@@ -1,12 +1,16 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace irQm.BaseCodes
 {
-    public  class Option:IOption
+    public class Option : IOption
     {
-        public bool Answered { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        [MaxLength(50)]
+        public string Id{get;set;}
+        public bool Answered { get; set; }
         string  Face { get; set; }
         
-        public bool IsTrue { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool IsTrue { get; set ; }
 
     }
 }
