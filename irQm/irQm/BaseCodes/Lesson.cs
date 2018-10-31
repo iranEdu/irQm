@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
-    class Lesson
+   public class Lesson
     {
-        public string LessonName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        [Key]
+        public string LessonName { get ; set ; }
         public string Description { get; set; }
 
     }
