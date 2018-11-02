@@ -1,4 +1,4 @@
-﻿psusing System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace irQm.BaseCodes
