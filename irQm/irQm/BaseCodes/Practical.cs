@@ -14,6 +14,9 @@ namespace irQm.BaseCodes
         public List<string> checkList { get; set; } = new List<string>();
         public List<string> Tags { get; set; } = new List<string>();
         public Lesson Lesson { get; set; }
+
+        public bool AutomaticEvaluation => throw new NotImplementedException();
+
         //test2
     }
 }
