@@ -1,30 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
-    class Puzzle : IQuestion,IEvaluable
+    class Puzzle : IQuestion
     {
-        [MaxLength(50)]
-        public string id { get; set; }
-        public string Face { get; set; }
-        public float Score { get; set; }
-        public float gainedScore { get; set; }
-        public List<string> Tags { get ; set; }
-        public Dictionary<string, string> Pairs { get; set; }
-        public List<string> ExtraAnswers { get; set; }
-        public Dictionary<string, string> AnswerPairs { get; set; }
-        public Lesson Lesson { get; set; }
+        public string Face { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public float Score { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public float gainedScore { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public List<string> Tags { get ; set; } = new List<string>();
+        public List<IDictionary<string, string>> Pairs { get; set; } = new List<IDictionary<string, string>>();
+        public List<string> ExtraAnswers { get; set; } = new List<string>();
 
-        public void Evaluate()
-        {
-            var count= AnswerPairs.Count(p=>Pairs.Contains(p));
-            gainedScore=Score/count;
-            
-        }
+        public bool AutomaticEvaluation => true;
     }
 }
