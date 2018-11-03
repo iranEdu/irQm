@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
-    class Puzzle : IQuestion,IEvaluable
+    class Puzzle : IQuestion
     {
         [MaxLength(50)]
         public string id { get; set; }

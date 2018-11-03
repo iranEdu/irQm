@@ -141,11 +141,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseCodes\Exam.cs" />
-    <Compile Include="BaseCodes\IEvaluable.cs" />
     <Compile Include="BaseCodes\IOption.cs" />
     <Compile Include="BaseCodes\IQuestion.cs" />
     <Compile Include="BaseCodes\Lesson.cs" />
-    <Compile Include="BaseCodes\Model.cs" />
     <Compile Include="BaseCodes\MultiChoices.cs" />
     <Compile Include="BaseCodes\Option.cs" />
     <Compile Include="BaseCodes\Practical.cs" />

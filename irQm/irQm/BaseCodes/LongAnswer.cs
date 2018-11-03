@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,13 +8,14 @@ namespace irQm.BaseCodes
 {
     class LongAnswer : IQuestion
     {
-        [MaxLength(50)]
-        public string Id { get; set; }
-        public string Face { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public float Score { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public float gainedScore { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Face { get; set ; }
+        public float Score { get ; set ; }
+        public float gainedScore { get; set ; }
         public string Answer { get; private set; }
         public List<string> Tags { get; set; } = new List<string>();
         public Lesson Lesson { get ; set; } 
+        [MaxLength(50)]
+        public string ID{get;set;}
+
     }
 }

@@ -1,20 +1,17 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
-    class ShortAnswer : IQuestion,IEvaluable
+    class ShortAnswer : IQuestion
     {
-        [MaxLength(50)]
-        public string Id { get; set; }
-        public string Face { get; set ; }
+        public string Face { get ; set; }
         public float Score { get; set; }
         public float gainedScore { get; set; }
-        public List<string> Answer { get; set; } = new List<string>();
+        public string Answer { get; private set; }
         public List<string> Tags { get; set; } = new List<string>();
         public string UserAnswer { get; set; }
         public Lesson Lesson { get ; set ; }
