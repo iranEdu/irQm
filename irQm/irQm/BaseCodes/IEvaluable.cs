@@ -8,6 +8,6 @@ namespace irQm.BaseCodes
 {
     interface IEvaluable
     {
-         void Evaluate(); 
+         void Evaluate();
     }
 }
