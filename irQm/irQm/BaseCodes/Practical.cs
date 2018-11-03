@@ -16,6 +16,6 @@ namespace irQm.BaseCodes
         public float gainedScore { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public List<string> checkList { get; set; } = new List<string>();
         public List<string> Tags { get; set; } = new List<string>();
-        public Lesson Lesson { get; set; }
+        public Lesson Lesson { get; set; } 
     }
 }

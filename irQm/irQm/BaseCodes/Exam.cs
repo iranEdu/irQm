@@ -16,7 +16,7 @@ namespace irQm.BaseCodes
         public string User { get; set; }
         public void Mix() { }
         [MaxLength(50)]
-        public string Id { get;  set; }
+        public string Id { get;  set; } 
    
     }
 }

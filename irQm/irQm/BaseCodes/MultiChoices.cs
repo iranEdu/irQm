@@ -9,7 +9,7 @@ namespace irQm.BaseCodes
         public List<Option> Options { get; set; }
         [MaxLength(50)]
         public string Id { get; private set; }
-        public string Face { get; set; }
+        public string Face { get; set; } 
         public float Score { get; set; }
         public float gainedScore { get; set; }
         public List<string> Tags { get; set; }

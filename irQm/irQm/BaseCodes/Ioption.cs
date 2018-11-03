@@ -9,6 +9,6 @@ namespace irQm.BaseCodes
     interface IOption
     {
         bool IsTrue { get; set; }
-        bool Answered { get; set; }
+        bool Answered { get; set; } 
     }
 }

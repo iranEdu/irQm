@@ -19,7 +19,7 @@ namespace irQm.BaseCodes
         public List<string> ExtraAnswers { get; set; }
         public Dictionary<string, string> AnswerPairs { get; set; }
         public Lesson Lesson { get; set; }
-
+         
         public void Evaluate()
         {
             var count= AnswerPairs.Count(p=>Pairs.Contains(p));

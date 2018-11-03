@@ -10,7 +10,7 @@ namespace irQm.BaseCodes
     class TFOption : IOption
     {
         [MaxLength(50)]
-        public string Id { get; set; }
+        public string Id { get; set; } 
         public bool IsTrue { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public bool Answered { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }

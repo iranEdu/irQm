@@ -18,7 +18,7 @@ namespace irQm.BaseCodes
         public TFOption TrueOption { get; set; }
         public TFOption FalseOption { get; set; }
         public Lesson Lesson { get; set; }
-
+         
         public void Evaluate()
         {
             if ((TrueOption.IsTrue&&TrueOption.Answered) || (FalseOption.IsTrue&& FalseOption.Answered))
