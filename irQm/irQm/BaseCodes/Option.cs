@@ -10,7 +10,7 @@ namespace irQm.BaseCodes
         public bool Answered { get; set; }
         string  Face { get; set; }
         
-        public bool IsTrue { get; set ; }
+        public bool IsTrue { get; set ; } 
 
     }
 }

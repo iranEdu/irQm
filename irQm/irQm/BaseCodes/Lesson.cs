@@ -11,7 +11,7 @@ namespace irQm.BaseCodes
     {
         [Key]
         public string LessonName { get ; set ; }
-        public string Description { get; set; }
+        public string Description { get; set; } 
 
     }
 }

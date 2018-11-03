@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
-    interface IOption
+    interface IEvaluable
     {
-        bool IsTrue { get; set; }
-        bool Answered { get; set; } 
+         void Evaluate(); 
     }
 }
