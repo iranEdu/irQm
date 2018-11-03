@@ -141,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseCodes\Exam.cs" />
+    <Compile Include="BaseCodes\IEvaluable.cs" />
     <Compile Include="BaseCodes\IOption.cs" />
     <Compile Include="BaseCodes\IQuestion.cs" />
     <Compile Include="BaseCodes\Lesson.cs" />
