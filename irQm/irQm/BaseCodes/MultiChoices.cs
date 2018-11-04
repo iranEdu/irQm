@@ -9,13 +9,14 @@ namespace irQm.BaseCodes
         public List<Option> Options { get; set; }
         [MaxLength(50)]
         public string Id { get; private set; }
-        public string Face { get; set; } 
+        public string Face { get; set; }
+        [Required]
         public float Score { get; set; }
         public float gainedScore { get; set; }
         public List<string> Tags { get; set; }
         bool multi;
         public bool MultiSelections { get { return multi; }set { multi = value && Options.Count(o => o.IsTrue) > 1; } }
-
+        [Required]
         public Lesson Lesson { get; set; }
 
         public void Mix() { }

@@ -12,12 +12,14 @@ namespace irQm.BaseCodes
         [MaxLength(50)]
         public string id { get; set; }
         public string Face { get; set; }
+        [Required]
         public float Score { get; set; }
         public float gainedScore { get; set; }
         public List<string> Tags { get ; set; }
         public Dictionary<string, string> Pairs { get; set; }
         public List<string> ExtraAnswers { get; set; }
         public Dictionary<string, string> AnswerPairs { get; set; }
+        [Required]
         public Lesson Lesson { get; set; }
          
         public void Evaluate()

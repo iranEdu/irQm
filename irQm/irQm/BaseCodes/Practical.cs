@@ -12,10 +12,12 @@ namespace irQm.BaseCodes
         [MaxLength(50)]
         public string Id { get; set; }
         public string Face { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        [Required]
         public float Score { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public float gainedScore { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public List<string> checkList { get; set; } = new List<string>();
         public List<string> Tags { get; set; } = new List<string>();
+        [Required]
         public Lesson Lesson { get; set; } 
     }
 }
