@@ -11,7 +11,7 @@ namespace irQm.BaseCodes
     {
         [MaxLength(50)]
         public string Id { get; set; }
-        [Required]
+        [Required] 
         public string Face { get ; set ; }
 
         public float Score { get; set; }

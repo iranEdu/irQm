@@ -153,7 +153,7 @@ namespace irQm.BaseCodes
                 Started = true;
             }
             return r;
-            
+             
         }
 
         public bool Finish(Func<bool> saveMethod)
