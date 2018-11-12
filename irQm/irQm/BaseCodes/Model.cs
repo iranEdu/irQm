@@ -32,7 +32,7 @@ namespace irQm.BaseCodes
             modelBuilder.Entity<Exam>().HasMany(ql => ql.PracticalQuestions).WithOne().OnDelete(DeleteBehavior.Cascade);
             modelBuilder.Entity<Exam>().HasMany(ql => ql.MultiChoicesQuestions).WithOne().OnDelete(DeleteBehavior.Cascade);
             modelBuilder.Entity<Exam>().HasMany(ql => ql.PuzzleQuestions).WithOne().OnDelete(DeleteBehavior.Cascade);
-
+            
             modelBuilder.Entity<Puzzle>().HasMany(p=>p.Pairs).WithOne().HasForeignKey("PuzzlePairs").OnDelete(DeleteBehavior.Cascade);
             modelBuilder.Entity<Puzzle>().HasMany(p => p.AnswerPairs).WithOne().HasForeignKey("PuzzleAnswerPairs").OnDelete(DeleteBehavior.Cascade);
 

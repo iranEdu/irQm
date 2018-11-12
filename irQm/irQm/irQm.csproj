@@ -146,6 +146,7 @@
     <Compile Include="BaseCodes\IQuestion.cs" />
     <Compile Include="BaseCodes\IquestionInList.cs" />
     <Compile Include="BaseCodes\Lesson.cs" />
+    <Compile Include="BaseCodes\Model.cs" />
     <Compile Include="BaseCodes\MultiChoices.cs" />
     <Compile Include="BaseCodes\Option.cs" />
     <Compile Include="BaseCodes\Practical.cs" />
