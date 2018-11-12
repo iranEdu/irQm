@@ -8,9 +8,10 @@ namespace irQm.BaseCodes
         [MaxLength(50)]
         public string Id{get;set;}
         public bool Answered { get; set; }
+        [Required]
         string  Face { get; set; }
-        
-        public bool IsTrue { get; set ; } 
-
+        [Required]
+        public bool IsTrue { get; set ; }
+        public byte number { get ; set ; }
     }
 }

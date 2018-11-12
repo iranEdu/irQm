@@ -15,6 +15,11 @@ namespace irQm
         public Form1()
         {
             InitializeComponent();
+            using (var db = new irQm.BaseCodes.irQmDbContext())
+            {
+                db.Database.EnsureCreated();
+            }
+
         }
     }
 }
