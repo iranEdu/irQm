@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
-    interface IOption
+   public class Tag
     {
-        bool IsTrue { get; set; }
-        bool Answered { get; set; }
-        byte number { get; set; }
+        [Key]
+        public string Value { get; set; }
     }
 }

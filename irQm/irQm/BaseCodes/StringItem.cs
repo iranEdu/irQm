@@ -7,14 +7,11 @@ using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
-  public  class TFOption : IOption
+  public  class StringItem
     {
         [MaxLength(50)]
-        public string Id { get; set; } 
+        public string Id { get; set; }
         [Required]
-        public bool IsTrue { get ; set ; }
-        public bool Answered { get ; set ; }
-
-        public byte number { get; set; }
+        public string Value { get; set; }
     }
 }
