@@ -7,18 +7,19 @@ using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
-   public class Lesson
+    public class Lesson
     {
+        
         [Key]
-        public string LessonName { get ; set ; }
+        public string LessonName { get; set; }
         public string Description { get; set; }
-        internal List<TFQuestion> TFQuestions { get; set; }
-        internal List<LongAnswer> LongAnswers { get; set; }
-        internal List<ShortAnswer> ShortAnswers { get; set; }
-        internal List<Practical> Practicals { get; set; }
-        internal List<Puzzle> Puzzles { get; set; }
-        internal List<MultiChoices> MultiChoicesQusestions { get; set; }
-        //internal List<IQuestion> Questions { get; set; }
+
+        private ICollection<LongAnswer> _longAnswers { get; set; }
+        private ICollection<MultiChoices> _multichice { get; set; }
+        private ICollection<Practical> _practical { get; set; }
+        private ICollection<ShortAnswer> _shortanswer { get; set; }
+        private ICollection<Puzzle> _puzzle { get; set; }
+
 
     }
 }
