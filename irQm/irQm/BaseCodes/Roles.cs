@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
-    interface IOption
+    public class Roles
     {
-        bool IsTrue { get; set; }
-        bool Answered { get; set; }
-        byte number { get; set; }
+        public enum RoleSNames { Admin,Teacher,Student }
     }
 }
