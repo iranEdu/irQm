@@ -140,6 +140,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseCodes\Configurations\ExamConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\PracticalConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\ShortAnswerConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\LongAnswerConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\MultiChoicesConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\MultiChoicesQuestionInListConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\LongAnswerQuestionInListConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\PracticalQuestionInListConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\TagInPracticalConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\TagInLongAnswerConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\TagInShortAnswerConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\TagInPuzzleConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\TagInMultichoicesConfiguration .cs" />
+    <Compile Include="BaseCodes\Configurations\TagInTfQuestionConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\TFQuestionConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\PuzzleConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\ShortAnswerQuestionInListConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\PuzzleQuestionInListConfiguration.cs" />
+    <Compile Include="BaseCodes\Configurations\TFQuestionInListConfiguration.cs" />
     <Compile Include="BaseCodes\Exam.cs" />
     <Compile Include="BaseCodes\IEvaluable.cs" />
     <Compile Include="BaseCodes\IOption.cs" />
@@ -168,11 +187,6 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\13970821180257_initialMig.cs" />
-    <Compile Include="Migrations\13970821180257_initialMig.designer.cs">
-      <DependentUpon>13970821180257_initialMig.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\irQmDbContextModelSnapshot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -203,7 +217,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BaseCodes\Configurations\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />
