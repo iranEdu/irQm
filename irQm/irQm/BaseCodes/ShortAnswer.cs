@@ -14,11 +14,11 @@ namespace irQm.BaseCodes
         public string Face { get; set ; }
         [Required]
         public float Score { get; set; }
-        public float gainedScore { get; set; }
+        
         public float GainedScore { get; set ; }
         public List<StringItem> Answer { get; set; }
 
-        public ICollection<TagInQuestion<LongAnswer>> Tags { get; set; }
+        public ICollection<TagInQuestion<ShortAnswer>> Tags { get; set; }
         public string UserAnswer { get; set; }
 
         public User CreatedBy { get; set; }
@@ -36,7 +36,7 @@ namespace irQm.BaseCodes
                 if (str.Trim().Replace(" ", "").Replace("‌", "").Replace('ي','ی').Replace( 'ك','ک').Replace('آ', 'ا') == UserAnswer.Replace(" ", "").Replace("‌", "").Replace('ي', 'ی').Replace('ك', 'ک').Replace('آ', 'ا'))
                 {
                    
-                    gainedScore = Score;
+                    GainedScore = Score;
                     break;
                 }
                
