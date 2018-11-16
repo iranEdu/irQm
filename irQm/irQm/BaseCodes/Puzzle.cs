@@ -14,12 +14,12 @@ namespace irQm.BaseCodes
         public string Face { get; set; }
         [Required]
         public float Score { get; set; }
-        public float gainedScore { get; set; }
+        
         public float GainedScore { get ; set ; }
-        public List<string> Tags { get ; set; }
-        public Dictionary<string, string> Pairs { get; set; }
-        public List<string> ExtraAnswers { get; set; }
-        public Dictionary<string, string> AnswerPairs { get; set; }
+        public ICollection<TagInQuestion<Puzzle>> Tags { get; set; }
+        public List<StringPair> Pairs { get; set; }
+        public List<StringItem> ExtraAnswers { get; set; }
+        public List<StringPair> AnswerPairs { get; set; }
 
         public User CreatedBy { get; set; }
 
@@ -30,7 +30,7 @@ namespace irQm.BaseCodes
         public void Evaluate()
         {
             var count= AnswerPairs.Count(p=>Pairs.Contains(p));
-            gainedScore=Score/count;
+            GainedScore=Score/count;
             
         }
     }
