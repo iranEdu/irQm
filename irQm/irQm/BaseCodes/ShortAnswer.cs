@@ -16,8 +16,8 @@ namespace irQm.BaseCodes
         public float Score { get; set; }
         public float gainedScore { get; set; }
         public float GainedScore { get; set ; }
-        public List<string> Answer { get; set; } = new List<string>();
-        public List<string> Tags { get; set; } = new List<string>();
+        public ICollection<StringItem> Answer { get; set; } = new List<StringItem>();
+        public ICollection<TagInQuestion<LongAnswer>> Tags { get; set; }
         public string UserAnswer { get; set; }
 
         public User CreatedBy { get; set; }

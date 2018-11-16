@@ -10,11 +10,11 @@ namespace irQm.BaseCodes
         public string Face { get ; set ; }
         [Required]
         public float Score { get ; set; }
-        public float gainedScore { get; set; }
+        
         public float GainedScore { get ; set ; }
         public string Answer { get; private set; }
-        public List<string> Tags { get; set; } = new List<string>();
-        
+        public ICollection<TagInQuestion<LongAnswer>> Tags { get; set; }
+
         public Lesson Lesson { get ; set; }
         [Required]
         public string LessonName { get; set; }
