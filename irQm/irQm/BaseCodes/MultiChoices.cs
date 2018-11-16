@@ -12,11 +12,14 @@ namespace irQm.BaseCodes
         public string Face { get; set; }
         [Required]
         public float Score { get; set; }
-        public float gainedScore { get; set; }
+        public float GainedScore { get; set; }
         public List<string> Tags { get; set; }
         bool multi;
         public bool MultiSelections { get { return multi; }set { multi = value && Options.Count(o => o.IsTrue) > 1; } }
+        public User CreatedBy { get; set; }
+
         [Required]
+        public string LessonName { get; set; }
         public Lesson Lesson { get; set; }
 
         public void Mix() { }
@@ -31,7 +34,7 @@ namespace irQm.BaseCodes
                 var g = Score * ( Options.Count(o => o.IsTrue && o.Answered) - Options.Count(o=> o.Answered&& !o.IsTrue))/c;
                 if (g < 0)
                     g = 0;
-                gainedScore = g;
+                GainedScore = g;
             }
 
         }

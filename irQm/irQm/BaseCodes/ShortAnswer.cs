@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
-    class ShortAnswer : IQuestion,IEvaluable
+    public class ShortAnswer : IQuestion,IEvaluable
     {
         [MaxLength(50)]
         public string Id { get; set; }
@@ -15,12 +15,17 @@ namespace irQm.BaseCodes
         [Required]
         public float Score { get; set; }
         public float gainedScore { get; set; }
+        public float GainedScore { get; set ; }
         public List<string> Answer { get; set; } = new List<string>();
         public List<string> Tags { get; set; } = new List<string>();
         public string UserAnswer { get; set; }
-        [Required]
+
+        public User CreatedBy { get; set; }
+
         public Lesson Lesson { get ; set ; }
-         
+        [Required]
+        public string LessonName { get; set; }
+
         public void Evaluate()
         {
                                                                                   

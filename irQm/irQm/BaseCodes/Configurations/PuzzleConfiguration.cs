@@ -15,6 +15,8 @@ namespace irQm.BaseCodes.Configurations
             builder.HasMany(q => q.AnswerPairs).WithOne().OnDelete(DeleteBehavior.Cascade);
             builder.HasMany(q => q.ExtraAnswers).WithOne().OnDelete(DeleteBehavior.Cascade);
 
+            builder.HasOne(q => q.CreatedBy).WithMany().OnDelete(DeleteBehavior.Cascade);
+
             builder.HasOne(q => q.Lesson).WithMany(l => l.Puzzles).HasForeignKey(l => l.LessonName).OnDelete(DeleteBehavior.Cascade);
         }
     }

@@ -13,6 +13,9 @@ namespace irQm.BaseCodes
        
         string LessonName { get; set; }
         Lesson Lesson { get; set; }   
+
+        
+         User CreatedBy { get; set; }
        
     }
 }

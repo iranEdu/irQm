@@ -14,6 +14,8 @@ namespace irQm.BaseCodes
         [Required] 
         public string Face { get ; set ; }
 
+        public User CreatedBy { get; set; }
+
         public float Score { get; set; }
         public float GainedScore { get; set; }
         public ICollection<TagInQuestion<TFQuestion>> Tags { get; set; } 
