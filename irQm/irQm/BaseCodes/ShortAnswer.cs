@@ -16,7 +16,8 @@ namespace irQm.BaseCodes
         public float Score { get; set; }
         public float gainedScore { get; set; }
         public float GainedScore { get; set ; }
-        public ICollection<StringItem> Answer { get; set; } = new List<StringItem>();
+        public List<StringItem> Answer { get; set; }
+
         public ICollection<TagInQuestion<LongAnswer>> Tags { get; set; }
         public string UserAnswer { get; set; }
 
@@ -31,7 +32,7 @@ namespace irQm.BaseCodes
                                                                                   
             for (int i = 0; i < Answer.Count; i++)
             {
-                string str = Answer[i];
+                string str = Answer[i].Value;
                 if (str.Trim().Replace(" ", "").Replace("‌", "").Replace('ي','ی').Replace( 'ك','ک').Replace('آ', 'ا') == UserAnswer.Replace(" ", "").Replace("‌", "").Replace('ي', 'ی').Replace('ك', 'ک').Replace('آ', 'ا'))
                 {
                    
