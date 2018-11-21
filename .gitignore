@@ -7,7 +7,10 @@
 *.user
 *.userosscache
 *.sln.docstates
-
+*.lock
+*.ide
+irQm/.vs/irQm/v15/Server/sqlite3/db.lock
+irQm/.vs/irQm/v15/Server/sqlite3/storage.ide
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
