@@ -205,6 +205,12 @@
     <Compile Include="Form\FrmInsertQuestion.Designer.cs">
       <DependentUpon>FrmInsertQuestion.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmExamResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExamResult.Designer.cs">
+      <DependentUpon>FrmExamResult.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\13970825112916_InitialMigr.cs" />
     <Compile Include="Migrations\13970825112916_InitialMigr.designer.cs">
       <DependentUpon>13970825112916_InitialMigr.cs</DependentUpon>
@@ -259,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmInsertQuestion.resx">
       <DependentUpon>FrmInsertQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExamResult.resx">
+      <DependentUpon>FrmExamResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
