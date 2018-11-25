@@ -117,38 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="questionsbank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\questionsbank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="New Lesson0" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\New Lesson0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="marklist" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\marklist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settingpic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\settingpic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="accountpic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\accountpic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="topribon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\topribon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="backup" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backup.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bookpic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bookpic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="addquestion" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\addquestion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nwexam" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nwexam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="results" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\results.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>
