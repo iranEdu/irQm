@@ -181,23 +181,29 @@
     <Compile Include="BaseCodes\TFOption.cs" />
     <Compile Include="BaseCodes\TFQuestion.cs" />
     <Compile Include="BaseCodes\User.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Form\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Form\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMain.cs">
+    <Compile Include="Form\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmMain.Designer.cs">
+    <Compile Include="Form\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frmnewlesson.cs">
+    <Compile Include="Form\Frmnewlesson.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frmnewlesson.Designer.cs">
+    <Compile Include="Form\Frmnewlesson.Designer.cs">
       <DependentUpon>Frmnewlesson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmInsertQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmInsertQuestion.Designer.cs">
+      <DependentUpon>FrmInsertQuestion.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\13970825112916_InitialMigr.cs" />
     <Compile Include="Migrations\13970825112916_InitialMigr.designer.cs">
@@ -206,14 +212,53 @@
     <Compile Include="Migrations\irQmDbContextModelSnapshot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <Compile Include="UserControls\UCPuzzleAnswer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCPuzzleAnswer.Designer.cs">
+      <DependentUpon>UCPuzzleAnswer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCMultiOption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCMultiOption.Designer.cs">
+      <DependentUpon>UCMultiOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCTrueFalseAnswer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCTrueFalseAnswer.Designer.cs">
+      <DependentUpon>UCTrueFalseAnswer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCPracticalAnswer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCPracticalAnswer.Designer.cs">
+      <DependentUpon>UCPracticalAnswer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCShortAnswer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCShortAnswer.Designer.cs">
+      <DependentUpon>UCShortAnswer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCLongAnswer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCLongAnswer.Designer.cs">
+      <DependentUpon>UCLongAnswer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMain.resx">
+    <EmbeddedResource Include="Form\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frmnewlesson.resx">
+    <EmbeddedResource Include="Form\Frmnewlesson.resx">
       <DependentUpon>Frmnewlesson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmInsertQuestion.resx">
+      <DependentUpon>FrmInsertQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -225,6 +270,24 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\UCPuzzleAnswer.resx">
+      <DependentUpon>UCPuzzleAnswer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCMultiOption.resx">
+      <DependentUpon>UCMultiOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCTrueFalseAnswer.resx">
+      <DependentUpon>UCTrueFalseAnswer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCPracticalAnswer.resx">
+      <DependentUpon>UCPracticalAnswer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCLongAnswer.resx">
+      <DependentUpon>UCLongAnswer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCShortAnswer.resx">
+      <DependentUpon>UCShortAnswer.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -278,6 +341,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\email us.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removemark.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />

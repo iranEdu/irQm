@@ -73,6 +73,26 @@ namespace irQm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap add {
+            get {
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap addmark {
+            get {
+                object obj = ResourceManager.GetObject("addmark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap addquestion {
             get {
                 object obj = ResourceManager.GetObject("addquestion", resourceCulture);
@@ -96,6 +116,16 @@ namespace irQm.Properties {
         internal static System.Drawing.Bitmap bookpic {
             get {
                 object obj = ResourceManager.GetObject("bookpic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap edit {
+            get {
+                object obj = ResourceManager.GetObject("edit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +186,16 @@ namespace irQm.Properties {
         internal static System.Drawing.Bitmap questionsbank {
             get {
                 object obj = ResourceManager.GetObject("questionsbank", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap removemark {
+            get {
+                object obj = ResourceManager.GetObject("removemark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
