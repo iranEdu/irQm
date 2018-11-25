@@ -22,7 +22,10 @@ namespace irQm
             throw new NotImplementedException();
         }
 
-       
-        
+        private void Label13_Click(object sender, EventArgs e)
+        {
+            Frmnewlesson Fnl = new Frmnewlesson();
+            Fnl.Show();
+        }
     }
 }

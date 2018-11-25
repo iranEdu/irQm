@@ -37,9 +37,13 @@
             this.txtusername = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
             this.Btnentire = new System.Windows.Forms.Button();
+            this.Picimg = new System.Windows.Forms.PictureBox();
+            this.Picexit = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Picbook = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.Picimg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Picexit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).BeginInit();
@@ -143,6 +147,26 @@
             this.Btnentire.UseVisualStyleBackColor = false;
             this.Btnentire.Click += new System.EventHandler(this.Btnentire_Click);
             // 
+            // Picimg
+            // 
+            this.Picimg.Image = global::irQm.Properties.Resources.email_us;
+            this.Picimg.Location = new System.Drawing.Point(45, 4);
+            this.Picimg.Name = "Picimg";
+            this.Picimg.Size = new System.Drawing.Size(30, 30);
+            this.Picimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Picimg.TabIndex = 13;
+            this.Picimg.TabStop = false;
+            // 
+            // Picexit
+            // 
+            this.Picexit.Image = global::irQm.Properties.Resources.exit;
+            this.Picexit.Location = new System.Drawing.Point(11, 5);
+            this.Picexit.Name = "Picexit";
+            this.Picexit.Size = new System.Drawing.Size(30, 30);
+            this.Picexit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Picexit.TabIndex = 12;
+            this.Picexit.TabStop = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -182,6 +206,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.Picimg);
+            this.Controls.Add(this.Picexit);
             this.Controls.Add(this.Btnentire);
             this.Controls.Add(this.txtpass);
             this.Controls.Add(this.txtusername);
@@ -196,6 +222,8 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = " ";
+            ((System.ComponentModel.ISupportInitialize)(this.Picimg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Picexit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).EndInit();
@@ -218,6 +246,8 @@
         private System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.Button Btnentire;
+        private System.Windows.Forms.PictureBox Picexit;
+        private System.Windows.Forms.PictureBox Picimg;
     }
 }
 

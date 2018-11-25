@@ -193,6 +193,12 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frmnewlesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmnewlesson.Designer.cs">
+      <DependentUpon>Frmnewlesson.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\13970825112916_InitialMigr.cs" />
     <Compile Include="Migrations\13970825112916_InitialMigr.designer.cs">
       <DependentUpon>13970825112916_InitialMigr.cs</DependentUpon>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmnewlesson.resx">
+      <DependentUpon>Frmnewlesson.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -263,6 +272,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\results.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email us.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />
