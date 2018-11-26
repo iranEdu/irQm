@@ -150,9 +150,9 @@
             // Picimg
             // 
             this.Picimg.Image = global::irQm.Properties.Resources.email_us;
-            this.Picimg.Location = new System.Drawing.Point(45, 4);
+            this.Picimg.Location = new System.Drawing.Point(45, 5);
             this.Picimg.Name = "Picimg";
-            this.Picimg.Size = new System.Drawing.Size(30, 30);
+            this.Picimg.Size = new System.Drawing.Size(32, 32);
             this.Picimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Picimg.TabIndex = 13;
             this.Picimg.TabStop = false;

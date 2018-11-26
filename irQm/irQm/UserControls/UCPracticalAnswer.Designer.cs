@@ -30,14 +30,14 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.richtxtpractical = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Btnentire = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,7 +49,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.button1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(17, 359);
+            this.button1.Location = new System.Drawing.Point(3, 347);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button1.Size = new System.Drawing.Size(85, 39);
@@ -65,14 +65,24 @@
             this.panel1.Controls.Add(this.richTextBox2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.richtxtpractical);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(26, 3);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panel1.Size = new System.Drawing.Size(522, 325);
             this.panel1.TabIndex = 113;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::irQm.Properties.Resources.add;
+            this.pictureBox2.Location = new System.Drawing.Point(9, 193);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 113;
+            this.pictureBox2.TabStop = false;
             // 
             // richTextBox2
             // 
@@ -97,13 +107,23 @@
             this.label1.Text = "موارد چک لیست:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // richTextBox1
+            // pictureBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(39, 64);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(459, 96);
-            this.richTextBox1.TabIndex = 75;
-            this.richTextBox1.Text = "";
+            this.pictureBox1.Image = global::irQm.Properties.Resources.edit;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 67);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 110;
+            this.pictureBox1.TabStop = false;
+            // 
+            // richtxtpractical
+            // 
+            this.richtxtpractical.Location = new System.Drawing.Point(39, 64);
+            this.richtxtpractical.Name = "richtxtpractical";
+            this.richtxtpractical.Size = new System.Drawing.Size(459, 96);
+            this.richtxtpractical.TabIndex = 75;
+            this.richtxtpractical.Text = "";
             // 
             // label7
             // 
@@ -141,33 +161,13 @@
             this.Btnentire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.Btnentire.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Btnentire.ForeColor = System.Drawing.Color.White;
-            this.Btnentire.Location = new System.Drawing.Point(107, 359);
+            this.Btnentire.Location = new System.Drawing.Point(92, 347);
             this.Btnentire.Name = "Btnentire";
             this.Btnentire.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Btnentire.Size = new System.Drawing.Size(85, 39);
             this.Btnentire.TabIndex = 114;
             this.Btnentire.Text = " ثبت";
             this.Btnentire.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::irQm.Properties.Resources.add;
-            this.pictureBox2.Location = new System.Drawing.Point(9, 193);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 113;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::irQm.Properties.Resources.edit;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 67);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 110;
-            this.pictureBox1.TabStop = false;
             // 
             // UCPracticalAnswer
             // 
@@ -177,7 +177,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Btnentire);
             this.Name = "UCPracticalAnswer";
-            this.Size = new System.Drawing.Size(564, 401);
+            this.Size = new System.Drawing.Size(528, 401);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -193,7 +193,7 @@
         private System.Windows.Forms.RichTextBox richTextBox2;
         internal System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richtxtpractical;
         internal System.Windows.Forms.Label label7;
         internal System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Btnentire;

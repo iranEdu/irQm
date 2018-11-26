@@ -30,14 +30,14 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.richtxtTF = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Btnentire = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +48,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.button1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(27, 239);
+            this.button1.Location = new System.Drawing.Point(3, 239);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button1.Size = new System.Drawing.Size(85, 39);
@@ -64,14 +64,40 @@
             this.panel1.Controls.Add(this.radioButton1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.richtxtTF);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(26, 3);
+            this.panel1.Location = new System.Drawing.Point(4, 3);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panel1.Size = new System.Drawing.Size(522, 230);
             this.panel1.TabIndex = 116;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.radioButton2.Location = new System.Drawing.Point(320, 164);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.radioButton2.Size = new System.Drawing.Size(53, 30);
+            this.radioButton2.TabIndex = 115;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "غلط";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.radioButton1.Location = new System.Drawing.Point(394, 164);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.radioButton1.Size = new System.Drawing.Size(67, 30);
+            this.radioButton1.TabIndex = 114;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "صحیح";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -88,13 +114,23 @@
             this.label1.Text = "پاسخ:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // richTextBox1
+            // pictureBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(39, 64);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(459, 96);
-            this.richTextBox1.TabIndex = 75;
-            this.richTextBox1.Text = "";
+            this.pictureBox1.Image = global::irQm.Properties.Resources.edit;
+            this.pictureBox1.Location = new System.Drawing.Point(9, 67);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 110;
+            this.pictureBox1.TabStop = false;
+            // 
+            // richtxtTF
+            // 
+            this.richtxtTF.Location = new System.Drawing.Point(39, 64);
+            this.richtxtTF.Name = "richtxtTF";
+            this.richtxtTF.Size = new System.Drawing.Size(459, 96);
+            this.richtxtTF.TabIndex = 75;
+            this.richtxtTF.Text = "";
             // 
             // label7
             // 
@@ -132,49 +168,13 @@
             this.Btnentire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.Btnentire.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Btnentire.ForeColor = System.Drawing.Color.White;
-            this.Btnentire.Location = new System.Drawing.Point(117, 239);
+            this.Btnentire.Location = new System.Drawing.Point(90, 239);
             this.Btnentire.Name = "Btnentire";
             this.Btnentire.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Btnentire.Size = new System.Drawing.Size(85, 39);
             this.Btnentire.TabIndex = 117;
             this.Btnentire.Text = " ثبت";
             this.Btnentire.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::irQm.Properties.Resources.edit;
-            this.pictureBox1.Location = new System.Drawing.Point(9, 67);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 110;
-            this.pictureBox1.TabStop = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radioButton1.Location = new System.Drawing.Point(394, 164);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.radioButton1.Size = new System.Drawing.Size(67, 30);
-            this.radioButton1.TabIndex = 114;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "صحیح";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radioButton2.Location = new System.Drawing.Point(320, 164);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.radioButton2.Size = new System.Drawing.Size(53, 30);
-            this.radioButton2.TabIndex = 115;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "غلط";
-            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // UCTrueFalseAnswer
             // 
@@ -184,7 +184,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.Btnentire);
             this.Name = "UCTrueFalseAnswer";
-            this.Size = new System.Drawing.Size(564, 311);
+            this.Size = new System.Drawing.Size(531, 311);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -198,7 +198,7 @@
         private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richtxtTF;
         internal System.Windows.Forms.Label label7;
         internal System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Btnentire;

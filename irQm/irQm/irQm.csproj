@@ -205,11 +205,17 @@
     <Compile Include="Form\FrmInsertQuestion.Designer.cs">
       <DependentUpon>FrmInsertQuestion.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmExamResult.cs">
+    <Compile Include="Form\FrmExamResult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmExamResult.Designer.cs">
+    <Compile Include="Form\FrmExamResult.Designer.cs">
       <DependentUpon>FrmExamResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuestionsBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuestionsBank.Designer.cs">
+      <DependentUpon>FrmQuestionsBank.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\13970825112916_InitialMigr.cs" />
     <Compile Include="Migrations\13970825112916_InitialMigr.designer.cs">
@@ -266,8 +272,11 @@
     <EmbeddedResource Include="Form\FrmInsertQuestion.resx">
       <DependentUpon>FrmInsertQuestion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmExamResult.resx">
+    <EmbeddedResource Include="Form\FrmExamResult.resx">
       <DependentUpon>FrmExamResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuestionsBank.resx">
+      <DependentUpon>FrmQuestionsBank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

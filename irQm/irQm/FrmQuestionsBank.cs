@@ -10,25 +10,11 @@ using System.Windows.Forms;
 
 namespace irQm
 {
-    public partial class FrmMain : Form
+    public partial class FrmQuestionsBank : Form
     {
-        public FrmMain()
+        public FrmQuestionsBank()
         {
             InitializeComponent();
         }
-
-        internal new static void Show()
-        {
-            throw new NotImplementedException();
-        }
-
-        
-
-        private void FrmMain_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }
