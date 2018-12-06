@@ -9,7 +9,7 @@ namespace irQm.BaseCodes
         public string Id{get;set;}
         public bool Answered { get; set; }
         [Required]
-        string  Face { get; set; }
+        public string  Face { get; set; }
         [Required]
         public bool IsTrue { get; set ; }
         public byte number { get ; set ; }

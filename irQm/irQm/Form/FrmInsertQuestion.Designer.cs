@@ -58,12 +58,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Picbook = new System.Windows.Forms.PictureBox();
-            this.ucLongAnswer1 = new irQm.UCLongAnswer();
             this.ucMultiOption1 = new irQm.UCMultiOption();
-            this.ucPracticalAnswer1 = new irQm.UCPracticalAnswer();
-            this.ucPuzzleAnswer1 = new irQm.UCPuzzleAnswer();
-            this.ucShortAnswer1 = new irQm.UCShortAnswer();
-            this.ucTrueFalseAnswer1 = new irQm.UCTrueFalseAnswer();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).BeginInit();
@@ -365,6 +360,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(393, 47);
             this.comboBox1.Name = "comboBox1";
@@ -375,6 +371,7 @@
             // 
             // comboBox2
             // 
+            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(114, 47);
             this.comboBox2.Name = "comboBox2";
@@ -385,15 +382,12 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.ucTrueFalseAnswer1);
-            this.panel1.Controls.Add(this.ucShortAnswer1);
-            this.panel1.Controls.Add(this.ucPuzzleAnswer1);
-            this.panel1.Controls.Add(this.ucPracticalAnswer1);
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.ucMultiOption1);
-            this.panel1.Controls.Add(this.ucLongAnswer1);
             this.panel1.Location = new System.Drawing.Point(12, 78);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(564, 371);
+            this.panel1.Size = new System.Drawing.Size(564, 414);
             this.panel1.TabIndex = 111;
             // 
             // pictureBox1
@@ -419,53 +413,21 @@
             this.Picbook.TabIndex = 81;
             this.Picbook.TabStop = false;
             // 
-            // ucLongAnswer1
-            // 
-            this.ucLongAnswer1.Location = new System.Drawing.Point(14, 3);
-            this.ucLongAnswer1.Name = "ucLongAnswer1";
-            this.ucLongAnswer1.Size = new System.Drawing.Size(529, 296);
-            this.ucLongAnswer1.TabIndex = 0;
-            // 
             // ucMultiOption1
             // 
-            this.ucMultiOption1.Location = new System.Drawing.Point(20, 10);
+            this.ucMultiOption1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucMultiOption1.AutoScroll = true;
+            this.ucMultiOption1.Location = new System.Drawing.Point(25, 3);
             this.ucMultiOption1.Name = "ucMultiOption1";
-            this.ucMultiOption1.Size = new System.Drawing.Size(521, 401);
-            this.ucMultiOption1.TabIndex = 1;
-            // 
-            // ucPracticalAnswer1
-            // 
-            this.ucPracticalAnswer1.Location = new System.Drawing.Point(16, 8);
-            this.ucPracticalAnswer1.Name = "ucPracticalAnswer1";
-            this.ucPracticalAnswer1.Size = new System.Drawing.Size(528, 401);
-            this.ucPracticalAnswer1.TabIndex = 2;
-            // 
-            // ucPuzzleAnswer1
-            // 
-            this.ucPuzzleAnswer1.Location = new System.Drawing.Point(16, 11);
-            this.ucPuzzleAnswer1.Name = "ucPuzzleAnswer1";
-            this.ucPuzzleAnswer1.Size = new System.Drawing.Size(529, 401);
-            this.ucPuzzleAnswer1.TabIndex = 3;
-            // 
-            // ucShortAnswer1
-            // 
-            this.ucShortAnswer1.Location = new System.Drawing.Point(14, 10);
-            this.ucShortAnswer1.Name = "ucShortAnswer1";
-            this.ucShortAnswer1.Size = new System.Drawing.Size(530, 401);
-            this.ucShortAnswer1.TabIndex = 4;
-            // 
-            // ucTrueFalseAnswer1
-            // 
-            this.ucTrueFalseAnswer1.Location = new System.Drawing.Point(15, 10);
-            this.ucTrueFalseAnswer1.Name = "ucTrueFalseAnswer1";
-            this.ucTrueFalseAnswer1.Size = new System.Drawing.Size(531, 311);
-            this.ucTrueFalseAnswer1.TabIndex = 5;
+            this.ucMultiOption1.Size = new System.Drawing.Size(521, 446);
+            this.ucMultiOption1.TabIndex = 0;
             // 
             // FrmInsertQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(784, 504);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
@@ -536,11 +498,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Panel panel1;
-        private UCTrueFalseAnswer ucTrueFalseAnswer1;
-        private UCShortAnswer ucShortAnswer1;
-        private UCPuzzleAnswer ucPuzzleAnswer1;
-        private UCPracticalAnswer ucPracticalAnswer1;
         private UCMultiOption ucMultiOption1;
-        private UCLongAnswer ucLongAnswer1;
     }
 }
