@@ -21,5 +21,13 @@ namespace irQm
             }
 
         }
+
+      
+
+        private void Btnentire_Click(object sender, EventArgs e)
+        {
+            FrmMain Fm = new FrmMain();
+            Fm.ShowDialog();
+        }
     }
 }

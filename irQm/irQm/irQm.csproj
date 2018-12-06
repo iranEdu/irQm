@@ -53,8 +53,8 @@
     <Reference Include="Microsoft.EntityFrameworkCore.Sqlite, Version=2.1.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.EntityFrameworkCore.Sqlite.Core.2.1.4\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Sqlite.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
+    <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.2.1.2\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Extensions.Caching.Memory, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Caching.Memory.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Caching.Memory.dll</HintPath>
@@ -181,11 +181,41 @@
     <Compile Include="BaseCodes\TFOption.cs" />
     <Compile Include="BaseCodes\TFQuestion.cs" />
     <Compile Include="BaseCodes\User.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Form\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Form\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Frmnewlesson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Frmnewlesson.Designer.cs">
+      <DependentUpon>Frmnewlesson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmInsertQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmInsertQuestion.Designer.cs">
+      <DependentUpon>FrmInsertQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmExamResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmExamResult.Designer.cs">
+      <DependentUpon>FrmExamResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmQuestionsBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmQuestionsBank.Designer.cs">
+      <DependentUpon>FrmQuestionsBank.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\13970825112916_InitialMigr.cs" />
     <Compile Include="Migrations\13970825112916_InitialMigr.designer.cs">
@@ -194,8 +224,59 @@
     <Compile Include="Migrations\irQmDbContextModelSnapshot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
+    <Compile Include="UserControls\UCPuzzleAnswer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCPuzzleAnswer.Designer.cs">
+      <DependentUpon>UCPuzzleAnswer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCMultiOption.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCMultiOption.Designer.cs">
+      <DependentUpon>UCMultiOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCTrueFalseAnswer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCTrueFalseAnswer.Designer.cs">
+      <DependentUpon>UCTrueFalseAnswer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCPracticalAnswer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCPracticalAnswer.Designer.cs">
+      <DependentUpon>UCPracticalAnswer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCShortAnswer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCShortAnswer.Designer.cs">
+      <DependentUpon>UCShortAnswer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCLongAnswer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCLongAnswer.Designer.cs">
+      <DependentUpon>UCLongAnswer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Frmnewlesson.resx">
+      <DependentUpon>Frmnewlesson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmInsertQuestion.resx">
+      <DependentUpon>FrmInsertQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmExamResult.resx">
+      <DependentUpon>FrmExamResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmQuestionsBank.resx">
+      <DependentUpon>FrmQuestionsBank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -205,7 +286,26 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\UCPuzzleAnswer.resx">
+      <DependentUpon>UCPuzzleAnswer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCMultiOption.resx">
+      <DependentUpon>UCMultiOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCTrueFalseAnswer.resx">
+      <DependentUpon>UCTrueFalseAnswer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCPracticalAnswer.resx">
+      <DependentUpon>UCPracticalAnswer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCLongAnswer.resx">
+      <DependentUpon>UCLongAnswer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCShortAnswer.resx">
+      <DependentUpon>UCShortAnswer.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -221,7 +321,57 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\bookpic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\topribon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accountpic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\New Lesson0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addquestion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\questionsbank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nwexam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingpic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\results.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email us.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\addmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removemark.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
