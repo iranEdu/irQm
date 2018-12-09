@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace irQm.Migrations
 {
-    public partial class InitialMigr : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -294,6 +294,7 @@ namespace irQm.Migrations
                 {
                     Id = table.Column<string>(maxLength: 50, nullable: false),
                     Answered = table.Column<bool>(nullable: false),
+                    Face = table.Column<string>(nullable: false),
                     IsTrue = table.Column<bool>(nullable: false),
                     number = table.Column<byte>(nullable: false),
                     MultiChoicesId = table.Column<string>(nullable: true)

@@ -114,6 +114,9 @@ namespace irQm.Migrations
 
                     b.Property<bool>("Answered");
 
+                    b.Property<string>("Face")
+                        .IsRequired();
+
                     b.Property<bool>("IsTrue");
 
                     b.Property<string>("MultiChoicesId");

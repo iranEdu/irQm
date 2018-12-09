@@ -9,8 +9,8 @@ using irQm.BaseCodes;
 namespace irQm.Migrations
 {
     [DbContext(typeof(irQmDbContext))]
-    [Migration("13970825112916_InitialMigr")]
-    partial class InitialMigr
+    [Migration("13970915124639_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -115,6 +115,9 @@ namespace irQm.Migrations
                         .HasMaxLength(50);
 
                     b.Property<bool>("Answered");
+
+                    b.Property<string>("Face")
+                        .IsRequired();
 
                     b.Property<bool>("IsTrue");
 

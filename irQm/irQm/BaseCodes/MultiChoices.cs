@@ -6,7 +6,7 @@ namespace irQm.BaseCodes
 {
     public class MultiChoices : IQuestion,IEvaluable
     {
-        public List<Option> Options { get; set; }
+        public List<Option> Options { get; set; } = new List<Option>();
         [MaxLength(50)]
         public string Id { get; private set; }
         public string Face { get; set; }
