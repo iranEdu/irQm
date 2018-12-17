@@ -31,8 +31,11 @@ namespace irQm.UserControls
 
         private void Remove_Click(object sender, EventArgs e)
         {
-            OptionRemoved?.Invoke(this);
-            this.Dispose();
+            if (Option.number > 1)
+            {
+                OptionRemoved?.Invoke(this);
+                this.Dispose();
+            }
         }
 
         private void rtbOption_TextChanged(object sender, EventArgs e)

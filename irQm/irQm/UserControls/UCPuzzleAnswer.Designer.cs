@@ -29,13 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.richtxtpuzzel = new System.Windows.Forms.RichTextBox();
@@ -43,8 +38,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.Btnentire = new System.Windows.Forms.Button();
+            this.ucOptionListpuzzle1 = new irQm.UserControls.UCOptionListpuzzle();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,13 +48,9 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.richTextBox4);
-            this.panel1.Controls.Add(this.richTextBox5);
+            this.panel1.Controls.Add(this.ucOptionListpuzzle1);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.richTextBox3);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.richTextBox2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.richtxtpuzzel);
@@ -71,22 +62,6 @@
             this.panel1.Size = new System.Drawing.Size(522, 350);
             this.panel1.TabIndex = 119;
             // 
-            // richTextBox4
-            // 
-            this.richTextBox4.Location = new System.Drawing.Point(100, 220);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(165, 28);
-            this.richTextBox4.TabIndex = 121;
-            this.richTextBox4.Text = "";
-            // 
-            // richTextBox5
-            // 
-            this.richTextBox5.Location = new System.Drawing.Point(100, 190);
-            this.richTextBox5.Name = "richTextBox5";
-            this.richTextBox5.Size = new System.Drawing.Size(165, 28);
-            this.richTextBox5.TabIndex = 120;
-            this.richTextBox5.Text = "";
-            // 
             // label4
             // 
             this.label4.AllowDrop = true;
@@ -94,7 +69,7 @@
             this.label4.BackColor = System.Drawing.SystemColors.Control;
             this.label4.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(127, 162);
+            this.label4.Location = new System.Drawing.Point(148, 162);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(143, 35);
@@ -102,41 +77,16 @@
             this.label4.Text = "ستون دوم:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::irQm.Properties.Resources.removemark;
-            this.pictureBox3.Location = new System.Drawing.Point(38, 222);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 118;
-            this.pictureBox3.TabStop = false;
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.Location = new System.Drawing.Point(333, 220);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(165, 28);
-            this.richTextBox3.TabIndex = 116;
-            this.richTextBox3.Text = "";
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::irQm.Properties.Resources.addmark;
-            this.pictureBox2.Location = new System.Drawing.Point(69, 223);
+            this.pictureBox2.Location = new System.Drawing.Point(9, 305);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 113;
             this.pictureBox2.TabStop = false;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(333, 190);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(165, 28);
-            this.richTextBox2.TabIndex = 112;
-            this.richTextBox2.Text = "";
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label1
             // 
@@ -145,7 +95,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(360, 162);
+            this.label1.Location = new System.Drawing.Point(348, 162);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(143, 35);
@@ -229,6 +179,13 @@
             this.Btnentire.Text = " ثبت";
             this.Btnentire.UseVisualStyleBackColor = false;
             // 
+            // ucOptionListpuzzle1
+            // 
+            this.ucOptionListpuzzle1.Location = new System.Drawing.Point(35, 193);
+            this.ucOptionListpuzzle1.Name = "ucOptionListpuzzle1";
+            this.ucOptionListpuzzle1.Size = new System.Drawing.Size(464, 152);
+            this.ucOptionListpuzzle1.TabIndex = 122;
+            // 
             // UCPuzzleAnswer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,7 +196,6 @@
             this.Name = "UCPuzzleAnswer";
             this.Size = new System.Drawing.Size(529, 401);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -249,10 +205,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.RichTextBox richTextBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.RichTextBox richTextBox2;
         internal System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RichTextBox richtxtpuzzel;
@@ -260,8 +213,7 @@
         internal System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Btnentire;
-        private System.Windows.Forms.RichTextBox richTextBox4;
-        private System.Windows.Forms.RichTextBox richTextBox5;
         internal System.Windows.Forms.Label label4;
+        private UserControls.UCOptionListpuzzle ucOptionListpuzzle1;
     }
 }

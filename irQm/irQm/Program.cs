@@ -16,7 +16,7 @@ namespace irQm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmInsertQuestion());
+            Application.Run(new Form1());
 
 
 

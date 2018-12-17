@@ -1,6 +1,6 @@
 ﻿namespace irQm.UserControls
 {
-    partial class UCOptionList
+    partial class UCOptionListPracical
     {
         /// <summary> 
         /// Required designer variable.
@@ -37,18 +37,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.fLPanel.AutoScroll = true;
             this.fLPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.fLPanel.Location = new System.Drawing.Point(0, 3);
+            this.fLPanel.Location = new System.Drawing.Point(18, 3);
             this.fLPanel.Name = "fLPanel";
-            this.fLPanel.Size = new System.Drawing.Size(482, 147);
-            this.fLPanel.TabIndex = 0;
+            this.fLPanel.Size = new System.Drawing.Size(414, 147);
+            this.fLPanel.TabIndex = 1;
             // 
-            // UCOptionList
+            // UCOptionListPracical
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.fLPanel);
-            this.Name = "UCOptionList";
-            this.Size = new System.Drawing.Size(482, 150);
+            this.Name = "UCOptionListPracical";
+            this.Size = new System.Drawing.Size(432, 132);
             this.ResumeLayout(false);
 
         }

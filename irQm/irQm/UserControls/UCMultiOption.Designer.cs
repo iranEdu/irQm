@@ -30,6 +30,7 @@
         {
             this.btnNew = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ucOptionList1 = new irQm.UserControls.UCOptionList();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.richtxtmultianswer = new System.Windows.Forms.RichTextBox();
             this.pbAdd = new System.Windows.Forms.PictureBox();
@@ -37,7 +38,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.BtnEntire = new System.Windows.Forms.Button();
             this.cbMulti = new System.Windows.Forms.CheckBox();
-            this.ucOptionList1 = new irQm.UserControls.UCOptionList();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
@@ -73,6 +73,17 @@
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panel1.Size = new System.Drawing.Size(522, 332);
             this.panel1.TabIndex = 116;
+            // 
+            // ucOptionList1
+            // 
+            this.ucOptionList1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucOptionList1.AutoScroll = true;
+            this.ucOptionList1.Location = new System.Drawing.Point(39, 166);
+            this.ucOptionList1.MultiSelect = false;
+            this.ucOptionList1.Name = "ucOptionList1";
+            this.ucOptionList1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ucOptionList1.Size = new System.Drawing.Size(477, 154);
+            this.ucOptionList1.TabIndex = 111;
             // 
             // pictureBox1
             // 
@@ -135,6 +146,7 @@
             this.label5.TabIndex = 72;
             this.label5.Text = "+ ثبت سوال چندگزینه‌ای";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // BtnEntire
             // 
@@ -163,16 +175,6 @@
             this.cbMulti.Text = "امکان انتخاب چند گزینه";
             this.cbMulti.UseVisualStyleBackColor = true;
             this.cbMulti.CheckedChanged += new System.EventHandler(this.cbMulti_CheckedChanged);
-            // 
-            // ucOptionList1
-            // 
-            this.ucOptionList1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucOptionList1.AutoScroll = true;
-            this.ucOptionList1.Location = new System.Drawing.Point(44, 166);
-            this.ucOptionList1.Name = "ucOptionList1";
-            this.ucOptionList1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ucOptionList1.Size = new System.Drawing.Size(477, 154);
-            this.ucOptionList1.TabIndex = 111;
             // 
             // UCMultiOption
             // 

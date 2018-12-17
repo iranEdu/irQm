@@ -30,16 +30,16 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.pbAdd = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.richtxtpractical = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Btnentire = new System.Windows.Forms.Button();
+            this.ucOptionListPracical1 = new irQm.UserControls.UCOptionListPracical();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +49,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.button1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 347);
+            this.button1.Location = new System.Drawing.Point(4, 359);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button1.Size = new System.Drawing.Size(85, 39);
@@ -61,8 +61,8 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.richTextBox2);
+            this.panel1.Controls.Add(this.ucOptionListPracical1);
+            this.panel1.Controls.Add(this.pbAdd);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.richtxtpractical);
@@ -71,26 +71,20 @@
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panel1.Size = new System.Drawing.Size(522, 325);
+            this.panel1.Size = new System.Drawing.Size(522, 350);
             this.panel1.TabIndex = 113;
             // 
-            // pictureBox2
+            // pbAdd
             // 
-            this.pictureBox2.Image = global::irQm.Properties.Resources.add;
-            this.pictureBox2.Location = new System.Drawing.Point(9, 193);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 113;
-            this.pictureBox2.TabStop = false;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(39, 193);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(459, 28);
-            this.richTextBox2.TabIndex = 112;
-            this.richTextBox2.Text = "";
+            this.pbAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbAdd.Image = global::irQm.Properties.Resources.addmark;
+            this.pbAdd.Location = new System.Drawing.Point(8, 307);
+            this.pbAdd.Name = "pbAdd";
+            this.pbAdd.Size = new System.Drawing.Size(25, 25);
+            this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAdd.TabIndex = 115;
+            this.pbAdd.TabStop = false;
+            this.pbAdd.Click += new System.EventHandler(this.pbAdd_Click);
             // 
             // label1
             // 
@@ -161,13 +155,20 @@
             this.Btnentire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.Btnentire.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Btnentire.ForeColor = System.Drawing.Color.White;
-            this.Btnentire.Location = new System.Drawing.Point(92, 347);
+            this.Btnentire.Location = new System.Drawing.Point(92, 359);
             this.Btnentire.Name = "Btnentire";
             this.Btnentire.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Btnentire.Size = new System.Drawing.Size(85, 39);
             this.Btnentire.TabIndex = 114;
             this.Btnentire.Text = " ثبت";
             this.Btnentire.UseVisualStyleBackColor = false;
+            // 
+            // ucOptionListPracical1
+            // 
+            this.ucOptionListPracical1.Location = new System.Drawing.Point(39, 190);
+            this.ucOptionListPracical1.Name = "ucOptionListPracical1";
+            this.ucOptionListPracical1.Size = new System.Drawing.Size(459, 132);
+            this.ucOptionListPracical1.TabIndex = 116;
             // 
             // UCPracticalAnswer
             // 
@@ -179,7 +180,7 @@
             this.Name = "UCPracticalAnswer";
             this.Size = new System.Drawing.Size(528, 401);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -189,13 +190,13 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.RichTextBox richTextBox2;
         internal System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RichTextBox richtxtpractical;
         internal System.Windows.Forms.Label label7;
         internal System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Btnentire;
+        private System.Windows.Forms.PictureBox pbAdd;
+        private UserControls.UCOptionListPracical ucOptionListPracical1;
     }
 }
