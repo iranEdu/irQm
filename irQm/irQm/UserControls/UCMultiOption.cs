@@ -43,5 +43,10 @@ namespace irQm
         {
 
         }
+
+        private void BtnEntire_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

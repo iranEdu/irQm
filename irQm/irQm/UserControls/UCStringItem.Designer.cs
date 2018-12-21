@@ -1,6 +1,6 @@
 ﻿namespace irQm.UserControls
 {
-    partial class UCOptionPractical
+    partial class UCStringItem
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,32 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCheckList = new System.Windows.Forms.RichTextBox();
-            this.pbEdit = new System.Windows.Forms.PictureBox();
+            this.txtCheckList = new System.Windows.Forms.TextBox();
             this.pbRemove = new System.Windows.Forms.PictureBox();
             this.lblNumber = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemove)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCheckList
             // 
-            this.txtCheckList.Location = new System.Drawing.Point(66, 6);
+            this.txtCheckList.Location = new System.Drawing.Point(36, 9);
             this.txtCheckList.Name = "txtCheckList";
-            this.txtCheckList.Size = new System.Drawing.Size(315, 24);
+            this.txtCheckList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtCheckList.Size = new System.Drawing.Size(315, 20);
             this.txtCheckList.TabIndex = 0;
-            this.txtCheckList.Text = "";
             this.txtCheckList.TextChanged += new System.EventHandler(this.txtCheckList_TextChanged);
-            // 
-            // pbEdit
-            // 
-            this.pbEdit.Image = global::irQm.Properties.Resources.edit;
-            this.pbEdit.Location = new System.Drawing.Point(38, 8);
-            this.pbEdit.Name = "pbEdit";
-            this.pbEdit.Size = new System.Drawing.Size(22, 21);
-            this.pbEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEdit.TabIndex = 125;
-            this.pbEdit.TabStop = false;
             // 
             // pbRemove
             // 
@@ -68,31 +56,32 @@
             // 
             // lblNumber
             // 
-            this.lblNumber.Location = new System.Drawing.Point(386, 7);
+            this.lblNumber.Location = new System.Drawing.Point(357, 9);
             this.lblNumber.Name = "lblNumber";
+            this.lblNumber.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblNumber.Size = new System.Drawing.Size(24, 23);
             this.lblNumber.TabIndex = 126;
+            this.lblNumber.Text = " ";
+            this.lblNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // UCOptionPractical
+            // UCPracticalItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblNumber);
-            this.Controls.Add(this.pbEdit);
             this.Controls.Add(this.pbRemove);
             this.Controls.Add(this.txtCheckList);
-            this.Name = "UCOptionPractical";
-            this.Size = new System.Drawing.Size(423, 37);
-            ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).EndInit();
+            this.Name = "UCPracticalItem";
+            this.Size = new System.Drawing.Size(395, 37);
             ((System.ComponentModel.ISupportInitialize)(this.pbRemove)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox txtCheckList;
-        private System.Windows.Forms.PictureBox pbEdit;
+        private System.Windows.Forms.TextBox txtCheckList;
         private System.Windows.Forms.PictureBox pbRemove;
         private System.Windows.Forms.Label lblNumber;
     }

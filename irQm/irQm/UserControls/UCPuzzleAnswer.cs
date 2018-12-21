@@ -14,7 +14,7 @@ namespace irQm
     public partial class UCPuzzleAnswer : UserControl
     {
         public Puzzle Question { get; set; }
-        List<Option> options;
+        List<StringPair> options;
         public UCPuzzleAnswer()
         {
             InitializeComponent();
@@ -24,7 +24,7 @@ namespace irQm
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            ucOptionListpuzzle1.AddOption(new BaseCodes.Option());
+            ucOptionListpuzzle1.AddPair(new StringPair());
         }
     }
 }

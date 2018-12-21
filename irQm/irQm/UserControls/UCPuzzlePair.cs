@@ -13,48 +13,48 @@ namespace irQm
 {
     public partial class UCPuzzleOption : UserControl
     {
-        public Option Option { get; }
-        public delegate void OptionEventHandler(UCPuzzleOption ucpuzzleoption);
-        public event OptionEventHandler OptionRemoved;
+        public StringPair Pair { get; private set; }
+        public delegate void StringPairEventHandler(UCPuzzleOption ucpuzzleoption);
+        public event StringPairEventHandler PairRemoved;
         byte _number = 1;
         public byte Number
         {
             get { return _number; }
             set
             {
-                _number = value; Option.number = value;
+                _number = value; Pair.Number = value;
                 lblNumber.Text = value.ToString();
             }
 
         
         
             }
-        public UCPuzzleOption(Option option)
+        public UCPuzzleOption(StringPair pair)
         {
-            this.Option = option;
+            this.Pair = pair;
             InitializeComponent();
-            Number = option.number;
+            Number = pair.Number;
         }
 
 
 
         private void pbRemove_Click(object sender, EventArgs e)
         {
-            if (Option.number > 1)
+            if (Pair.Number > 1)
             {
-                OptionRemoved?.Invoke(this);
+                PairRemoved?.Invoke(this);
                 this.Dispose();
             }
         }
 
         private void txtcolumn1_TextChanged(object sender, EventArgs e)
         {
-            Option.Face = txtcolumn1.Rtf;
+            Pair.Key= txtcolumn1.Text;
         }
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
-            Option.Face = txtcolumn1.Rtf;
+            Pair.Value = txtcolumn1.Text;
         }
     }
 }

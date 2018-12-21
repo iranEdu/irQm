@@ -30,11 +30,9 @@
         {
             this.pbRemove = new System.Windows.Forms.PictureBox();
             this.lblNumber = new System.Windows.Forms.Label();
-            this.txtcolumn1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.pbEdit = new System.Windows.Forms.PictureBox();
+            this.txtcolumn1 = new System.Windows.Forms.TextBox();
+            this.richTextBox2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemove)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // pbRemove
@@ -50,61 +48,57 @@
             // 
             // lblNumber
             // 
-            this.lblNumber.Location = new System.Drawing.Point(474, 2);
+            this.lblNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNumber.BackColor = System.Drawing.SystemColors.Control;
+            this.lblNumber.Location = new System.Drawing.Point(426, 1);
             this.lblNumber.Name = "lblNumber";
-            this.lblNumber.Size = new System.Drawing.Size(30, 23);
+            this.lblNumber.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblNumber.Size = new System.Drawing.Size(33, 23);
             this.lblNumber.TabIndex = 122;
+            this.lblNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtcolumn1
             // 
-            this.txtcolumn1.Location = new System.Drawing.Point(264, 0);
+            this.txtcolumn1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtcolumn1.Location = new System.Drawing.Point(216, 3);
             this.txtcolumn1.Name = "txtcolumn1";
-            this.txtcolumn1.Size = new System.Drawing.Size(204, 25);
+            this.txtcolumn1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtcolumn1.Size = new System.Drawing.Size(204, 20);
             this.txtcolumn1.TabIndex = 123;
-            this.txtcolumn1.Text = "";
             this.txtcolumn1.TextChanged += new System.EventHandler(this.txtcolumn1_TextChanged);
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(56, 0);
+            this.richTextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox2.Location = new System.Drawing.Point(29, 3);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(202, 25);
+            this.richTextBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.richTextBox2.Size = new System.Drawing.Size(181, 20);
             this.richTextBox2.TabIndex = 124;
-            this.richTextBox2.Text = "";
             this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
-            // 
-            // pbEdit
-            // 
-            this.pbEdit.Image = global::irQm.Properties.Resources.edit;
-            this.pbEdit.Location = new System.Drawing.Point(30, 2);
-            this.pbEdit.Name = "pbEdit";
-            this.pbEdit.Size = new System.Drawing.Size(22, 21);
-            this.pbEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbEdit.TabIndex = 125;
-            this.pbEdit.TabStop = false;
             // 
             // UCPuzzleOption
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pbEdit);
             this.Controls.Add(this.richTextBox2);
             this.Controls.Add(this.txtcolumn1);
             this.Controls.Add(this.lblNumber);
             this.Controls.Add(this.pbRemove);
             this.Name = "UCPuzzleOption";
-            this.Size = new System.Drawing.Size(512, 30);
+            this.Size = new System.Drawing.Size(476, 30);
             ((System.ComponentModel.ISupportInitialize)(this.pbRemove)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbEdit)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.PictureBox pbRemove;
         private System.Windows.Forms.Label lblNumber;
-        private System.Windows.Forms.RichTextBox txtcolumn1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.PictureBox pbEdit;
+        private System.Windows.Forms.TextBox txtcolumn1;
+        private System.Windows.Forms.TextBox richTextBox2;
     }
 }

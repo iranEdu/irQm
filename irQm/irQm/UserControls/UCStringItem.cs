@@ -11,40 +11,40 @@ using irQm.BaseCodes;
 
 namespace irQm.UserControls
 {
-    public partial class UCOptionPractical : UserControl
+    public partial class UCStringItem : UserControl
     {
-        public Option Option { get; }
-        public delegate void OptionEventHandler(UCOptionPractical  ucoptionpractical);
-        public event OptionEventHandler OptionRemoved;
+        public StringItem Item { get; }
+        public delegate void OptionEventHandler(UCStringItem ucStringItem);
+        public event OptionEventHandler ItemRemoved;
         byte _number = 1;
         public byte Number
         {
             get { return _number; }
             set
             {
-                _number = value; Option.number = value;
+                _number = value; Item.Number = value;
                 lblNumber.Text = value.ToString();
             }
         }
-        public UCOptionPractical(Option option)
+        public UCStringItem(StringItem item)
         {
-            this.Option = option;
+            this.Item = item;
             InitializeComponent();
-            Number = option.number;
+            Number = item.Number;
         }
 
         private void pbRemove_Click(object sender, EventArgs e)
         {
-            if (Option.number > 1)
+            if (Item.Number > 1)
             {
-                OptionRemoved?.Invoke(this);
+                ItemRemoved?.Invoke(this);
                 this.Dispose();
             }
         }
 
         private void txtCheckList_TextChanged(object sender, EventArgs e)
         {
-            Option.Face =txtCheckList.Rtf;
+            Item.Value =txtCheckList.Text;
         }
     }
 }

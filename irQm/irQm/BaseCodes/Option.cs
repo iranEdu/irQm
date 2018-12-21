@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 
 namespace irQm.BaseCodes
-{
+{[Serializable]
     public class Option : IOption
     {
         [MaxLength(50)]

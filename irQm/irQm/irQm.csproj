@@ -224,29 +224,29 @@
     <Compile Include="Migrations\irQmDbContextModelSnapshot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\UCOptionListPracical.cs">
+    <Compile Include="UserControls\UCStringItemList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UCOptionListPracical.Designer.cs">
-      <DependentUpon>UCOptionListPracical.cs</DependentUpon>
+    <Compile Include="UserControls\UCStringItemList.Designer.cs">
+      <DependentUpon>UCStringItemList.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UCOptionListpuzzle.cs">
+    <Compile Include="UserControls\UCPuzzlePairs.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UCOptionListpuzzle.Designer.cs">
-      <DependentUpon>UCOptionListpuzzle.cs</DependentUpon>
+    <Compile Include="UserControls\UCPuzzlePairs.Designer.cs">
+      <DependentUpon>UCPuzzlePairs.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UCOptionPractical.cs">
+    <Compile Include="UserControls\UCStringItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UCOptionPractical.Designer.cs">
-      <DependentUpon>UCOptionPractical.cs</DependentUpon>
+    <Compile Include="UserControls\UCStringItem.Designer.cs">
+      <DependentUpon>UCStringItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UCPuzzleOption.cs">
+    <Compile Include="UserControls\UCPuzzlePair.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UCPuzzleOption.Designer.cs">
-      <DependentUpon>UCPuzzleOption.cs</DependentUpon>
+    <Compile Include="UserControls\UCPuzzlePair.Designer.cs">
+      <DependentUpon>UCPuzzlePair.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCOption.cs">
       <SubType>UserControl</SubType>
@@ -307,6 +307,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmInsertQuestion.resx">
       <DependentUpon>FrmInsertQuestion.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmExamResult.resx">
       <DependentUpon>FrmExamResult.cs</DependentUpon>
@@ -324,11 +325,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControls\UCOptionListPracical.resx">
-      <DependentUpon>UCOptionListPracical.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UCStringItemList.resx">
+      <DependentUpon>UCStringItemList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UCOptionListpuzzle.resx">
-      <DependentUpon>UCOptionListpuzzle.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UCPuzzlePairs.resx">
+      <DependentUpon>UCPuzzlePairs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCOption.resx">
       <DependentUpon>UCOption.cs</DependentUpon>
@@ -336,8 +337,8 @@
     <EmbeddedResource Include="UserControls\UCOptionList.resx">
       <DependentUpon>UCOptionList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UCOptionPractical.resx">
-      <DependentUpon>UCOptionPractical.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UCStringItem.resx">
+      <DependentUpon>UCStringItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCPuzzleAnswer.resx">
       <DependentUpon>UCPuzzleAnswer.cs</DependentUpon>
@@ -345,8 +346,8 @@
     <EmbeddedResource Include="UserControls\UCMultiOption.resx">
       <DependentUpon>UCMultiOption.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UCPuzzleOption.resx">
-      <DependentUpon>UCPuzzleOption.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UCPuzzlePair.resx">
+      <DependentUpon>UCPuzzlePair.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCTrueFalseAnswer.resx">
       <DependentUpon>UCTrueFalseAnswer.cs</DependentUpon>

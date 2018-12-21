@@ -1,6 +1,6 @@
 ﻿namespace irQm.UserControls
 {
-    partial class UCOptionListpuzzle
+    partial class UCPuzzlePairs
     {
         /// <summary> 
         /// Required designer variable.

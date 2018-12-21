@@ -11,21 +11,21 @@ using irQm.BaseCodes;
 
 namespace irQm.UserControls
 {
-    public partial class UCOptionListPracical : UserControl
+    public partial class UCStringItemList : UserControl
     {
-        public List<Option> Options { get; private set; }
+        public List<StringItem> Items { get; private set; }
 
-        public UCOptionListPracical(List<Option> options)
+        public UCStringItemList(List<StringItem> options)
         {
             InitializeComponent();
             fLPanel.WrapContents = false;
-            this.Options = options;
+            this.Items = options;
             Make();
         }
 
-        public UCOptionListPracical()
+        public UCStringItemList()
         {
-            this.Options = new List<Option>() { new Option(), new Option(), new Option() };
+            this.Items = new List<StringItem>() { new StringItem(), new StringItem(), new StringItem() };
             InitializeComponent();
             fLPanel.WrapContents = false;
             Make();
@@ -34,18 +34,18 @@ namespace irQm.UserControls
         {
             //fLPanel.Controls.Clear();
             byte i = 1;
-            foreach (Option o in Options)
+            foreach ( StringItem o in Items)
             {
-                o.number = i++;
+                o.Number = i++;
 
-                var oc = new UCOptionPractical(o);
+                var oc = new UCStringItem(o);
                 //oc.CheckedChanged += OptionItem_CheckedChanged;
                 oc.Width = fLPanel.Width - 30;
                 //oc.Anchor = AnchorStyles.Right | AnchorStyles.Left;
 
 
 
-                oc.OptionRemoved += OptionRemoved;
+                oc.ItemRemoved += OptionRemoved;
 
                 fLPanel.Controls.Add(oc);
             }
@@ -53,20 +53,20 @@ namespace irQm.UserControls
 
 
         }
-        private void OptionRemoved(UCOptionPractical ucoptionpractical)
+        private void OptionRemoved(UCStringItem ucoptionpractical)
         {
-            Options.Remove(ucoptionpractical.Option);
+            Items.Remove(ucoptionpractical.Item);
             fLPanel.Controls.Remove(ucoptionpractical);
             RefreshNumbers();
         }
-        public void AddOption(Option option)
+        public void AddOption(StringItem option)
         {
-            option.number = Convert.ToByte(Options.Count + 1);
-            Options.Add(option);
-            var oc = new UCOptionPractical(option);
+            option.Number = Convert.ToByte(Items.Count + 1);
+            Items.Add(option);
+            var oc = new UCStringItem(option);
             oc.Width = fLPanel.Width - 30;
             oc.Anchor = AnchorStyles.Right | AnchorStyles.Left;
-            oc.OptionRemoved += OptionRemoved;
+            oc.ItemRemoved += OptionRemoved;
             fLPanel.Controls.Add(oc);
         }
 
@@ -75,7 +75,7 @@ namespace irQm.UserControls
             byte i = 1;
             foreach (Control c in fLPanel.Controls)
             {
-                ((UCOptionPractical)c).Number = i++;
+                ((UCStringItem)c).Number = i++;
 
             }
         }

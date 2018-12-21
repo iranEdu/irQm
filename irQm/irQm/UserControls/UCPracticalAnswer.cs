@@ -14,17 +14,17 @@ namespace irQm
     public partial class UCPracticalAnswer : UserControl
     {
         public Practical Question { get; set; }
-        List<Option> options;
+        List<StringItem> options;
         public UCPracticalAnswer()
         {
             InitializeComponent();
             Question = new Practical();
-            options = ucOptionListPracical1.Options;
+            options = ucPracticalItemList1.Items;
         }
 
         private void pbAdd_Click(object sender, EventArgs e)
         {
-            ucOptionListPracical1.AddOption(new BaseCodes.Option());
+            ucPracticalItemList1.AddOption(new BaseCodes.StringItem());
           
         }
 
