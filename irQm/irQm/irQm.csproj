@@ -217,6 +217,12 @@
     <Compile Include="Form\FrmQuestionsBank.Designer.cs">
       <DependentUpon>FrmQuestionsBank.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\FrmEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmEdit.Designer.cs">
+      <DependentUpon>FrmEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\13970915124639_initial.cs" />
     <Compile Include="Migrations\13970915124639_initial.designer.cs">
       <DependentUpon>13970915124639_initial.cs</DependentUpon>
@@ -298,6 +304,9 @@
     </Compile>
     <EmbeddedResource Include="Form\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmEdit.resx">
+      <DependentUpon>FrmEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
@@ -427,7 +436,69 @@
   <ItemGroup>
     <None Include="Resources\removemark.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\align right.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alighn left.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\justify.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\underline.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bold.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontcolor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right to left.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left to right.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pictures.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\symbol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equation.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subscript.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\superscript.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
