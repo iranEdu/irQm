@@ -49,17 +49,12 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.Picbook = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTxtEdit = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblRedo = new System.Windows.Forms.Label();
-            this.lblUndo = new System.Windows.Forms.Label();
-            this.lblSave = new System.Windows.Forms.Label();
             this.lblsuperscript = new System.Windows.Forms.Label();
             this.lblSubscript = new System.Windows.Forms.Label();
             this.lblPaste = new System.Windows.Forms.Label();
@@ -70,6 +65,8 @@
             this.lblPictures = new System.Windows.Forms.Label();
             this.lblRightToLeft = new System.Windows.Forms.Label();
             this.lblLeftToRight = new System.Windows.Forms.Label();
+            this.combofontsize = new System.Windows.Forms.ComboBox();
+            this.combofont = new System.Windows.Forms.ComboBox();
             this.lblFontColor = new System.Windows.Forms.Label();
             this.lblUnderline = new System.Windows.Forms.Label();
             this.lblItalic = new System.Windows.Forms.Label();
@@ -77,11 +74,16 @@
             this.lblJustify = new System.Windows.Forms.Label();
             this.lblAlignL = new System.Windows.Forms.Label();
             this.LblalignR = new System.Windows.Forms.Label();
-            this.Picbook = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblRedo = new System.Windows.Forms.Label();
+            this.lblUndo = new System.Windows.Forms.Label();
+            this.lblSave = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).BeginInit();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -293,6 +295,7 @@
             this.label21.TabIndex = 56;
             this.label21.Text = "خروج";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label18
             // 
@@ -350,6 +353,18 @@
             this.label3.Text = "آزمون یار معلم";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Picbook
+            // 
+            this.Picbook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Picbook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.Picbook.Image = global::irQm.Properties.Resources.bookpic;
+            this.Picbook.Location = new System.Drawing.Point(3, 4);
+            this.Picbook.Name = "Picbook";
+            this.Picbook.Size = new System.Drawing.Size(172, 69);
+            this.Picbook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Picbook.TabIndex = 8;
+            this.Picbook.TabStop = false;
+            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -381,14 +396,16 @@
             this.label4.TabIndex = 49;
             this.label4.Text = "ورود  >  صفحه اصلی  >  ثبت سوال  >  ویرایش";
             // 
-            // richTextBox1
+            // richTxtEdit
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 161);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(570, 249);
-            this.richTextBox1.TabIndex = 51;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.richTxtEdit.Location = new System.Drawing.Point(12, 161);
+            this.richTxtEdit.Name = "richTxtEdit";
+            this.richTxtEdit.Size = new System.Drawing.Size(570, 249);
+            this.richTxtEdit.TabIndex = 51;
+            this.richTxtEdit.Text = "";
+            this.richTxtEdit.SelectionChanged += new System.EventHandler(this.richTxtEdit_SelectionChanged);
+            this.richTxtEdit.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.richTxtEdit.MouseUp += new System.Windows.Forms.MouseEventHandler(this.richTxtEdit_MouseUp);
             // 
             // panel2
             // 
@@ -403,8 +420,8 @@
             this.panel2.Controls.Add(this.lblPictures);
             this.panel2.Controls.Add(this.lblRightToLeft);
             this.panel2.Controls.Add(this.lblLeftToRight);
-            this.panel2.Controls.Add(this.comboBox2);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.combofontsize);
+            this.panel2.Controls.Add(this.combofont);
             this.panel2.Controls.Add(this.lblFontColor);
             this.panel2.Controls.Add(this.lblUnderline);
             this.panel2.Controls.Add(this.lblItalic);
@@ -417,77 +434,6 @@
             this.panel2.Size = new System.Drawing.Size(570, 70);
             this.panel2.TabIndex = 52;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(155, 6);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(110, 21);
-            this.comboBox1.TabIndex = 53;
-            this.comboBox1.Text = "Font";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "14",
-            "16",
-            "18",
-            "20",
-            "22",
-            "24",
-            "26",
-            "28",
-            "36",
-            "48",
-            "72"});
-            this.comboBox2.Location = new System.Drawing.Point(267, 5);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(53, 21);
-            this.comboBox2.TabIndex = 54;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(12, 53);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(570, 30);
-            this.label5.TabIndex = 53;
-            // 
-            // lblRedo
-            // 
-            this.lblRedo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.lblRedo.Image = global::irQm.Properties.Resources.redo;
-            this.lblRedo.Location = new System.Drawing.Point(73, 55);
-            this.lblRedo.Name = "lblRedo";
-            this.lblRedo.Size = new System.Drawing.Size(26, 26);
-            this.lblRedo.TabIndex = 65;
-            // 
-            // lblUndo
-            // 
-            this.lblUndo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.lblUndo.Image = global::irQm.Properties.Resources.undo;
-            this.lblUndo.Location = new System.Drawing.Point(45, 55);
-            this.lblUndo.Name = "lblUndo";
-            this.lblUndo.Size = new System.Drawing.Size(26, 26);
-            this.lblUndo.TabIndex = 64;
-            // 
-            // lblSave
-            // 
-            this.lblSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.lblSave.Image = global::irQm.Properties.Resources.save1;
-            this.lblSave.Location = new System.Drawing.Point(15, 55);
-            this.lblSave.Name = "lblSave";
-            this.lblSave.Size = new System.Drawing.Size(26, 26);
-            this.lblSave.TabIndex = 63;
-            // 
             // lblsuperscript
             // 
             this.lblsuperscript.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -496,6 +442,7 @@
             this.lblsuperscript.Name = "lblsuperscript";
             this.lblsuperscript.Size = new System.Drawing.Size(26, 26);
             this.lblsuperscript.TabIndex = 64;
+            this.lblsuperscript.Click += new System.EventHandler(this.lblsuperscript_Click);
             // 
             // lblSubscript
             // 
@@ -505,6 +452,7 @@
             this.lblSubscript.Name = "lblSubscript";
             this.lblSubscript.Size = new System.Drawing.Size(26, 26);
             this.lblSubscript.TabIndex = 63;
+            this.lblSubscript.Click += new System.EventHandler(this.lblSubscript_Click);
             // 
             // lblPaste
             // 
@@ -514,6 +462,7 @@
             this.lblPaste.Name = "lblPaste";
             this.lblPaste.Size = new System.Drawing.Size(61, 58);
             this.lblPaste.TabIndex = 62;
+            this.lblPaste.Click += new System.EventHandler(this.lblPaste_Click);
             // 
             // lblCopy
             // 
@@ -523,6 +472,7 @@
             this.lblCopy.Name = "lblCopy";
             this.lblCopy.Size = new System.Drawing.Size(85, 28);
             this.lblCopy.TabIndex = 61;
+            this.lblCopy.Click += new System.EventHandler(this.lblCopy_Click);
             // 
             // lblCut
             // 
@@ -532,6 +482,7 @@
             this.lblCut.Name = "lblCut";
             this.lblCut.Size = new System.Drawing.Size(85, 28);
             this.lblCut.TabIndex = 60;
+            this.lblCut.Click += new System.EventHandler(this.lblCut_Click);
             // 
             // lblEquation
             // 
@@ -559,6 +510,7 @@
             this.lblPictures.Name = "lblPictures";
             this.lblPictures.Size = new System.Drawing.Size(61, 58);
             this.lblPictures.TabIndex = 57;
+            this.lblPictures.Click += new System.EventHandler(this.lblPictures_Click);
             // 
             // lblRightToLeft
             // 
@@ -578,6 +530,26 @@
             this.lblLeftToRight.Size = new System.Drawing.Size(26, 26);
             this.lblLeftToRight.TabIndex = 55;
             // 
+            // combofontsize
+            // 
+            this.combofontsize.FormattingEnabled = true;
+            this.combofontsize.Location = new System.Drawing.Point(267, 5);
+            this.combofontsize.Name = "combofontsize";
+            this.combofontsize.Size = new System.Drawing.Size(53, 21);
+            this.combofontsize.TabIndex = 54;
+            this.combofontsize.SelectedIndexChanged += new System.EventHandler(this.combofontsize_SelectedIndexChanged);
+            this.combofontsize.SelectedValueChanged += new System.EventHandler(this.combofontsize_SelectedValueChanged);
+            // 
+            // combofont
+            // 
+            this.combofont.FormattingEnabled = true;
+            this.combofont.Location = new System.Drawing.Point(155, 6);
+            this.combofont.Name = "combofont";
+            this.combofont.Size = new System.Drawing.Size(110, 21);
+            this.combofont.TabIndex = 53;
+            this.combofont.Text = "Font";
+            this.combofont.SelectedIndexChanged += new System.EventHandler(this.combofont_SelectedIndexChanged);
+            // 
             // lblFontColor
             // 
             this.lblFontColor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -586,6 +558,7 @@
             this.lblFontColor.Name = "lblFontColor";
             this.lblFontColor.Size = new System.Drawing.Size(26, 26);
             this.lblFontColor.TabIndex = 6;
+            this.lblFontColor.Click += new System.EventHandler(this.lblFontColor_Click);
             // 
             // lblUnderline
             // 
@@ -595,6 +568,7 @@
             this.lblUnderline.Name = "lblUnderline";
             this.lblUnderline.Size = new System.Drawing.Size(26, 26);
             this.lblUnderline.TabIndex = 5;
+            this.lblUnderline.Click += new System.EventHandler(this.lblUnderline_Click);
             // 
             // lblItalic
             // 
@@ -604,6 +578,7 @@
             this.lblItalic.Name = "lblItalic";
             this.lblItalic.Size = new System.Drawing.Size(26, 26);
             this.lblItalic.TabIndex = 4;
+            this.lblItalic.Click += new System.EventHandler(this.lblItalic_Click);
             // 
             // lblBold
             // 
@@ -623,6 +598,7 @@
             this.lblJustify.Name = "lblJustify";
             this.lblJustify.Size = new System.Drawing.Size(26, 26);
             this.lblJustify.TabIndex = 2;
+            this.lblJustify.Click += new System.EventHandler(this.lblJustify_Click);
             // 
             // lblAlignL
             // 
@@ -632,6 +608,7 @@
             this.lblAlignL.Name = "lblAlignL";
             this.lblAlignL.Size = new System.Drawing.Size(26, 26);
             this.lblAlignL.TabIndex = 1;
+            this.lblAlignL.Click += new System.EventHandler(this.lblAlignL_Click);
             // 
             // LblalignR
             // 
@@ -642,18 +619,47 @@
             this.LblalignR.Name = "LblalignR";
             this.LblalignR.Size = new System.Drawing.Size(26, 26);
             this.LblalignR.TabIndex = 0;
+            this.LblalignR.Click += new System.EventHandler(this.LblalignR_Click);
             // 
-            // Picbook
+            // label5
             // 
-            this.Picbook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Picbook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.Picbook.Image = global::irQm.Properties.Resources.bookpic;
-            this.Picbook.Location = new System.Drawing.Point(3, 4);
-            this.Picbook.Name = "Picbook";
-            this.Picbook.Size = new System.Drawing.Size(172, 69);
-            this.Picbook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Picbook.TabIndex = 8;
-            this.Picbook.TabStop = false;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(12, 53);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(570, 30);
+            this.label5.TabIndex = 53;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // lblRedo
+            // 
+            this.lblRedo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblRedo.Image = global::irQm.Properties.Resources.redo;
+            this.lblRedo.Location = new System.Drawing.Point(73, 55);
+            this.lblRedo.Name = "lblRedo";
+            this.lblRedo.Size = new System.Drawing.Size(26, 26);
+            this.lblRedo.TabIndex = 65;
+            this.lblRedo.Click += new System.EventHandler(this.lblRedo_Click);
+            // 
+            // lblUndo
+            // 
+            this.lblUndo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblUndo.Image = global::irQm.Properties.Resources.undo;
+            this.lblUndo.Location = new System.Drawing.Point(45, 55);
+            this.lblUndo.Name = "lblUndo";
+            this.lblUndo.Size = new System.Drawing.Size(26, 26);
+            this.lblUndo.TabIndex = 64;
+            this.lblUndo.Click += new System.EventHandler(this.lblUndo_Click);
+            // 
+            // lblSave
+            // 
+            this.lblSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblSave.Image = global::irQm.Properties.Resources.save1;
+            this.lblSave.Location = new System.Drawing.Point(15, 55);
+            this.lblSave.Name = "lblSave";
+            this.lblSave.Size = new System.Drawing.Size(26, 26);
+            this.lblSave.TabIndex = 63;
             // 
             // pictureBox1
             // 
@@ -666,6 +672,10 @@
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // FrmEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -676,15 +686,16 @@
             this.Controls.Add(this.lblSave);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.richTxtEdit);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
             this.Name = "FrmEdit";
             this.Text = "FrmEdit";
+            this.Load += new System.EventHandler(this.FrmEdit_Load);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).EndInit();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -718,7 +729,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTxtEdit;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label LblalignR;
         private System.Windows.Forms.Label lblAlignL;
@@ -729,8 +740,8 @@
         private System.Windows.Forms.Label lblFontColor;
         private System.Windows.Forms.Label lblRightToLeft;
         private System.Windows.Forms.Label lblLeftToRight;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox combofontsize;
+        private System.Windows.Forms.ComboBox combofont;
         private System.Windows.Forms.Label lblPictures;
         private System.Windows.Forms.Label lblSymbol;
         private System.Windows.Forms.Label lblEquation;
@@ -743,5 +754,7 @@
         private System.Windows.Forms.Label lblRedo;
         private System.Windows.Forms.Label lblsuperscript;
         private System.Windows.Forms.Label lblSubscript;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
