@@ -1,6 +1,6 @@
 ﻿namespace irQm.UserControls
 {
-    partial class UCOptionList
+    partial class UCPuzzlePairs
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,33 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.fLPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.fLPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
-            // fLPanel
+            // fLPanel2
             // 
-            this.fLPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.fLPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.fLPanel.AutoScroll = true;
-            this.fLPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.fLPanel.Location = new System.Drawing.Point(0, 3);
-            this.fLPanel.Name = "fLPanel";
-            this.fLPanel.Size = new System.Drawing.Size(482, 147);
-            this.fLPanel.TabIndex = 0;
+            this.fLPanel2.AutoScroll = true;
+            this.fLPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.fLPanel2.Location = new System.Drawing.Point(2, 2);
+            this.fLPanel2.Name = "fLPanel2";
+            this.fLPanel2.Size = new System.Drawing.Size(478, 164);
+            this.fLPanel2.TabIndex = 1;
             // 
-            // UCOptionList
+            // UCOptionListpuzzle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.fLPanel);
-            this.Name = "UCOptionList";
-            this.Size = new System.Drawing.Size(482, 150);
+            this.Controls.Add(this.fLPanel2);
+            this.Name = "UCOptionListpuzzle";
+            this.Size = new System.Drawing.Size(487, 169);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel fLPanel;
+        private System.Windows.Forms.FlowLayoutPanel fLPanel2;
     }
 }

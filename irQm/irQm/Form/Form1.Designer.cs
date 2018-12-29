@@ -156,6 +156,7 @@
             this.Picimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Picimg.TabIndex = 13;
             this.Picimg.TabStop = false;
+            this.Picimg.Click += new System.EventHandler(this.Picimg_Click);
             // 
             // Picexit
             // 
@@ -166,6 +167,7 @@
             this.Picexit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Picexit.TabIndex = 12;
             this.Picexit.TabStop = false;
+            this.Picexit.Click += new System.EventHandler(this.Picexit_Click);
             // 
             // pictureBox2
             // 

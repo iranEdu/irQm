@@ -211,11 +211,17 @@
     <Compile Include="Form\FrmExamResult.Designer.cs">
       <DependentUpon>FrmExamResult.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmQuestionsBank.cs">
+    <Compile Include="Form\FrmQuestionsBank.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmQuestionsBank.Designer.cs">
+    <Compile Include="Form\FrmQuestionsBank.Designer.cs">
       <DependentUpon>FrmQuestionsBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\FrmEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FrmEdit.Designer.cs">
+      <DependentUpon>FrmEdit.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\13970915124639_initial.cs" />
     <Compile Include="Migrations\13970915124639_initial.designer.cs">
@@ -224,6 +230,30 @@
     <Compile Include="Migrations\irQmDbContextModelSnapshot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\UCStringItemList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCStringItemList.Designer.cs">
+      <DependentUpon>UCStringItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCPuzzlePairs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCPuzzlePairs.Designer.cs">
+      <DependentUpon>UCPuzzlePairs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCStringItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCStringItem.Designer.cs">
+      <DependentUpon>UCStringItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCPuzzlePair.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCPuzzlePair.Designer.cs">
+      <DependentUpon>UCPuzzlePair.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCOption.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -275,6 +305,9 @@
     <EmbeddedResource Include="Form\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form\FrmEdit.resx">
+      <DependentUpon>FrmEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -283,11 +316,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmInsertQuestion.resx">
       <DependentUpon>FrmInsertQuestion.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\FrmExamResult.resx">
       <DependentUpon>FrmExamResult.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmQuestionsBank.resx">
+    <EmbeddedResource Include="Form\FrmQuestionsBank.resx">
       <DependentUpon>FrmQuestionsBank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -300,17 +334,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\UCStringItemList.resx">
+      <DependentUpon>UCStringItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCPuzzlePairs.resx">
+      <DependentUpon>UCPuzzlePairs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCOption.resx">
       <DependentUpon>UCOption.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCOptionList.resx">
       <DependentUpon>UCOptionList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCStringItem.resx">
+      <DependentUpon>UCStringItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCPuzzleAnswer.resx">
       <DependentUpon>UCPuzzleAnswer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCMultiOption.resx">
       <DependentUpon>UCMultiOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCPuzzlePair.resx">
+      <DependentUpon>UCPuzzlePair.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCTrueFalseAnswer.resx">
       <DependentUpon>UCTrueFalseAnswer.cs</DependentUpon>
@@ -390,7 +436,69 @@
   <ItemGroup>
     <None Include="Resources\removemark.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\align right.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alighn left.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\justify.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\underline.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\italic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bold.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fontcolor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right to left.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left to right.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pictures.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\symbol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\equation.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subscript.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\superscript.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -15,6 +15,7 @@ namespace irQm.BaseCodes
       public  string Key { get; set; }
         [Required]
         public string Value { get; set; }
+        public byte Number { get; set; }
 
         
     }

@@ -24,7 +24,7 @@ namespace irQm
 
         private void pbAdd_Click(object sender, EventArgs e)
         {
-            ucOptionList1.AddOption(new BaseCodes.Option());
+             ucOptionList1.AddOption(new BaseCodes.Option());
         }
 
         private void cbMulti_CheckedChanged(object sender, EventArgs e)
@@ -37,6 +37,16 @@ namespace irQm
             }
             ucOptionList1.MultiSelect = cbMulti.Checked;
            
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEntire_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
