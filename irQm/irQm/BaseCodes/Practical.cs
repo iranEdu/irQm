@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,7 +18,9 @@ namespace irQm.BaseCodes
         public float GainedScore { get; set ; }
         public ICollection<StringItem> CheckList { get; set; }
         public ICollection<TagInQuestion<Practical>> Tags { get; set; }
-     
+        public Image Image { get ; set; }
+        public DateTime RegisterTime { get; set; }
+        public DateTime EditTime { get; set; }
         public Lesson Lesson { get; set; }
         [Required]
         public string LessonName { get; set; }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace irQm
 {
-    public partial class FrmExamResult : Form
+    public partial class FrmExamResult : System.Windows.Forms.Form
     {
         public FrmExamResult()
         {

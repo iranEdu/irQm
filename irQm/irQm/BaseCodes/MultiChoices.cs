@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 using System.Linq;
 namespace irQm.BaseCodes
 {
@@ -10,6 +11,8 @@ namespace irQm.BaseCodes
         [MaxLength(50)]
         public string Id { get; private set; }
         public string Face { get; set; }
+        public Image Image { get; set; }
+
         [Required]
         public float Score { get; set; }
         public float GainedScore { get; set; }
@@ -21,7 +24,8 @@ namespace irQm.BaseCodes
         [Required]
         public string LessonName { get; set; }
         public Lesson Lesson { get; set; }
-
+        public DateTime RegisterTime { get; set; }
+        public DateTime EditTime { get; set; }
         public void Mix() { }
 
         public void Evaluate()

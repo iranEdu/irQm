@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            irQm.BaseCodes.MultiChoices multiChoices3 = new irQm.BaseCodes.MultiChoices();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInsertQuestion));
+            irQm.BaseCodes.MultiChoices multiChoices2 = new irQm.BaseCodes.MultiChoices();
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -58,19 +57,21 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnRegister = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.richtxtpractical = new System.Windows.Forms.RichTextBox();
             this.ucMultiOption1 = new irQm.UCMultiOption();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Picbook = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.richtxtpractical = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.btnRegister = new System.Windows.Forms.Button();
+            this.tagsBox1 = new irQm.TagsBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label30
@@ -393,6 +394,8 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.tagsBox1);
             this.panel1.Controls.Add(this.btnNew);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.btnRegister);
@@ -405,6 +408,85 @@
             this.panel1.Size = new System.Drawing.Size(564, 414);
             this.panel1.TabIndex = 111;
             // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.btnNew.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.Location = new System.Drawing.Point(34, 372);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnNew.Size = new System.Drawing.Size(85, 39);
+            this.btnNew.TabIndex = 117;
+            this.btnNew.Text = "+ جدید";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // label7
+            // 
+            this.label7.AllowDrop = true;
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.BackColor = System.Drawing.SystemColors.Control;
+            this.label7.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(515, 35);
+            this.label7.Name = "label7";
+            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label7.Size = new System.Drawing.Size(46, 25);
+            this.label7.TabIndex = 114;
+            this.label7.Text = "سوال:";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.btnRegister.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
+            this.btnRegister.Location = new System.Drawing.Point(122, 372);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnRegister.Size = new System.Drawing.Size(85, 39);
+            this.btnRegister.TabIndex = 116;
+            this.btnRegister.Text = " ثبت";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // label5
+            // 
+            this.label5.AllowDrop = true;
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.label5.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(3, 0);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label5.Size = new System.Drawing.Size(559, 35);
+            this.label5.TabIndex = 113;
+            this.label5.Text = "+ ثبت سوال چند گزینه‌ای";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::irQm.Properties.Resources.edit;
+            this.pictureBox2.Location = new System.Drawing.Point(71, 77);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 112;
+            this.pictureBox2.TabStop = false;
+            // 
+            // richtxtpractical
+            // 
+            this.richtxtpractical.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richtxtpractical.Location = new System.Drawing.Point(108, 63);
+            this.richtxtpractical.Name = "richtxtpractical";
+            this.richtxtpractical.Size = new System.Drawing.Size(459, 96);
+            this.richtxtpractical.TabIndex = 111;
+            this.richtxtpractical.Text = "";
+            // 
             // ucMultiOption1
             // 
             this.ucMultiOption1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -412,16 +494,16 @@
             this.ucMultiOption1.AutoScroll = true;
             this.ucMultiOption1.Location = new System.Drawing.Point(40, 191);
             this.ucMultiOption1.Name = "ucMultiOption1";
-            multiChoices3.CreatedBy = null;
-            multiChoices3.Face = null;
-            multiChoices3.GainedScore = 0F;
-            multiChoices3.Lesson = null;
-            multiChoices3.LessonName = null;
-            multiChoices3.MultiSelections = false;
-            multiChoices3.Options = ((System.Collections.Generic.List<irQm.BaseCodes.Option>)(resources.GetObject("multiChoices3.Options")));
-            multiChoices3.Score = 0F;
-            multiChoices3.Tags = null;
-            this.ucMultiOption1.Question = multiChoices3;
+            multiChoices2.CreatedBy = null;
+            multiChoices2.Face = null;
+            multiChoices2.GainedScore = 0F;
+            multiChoices2.Lesson = null;
+            multiChoices2.LessonName = null;
+            multiChoices2.MultiSelections = false;
+            multiChoices2.Options = null;
+            multiChoices2.Score = 0F;
+            multiChoices2.Tags = null;
+            this.ucMultiOption1.Question = multiChoices2;
             this.ucMultiOption1.Size = new System.Drawing.Size(521, 198);
             this.ucMultiOption1.TabIndex = 0;
             // 
@@ -448,84 +530,29 @@
             this.Picbook.TabIndex = 81;
             this.Picbook.TabStop = false;
             // 
-            // pictureBox2
+            // tagsBox1
             // 
-            this.pictureBox2.Image = global::irQm.Properties.Resources.edit;
-            this.pictureBox2.Location = new System.Drawing.Point(71, 77);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 112;
-            this.pictureBox2.TabStop = false;
-            // 
-            // richtxtpractical
-            // 
-            this.richtxtpractical.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tagsBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richtxtpractical.Location = new System.Drawing.Point(108, 63);
-            this.richtxtpractical.Name = "richtxtpractical";
-            this.richtxtpractical.Size = new System.Drawing.Size(459, 96);
-            this.richtxtpractical.TabIndex = 111;
-            this.richtxtpractical.Text = "";
+            this.tagsBox1.Location = new System.Drawing.Point(108, 165);
+            this.tagsBox1.Name = "tagsBox1";
+            this.tagsBox1.Size = new System.Drawing.Size(369, 20);
+            this.tagsBox1.TabIndex = 118;
             // 
-            // label5
+            // label6
             // 
-            this.label5.AllowDrop = true;
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label5.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(3, 0);
-            this.label5.Name = "label5";
-            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(559, 35);
-            this.label5.TabIndex = 113;
-            this.label5.Text = "+ ثبت سوال چند گزینه‌ای";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.AllowDrop = true;
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.BackColor = System.Drawing.SystemColors.Control;
-            this.label7.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(515, 35);
-            this.label7.Name = "label7";
-            this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label7.Size = new System.Drawing.Size(46, 25);
-            this.label7.TabIndex = 114;
-            this.label7.Text = "سوال:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.btnNew.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnNew.ForeColor = System.Drawing.Color.White;
-            this.btnNew.Location = new System.Drawing.Point(34, 372);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnNew.Size = new System.Drawing.Size(85, 39);
-            this.btnNew.TabIndex = 117;
-            this.btnNew.Text = "+ جدید";
-            this.btnNew.UseVisualStyleBackColor = false;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.btnRegister.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(122, 372);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnRegister.Size = new System.Drawing.Size(85, 39);
-            this.btnRegister.TabIndex = 116;
-            this.btnRegister.Text = " ثبت";
-            this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            this.label6.AllowDrop = true;
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.BackColor = System.Drawing.SystemColors.Control;
+            this.label6.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(483, 165);
+            this.label6.Name = "label6";
+            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label6.Size = new System.Drawing.Size(78, 25);
+            this.label6.TabIndex = 119;
+            this.label6.Text = "برچسب ها:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FrmInsertQuestion
             // 
@@ -565,9 +592,10 @@
             this.Name = "FrmInsertQuestion";
             this.Text = "FrmInsertQuestion";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -610,5 +638,7 @@
         internal System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnRegister;
+        internal System.Windows.Forms.Label label6;
+        private TagsBox tagsBox1;
     }
 }

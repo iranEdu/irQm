@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ namespace irQm.BaseCodes
         [MaxLength(50)]
         public string Id { get; set; }
         public string Face { get; set ; }
+        public Image Image { get; set; }
+
         [Required]
         public float Score { get; set; }
         
@@ -20,7 +23,8 @@ namespace irQm.BaseCodes
 
         public ICollection<TagInQuestion<ShortAnswer>> Tags { get; set; }
         public string UserAnswer { get; set; }
-
+        public DateTime RegisterTime { get; set; }
+        public DateTime EditTime { get; set; }
         public User CreatedBy { get; set; }
 
         public Lesson Lesson { get ; set ; }

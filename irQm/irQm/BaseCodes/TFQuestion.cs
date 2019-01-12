@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,9 @@ namespace irQm.BaseCodes
 
         public User CreatedBy { get; set; }
 
+        public DateTime RegisterTime { get; set; }
+        public DateTime EditTime { get; set; }
+
         public float Score { get; set; }
         public float GainedScore { get; set; }
         public ICollection<TagInQuestion<TFQuestion>> Tags { get; set; } 
@@ -25,6 +29,7 @@ namespace irQm.BaseCodes
         public TFOption FalseOption { get; set; }
         public Lesson Lesson { get; set; }
         public string LessonName { get; set; }
+        public Image Image { get ; set; }
 
         public void Evaluate()
         {

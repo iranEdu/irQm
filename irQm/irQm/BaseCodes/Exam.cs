@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
-   public class Exam
+    public class Exam
     {
         
+        public Exam()
+        {
+            RegisterTime = DateTime.UtcNow;
+        }
+
         public string ExamName { get ; set ; }
         public bool Shuffle { get;  set; }
        
@@ -37,6 +40,7 @@ namespace irQm.BaseCodes
         public User User { get; set; }
         public string Username { get; set; }
 
+        public DateTime RegisterTime { get; private set; }
         
 
         public DateTime StartTime { get; set; }
@@ -58,6 +62,9 @@ namespace irQm.BaseCodes
                 {
                     Random rnd = new Random();
                     list.ForEach(q => q.Row = rnd.Next(10 * list.Count()));
+                    list = list.OrderBy(itm => itm.Row).ToList();
+                    int i = 1;
+                    list.ForEach(q => q.Row = i++);
                 }
                 return list.OrderBy(q => q.Row).ToList();
             }
