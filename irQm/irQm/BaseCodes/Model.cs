@@ -14,8 +14,8 @@ namespace irQm.BaseCodes
         public DbSet<Practical> PracticalQuestions { get; set;}
         public DbSet<ShortAnswer> ShortAnswerQustions { get; set; }
         public DbSet<Exam> Exams { get; set; }
-       // public DbSet<Tag> Tags { get; set; }
-        public DbSet<Exam> Exams2 { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        //public DbSet<Exam> Exams2 { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
