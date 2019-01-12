@@ -16,10 +16,7 @@ namespace irQm
         public FrmEdit()
         {
             InitializeComponent();
-            for (var i = 1; i <58; i++)
-            {
-                combofontsize.Items.Add((double)i);
-            }
+           
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -142,12 +139,12 @@ namespace irQm
             {
                 Image img = Image.FromFile(openFileDialog1.FileName);
                 Clipboard.SetImage(img);
-                richTxtEdit.Paste();
-                richTxtEdit.Focus();
+                richTxtPic.Paste();
+                richTxtPic.Focus();
             }
             else
             {
-                richTxtEdit.Focus();
+                richTxtPic.Focus();
             }
 
         }
@@ -180,13 +177,7 @@ namespace irQm
 
         private void FrmEdit_Load(object sender, EventArgs e)
         {
-            InstalledFontCollection fonts = new InstalledFontCollection();
-            foreach (FontFamily family in fonts.Families)
-            {
-                combofont.Items.Add(family.Name);
-              
-            }
-            richTxtEdit.ShortcutsEnabled = true;
+            
         }
 
         private void combofont_DropDownStyleChanged(object sender, ToolStripItemClickedEventArgs e)
@@ -200,26 +191,12 @@ namespace irQm
 
         private void combofontsize_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                this.richTxtEdit.SelectionFont = new Font(this.richTxtEdit.SelectionFont.FontFamily,this.combofontsize.SelectedIndex, this.richTxtEdit.SelectionFont.Style);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Abnormal: " + ex, " error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
 
         private void combofont_SelectedIndexChanged(object sender, EventArgs e)
         {
-            try
-            {
-                this.richTxtEdit.SelectionFont = new Font(this.combofont.Text, this.richTxtEdit.SelectionFont.Size, this.richTxtEdit.SelectionFont.Style);
-            }
-            catch (Exception ex)//Capture and display the content of abnormal
-            {
-                MessageBox.Show("Abnormal: " + ex, " error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            
         }
 
         private void lblUndo_Click(object sender, EventArgs e)
