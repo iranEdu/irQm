@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace irQm
+namespace irQm.Forms
 {
-    public partial class FrmExam : Form
+    public partial class FrmExam : ExtendedForm
     {
         public FrmExam()
         {

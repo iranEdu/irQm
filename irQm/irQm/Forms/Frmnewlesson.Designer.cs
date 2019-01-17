@@ -1,4 +1,4 @@
-﻿namespace irQm
+﻿namespace irQm.Forms
 {
     partial class Frmnewlesson
     {
@@ -53,14 +53,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txtLessonname = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Picbook = new System.Windows.Forms.PictureBox();
-            this.Txtlessonid = new System.Windows.Forms.TextBox();
-            this.Txtlessonname = new System.Windows.Forms.TextBox();
-            this.Btnentire = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.lblResult = new System.Windows.Forms.Label();
+            this.txtDesc = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).BeginInit();
@@ -347,10 +348,12 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.Txtlessonname);
-            this.panel1.Controls.Add(this.Txtlessonid);
+            this.panel1.Controls.Add(this.lblResult);
+            this.panel1.Controls.Add(this.txtLessonname);
+            this.panel1.Controls.Add(this.txtDesc);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -360,20 +363,15 @@
             this.panel1.Size = new System.Drawing.Size(522, 196);
             this.panel1.TabIndex = 74;
             // 
-            // label6
+            // txtLessonname
             // 
-            this.label6.AllowDrop = true;
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.BackColor = System.Drawing.SystemColors.Control;
-            this.label6.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(421, 116);
-            this.label6.Name = "label6";
-            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label6.Size = new System.Drawing.Size(67, 35);
-            this.label6.TabIndex = 73;
-            this.label6.Text = "نام درس:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txtLessonname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLessonname.Location = new System.Drawing.Point(227, 42);
+            this.txtLessonname.MaxLength = 250;
+            this.txtLessonname.Name = "txtLessonname";
+            this.txtLessonname.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtLessonname.Size = new System.Drawing.Size(188, 20);
+            this.txtLessonname.TabIndex = 76;
             // 
             // label7
             // 
@@ -387,8 +385,23 @@
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label7.Size = new System.Drawing.Size(67, 35);
             this.label7.TabIndex = 74;
-            this.label7.Text = "کد درس:";
+            this.label7.Text = "توضیح:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.AllowDrop = true;
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.BackColor = System.Drawing.SystemColors.Control;
+            this.label6.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(421, 35);
+            this.label6.Name = "label6";
+            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label6.Size = new System.Drawing.Size(67, 35);
+            this.label6.TabIndex = 73;
+            this.label6.Text = "نام درس:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBox1
             // 
@@ -413,37 +426,20 @@
             this.Picbook.TabIndex = 49;
             this.Picbook.TabStop = false;
             // 
-            // Txtlessonid
+            // btnRegister
             // 
-            this.Txtlessonid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Txtlessonid.Location = new System.Drawing.Point(220, 69);
-            this.Txtlessonid.Name = "Txtlessonid";
-            this.Txtlessonid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Txtlessonid.Size = new System.Drawing.Size(188, 20);
-            this.Txtlessonid.TabIndex = 75;
-            // 
-            // Txtlessonname
-            // 
-            this.Txtlessonname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Txtlessonname.Location = new System.Drawing.Point(220, 123);
-            this.Txtlessonname.Name = "Txtlessonname";
-            this.Txtlessonname.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Txtlessonname.Size = new System.Drawing.Size(188, 20);
-            this.Txtlessonname.TabIndex = 76;
-            // 
-            // Btnentire
-            // 
-            this.Btnentire.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Btnentire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.Btnentire.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.Btnentire.ForeColor = System.Drawing.Color.White;
-            this.Btnentire.Location = new System.Drawing.Point(123, 291);
-            this.Btnentire.Name = "Btnentire";
-            this.Btnentire.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Btnentire.Size = new System.Drawing.Size(85, 39);
-            this.Btnentire.TabIndex = 77;
-            this.Btnentire.Text = " ثبت";
-            this.Btnentire.UseVisualStyleBackColor = false;
+            this.btnRegister.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.btnRegister.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
+            this.btnRegister.Location = new System.Drawing.Point(123, 291);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnRegister.Size = new System.Drawing.Size(85, 39);
+            this.btnRegister.TabIndex = 77;
+            this.btnRegister.Text = " ثبت";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // button1
             // 
@@ -459,12 +455,34 @@
             this.button1.Text = "+ جدید";
             this.button1.UseVisualStyleBackColor = false;
             // 
+            // lblResult
+            // 
+            this.lblResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblResult.ForeColor = System.Drawing.Color.Black;
+            this.lblResult.Location = new System.Drawing.Point(0, 147);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(521, 23);
+            this.lblResult.TabIndex = 77;
+            this.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtDesc
+            // 
+            this.txtDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDesc.Location = new System.Drawing.Point(43, 69);
+            this.txtDesc.MaxLength = 1000;
+            this.txtDesc.Multiline = true;
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtDesc.Size = new System.Drawing.Size(372, 61);
+            this.txtDesc.TabIndex = 75;
+            // 
             // Frmnewlesson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.Btnentire);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label30);
@@ -534,9 +552,10 @@
         private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.Label label7;
         internal System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox Txtlessonname;
-        private System.Windows.Forms.TextBox Txtlessonid;
-        private System.Windows.Forms.Button Btnentire;
+        private System.Windows.Forms.TextBox txtLessonname;
+        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.TextBox txtDesc;
     }
 }

@@ -76,6 +76,8 @@
             // 
             this.cbMulti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbMulti.AutoSize = true;
+            this.cbMulti.Checked = true;
+            this.cbMulti.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbMulti.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold);
             this.cbMulti.Location = new System.Drawing.Point(352, 167);
             this.cbMulti.Name = "cbMulti";

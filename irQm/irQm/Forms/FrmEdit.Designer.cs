@@ -1,4 +1,4 @@
-﻿namespace irQm
+﻿namespace irQm.Forms
 {
     partial class FrmEdit
     {

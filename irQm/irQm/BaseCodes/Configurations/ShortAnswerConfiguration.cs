@@ -8,7 +8,7 @@ namespace irQm.BaseCodes.Configurations
         public void Configure(EntityTypeBuilder<ShortAnswer> builder)
         {
             builder.HasOne(q => q.Lesson).WithMany(l => l.ShortAnswers).HasForeignKey(l => l.LessonName).OnDelete(DeleteBehavior.Cascade);
-            builder.HasOne(q => q.CreatedBy).WithMany().OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne(q => q.CreatorUser).WithMany(u => u.ShortAnswerQuestions).OnDelete(DeleteBehavior.Cascade).HasForeignKey(q => q.CreatorUserId);
 
         }
     }

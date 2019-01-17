@@ -11,9 +11,9 @@ namespace irQm.BaseCodes
     public class Puzzle : IQuestion,IEvaluable
     {
         [MaxLength(50)]
-        public string id { get; set; }
+        public string Id { get; set; }
         public string Face { get; set; }
-        public Image Image { get; set; }
+        public byte[] Image { get; set; }
 
         [Required]
         public float Score { get; set; }
@@ -27,7 +27,8 @@ namespace irQm.BaseCodes
         public List<StringItem> ExtraAnswers { get; set; }
         public List<StringPair> AnswerPairs { get; set; }
 
-        public User CreatedBy { get; set; }
+        public User CreatorUser { get; set; }
+        public string CreatorUserId { get; set; }
 
         public Lesson Lesson { get; set; }
         [Required]

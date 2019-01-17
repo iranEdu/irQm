@@ -21,9 +21,11 @@ namespace irQm.Migrations
                     b.Property<string>("Id")
                         .HasMaxLength(50);
 
-                    b.Property<string>("Username");
+                    b.Property<string>("UserId");
 
                     b.Property<string>("ExamName");
+
+                    b.Property<DateTime>("RegisterTime");
 
                     b.Property<bool>("Shuffle");
 
@@ -31,17 +33,18 @@ namespace irQm.Migrations
 
                     b.Property<TimeSpan>("Time");
 
-                    b.HasKey("Id", "Username");
+                    b.HasKey("Id", "UserId");
 
-                    b.HasIndex("Username");
+                    b.HasIndex("UserId");
 
-                    b.ToTable("Exam");
+                    b.ToTable("Exams");
                 });
 
             modelBuilder.Entity("irQm.BaseCodes.Lesson", b =>
                 {
                     b.Property<string>("LessonName")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(250);
 
                     b.Property<string>("Description");
 
@@ -58,20 +61,26 @@ namespace irQm.Migrations
 
                     b.Property<string>("Answer");
 
-                    b.Property<string>("CreatedByUserName");
+                    b.Property<string>("CreatorUserId");
+
+                    b.Property<DateTime>("EditTime");
 
                     b.Property<string>("Face");
 
                     b.Property<float>("GainedScore");
 
+                    b.Property<byte[]>("Image");
+
                     b.Property<string>("LessonName")
                         .IsRequired();
+
+                    b.Property<DateTime>("RegisterTime");
 
                     b.Property<float>("Score");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CreatedByUserName");
+                    b.HasIndex("CreatorUserId");
 
                     b.HasIndex("LessonName");
 
@@ -84,22 +93,28 @@ namespace irQm.Migrations
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50);
 
-                    b.Property<string>("CreatedByUserName");
+                    b.Property<string>("CreatorUserId");
+
+                    b.Property<DateTime>("EditTime");
 
                     b.Property<string>("Face");
 
                     b.Property<float>("GainedScore");
+
+                    b.Property<byte[]>("Image");
 
                     b.Property<string>("LessonName")
                         .IsRequired();
 
                     b.Property<bool>("MultiSelections");
 
+                    b.Property<DateTime>("RegisterTime");
+
                     b.Property<float>("Score");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CreatedByUserName");
+                    b.HasIndex("CreatorUserId");
 
                     b.HasIndex("LessonName");
 
@@ -136,20 +151,26 @@ namespace irQm.Migrations
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50);
 
-                    b.Property<string>("CreatedByUserName");
+                    b.Property<string>("CreatorUserId");
+
+                    b.Property<DateTime>("EditTime");
 
                     b.Property<string>("Face");
 
                     b.Property<float>("GainedScore");
 
+                    b.Property<byte[]>("Image");
+
                     b.Property<string>("LessonName")
                         .IsRequired();
+
+                    b.Property<DateTime>("RegisterTime");
 
                     b.Property<float>("Score");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CreatedByUserName");
+                    b.HasIndex("CreatorUserId");
 
                     b.HasIndex("LessonName");
 
@@ -158,24 +179,30 @@ namespace irQm.Migrations
 
             modelBuilder.Entity("irQm.BaseCodes.Puzzle", b =>
                 {
-                    b.Property<string>("id")
+                    b.Property<string>("Id")
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50);
 
-                    b.Property<string>("CreatedByUserName");
+                    b.Property<string>("CreatorUserId");
+
+                    b.Property<DateTime>("EditTime");
 
                     b.Property<string>("Face");
 
                     b.Property<float>("GainedScore");
 
+                    b.Property<byte[]>("Image");
+
                     b.Property<string>("LessonName")
                         .IsRequired();
 
+                    b.Property<DateTime>("RegisterTime");
+
                     b.Property<float>("Score");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
 
-                    b.HasIndex("CreatedByUserName");
+                    b.HasIndex("CreatorUserId");
 
                     b.HasIndex("LessonName");
 
@@ -190,7 +217,7 @@ namespace irQm.Migrations
 
                     b.Property<string>("ExamId");
 
-                    b.Property<string>("ExamUsername");
+                    b.Property<string>("ExamUserId");
 
                     b.Property<string>("QuestionId")
                         .IsRequired();
@@ -201,7 +228,7 @@ namespace irQm.Migrations
 
                     b.HasIndex("QuestionId");
 
-                    b.HasIndex("ExamId", "ExamUsername");
+                    b.HasIndex("ExamId", "ExamUserId");
 
                     b.ToTable("LongAnswerQuestionInList");
                 });
@@ -214,7 +241,7 @@ namespace irQm.Migrations
 
                     b.Property<string>("ExamId");
 
-                    b.Property<string>("ExamUsername");
+                    b.Property<string>("ExamUserId");
 
                     b.Property<string>("QuestionId")
                         .IsRequired();
@@ -225,7 +252,7 @@ namespace irQm.Migrations
 
                     b.HasIndex("QuestionId");
 
-                    b.HasIndex("ExamId", "ExamUsername");
+                    b.HasIndex("ExamId", "ExamUserId");
 
                     b.ToTable("MultiChoicesQuestionInList");
                 });
@@ -238,7 +265,7 @@ namespace irQm.Migrations
 
                     b.Property<string>("ExamId");
 
-                    b.Property<string>("ExamUsername");
+                    b.Property<string>("ExamUserId");
 
                     b.Property<string>("QuestionId")
                         .IsRequired();
@@ -249,7 +276,7 @@ namespace irQm.Migrations
 
                     b.HasIndex("QuestionId");
 
-                    b.HasIndex("ExamId", "ExamUsername");
+                    b.HasIndex("ExamId", "ExamUserId");
 
                     b.ToTable("PracticalQuestionInList");
                 });
@@ -262,18 +289,18 @@ namespace irQm.Migrations
 
                     b.Property<string>("ExamId");
 
-                    b.Property<string>("ExamUsername");
+                    b.Property<string>("ExamUserId");
 
-                    b.Property<string>("Questionid")
+                    b.Property<string>("QuestionId")
                         .IsRequired();
 
                     b.Property<int>("Row");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("Questionid");
+                    b.HasIndex("QuestionId");
 
-                    b.HasIndex("ExamId", "ExamUsername");
+                    b.HasIndex("ExamId", "ExamUserId");
 
                     b.ToTable("PuzzleQuestionInList");
                 });
@@ -286,7 +313,7 @@ namespace irQm.Migrations
 
                     b.Property<string>("ExamId");
 
-                    b.Property<string>("ExamUsername");
+                    b.Property<string>("ExamUserId");
 
                     b.Property<string>("QuestionId")
                         .IsRequired();
@@ -297,7 +324,7 @@ namespace irQm.Migrations
 
                     b.HasIndex("QuestionId");
 
-                    b.HasIndex("ExamId", "ExamUsername");
+                    b.HasIndex("ExamId", "ExamUserId");
 
                     b.ToTable("ShortAnswerQuestionInList");
                 });
@@ -310,7 +337,7 @@ namespace irQm.Migrations
 
                     b.Property<string>("ExamId");
 
-                    b.Property<string>("ExamUsername");
+                    b.Property<string>("ExamUserId");
 
                     b.Property<string>("QuestionId")
                         .IsRequired();
@@ -321,7 +348,7 @@ namespace irQm.Migrations
 
                     b.HasIndex("QuestionId");
 
-                    b.HasIndex("ExamId", "ExamUsername");
+                    b.HasIndex("ExamId", "ExamUserId");
 
                     b.ToTable("TFQuestionInList");
                 });
@@ -332,14 +359,20 @@ namespace irQm.Migrations
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50);
 
-                    b.Property<string>("CreatedByUserName");
+                    b.Property<string>("CreatorUserId");
+
+                    b.Property<DateTime>("EditTime");
 
                     b.Property<string>("Face");
 
                     b.Property<float>("GainedScore");
 
+                    b.Property<byte[]>("Image");
+
                     b.Property<string>("LessonName")
                         .IsRequired();
+
+                    b.Property<DateTime>("RegisterTime");
 
                     b.Property<float>("Score");
 
@@ -347,7 +380,7 @@ namespace irQm.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CreatedByUserName");
+                    b.HasIndex("CreatorUserId");
 
                     b.HasIndex("LessonName");
 
@@ -360,9 +393,11 @@ namespace irQm.Migrations
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50);
 
+                    b.Property<byte>("Number");
+
                     b.Property<string>("PracticalId");
 
-                    b.Property<string>("Puzzleid");
+                    b.Property<string>("PuzzleId");
 
                     b.Property<string>("ShortAnswerId");
 
@@ -373,7 +408,7 @@ namespace irQm.Migrations
 
                     b.HasIndex("PracticalId");
 
-                    b.HasIndex("Puzzleid");
+                    b.HasIndex("PuzzleId");
 
                     b.HasIndex("ShortAnswerId");
 
@@ -388,6 +423,8 @@ namespace irQm.Migrations
 
                     b.Property<string>("Key")
                         .IsRequired();
+
+                    b.Property<byte>("Number");
 
                     b.Property<string>("PuzzleAnswerPairs");
 
@@ -412,7 +449,7 @@ namespace irQm.Migrations
 
                     b.HasKey("Value");
 
-                    b.ToTable("Tag");
+                    b.ToTable("Tags");
                 });
 
             modelBuilder.Entity("irQm.BaseCodes.TagInQuestion<irQm.BaseCodes.LongAnswer>", b =>
@@ -515,7 +552,9 @@ namespace irQm.Migrations
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50);
 
-                    b.Property<string>("CreatedByUserName");
+                    b.Property<string>("CreatorUserId");
+
+                    b.Property<DateTime>("EditTime");
 
                     b.Property<string>("Face")
                         .IsRequired();
@@ -525,13 +564,17 @@ namespace irQm.Migrations
 
                     b.Property<float>("GainedScore");
 
+                    b.Property<byte[]>("Image");
+
                     b.Property<string>("LessonName");
+
+                    b.Property<DateTime>("RegisterTime");
 
                     b.Property<float>("Score");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CreatedByUserName");
+                    b.HasIndex("CreatorUserId");
 
                     b.HasIndex("FalseOptionId");
 
@@ -542,20 +585,27 @@ namespace irQm.Migrations
 
             modelBuilder.Entity("irQm.BaseCodes.User", b =>
                 {
-                    b.Property<string>("UserName")
+                    b.Property<string>("UserId")
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50);
+
+                    b.Property<string>("Email");
 
                     b.Property<string>("Family");
 
                     b.Property<string>("Name");
 
                     b.Property<string>("Password")
+                        .IsRequired()
                         .HasMaxLength(50);
 
                     b.Property<int>("Role");
 
-                    b.HasKey("UserName");
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
+                    b.HasKey("UserId");
 
                     b.ToTable("User");
                 });
@@ -564,15 +614,15 @@ namespace irQm.Migrations
                 {
                     b.HasOne("irQm.BaseCodes.User", "User")
                         .WithMany()
-                        .HasForeignKey("Username")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("irQm.BaseCodes.LongAnswer", b =>
                 {
-                    b.HasOne("irQm.BaseCodes.User", "CreatedBy")
-                        .WithMany()
-                        .HasForeignKey("CreatedByUserName")
+                    b.HasOne("irQm.BaseCodes.User", "CreatorUser")
+                        .WithMany("LongAnswerQuestions")
+                        .HasForeignKey("CreatorUserId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("irQm.BaseCodes.Lesson", "Lesson")
@@ -583,13 +633,13 @@ namespace irQm.Migrations
 
             modelBuilder.Entity("irQm.BaseCodes.MultiChoices", b =>
                 {
-                    b.HasOne("irQm.BaseCodes.User", "CreatedBy")
-                        .WithMany()
-                        .HasForeignKey("CreatedByUserName")
+                    b.HasOne("irQm.BaseCodes.User", "CreatorUser")
+                        .WithMany("MultiChoicesQuestions")
+                        .HasForeignKey("CreatorUserId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("irQm.BaseCodes.Lesson", "Lesson")
-                        .WithMany("Multichices")
+                        .WithMany("Multichoices")
                         .HasForeignKey("LessonName")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
@@ -604,9 +654,9 @@ namespace irQm.Migrations
 
             modelBuilder.Entity("irQm.BaseCodes.Practical", b =>
                 {
-                    b.HasOne("irQm.BaseCodes.User", "CreatedBy")
-                        .WithMany()
-                        .HasForeignKey("CreatedByUserName")
+                    b.HasOne("irQm.BaseCodes.User", "CreatorUser")
+                        .WithMany("PracticalQuestions")
+                        .HasForeignKey("CreatorUserId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("irQm.BaseCodes.Lesson", "Lesson")
@@ -617,9 +667,9 @@ namespace irQm.Migrations
 
             modelBuilder.Entity("irQm.BaseCodes.Puzzle", b =>
                 {
-                    b.HasOne("irQm.BaseCodes.User", "CreatedBy")
-                        .WithMany()
-                        .HasForeignKey("CreatedByUserName")
+                    b.HasOne("irQm.BaseCodes.User", "CreatorUser")
+                        .WithMany("PuzzleQuestions")
+                        .HasForeignKey("CreatorUserId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("irQm.BaseCodes.Lesson", "Lesson")
@@ -637,7 +687,7 @@ namespace irQm.Migrations
 
                     b.HasOne("irQm.BaseCodes.Exam")
                         .WithMany("LongAnswerQuestions")
-                        .HasForeignKey("ExamId", "ExamUsername")
+                        .HasForeignKey("ExamId", "ExamUserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -650,7 +700,7 @@ namespace irQm.Migrations
 
                     b.HasOne("irQm.BaseCodes.Exam")
                         .WithMany("MultiChoicesQuestions")
-                        .HasForeignKey("ExamId", "ExamUsername")
+                        .HasForeignKey("ExamId", "ExamUserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -663,7 +713,7 @@ namespace irQm.Migrations
 
                     b.HasOne("irQm.BaseCodes.Exam")
                         .WithMany("PracticalQuestions")
-                        .HasForeignKey("ExamId", "ExamUsername")
+                        .HasForeignKey("ExamId", "ExamUserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -671,12 +721,12 @@ namespace irQm.Migrations
                 {
                     b.HasOne("irQm.BaseCodes.Puzzle", "Question")
                         .WithMany()
-                        .HasForeignKey("Questionid")
+                        .HasForeignKey("QuestionId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("irQm.BaseCodes.Exam")
                         .WithMany("PuzzleQuestions")
-                        .HasForeignKey("ExamId", "ExamUsername")
+                        .HasForeignKey("ExamId", "ExamUserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -689,7 +739,7 @@ namespace irQm.Migrations
 
                     b.HasOne("irQm.BaseCodes.Exam")
                         .WithMany("ShortAnswerQuestions")
-                        .HasForeignKey("ExamId", "ExamUsername")
+                        .HasForeignKey("ExamId", "ExamUserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -702,15 +752,15 @@ namespace irQm.Migrations
 
                     b.HasOne("irQm.BaseCodes.Exam")
                         .WithMany("TFQuestions")
-                        .HasForeignKey("ExamId", "ExamUsername")
+                        .HasForeignKey("ExamId", "ExamUserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("irQm.BaseCodes.ShortAnswer", b =>
                 {
-                    b.HasOne("irQm.BaseCodes.User", "CreatedBy")
-                        .WithMany()
-                        .HasForeignKey("CreatedByUserName")
+                    b.HasOne("irQm.BaseCodes.User", "CreatorUser")
+                        .WithMany("ShortAnswerQuestions")
+                        .HasForeignKey("CreatorUserId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("irQm.BaseCodes.Lesson", "Lesson")
@@ -727,7 +777,7 @@ namespace irQm.Migrations
 
                     b.HasOne("irQm.BaseCodes.Puzzle")
                         .WithMany("ExtraAnswers")
-                        .HasForeignKey("Puzzleid")
+                        .HasForeignKey("PuzzleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("irQm.BaseCodes.ShortAnswer")
@@ -836,9 +886,9 @@ namespace irQm.Migrations
 
             modelBuilder.Entity("irQm.BaseCodes.TFQuestion", b =>
                 {
-                    b.HasOne("irQm.BaseCodes.User", "CreatedBy")
-                        .WithMany()
-                        .HasForeignKey("CreatedByUserName")
+                    b.HasOne("irQm.BaseCodes.User", "CreatorUser")
+                        .WithMany("TFQuestions")
+                        .HasForeignKey("CreatorUserId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("irQm.BaseCodes.TFOption", "FalseOption")

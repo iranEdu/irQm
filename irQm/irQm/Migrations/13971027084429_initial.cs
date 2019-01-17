@@ -11,7 +11,7 @@ namespace irQm.Migrations
                 name: "Lessons",
                 columns: table => new
                 {
-                    LessonName = table.Column<string>(nullable: false),
+                    LessonName = table.Column<string>(maxLength: 250, nullable: false),
                     Description = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -20,14 +20,14 @@ namespace irQm.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Tag",
+                name: "Tags",
                 columns: table => new
                 {
                     Value = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Tag", x => x.Value);
+                    table.PrimaryKey("PK_Tags", x => x.Value);
                 });
 
             migrationBuilder.CreateTable(
@@ -35,35 +35,38 @@ namespace irQm.Migrations
                 columns: table => new
                 {
                     UserName = table.Column<string>(maxLength: 50, nullable: false),
-                    Password = table.Column<string>(maxLength: 50, nullable: true),
+                    UserId = table.Column<string>(maxLength: 50, nullable: false),
+                    Password = table.Column<string>(maxLength: 50, nullable: false),
                     Name = table.Column<string>(nullable: true),
                     Family = table.Column<string>(nullable: true),
-                    Role = table.Column<int>(nullable: false)
+                    Role = table.Column<int>(nullable: false),
+                    Email = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_User", x => x.UserName);
+                    table.PrimaryKey("PK_User", x => x.UserId);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Exam",
+                name: "Exams",
                 columns: table => new
                 {
                     ExamName = table.Column<string>(nullable: true),
                     Shuffle = table.Column<bool>(nullable: false),
                     Id = table.Column<string>(maxLength: 50, nullable: false),
-                    Username = table.Column<string>(nullable: false),
+                    UserId = table.Column<string>(nullable: false),
+                    RegisterTime = table.Column<DateTime>(nullable: false),
                     StartTime = table.Column<DateTime>(nullable: false),
                     Time = table.Column<TimeSpan>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Exam", x => new { x.Id, x.Username });
+                    table.PrimaryKey("PK_Exams", x => new { x.Id, x.UserId });
                     table.ForeignKey(
-                        name: "FK_Exam_User_Username",
-                        column: x => x.Username,
+                        name: "FK_Exams_User_UserId",
+                        column: x => x.UserId,
                         principalTable: "User",
-                        principalColumn: "UserName",
+                        principalColumn: "UserId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -77,16 +80,19 @@ namespace irQm.Migrations
                     GainedScore = table.Column<float>(nullable: false),
                     Answer = table.Column<string>(nullable: true),
                     LessonName = table.Column<string>(nullable: false),
-                    CreatedByUserName = table.Column<string>(nullable: true)
+                    CreatorUserId = table.Column<string>(nullable: true),
+                    Image = table.Column<byte[]>(nullable: true),
+                    RegisterTime = table.Column<DateTime>(nullable: false),
+                    EditTime = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_LongAnswerQuestions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_LongAnswerQuestions_User_CreatedByUserName",
-                        column: x => x.CreatedByUserName,
+                        name: "FK_LongAnswerQuestions_User_CreatorUserId",
+                        column: x => x.CreatorUserId,
                         principalTable: "User",
-                        principalColumn: "UserName",
+                        principalColumn: "UserId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_LongAnswerQuestions_Lessons_LessonName",
@@ -102,20 +108,23 @@ namespace irQm.Migrations
                 {
                     Id = table.Column<string>(maxLength: 50, nullable: false),
                     Face = table.Column<string>(nullable: true),
+                    Image = table.Column<byte[]>(nullable: true),
                     Score = table.Column<float>(nullable: false),
                     GainedScore = table.Column<float>(nullable: false),
                     MultiSelections = table.Column<bool>(nullable: false),
-                    CreatedByUserName = table.Column<string>(nullable: true),
-                    LessonName = table.Column<string>(nullable: false)
+                    CreatorUserId = table.Column<string>(nullable: true),
+                    LessonName = table.Column<string>(nullable: false),
+                    RegisterTime = table.Column<DateTime>(nullable: false),
+                    EditTime = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_MultiChoicesQuestions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_MultiChoicesQuestions_User_CreatedByUserName",
-                        column: x => x.CreatedByUserName,
+                        name: "FK_MultiChoicesQuestions_User_CreatorUserId",
+                        column: x => x.CreatorUserId,
                         principalTable: "User",
-                        principalColumn: "UserName",
+                        principalColumn: "UserId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_MultiChoicesQuestions_Lessons_LessonName",
@@ -133,17 +142,20 @@ namespace irQm.Migrations
                     Face = table.Column<string>(nullable: true),
                     Score = table.Column<float>(nullable: false),
                     GainedScore = table.Column<float>(nullable: false),
+                    Image = table.Column<byte[]>(nullable: true),
+                    RegisterTime = table.Column<DateTime>(nullable: false),
+                    EditTime = table.Column<DateTime>(nullable: false),
                     LessonName = table.Column<string>(nullable: false),
-                    CreatedByUserName = table.Column<string>(nullable: true)
+                    CreatorUserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PracticalQuestions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PracticalQuestions_User_CreatedByUserName",
-                        column: x => x.CreatedByUserName,
+                        name: "FK_PracticalQuestions_User_CreatorUserId",
+                        column: x => x.CreatorUserId,
                         principalTable: "User",
-                        principalColumn: "UserName",
+                        principalColumn: "UserId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_PracticalQuestions_Lessons_LessonName",
@@ -157,21 +169,24 @@ namespace irQm.Migrations
                 name: "PuzzleQuestions",
                 columns: table => new
                 {
-                    id = table.Column<string>(maxLength: 50, nullable: false),
+                    Id = table.Column<string>(maxLength: 50, nullable: false),
                     Face = table.Column<string>(nullable: true),
+                    Image = table.Column<byte[]>(nullable: true),
                     Score = table.Column<float>(nullable: false),
+                    RegisterTime = table.Column<DateTime>(nullable: false),
+                    EditTime = table.Column<DateTime>(nullable: false),
                     GainedScore = table.Column<float>(nullable: false),
-                    CreatedByUserName = table.Column<string>(nullable: true),
+                    CreatorUserId = table.Column<string>(nullable: true),
                     LessonName = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PuzzleQuestions", x => x.id);
+                    table.PrimaryKey("PK_PuzzleQuestions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PuzzleQuestions_User_CreatedByUserName",
-                        column: x => x.CreatedByUserName,
+                        name: "FK_PuzzleQuestions_User_CreatorUserId",
+                        column: x => x.CreatorUserId,
                         principalTable: "User",
-                        principalColumn: "UserName",
+                        principalColumn: "UserId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_PuzzleQuestions_Lessons_LessonName",
@@ -187,20 +202,23 @@ namespace irQm.Migrations
                 {
                     Id = table.Column<string>(maxLength: 50, nullable: false),
                     Face = table.Column<string>(nullable: true),
+                    Image = table.Column<byte[]>(nullable: true),
                     Score = table.Column<float>(nullable: false),
                     GainedScore = table.Column<float>(nullable: false),
                     UserAnswer = table.Column<string>(nullable: true),
-                    CreatedByUserName = table.Column<string>(nullable: true),
+                    RegisterTime = table.Column<DateTime>(nullable: false),
+                    EditTime = table.Column<DateTime>(nullable: false),
+                    CreatorUserId = table.Column<string>(nullable: true),
                     LessonName = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ShortAnswerQustions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ShortAnswerQustions_User_CreatedByUserName",
-                        column: x => x.CreatedByUserName,
+                        name: "FK_ShortAnswerQustions_User_CreatorUserId",
+                        column: x => x.CreatorUserId,
                         principalTable: "User",
-                        principalColumn: "UserName",
+                        principalColumn: "UserId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ShortAnswerQustions_Lessons_LessonName",
@@ -218,7 +236,7 @@ namespace irQm.Migrations
                     Row = table.Column<int>(nullable: false),
                     QuestionId = table.Column<string>(nullable: false),
                     ExamId = table.Column<string>(nullable: true),
-                    ExamUsername = table.Column<string>(nullable: true)
+                    ExamUserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -230,10 +248,10 @@ namespace irQm.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_LongAnswerQuestionInList_Exam_ExamId_ExamUsername",
-                        columns: x => new { x.ExamId, x.ExamUsername },
-                        principalTable: "Exam",
-                        principalColumns: new[] { "Id", "Username" },
+                        name: "FK_LongAnswerQuestionInList_Exams_ExamId_ExamUserId",
+                        columns: x => new { x.ExamId, x.ExamUserId },
+                        principalTable: "Exams",
+                        principalColumns: new[] { "Id", "UserId" },
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -254,9 +272,9 @@ namespace irQm.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_TagInLongAnswer_Tag_TagId",
+                        name: "FK_TagInLongAnswer_Tags_TagId",
                         column: x => x.TagId,
-                        principalTable: "Tag",
+                        principalTable: "Tags",
                         principalColumn: "Value",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -269,7 +287,7 @@ namespace irQm.Migrations
                     Row = table.Column<int>(nullable: false),
                     QuestionId = table.Column<string>(nullable: false),
                     ExamId = table.Column<string>(nullable: true),
-                    ExamUsername = table.Column<string>(nullable: true)
+                    ExamUserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -281,10 +299,10 @@ namespace irQm.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MultiChoicesQuestionInList_Exam_ExamId_ExamUsername",
-                        columns: x => new { x.ExamId, x.ExamUsername },
-                        principalTable: "Exam",
-                        principalColumns: new[] { "Id", "Username" },
+                        name: "FK_MultiChoicesQuestionInList_Exams_ExamId_ExamUserId",
+                        columns: x => new { x.ExamId, x.ExamUserId },
+                        principalTable: "Exams",
+                        principalColumns: new[] { "Id", "UserId" },
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -327,9 +345,9 @@ namespace irQm.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_TagInMultichoices_Tag_TagId",
+                        name: "FK_TagInMultichoices_Tags_TagId",
                         column: x => x.TagId,
-                        principalTable: "Tag",
+                        principalTable: "Tags",
                         principalColumn: "Value",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -342,7 +360,7 @@ namespace irQm.Migrations
                     Row = table.Column<int>(nullable: false),
                     QuestionId = table.Column<string>(nullable: false),
                     ExamId = table.Column<string>(nullable: true),
-                    ExamUsername = table.Column<string>(nullable: true)
+                    ExamUserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -354,10 +372,10 @@ namespace irQm.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_PracticalQuestionInList_Exam_ExamId_ExamUsername",
-                        columns: x => new { x.ExamId, x.ExamUsername },
-                        principalTable: "Exam",
-                        principalColumns: new[] { "Id", "Username" },
+                        name: "FK_PracticalQuestionInList_Exams_ExamId_ExamUserId",
+                        columns: x => new { x.ExamId, x.ExamUserId },
+                        principalTable: "Exams",
+                        principalColumns: new[] { "Id", "UserId" },
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -378,9 +396,9 @@ namespace irQm.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_TagInPractical_Tag_TagId",
+                        name: "FK_TagInPractical_Tags_TagId",
                         column: x => x.TagId,
-                        principalTable: "Tag",
+                        principalTable: "Tags",
                         principalColumn: "Value",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -391,24 +409,24 @@ namespace irQm.Migrations
                 {
                     Id = table.Column<string>(maxLength: 50, nullable: false),
                     Row = table.Column<int>(nullable: false),
-                    Questionid = table.Column<string>(nullable: false),
+                    QuestionId = table.Column<string>(nullable: false),
                     ExamId = table.Column<string>(nullable: true),
-                    ExamUsername = table.Column<string>(nullable: true)
+                    ExamUserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PuzzleQuestionInList", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_PuzzleQuestionInList_PuzzleQuestions_Questionid",
-                        column: x => x.Questionid,
+                        name: "FK_PuzzleQuestionInList_PuzzleQuestions_QuestionId",
+                        column: x => x.QuestionId,
                         principalTable: "PuzzleQuestions",
-                        principalColumn: "id",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_PuzzleQuestionInList_Exam_ExamId_ExamUsername",
-                        columns: x => new { x.ExamId, x.ExamUsername },
-                        principalTable: "Exam",
-                        principalColumns: new[] { "Id", "Username" },
+                        name: "FK_PuzzleQuestionInList_Exams_ExamId_ExamUserId",
+                        columns: x => new { x.ExamId, x.ExamUserId },
+                        principalTable: "Exams",
+                        principalColumns: new[] { "Id", "UserId" },
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -419,6 +437,7 @@ namespace irQm.Migrations
                     Id = table.Column<string>(maxLength: 50, nullable: false),
                     Key = table.Column<string>(nullable: false),
                     Value = table.Column<string>(nullable: false),
+                    Number = table.Column<byte>(nullable: false),
                     PuzzleAnswerPairs = table.Column<string>(nullable: true),
                     PuzzlePairs = table.Column<string>(nullable: true)
                 },
@@ -429,13 +448,13 @@ namespace irQm.Migrations
                         name: "FK_StringPair_PuzzleQuestions_PuzzleAnswerPairs",
                         column: x => x.PuzzleAnswerPairs,
                         principalTable: "PuzzleQuestions",
-                        principalColumn: "id",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_StringPair_PuzzleQuestions_PuzzlePairs",
                         column: x => x.PuzzlePairs,
                         principalTable: "PuzzleQuestions",
-                        principalColumn: "id",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -453,12 +472,12 @@ namespace irQm.Migrations
                         name: "FK_TagInPuzzle_PuzzleQuestions_QuestionId",
                         column: x => x.QuestionId,
                         principalTable: "PuzzleQuestions",
-                        principalColumn: "id",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_TagInPuzzle_Tag_TagId",
+                        name: "FK_TagInPuzzle_Tags_TagId",
                         column: x => x.TagId,
-                        principalTable: "Tag",
+                        principalTable: "Tags",
                         principalColumn: "Value",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -471,7 +490,7 @@ namespace irQm.Migrations
                     Row = table.Column<int>(nullable: false),
                     QuestionId = table.Column<string>(nullable: false),
                     ExamId = table.Column<string>(nullable: true),
-                    ExamUsername = table.Column<string>(nullable: true)
+                    ExamUserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -483,10 +502,10 @@ namespace irQm.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_ShortAnswerQuestionInList_Exam_ExamId_ExamUsername",
-                        columns: x => new { x.ExamId, x.ExamUsername },
-                        principalTable: "Exam",
-                        principalColumns: new[] { "Id", "Username" },
+                        name: "FK_ShortAnswerQuestionInList_Exams_ExamId_ExamUserId",
+                        columns: x => new { x.ExamId, x.ExamUserId },
+                        principalTable: "Exams",
+                        principalColumns: new[] { "Id", "UserId" },
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -496,8 +515,9 @@ namespace irQm.Migrations
                 {
                     Id = table.Column<string>(maxLength: 50, nullable: false),
                     Value = table.Column<string>(nullable: false),
+                    Number = table.Column<byte>(nullable: false),
                     PracticalId = table.Column<string>(nullable: true),
-                    Puzzleid = table.Column<string>(nullable: true),
+                    PuzzleId = table.Column<string>(nullable: true),
                     ShortAnswerId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -510,10 +530,10 @@ namespace irQm.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_StringItem_PuzzleQuestions_Puzzleid",
-                        column: x => x.Puzzleid,
+                        name: "FK_StringItem_PuzzleQuestions_PuzzleId",
+                        column: x => x.PuzzleId,
                         principalTable: "PuzzleQuestions",
-                        principalColumn: "id",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_StringItem_ShortAnswerQustions_ShortAnswerId",
@@ -540,9 +560,9 @@ namespace irQm.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_TagInShortAnswer_Tag_TagId",
+                        name: "FK_TagInShortAnswer_Tags_TagId",
                         column: x => x.TagId,
-                        principalTable: "Tag",
+                        principalTable: "Tags",
                         principalColumn: "Value",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -555,16 +575,16 @@ namespace irQm.Migrations
                     Row = table.Column<int>(nullable: false),
                     QuestionId = table.Column<string>(nullable: false),
                     ExamId = table.Column<string>(nullable: true),
-                    ExamUsername = table.Column<string>(nullable: true)
+                    ExamUserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TFQuestionInList", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TFQuestionInList_Exam_ExamId_ExamUsername",
-                        columns: x => new { x.ExamId, x.ExamUsername },
-                        principalTable: "Exam",
-                        principalColumns: new[] { "Id", "Username" },
+                        name: "FK_TFQuestionInList_Exams_ExamId_ExamUserId",
+                        columns: x => new { x.ExamId, x.ExamUserId },
+                        principalTable: "Exams",
+                        principalColumns: new[] { "Id", "UserId" },
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -574,20 +594,23 @@ namespace irQm.Migrations
                 {
                     Id = table.Column<string>(maxLength: 50, nullable: false),
                     Face = table.Column<string>(nullable: false),
-                    CreatedByUserName = table.Column<string>(nullable: true),
+                    CreatorUserId = table.Column<string>(nullable: true),
+                    RegisterTime = table.Column<DateTime>(nullable: false),
+                    EditTime = table.Column<DateTime>(nullable: false),
                     Score = table.Column<float>(nullable: false),
                     GainedScore = table.Column<float>(nullable: false),
                     FalseOptionId = table.Column<string>(nullable: false),
-                    LessonName = table.Column<string>(nullable: true)
+                    LessonName = table.Column<string>(nullable: true),
+                    Image = table.Column<byte[]>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_TFQuestions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TFQuestions_User_CreatedByUserName",
-                        column: x => x.CreatedByUserName,
+                        name: "FK_TFQuestions_User_CreatorUserId",
+                        column: x => x.CreatorUserId,
                         principalTable: "User",
-                        principalColumn: "UserName",
+                        principalColumn: "UserId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_TFQuestions_Lessons_LessonName",
@@ -614,9 +637,9 @@ namespace irQm.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_TagInTfQuestion_Tag_TagId",
+                        name: "FK_TagInTfQuestion_Tags_TagId",
                         column: x => x.TagId,
-                        principalTable: "Tag",
+                        principalTable: "Tags",
                         principalColumn: "Value",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -642,9 +665,9 @@ namespace irQm.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Exam_Username",
-                table: "Exam",
-                column: "Username");
+                name: "IX_Exams_UserId",
+                table: "Exams",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_LongAnswerQuestionInList_QuestionId",
@@ -652,14 +675,14 @@ namespace irQm.Migrations
                 column: "QuestionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_LongAnswerQuestionInList_ExamId_ExamUsername",
+                name: "IX_LongAnswerQuestionInList_ExamId_ExamUserId",
                 table: "LongAnswerQuestionInList",
-                columns: new[] { "ExamId", "ExamUsername" });
+                columns: new[] { "ExamId", "ExamUserId" });
 
             migrationBuilder.CreateIndex(
-                name: "IX_LongAnswerQuestions_CreatedByUserName",
+                name: "IX_LongAnswerQuestions_CreatorUserId",
                 table: "LongAnswerQuestions",
-                column: "CreatedByUserName");
+                column: "CreatorUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_LongAnswerQuestions_LessonName",
@@ -672,14 +695,14 @@ namespace irQm.Migrations
                 column: "QuestionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MultiChoicesQuestionInList_ExamId_ExamUsername",
+                name: "IX_MultiChoicesQuestionInList_ExamId_ExamUserId",
                 table: "MultiChoicesQuestionInList",
-                columns: new[] { "ExamId", "ExamUsername" });
+                columns: new[] { "ExamId", "ExamUserId" });
 
             migrationBuilder.CreateIndex(
-                name: "IX_MultiChoicesQuestions_CreatedByUserName",
+                name: "IX_MultiChoicesQuestions_CreatorUserId",
                 table: "MultiChoicesQuestions",
-                column: "CreatedByUserName");
+                column: "CreatorUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_MultiChoicesQuestions_LessonName",
@@ -697,14 +720,14 @@ namespace irQm.Migrations
                 column: "QuestionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PracticalQuestionInList_ExamId_ExamUsername",
+                name: "IX_PracticalQuestionInList_ExamId_ExamUserId",
                 table: "PracticalQuestionInList",
-                columns: new[] { "ExamId", "ExamUsername" });
+                columns: new[] { "ExamId", "ExamUserId" });
 
             migrationBuilder.CreateIndex(
-                name: "IX_PracticalQuestions_CreatedByUserName",
+                name: "IX_PracticalQuestions_CreatorUserId",
                 table: "PracticalQuestions",
-                column: "CreatedByUserName");
+                column: "CreatorUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PracticalQuestions_LessonName",
@@ -712,19 +735,19 @@ namespace irQm.Migrations
                 column: "LessonName");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PuzzleQuestionInList_Questionid",
+                name: "IX_PuzzleQuestionInList_QuestionId",
                 table: "PuzzleQuestionInList",
-                column: "Questionid");
+                column: "QuestionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_PuzzleQuestionInList_ExamId_ExamUsername",
+                name: "IX_PuzzleQuestionInList_ExamId_ExamUserId",
                 table: "PuzzleQuestionInList",
-                columns: new[] { "ExamId", "ExamUsername" });
+                columns: new[] { "ExamId", "ExamUserId" });
 
             migrationBuilder.CreateIndex(
-                name: "IX_PuzzleQuestions_CreatedByUserName",
+                name: "IX_PuzzleQuestions_CreatorUserId",
                 table: "PuzzleQuestions",
-                column: "CreatedByUserName");
+                column: "CreatorUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PuzzleQuestions_LessonName",
@@ -737,14 +760,14 @@ namespace irQm.Migrations
                 column: "QuestionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ShortAnswerQuestionInList_ExamId_ExamUsername",
+                name: "IX_ShortAnswerQuestionInList_ExamId_ExamUserId",
                 table: "ShortAnswerQuestionInList",
-                columns: new[] { "ExamId", "ExamUsername" });
+                columns: new[] { "ExamId", "ExamUserId" });
 
             migrationBuilder.CreateIndex(
-                name: "IX_ShortAnswerQustions_CreatedByUserName",
+                name: "IX_ShortAnswerQustions_CreatorUserId",
                 table: "ShortAnswerQustions",
-                column: "CreatedByUserName");
+                column: "CreatorUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ShortAnswerQustions_LessonName",
@@ -757,9 +780,9 @@ namespace irQm.Migrations
                 column: "PracticalId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_StringItem_Puzzleid",
+                name: "IX_StringItem_PuzzleId",
                 table: "StringItem",
-                column: "Puzzleid");
+                column: "PuzzleId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_StringItem_ShortAnswerId",
@@ -812,14 +835,14 @@ namespace irQm.Migrations
                 column: "QuestionId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_TFQuestionInList_ExamId_ExamUsername",
+                name: "IX_TFQuestionInList_ExamId_ExamUserId",
                 table: "TFQuestionInList",
-                columns: new[] { "ExamId", "ExamUsername" });
+                columns: new[] { "ExamId", "ExamUserId" });
 
             migrationBuilder.CreateIndex(
-                name: "IX_TFQuestions_CreatedByUserName",
+                name: "IX_TFQuestions_CreatorUserId",
                 table: "TFQuestions",
-                column: "CreatedByUserName");
+                column: "CreatorUserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_TFQuestions_FalseOptionId",
@@ -851,7 +874,7 @@ namespace irQm.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropForeignKey(
-                name: "FK_TFQuestions_User_CreatedByUserName",
+                name: "FK_TFQuestions_User_CreatorUserId",
                 table: "TFQuestions");
 
             migrationBuilder.DropForeignKey(
@@ -923,10 +946,10 @@ namespace irQm.Migrations
                 name: "ShortAnswerQustions");
 
             migrationBuilder.DropTable(
-                name: "Tag");
+                name: "Tags");
 
             migrationBuilder.DropTable(
-                name: "Exam");
+                name: "Exams");
 
             migrationBuilder.DropTable(
                 name: "User");

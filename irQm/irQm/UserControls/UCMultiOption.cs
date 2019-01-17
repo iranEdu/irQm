@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -13,13 +14,15 @@ namespace irQm
 {
     public partial class UCMultiOption : UserControl
     {
-        public MultiChoices Question { get; set; }
-        List<Option> options;
+       
+       public List<Option> Options;
+
+
         public UCMultiOption()
         {
             InitializeComponent();
-            Question = new MultiChoices();
-            options =ucOptionList1.Options;
+            
+            Options =ucOptionList1.Options;
         }
 
         private void pbAdd_Click(object sender, EventArgs e)
@@ -29,7 +32,7 @@ namespace irQm
 
         private void cbMulti_CheckedChanged(object sender, EventArgs e)
         {
-            if(!cbMulti.Checked&&options.Count(o=>o.IsTrue)>1 )
+            if(!cbMulti.Checked&&Options.Count(o=>o.IsTrue)>1 )
             {
                 cbMulti.Checked = true;
                 MessageBox.Show("بیش از دو گزینه به عنوان پاسخ تیک خورده است! \n برای فعال کردن تک انتخابی، ابتدا گزینه‌های اضافی را از حالت پاسخ در بیاورید", "خطا!");
@@ -39,14 +42,10 @@ namespace irQm
            
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        public void New(List<Option> options)
         {
-
-        }
-
-        private void BtnEntire_Click(object sender, EventArgs e)
-        {
-
+            ucOptionList1.New(options);
+            Options = options;
         }
     }
 }

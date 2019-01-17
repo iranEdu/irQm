@@ -8,6 +8,6 @@ namespace irQm.BaseCodes
 {
     public class Roles
     {
-        public enum RoleSNames { Admin,Teacher,Student }
+        public enum RoleSNames { Admin,limited }
     }
 }

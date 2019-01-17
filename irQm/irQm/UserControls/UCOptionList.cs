@@ -24,6 +24,12 @@ namespace irQm.UserControls
             this.Options = options;
             Make();
         }
+        public void New(List<Option> options)
+        {
+            this.Options = options;
+            fLPanel.Controls.Clear();
+            Make();
+        }
         public UCOptionList()
         {
             this.Options = new List<Option>() { new Option(), new Option(), new Option(), new Option() };
