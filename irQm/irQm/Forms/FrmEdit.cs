@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
 
-namespace irQm
+namespace irQm.Forms
 {
-    public partial class FrmEdit : Form
+    public partial class FrmEdit : ExtendedForm
     {
         public FrmEdit()
         {

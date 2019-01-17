@@ -12,11 +12,11 @@ namespace irQm.BaseCodes.Configurations
     {
         public void Configure(EntityTypeBuilder<MultiChoices> builder)
         {
-            builder.HasMany(q => q.Options).WithOne().OnDelete(DeleteBehavior.Cascade);
-            builder.HasOne(q => q.Lesson).WithMany(l => l.Multichices).HasForeignKey(l => l.LessonName).OnDelete(DeleteBehavior.Cascade);
+            builder.HasMany(q => q.Options).WithOne().OnDelete(DeleteBehavior.Cascade).HasForeignKey(o=>o.MultiChoicesId);
+            builder.HasOne(q => q.Lesson).WithMany(l => l.Multichoices).HasForeignKey(l => l.LessonName).OnDelete(DeleteBehavior.Cascade);
             builder.Property(m => m.MultiSelections).HasField("multiSelection");
-            builder.HasOne(q => q.CreatedBy).WithMany().OnDelete(DeleteBehavior.Cascade);
-
+            builder.HasOne(q => q.CreatorUser).WithMany(u=>u.MultiChoicesQuestions).OnDelete(DeleteBehavior.Cascade).HasForeignKey(q => q.CreatorUserId);
+         
 
         }
     }

@@ -9,9 +9,9 @@ namespace irQm.BaseCodes
     {
         public List<Option> Options { get; set; } = new List<Option>();
         [MaxLength(50)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         public string Face { get; set; }
-        public Image Image { get; set; }
+        public byte[] Image { get; set; }
 
         [Required]
         public float Score { get; set; }
@@ -19,7 +19,8 @@ namespace irQm.BaseCodes
         public ICollection<TagInQuestion<MultiChoices>> Tags { get; set; }
         bool multiSelection;
         public bool MultiSelections { get { return multiSelection; }set { multiSelection = value && Options.Count(o => o.IsTrue) > 1; } }
-        public User CreatedBy { get; set; }
+        public User CreatorUser { get; set; }
+        public string CreatorUserId { get; set; }
 
         [Required]
         public string LessonName { get; set; }

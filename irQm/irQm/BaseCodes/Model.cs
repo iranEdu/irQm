@@ -15,6 +15,20 @@ namespace irQm.BaseCodes
         public DbSet<ShortAnswer> ShortAnswerQustions { get; set; }
         public DbSet<Exam> Exams { get; set; }
         public DbSet<Tag> Tags { get; set; }
+        public DbSet<TagInQuestion<MultiChoices>> TagInMultichoices { get; set; }
+        public DbSet<TagInQuestion<Puzzle>> TagInPuzzle { get; set; }
+        public DbSet<TagInQuestion<ShortAnswer>> TagInShortAnswer { get; set; }
+        public DbSet<TagInQuestion<Practical>> TagInPractical { get; set; }
+        public DbSet<TagInQuestion<LongAnswer>> TagInLongAnswer { get; set; }
+        public DbSet<TagInQuestion<TFQuestion>> TagInTfQuestion { get; set; }
+        public DbSet<Option> Option { get; set; }
+        public DbSet<User> User { get; set; }
+
+
+
+
+
+
         //public DbSet<Exam> Exams2 { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -22,7 +36,6 @@ namespace irQm.BaseCodes
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfiguration(new ExamConfiguration());
             modelBuilder.ApplyConfiguration(new TFQuestionConfiguration());
-            modelBuilder.ApplyConfiguration(new TagInTfQuestionConfiguration());
             modelBuilder.ApplyConfiguration(new TFQuestionInListConfiguration());
             modelBuilder.ApplyConfiguration(new PuzzleConfiguration());
             modelBuilder.ApplyConfiguration(new ShortAnswerConfiguration());
@@ -39,7 +52,10 @@ namespace irQm.BaseCodes
             modelBuilder.ApplyConfiguration(new TagInPracticalConfiguration());
             modelBuilder.ApplyConfiguration(new TagInPuzzleConfiguration());
             modelBuilder.ApplyConfiguration(new TagInShortAnswerConfiguration());
-            
+            modelBuilder.ApplyConfiguration(new TagInTfQuestionConfiguration());
+
+
+
 
 
 

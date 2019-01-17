@@ -18,13 +18,13 @@ namespace irQm.BaseCodes
         public float GainedScore { get; set ; }
         public ICollection<StringItem> CheckList { get; set; }
         public ICollection<TagInQuestion<Practical>> Tags { get; set; }
-        public Image Image { get ; set; }
+        public byte[] Image { get ; set; }
         public DateTime RegisterTime { get; set; }
         public DateTime EditTime { get; set; }
         public Lesson Lesson { get; set; }
         [Required]
         public string LessonName { get; set; }
-        public User CreatedBy { get; set; }
-
+        public User CreatorUser { get; set; }
+        public string CreatorUserId { get; set; }
     }
 }

@@ -7,9 +7,10 @@ namespace irQm.BaseCodes
 {
     public interface IQuestion
     {
-        
+     
+        string Id { get; set; }
         string Face { get; set; }
-        Image Image { get; set; }
+        byte[] Image { get; set; }
         float Score { get; set; }
         float GainedScore { get; set; }
        
@@ -18,7 +19,8 @@ namespace irQm.BaseCodes
         DateTime RegisterTime { get; set; }
         DateTime EditTime { get; set; }
         
-         User CreatedBy { get; set; }
+         User CreatorUser { get; set; }
+        string CreatorUserId { get; set; }
        
     }
 }

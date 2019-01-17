@@ -1,26 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace irQm
+namespace irQm.Forms
 {
-    public partial class FrmMain : Form
+    public partial class FrmMain : ExtendedForm
     {
         public FrmMain()
         {
             InitializeComponent();
         }
 
-        internal new static void Show()
-        {
-            throw new NotImplementedException();
-        }
+       
 
         
 
@@ -29,6 +19,18 @@ namespace irQm
 
         }
 
-        
+        private void pbQuestionReg_Click(object sender, EventArgs e)
+        {
+            FrmInsertQuestion insert = new FrmInsertQuestion();
+            insert.Show();
+            this.Close();
+        }
+
+        private void pbNewLesson_Click(object sender, EventArgs e)
+        {
+            Frmnewlesson nlesson = new Frmnewlesson();
+            nlesson.Show();
+            this.Close();
+        }
     }
 }

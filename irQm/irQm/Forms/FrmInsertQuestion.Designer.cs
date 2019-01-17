@@ -1,4 +1,8 @@
-﻿namespace irQm
+﻿
+
+using irQm.UserControls.Utilities;
+
+namespace irQm.Forms
 {
     partial class FrmInsertQuestion
     {
@@ -28,7 +32,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            irQm.BaseCodes.MultiChoices multiChoices2 = new irQm.BaseCodes.MultiChoices();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInsertQuestion));
             this.label30 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -54,20 +58,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboLesson = new irQm.UserControls.Utilities.LessonsComboBox();
+            this.comboQuestionType = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblMessage = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tagsBox1 = new irQm.TagsBox();
             this.btnNew = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.richtxtpractical = new System.Windows.Forms.RichTextBox();
+            this.rbFace = new System.Windows.Forms.RichTextBox();
             this.ucMultiOption1 = new irQm.UCMultiOption();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Picbook = new System.Windows.Forms.PictureBox();
-            this.tagsBox1 = new irQm.TagsBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -368,32 +373,31 @@
             this.label9.Text = "نوع سوال:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // comboBox1
+            // comboLesson
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(393, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 109;
-            this.comboBox1.Text = "انتخاب درس";
+            this.comboLesson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboLesson.FormattingEnabled = true;
+            this.comboLesson.Location = new System.Drawing.Point(393, 47);
+            this.comboLesson.Name = "comboLesson";
+            this.comboLesson.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.comboLesson.Size = new System.Drawing.Size(121, 21);
+            this.comboLesson.TabIndex = 109;
             // 
-            // comboBox2
+            // comboQuestionType
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(114, 47);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 110;
-            this.comboBox2.Text = "انتخاب نوع سوال";
+            this.comboQuestionType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboQuestionType.FormattingEnabled = true;
+            this.comboQuestionType.Location = new System.Drawing.Point(114, 47);
+            this.comboQuestionType.Name = "comboQuestionType";
+            this.comboQuestionType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.comboQuestionType.Size = new System.Drawing.Size(121, 21);
+            this.comboQuestionType.TabIndex = 110;
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.lblMessage);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tagsBox1);
             this.panel1.Controls.Add(this.btnNew);
@@ -401,12 +405,49 @@
             this.panel1.Controls.Add(this.btnRegister);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.richtxtpractical);
+            this.panel1.Controls.Add(this.rbFace);
             this.panel1.Controls.Add(this.ucMultiOption1);
             this.panel1.Location = new System.Drawing.Point(12, 78);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(564, 414);
             this.panel1.TabIndex = 111;
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMessage.BackColor = System.Drawing.Color.Transparent;
+            this.lblMessage.Location = new System.Drawing.Point(206, 385);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblMessage.Size = new System.Drawing.Size(350, 25);
+            this.lblMessage.TabIndex = 120;
+            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label6
+            // 
+            this.label6.AllowDrop = true;
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.BackColor = System.Drawing.SystemColors.Control;
+            this.label6.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(483, 165);
+            this.label6.Name = "label6";
+            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label6.Size = new System.Drawing.Size(78, 25);
+            this.label6.TabIndex = 119;
+            this.label6.Text = "برچسب ها:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tagsBox1
+            // 
+            this.tagsBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tagsBox1.Location = new System.Drawing.Point(108, 165);
+            this.tagsBox1.Name = "tagsBox1";
+            this.tagsBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.tagsBox1.Size = new System.Drawing.Size(369, 20);
+            this.tagsBox1.TabIndex = 118;
             // 
             // btnNew
             // 
@@ -469,7 +510,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::irQm.Properties.Resources.edit;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(71, 77);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 25);
@@ -477,15 +518,16 @@
             this.pictureBox2.TabIndex = 112;
             this.pictureBox2.TabStop = false;
             // 
-            // richtxtpractical
+            // rbFace
             // 
-            this.richtxtpractical.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.rbFace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richtxtpractical.Location = new System.Drawing.Point(108, 63);
-            this.richtxtpractical.Name = "richtxtpractical";
-            this.richtxtpractical.Size = new System.Drawing.Size(459, 96);
-            this.richtxtpractical.TabIndex = 111;
-            this.richtxtpractical.Text = "";
+            this.rbFace.Location = new System.Drawing.Point(108, 63);
+            this.rbFace.Name = "rbFace";
+            this.rbFace.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rbFace.Size = new System.Drawing.Size(459, 96);
+            this.rbFace.TabIndex = 111;
+            this.rbFace.Text = "";
             // 
             // ucMultiOption1
             // 
@@ -494,23 +536,13 @@
             this.ucMultiOption1.AutoScroll = true;
             this.ucMultiOption1.Location = new System.Drawing.Point(40, 191);
             this.ucMultiOption1.Name = "ucMultiOption1";
-            multiChoices2.CreatedBy = null;
-            multiChoices2.Face = null;
-            multiChoices2.GainedScore = 0F;
-            multiChoices2.Lesson = null;
-            multiChoices2.LessonName = null;
-            multiChoices2.MultiSelections = false;
-            multiChoices2.Options = null;
-            multiChoices2.Score = 0F;
-            multiChoices2.Tags = null;
-            this.ucMultiOption1.Question = multiChoices2;
             this.ucMultiOption1.Size = new System.Drawing.Size(521, 198);
             this.ucMultiOption1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::irQm.Properties.Resources.topribon;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(203, -34);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(387, 67);
@@ -522,7 +554,7 @@
             // 
             this.Picbook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Picbook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.Picbook.Image = global::irQm.Properties.Resources.bookpic;
+            this.Picbook.Image = ((System.Drawing.Image)(resources.GetObject("Picbook.Image")));
             this.Picbook.Location = new System.Drawing.Point(601, 6);
             this.Picbook.Name = "Picbook";
             this.Picbook.Size = new System.Drawing.Size(172, 69);
@@ -530,38 +562,14 @@
             this.Picbook.TabIndex = 81;
             this.Picbook.TabStop = false;
             // 
-            // tagsBox1
-            // 
-            this.tagsBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tagsBox1.Location = new System.Drawing.Point(108, 165);
-            this.tagsBox1.Name = "tagsBox1";
-            this.tagsBox1.Size = new System.Drawing.Size(369, 20);
-            this.tagsBox1.TabIndex = 118;
-            // 
-            // label6
-            // 
-            this.label6.AllowDrop = true;
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.BackColor = System.Drawing.SystemColors.Control;
-            this.label6.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(483, 165);
-            this.label6.Name = "label6";
-            this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label6.Size = new System.Drawing.Size(78, 25);
-            this.label6.TabIndex = 119;
-            this.label6.Text = "برچسب ها:";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // FrmInsertQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 504);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboQuestionType);
+            this.Controls.Add(this.comboLesson);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label30);
@@ -628,17 +636,18 @@
         private System.Windows.Forms.Label label1;
         internal System.Windows.Forms.Label label8;
         internal System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private LessonsComboBox comboLesson;
+        private System.Windows.Forms.ComboBox comboQuestionType;
         private System.Windows.Forms.Panel panel1;
         private UCMultiOption ucMultiOption1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.RichTextBox richtxtpractical;
+        private System.Windows.Forms.RichTextBox rbFace;
         internal System.Windows.Forms.Label label5;
         internal System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnRegister;
         internal System.Windows.Forms.Label label6;
         private TagsBox tagsBox1;
+        private System.Windows.Forms.Label lblMessage;
     }
 }

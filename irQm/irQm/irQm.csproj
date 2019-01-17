@@ -140,6 +140,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseCodes\Configurations\UserConfiguration.cs" />
     <Compile Include="BaseCodes\Configurations\ExamConfiguration.cs" />
     <Compile Include="BaseCodes\Configurations\PracticalConfiguration.cs" />
     <Compile Include="BaseCodes\Configurations\ShortAnswerConfiguration.cs" />
@@ -181,11 +182,21 @@
     <Compile Include="BaseCodes\TFOption.cs" />
     <Compile Include="BaseCodes\TFQuestion.cs" />
     <Compile Include="BaseCodes\User.cs" />
-    <Compile Include="Forms\Form1.cs">
+    <Compile Include="BaseCodes\Utilities\Globals.cs" />
+    <Compile Include="Forms\ExtendedForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\FrmUserRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmUserRegister.Designer.cs">
+      <DependentUpon>FrmUserRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmExam.cs">
       <SubType>Form</SubType>
@@ -229,17 +240,17 @@
     <Compile Include="Forms\FrmEdit.Designer.cs">
       <DependentUpon>FrmEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\13971027084429_initial.cs" />
+    <Compile Include="Migrations\13971027084429_initial.designer.cs">
+      <DependentUpon>13971027084429_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\irQmDbContextModelSnapshot.cs" />
     <Compile Include="UserControls\UCQuestionForPresentation.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UCQuestionForPresentation.Designer.cs">
       <DependentUpon>UCQuestionForPresentation.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\13970915124639_initial.cs" />
-    <Compile Include="Migrations\13970915124639_initial.designer.cs">
-      <DependentUpon>13970915124639_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\irQmDbContextModelSnapshot.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\Utilities\FreeSizeRichTextBox.cs">
@@ -347,8 +358,20 @@
     <Compile Include="UserControls\Utilities\InformaionBox1.Designer.cs">
       <DependentUpon>InformaionBox1.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UserControls\Utilities\LessonsComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControls\Utilities\UCMessageBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Utilities\UCMessageBox.Designer.cs">
+      <DependentUpon>UCMessageBox.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\FrmUserRegister.resx">
+      <DependentUpon>FrmUserRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmEdit.resx">
       <DependentUpon>FrmEdit.cs</DependentUpon>
@@ -429,6 +452,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Utilities\InformaionBox1.resx">
       <DependentUpon>InformaionBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Utilities\UCMessageBox.resx">
+      <DependentUpon>UCMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
@@ -560,7 +586,7 @@
     <None Include="Resources\superscript.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BaseCodes\Utilities\" />
+    <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\baseline_more_black_18dp.gif" />

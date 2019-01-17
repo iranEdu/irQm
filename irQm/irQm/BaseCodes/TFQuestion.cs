@@ -15,7 +15,9 @@ namespace irQm.BaseCodes
         [Required] 
         public string Face { get ; set ; }
 
-        public User CreatedBy { get; set; }
+        public User CreatorUser { get; set; }
+        public string CreatorUserId { get; set; }
+
 
         public DateTime RegisterTime { get; set; }
         public DateTime EditTime { get; set; }
@@ -29,7 +31,7 @@ namespace irQm.BaseCodes
         public TFOption FalseOption { get; set; }
         public Lesson Lesson { get; set; }
         public string LessonName { get; set; }
-        public Image Image { get ; set; }
+        public byte[] Image { get ; set; }
 
         public void Evaluate()
         {

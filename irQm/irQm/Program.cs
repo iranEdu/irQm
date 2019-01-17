@@ -1,4 +1,5 @@
-﻿using System;
+﻿using irQm.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,14 @@ namespace irQm
         [STAThread]
         static void Main()
         {
+            var db = new irQm.BaseCodes.irQmDbContext();
+            db.Database.EnsureCreated();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmEdit());
+            FrmLogin login = new FrmLogin();
+            login.Show();
+            Application.Run();
+           
 
 
 

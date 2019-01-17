@@ -38,7 +38,7 @@ namespace irQm.BaseCodes
         public string Id { get; set; }
 
         public User User { get; set; }
-        public string Username { get; set; }
+        public string UserId { get; set; }
 
         public DateTime RegisterTime { get; private set; }
         
