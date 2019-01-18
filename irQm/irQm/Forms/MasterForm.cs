@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace irQm.Forms
 {
-    public abstract class MasterForm:ExtendedForm
+    public class MasterForm:ExtendedForm
     {
         internal Label label21;
         internal Label label20;
