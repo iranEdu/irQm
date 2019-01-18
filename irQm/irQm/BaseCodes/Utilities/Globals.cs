@@ -19,12 +19,12 @@ namespace irQm.BaseCodes.Utilities
                     Name = name;Value = value;
                 }
             }
-            public static QuestionType[] Names = { new QuestionType( "چند گزینه‌ای", "multiOprion"),
-               new QuestionType( "درست و نادرست","TrueOrFalse")
-                    ,
-                new QuestionType( "عملی","practical"),
-                new QuestionType("کوتاه پاسخ","shorAnswer"),
-                new QuestionType("بلند پاسخ","longAnswer"),
+            public static QuestionType[] Names = {
+               new QuestionType( "چند گزینه‌ای", "multiOption"),
+               new QuestionType( "درست و نادرست","TrueOrFalse"),
+               new QuestionType( "عملی","practical"),
+               new QuestionType("کوتاه پاسخ","shorAnswer"),
+               new QuestionType("بلند پاسخ","longAnswer"),
                new QuestionType( "جور کردنی","puzzle") };
            
         }

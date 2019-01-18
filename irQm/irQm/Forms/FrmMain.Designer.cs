@@ -207,6 +207,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 16;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // pictureBox5
             // 
@@ -218,6 +219,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 15;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox4
             // 
@@ -229,6 +231,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 14;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // pbQuestionReg
             // 
@@ -258,6 +261,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -274,10 +279,25 @@
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pbQuestionReg);
             this.Controls.Add(this.pbNewLesson);
-            this.Controls.Add(this.label4);
             this.Name = "FrmMain";
             this.Text = "FrmMain";
-            this.Load += new System.EventHandler(this.FrmMain_Load);
+            this.Controls.SetChildIndex(this.pbNewLesson, 0);
+            this.Controls.SetChildIndex(this.pbQuestionReg, 0);
+            this.Controls.SetChildIndex(this.pictureBox4, 0);
+            this.Controls.SetChildIndex(this.pictureBox5, 0);
+            this.Controls.SetChildIndex(this.pictureBox6, 0);
+            this.Controls.SetChildIndex(this.pictureBox7, 0);
+            this.Controls.SetChildIndex(this.pictureBox8, 0);
+            this.Controls.SetChildIndex(this.pictureBox9, 0);
+            this.Controls.SetChildIndex(this.lblnewlesson, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.label8, 0);
+            this.Controls.SetChildIndex(this.label9, 0);
+            this.Controls.SetChildIndex(this.label10, 0);
+            this.Controls.SetChildIndex(this.label11, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
@@ -286,7 +306,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQuestionReg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNewLesson)).EndInit();
-            this.Controls.SetChildIndex(label4, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 

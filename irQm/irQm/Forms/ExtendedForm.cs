@@ -21,7 +21,7 @@ namespace irQm.Forms
             // 
             // ExtendedForm
             // 
-            this.ClientSize = new System.Drawing.Size(784, 504);
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Name = "ExtendedForm";
             this.ResumeLayout(false);
 
