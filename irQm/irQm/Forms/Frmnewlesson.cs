@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace irQm.Forms
 {
-    public partial class Frmnewlesson : ExtendedForm
+    public partial class Frmnewlesson : MasterForm
     {
         public Frmnewlesson()
         {

@@ -186,6 +186,9 @@
     <Compile Include="Forms\ExtendedForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\MasterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\FrmUserRegister.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -367,6 +370,9 @@
     <Compile Include="UserControls\Utilities\UCMessageBox.Designer.cs">
       <DependentUpon>UCMessageBox.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Forms\ExtendedForm.resx">
+      <DependentUpon>ExtendedForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmUserRegister.resx">
       <DependentUpon>FrmUserRegister.cs</DependentUpon>
     </EmbeddedResource>
@@ -391,6 +397,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmQuestionsBank.resx">
       <DependentUpon>FrmQuestionsBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MasterForm.resx">
+      <DependentUpon>MasterForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCQuestionForPresentation.resx">
       <DependentUpon>UCQuestionForPresentation.cs</DependentUpon>

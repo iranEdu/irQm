@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace irQm.Forms
 {
-    public partial class FrmInsertQuestion : ExtendedForm
+    public partial class FrmInsertQuestion : MasterForm
     {
        
         public FrmInsertQuestion()

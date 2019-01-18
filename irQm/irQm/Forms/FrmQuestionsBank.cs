@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace irQm.Forms
 {
-    public partial class FrmQuestionsBank : ExtendedForm
+    public partial class FrmQuestionsBank : MasterForm
     {
         public FrmQuestionsBank()
         {
