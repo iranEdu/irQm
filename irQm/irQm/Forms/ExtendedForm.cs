@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace irQm.Forms
 {
-    public abstract class ExtendedForm:Form
+    public class ExtendedForm:Form
     {
 
         public ExtendedForm():base()
