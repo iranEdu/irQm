@@ -173,7 +173,7 @@
     <Compile Include="BaseCodes\LongAnswer.cs" />
     <Compile Include="BaseCodes\Puzzle.cs" />
     <Compile Include="BaseCodes\QuestionInList.cs" />
-    <Compile Include="BaseCodes\RichTextClass.cs">
+    <Compile Include="UserControls\Utilities\CustomizedRichTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="BaseCodes\Roles.cs" />

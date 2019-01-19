@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using System.Net.Mail;
 using System.Linq;
 using irQm.BaseCodes;
+using irQm.Properties;
 
 namespace irQm.Forms
 {
@@ -11,7 +12,12 @@ namespace irQm.Forms
         public FrmLogin()
         {
             InitializeComponent();
-           
+            if (Settings.Default.passRemember)
+            {
+                txtpass.Text = Settings.Default.pass;
+                txtusername.Text = Settings.Default.username;
+                cbRemember.Checked = Settings.Default.passRemember;
+            }
 
         }
 
@@ -27,6 +33,13 @@ namespace irQm.Forms
                     FrmMain main = new FrmMain();
                     irQm.BaseCodes.Utilities.Globals.CurrentUser = user;
                     main.Show();
+                    Settings.Default.passRemember = cbRemember.Checked ;
+                    if(cbRemember.Checked)
+                    {
+                        Settings.Default.pass = txtpass.Text;
+                        Settings.Default.username = txtusername.Text;
+                    }
+                    Settings.Default.Save();
                     this.Close();
                 }
             }

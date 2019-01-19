@@ -288,32 +288,52 @@ namespace irQm.Forms
 
         private void lblMainPage_Click(object sender, EventArgs e)
         {
+            if (this is FrmMain)
+                return;
             Form mf = new FrmMain();
+
             mf.Show();
+            this.Close();
+
         }
 
         private void lblNewLesson_Click(object sender, EventArgs e)
         {
+            if (this is Frmnewlesson)
+                return;
             Form nl = new Frmnewlesson();
             nl.Show();
+            this.Close();
+
         }
 
         private void lblInsertQuestion_Click(object sender, EventArgs e)
         {
+            if (this is FrmInsertQuestion)
+                return;
             Form iq = new FrmInsertQuestion();
             iq.Show();
+            this.Close();
+
         }
 
         private void lblExam_Click(object sender, EventArgs e)
         {
+            if (this is FrmExam)
+                return;
             Form fe = new FrmExam();
             fe.Show();
+            this.Close();
         }
 
         private void lblExamResult_Click(object sender, EventArgs e)
         {
+            if (this is FrmExamResult)
+                return;
             Form fer = new FrmExamResult();
             fer.Show();
+            this.Close();
+
         }
     }
 }

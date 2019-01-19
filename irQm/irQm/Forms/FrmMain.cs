@@ -30,21 +30,20 @@ namespace irQm.Forms
             this.Close();
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
+        private void pbExam_Click(object sender, EventArgs e)
         {
             Form fe = new FrmExam();
             fe.Show();
+            this.Close();
+
         }
 
-        private void pictureBox6_Click(object sender, EventArgs e)
+        private void pbExams_Click(object sender, EventArgs e)
         {
             Form fer = new FrmExamResult();
             fer.Show();
+            this.Close();
         }
     }
 }

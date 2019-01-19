@@ -43,7 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtusername = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbRemember = new System.Windows.Forms.CheckBox();
             this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -216,16 +216,16 @@
             this.txtpass.Size = new System.Drawing.Size(194, 20);
             this.txtpass.TabIndex = 2;
             // 
-            // checkBox1
+            // cbRemember
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(187, 259);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox1.Size = new System.Drawing.Size(119, 17);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "رمز را به خاطر بسپار";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbRemember.AutoSize = true;
+            this.cbRemember.Location = new System.Drawing.Point(187, 259);
+            this.cbRemember.Name = "cbRemember";
+            this.cbRemember.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cbRemember.Size = new System.Drawing.Size(119, 17);
+            this.cbRemember.TabIndex = 3;
+            this.cbRemember.Text = "رمز را به خاطر بسپار";
+            this.cbRemember.UseVisualStyleBackColor = true;
             // 
             // btnExit
             // 
@@ -245,7 +245,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.btnExit);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.cbRemember);
             this.Controls.Add(this.RegisterLink);
             this.Controls.Add(this.BtnEntire);
             this.Controls.Add(this.pictureBox2);
@@ -285,7 +285,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.LinkLabel RegisterLink;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbRemember;
         private System.Windows.Forms.Button btnExit;
     }
 }
