@@ -27,7 +27,7 @@ namespace irQm.UserControls
 
         public UCPuzzlePairs()
         {
-            this.Options = new List<StringPair>() {  new StringPair(), new StringPair(), new StringPair() , new StringPair()};
+            this.Options = new List<StringPair>() {  new StringPair(), new StringPair(), new StringPair()};
             InitializeComponent();
             fLPanel2.WrapContents = false;
             Make();

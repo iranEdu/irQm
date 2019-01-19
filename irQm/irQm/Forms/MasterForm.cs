@@ -10,16 +10,16 @@ namespace irQm.Forms
 {
     public class MasterForm:ExtendedForm
     {
-        internal Label label21;
-        internal Label label20;
-        internal Label label19;
-        internal Label label18;
-        internal Label label17;
-        internal Label label16;
-        internal Label label15;
-        internal Label label14;
-        internal Label label13;
-        internal Label label12;
+        internal Label lblExit;
+        internal Label lblContactUs;
+        internal Label lblAboutSoftware;
+        internal Label lblSetting;
+        internal Label lblBackup;
+        internal Label lblExamResult;
+        internal Label lblExam;
+        internal Label lblInsertQuestion;
+        internal Label lblNewLesson;
+        internal Label lblMainPage;
         private Label label3;
         private PictureBox Picbook;
         private Label label2;
@@ -34,16 +34,16 @@ namespace irQm.Forms
 
         private void InitializeComponent()
         {
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblExit = new System.Windows.Forms.Label();
+            this.lblContactUs = new System.Windows.Forms.Label();
+            this.lblAboutSoftware = new System.Windows.Forms.Label();
+            this.lblSetting = new System.Windows.Forms.Label();
+            this.lblBackup = new System.Windows.Forms.Label();
+            this.lblExamResult = new System.Windows.Forms.Label();
+            this.lblExam = new System.Windows.Forms.Label();
+            this.lblInsertQuestion = new System.Windows.Forms.Label();
+            this.lblNewLesson = new System.Windows.Forms.Label();
+            this.lblMainPage = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Picbook = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,145 +53,160 @@ namespace irQm.Forms
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label21
+            // lblExit
             // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.label21.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label21.ForeColor = System.Drawing.Color.White;
-            this.label21.Location = new System.Drawing.Point(594, 424);
-            this.label21.Name = "label21";
-            this.label21.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label21.Size = new System.Drawing.Size(189, 23);
-            this.label21.TabIndex = 136;
-            this.label21.Text = "خروج";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblExit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblExit.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblExit.ForeColor = System.Drawing.Color.White;
+            this.lblExit.Location = new System.Drawing.Point(594, 424);
+            this.lblExit.Name = "lblExit";
+            this.lblExit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblExit.Size = new System.Drawing.Size(189, 23);
+            this.lblExit.TabIndex = 136;
+            this.lblExit.Text = "خروج";
+            this.lblExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label20
+            // lblContactUs
             // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.label20.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(598, 391);
-            this.label20.Name = "label20";
-            this.label20.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label20.Size = new System.Drawing.Size(189, 23);
-            this.label20.TabIndex = 135;
-            this.label20.Text = "تماس با ما";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblContactUs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblContactUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblContactUs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblContactUs.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblContactUs.ForeColor = System.Drawing.Color.White;
+            this.lblContactUs.Location = new System.Drawing.Point(598, 391);
+            this.lblContactUs.Name = "lblContactUs";
+            this.lblContactUs.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblContactUs.Size = new System.Drawing.Size(189, 23);
+            this.lblContactUs.TabIndex = 135;
+            this.lblContactUs.Text = "تماس با ما";
+            this.lblContactUs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label19
+            // lblAboutSoftware
             // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.label19.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(595, 356);
-            this.label19.Name = "label19";
-            this.label19.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label19.Size = new System.Drawing.Size(189, 23);
-            this.label19.TabIndex = 134;
-            this.label19.Text = "درباره نرم افزار";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblAboutSoftware.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAboutSoftware.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblAboutSoftware.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblAboutSoftware.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblAboutSoftware.ForeColor = System.Drawing.Color.White;
+            this.lblAboutSoftware.Location = new System.Drawing.Point(595, 356);
+            this.lblAboutSoftware.Name = "lblAboutSoftware";
+            this.lblAboutSoftware.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblAboutSoftware.Size = new System.Drawing.Size(189, 23);
+            this.lblAboutSoftware.TabIndex = 134;
+            this.lblAboutSoftware.Text = "درباره نرم افزار";
+            this.lblAboutSoftware.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label18
+            // lblSetting
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.label18.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(595, 321);
-            this.label18.Name = "label18";
-            this.label18.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label18.Size = new System.Drawing.Size(189, 23);
-            this.label18.TabIndex = 133;
-            this.label18.Text = "تنظیمات";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSetting.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblSetting.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblSetting.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblSetting.ForeColor = System.Drawing.Color.White;
+            this.lblSetting.Location = new System.Drawing.Point(595, 321);
+            this.lblSetting.Name = "lblSetting";
+            this.lblSetting.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblSetting.Size = new System.Drawing.Size(189, 23);
+            this.lblSetting.TabIndex = 133;
+            this.lblSetting.Text = "تنظیمات";
+            this.lblSetting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label17
+            // lblBackup
             // 
-            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.label17.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(595, 286);
-            this.label17.Name = "label17";
-            this.label17.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label17.Size = new System.Drawing.Size(189, 23);
-            this.label17.TabIndex = 132;
-            this.label17.Text = "نسخه پشتیبان";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBackup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblBackup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblBackup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblBackup.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblBackup.ForeColor = System.Drawing.Color.White;
+            this.lblBackup.Location = new System.Drawing.Point(595, 286);
+            this.lblBackup.Name = "lblBackup";
+            this.lblBackup.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblBackup.Size = new System.Drawing.Size(189, 23);
+            this.lblBackup.TabIndex = 132;
+            this.lblBackup.Text = "نسخه پشتیبان";
+            this.lblBackup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label16
+            // lblExamResult
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.label16.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(595, 251);
-            this.label16.Name = "label16";
-            this.label16.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label16.Size = new System.Drawing.Size(189, 23);
-            this.label16.TabIndex = 131;
-            this.label16.Text = "نتیجه آزمون";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblExamResult.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblExamResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblExamResult.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblExamResult.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblExamResult.ForeColor = System.Drawing.Color.White;
+            this.lblExamResult.Location = new System.Drawing.Point(595, 251);
+            this.lblExamResult.Name = "lblExamResult";
+            this.lblExamResult.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblExamResult.Size = new System.Drawing.Size(189, 23);
+            this.lblExamResult.TabIndex = 131;
+            this.lblExamResult.Text = "نتیجه آزمون";
+            this.lblExamResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblExamResult.Click += new System.EventHandler(this.lblExamResult_Click);
             // 
-            // label15
+            // lblExam
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.label15.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(595, 216);
-            this.label15.Name = "label15";
-            this.label15.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label15.Size = new System.Drawing.Size(189, 23);
-            this.label15.TabIndex = 130;
-            this.label15.Text = "آزمون";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblExam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblExam.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblExam.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblExam.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblExam.ForeColor = System.Drawing.Color.White;
+            this.lblExam.Location = new System.Drawing.Point(595, 216);
+            this.lblExam.Name = "lblExam";
+            this.lblExam.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblExam.Size = new System.Drawing.Size(189, 23);
+            this.lblExam.TabIndex = 130;
+            this.lblExam.Text = "آزمون";
+            this.lblExam.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblExam.Click += new System.EventHandler(this.lblExam_Click);
             // 
-            // label14
+            // lblInsertQuestion
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.label14.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(595, 181);
-            this.label14.Name = "label14";
-            this.label14.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label14.Size = new System.Drawing.Size(189, 23);
-            this.label14.TabIndex = 129;
-            this.label14.Text = "ثبت سوال";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblInsertQuestion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblInsertQuestion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblInsertQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblInsertQuestion.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblInsertQuestion.ForeColor = System.Drawing.Color.White;
+            this.lblInsertQuestion.Location = new System.Drawing.Point(595, 181);
+            this.lblInsertQuestion.Name = "lblInsertQuestion";
+            this.lblInsertQuestion.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblInsertQuestion.Size = new System.Drawing.Size(189, 23);
+            this.lblInsertQuestion.TabIndex = 129;
+            this.lblInsertQuestion.Text = "ثبت سوال";
+            this.lblInsertQuestion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblInsertQuestion.Click += new System.EventHandler(this.lblInsertQuestion_Click);
             // 
-            // label13
+            // lblNewLesson
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.label13.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(595, 146);
-            this.label13.Name = "label13";
-            this.label13.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label13.Size = new System.Drawing.Size(189, 23);
-            this.label13.TabIndex = 128;
-            this.label13.Text = "درس جدید";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNewLesson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNewLesson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblNewLesson.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblNewLesson.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblNewLesson.ForeColor = System.Drawing.Color.White;
+            this.lblNewLesson.Location = new System.Drawing.Point(595, 146);
+            this.lblNewLesson.Name = "lblNewLesson";
+            this.lblNewLesson.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblNewLesson.Size = new System.Drawing.Size(189, 23);
+            this.lblNewLesson.TabIndex = 128;
+            this.lblNewLesson.Text = "درس جدید";
+            this.lblNewLesson.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblNewLesson.Click += new System.EventHandler(this.lblNewLesson_Click);
             // 
-            // label12
+            // lblMainPage
             // 
-            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.label12.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(595, 111);
-            this.label12.Name = "label12";
-            this.label12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label12.Size = new System.Drawing.Size(189, 23);
-            this.label12.TabIndex = 127;
-            this.label12.Text = "صفحه اصلی";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMainPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMainPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblMainPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblMainPage.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblMainPage.ForeColor = System.Drawing.Color.White;
+            this.lblMainPage.Location = new System.Drawing.Point(595, 111);
+            this.lblMainPage.Name = "lblMainPage";
+            this.lblMainPage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblMainPage.Size = new System.Drawing.Size(189, 23);
+            this.lblMainPage.TabIndex = 127;
+            this.lblMainPage.Text = "صفحه اصلی";
+            this.lblMainPage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblMainPage.Click += new System.EventHandler(this.lblMainPage_Click);
             // 
             // label3
             // 
@@ -248,17 +263,17 @@ namespace irQm.Forms
             // 
             // MasterForm
             // 
-            this.ClientSize = new System.Drawing.Size(784, 504);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.lblExit);
+            this.Controls.Add(this.lblContactUs);
+            this.Controls.Add(this.lblAboutSoftware);
+            this.Controls.Add(this.lblSetting);
+            this.Controls.Add(this.lblBackup);
+            this.Controls.Add(this.lblExamResult);
+            this.Controls.Add(this.lblExam);
+            this.Controls.Add(this.lblInsertQuestion);
+            this.Controls.Add(this.lblNewLesson);
+            this.Controls.Add(this.lblMainPage);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Picbook);
             this.Controls.Add(this.label2);
@@ -268,6 +283,56 @@ namespace irQm.Forms
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+
+        }
+
+        private void lblMainPage_Click(object sender, EventArgs e)
+        {
+            if (this is FrmMain)
+                return;
+            Form mf = new FrmMain();
+
+            mf.Show();
+            this.Close();
+
+        }
+
+        private void lblNewLesson_Click(object sender, EventArgs e)
+        {
+            if (this is Frmnewlesson)
+                return;
+            Form nl = new Frmnewlesson();
+            nl.Show();
+            this.Close();
+
+        }
+
+        private void lblInsertQuestion_Click(object sender, EventArgs e)
+        {
+            if (this is FrmInsertQuestion)
+                return;
+            Form iq = new FrmInsertQuestion();
+            iq.Show();
+            this.Close();
+
+        }
+
+        private void lblExam_Click(object sender, EventArgs e)
+        {
+            if (this is FrmExam)
+                return;
+            Form fe = new FrmExam();
+            fe.Show();
+            this.Close();
+        }
+
+        private void lblExamResult_Click(object sender, EventArgs e)
+        {
+            if (this is FrmExamResult)
+                return;
+            Form fer = new FrmExamResult();
+            fer.Show();
+            this.Close();
 
         }
     }

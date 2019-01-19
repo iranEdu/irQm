@@ -4,7 +4,7 @@ namespace irQm.UserControls.Utilities
 {
     class FreeSizeRichTextBox:RichTextBox
     {
-        public FreeSizeRichTextBox():base()
+          public FreeSizeRichTextBox():base()
         {
             SetStyle(ControlStyles.SupportsTransparentBackColor |
                  ControlStyles.OptimizedDoubleBuffer |
