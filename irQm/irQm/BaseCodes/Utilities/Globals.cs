@@ -10,22 +10,23 @@ namespace irQm.BaseCodes.Utilities
     {
         public class QuestionTypes
         {
+            public enum QType { multiOption , trueOrFalse, practical, shortAnswer, longAnswer, puzzle }
             public class QuestionType
             {
                 public string Name { get; set; }
-                public string Value { get; set; }
-                public QuestionType(string name,string value)
+                public QType Value { get; set; }
+                public QuestionType(string name,QType value)
                 {
                     Name = name;Value = value;
                 }
             }
-            public static QuestionType[] Names = {
-               new QuestionType( "چند گزینه‌ای", "multiOption"),
-               new QuestionType( "درست و نادرست","TrueOrFalse"),
-               new QuestionType( "عملی","practical"),
-               new QuestionType("کوتاه پاسخ","shorAnswer"),
-               new QuestionType("بلند پاسخ","longAnswer"),
-               new QuestionType( "جور کردنی","puzzle") };
+            public static QuestionType[] Names = { new QuestionType( "چند گزینه‌ای", QType.multiOption),
+               new QuestionType( "درست و نادرست",QType.trueOrFalse)
+                    ,
+                new QuestionType( "عملی",QType.practical),
+                new QuestionType("کوتاه پاسخ",QType.shortAnswer),
+                new QuestionType("بلند پاسخ",QType.longAnswer),
+               new QuestionType( "جور کردنی",QType.puzzle) };
            
         }
 

@@ -367,12 +367,6 @@
     <Compile Include="UserControls\Utilities\LessonsComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UserControls\Utilities\UCMessageBox.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\Utilities\UCMessageBox.Designer.cs">
-      <DependentUpon>UCMessageBox.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Forms\ExtendedForm.resx">
       <DependentUpon>ExtendedForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -464,9 +458,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Utilities\InformaionBox1.resx">
       <DependentUpon>InformaionBox1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\Utilities\UCMessageBox.resx">
-      <DependentUpon>UCMessageBox.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
