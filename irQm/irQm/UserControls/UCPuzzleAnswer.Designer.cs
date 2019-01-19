@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ucOptionListpuzzle1 = new irQm.UserControls.UCPuzzlePairs();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.ucOptionListpuzzle1 = new irQm.UserControls.UCPuzzlePairs();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +50,17 @@
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.panel1.Size = new System.Drawing.Size(522, 192);
             this.panel1.TabIndex = 119;
+            // 
+            // ucOptionListpuzzle1
+            // 
+            this.ucOptionListpuzzle1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucOptionListpuzzle1.AutoScroll = true;
+            this.ucOptionListpuzzle1.Location = new System.Drawing.Point(81, 41);
+            this.ucOptionListpuzzle1.Name = "ucOptionListpuzzle1";
+            this.ucOptionListpuzzle1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.ucOptionListpuzzle1.Size = new System.Drawing.Size(444, 146);
+            this.ucOptionListpuzzle1.TabIndex = 122;
             // 
             // label4
             // 
@@ -91,14 +102,6 @@
             this.label1.TabIndex = 111;
             this.label1.Text = "ستون اول:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ucOptionListpuzzle1
-            // 
-            this.ucOptionListpuzzle1.Location = new System.Drawing.Point(78, 41);
-            this.ucOptionListpuzzle1.Name = "ucOptionListpuzzle1";
-            this.ucOptionListpuzzle1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ucOptionListpuzzle1.Size = new System.Drawing.Size(444, 146);
-            this.ucOptionListpuzzle1.TabIndex = 122;
             // 
             // UCPuzzleAnswer
             // 

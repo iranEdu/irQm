@@ -37,20 +37,20 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pbSettings = new System.Windows.Forms.PictureBox();
+            this.pbBackup = new System.Windows.Forms.PictureBox();
+            this.pbScores = new System.Windows.Forms.PictureBox();
+            this.pbExamExams = new System.Windows.Forms.PictureBox();
+            this.pbExam = new System.Windows.Forms.PictureBox();
+            this.pbQuestionbank = new System.Windows.Forms.PictureBox();
             this.pbQuestionReg = new System.Windows.Forms.PictureBox();
             this.pbNewLesson = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbScores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExamExams)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQuestionbank)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQuestionReg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNewLesson)).BeginInit();
             this.SuspendLayout();
@@ -164,75 +164,84 @@
             this.label11.TabIndex = 27;
             this.label11.Text = "تنظیمات";
             // 
-            // pictureBox9
+            // pbSettings
             // 
-            this.pictureBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox9.Image = global::irQm.Properties.Resources.settingpic;
-            this.pictureBox9.Location = new System.Drawing.Point(37, 252);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(115, 115);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 19;
-            this.pictureBox9.TabStop = false;
+            this.pbSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbSettings.Image = global::irQm.Properties.Resources.settingpic;
+            this.pbSettings.Location = new System.Drawing.Point(37, 252);
+            this.pbSettings.Name = "pbSettings";
+            this.pbSettings.Size = new System.Drawing.Size(115, 115);
+            this.pbSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSettings.TabIndex = 19;
+            this.pbSettings.TabStop = false;
             // 
-            // pictureBox8
+            // pbBackup
             // 
-            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox8.Image = global::irQm.Properties.Resources.backup;
-            this.pictureBox8.Location = new System.Drawing.Point(174, 252);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(115, 115);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 18;
-            this.pictureBox8.TabStop = false;
+            this.pbBackup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbBackup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbBackup.Image = global::irQm.Properties.Resources.backup;
+            this.pbBackup.Location = new System.Drawing.Point(174, 252);
+            this.pbBackup.Name = "pbBackup";
+            this.pbBackup.Size = new System.Drawing.Size(115, 115);
+            this.pbBackup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBackup.TabIndex = 18;
+            this.pbBackup.TabStop = false;
             // 
-            // pictureBox7
+            // pbScores
             // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox7.Image = global::irQm.Properties.Resources.marklist;
-            this.pictureBox7.Location = new System.Drawing.Point(312, 252);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(115, 115);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 17;
-            this.pictureBox7.TabStop = false;
+            this.pbScores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbScores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbScores.Image = global::irQm.Properties.Resources.marklist;
+            this.pbScores.Location = new System.Drawing.Point(312, 252);
+            this.pbScores.Name = "pbScores";
+            this.pbScores.Size = new System.Drawing.Size(115, 115);
+            this.pbScores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbScores.TabIndex = 17;
+            this.pbScores.TabStop = false;
             // 
-            // pictureBox6
+            // pbExamExams
             // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.Image = global::irQm.Properties.Resources.results;
-            this.pictureBox6.Location = new System.Drawing.Point(451, 252);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(115, 115);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 16;
-            this.pictureBox6.TabStop = false;
+            this.pbExamExams.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbExamExams.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbExamExams.Image = global::irQm.Properties.Resources.results;
+            this.pbExamExams.Location = new System.Drawing.Point(451, 252);
+            this.pbExamExams.Name = "pbExamExams";
+            this.pbExamExams.Size = new System.Drawing.Size(115, 115);
+            this.pbExamExams.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbExamExams.TabIndex = 16;
+            this.pbExamExams.TabStop = false;
+            this.pbExamExams.Click += new System.EventHandler(this.pbExams_Click);
             // 
-            // pictureBox5
+            // pbExam
             // 
-            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox5.Image = global::irQm.Properties.Resources.nwexam;
-            this.pictureBox5.Location = new System.Drawing.Point(37, 66);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(115, 115);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 15;
-            this.pictureBox5.TabStop = false;
+            this.pbExam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbExam.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbExam.Image = global::irQm.Properties.Resources.nwexam;
+            this.pbExam.Location = new System.Drawing.Point(37, 66);
+            this.pbExam.Name = "pbExam";
+            this.pbExam.Size = new System.Drawing.Size(115, 115);
+            this.pbExam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbExam.TabIndex = 15;
+            this.pbExam.TabStop = false;
+            this.pbExam.Click += new System.EventHandler(this.pbExam_Click);
             // 
-            // pictureBox4
+            // pbQuestionbank
             // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Image = global::irQm.Properties.Resources.questionsbank;
-            this.pictureBox4.Location = new System.Drawing.Point(174, 66);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(115, 115);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 14;
-            this.pictureBox4.TabStop = false;
+            this.pbQuestionbank.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbQuestionbank.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbQuestionbank.Image = global::irQm.Properties.Resources.questionsbank;
+            this.pbQuestionbank.Location = new System.Drawing.Point(174, 66);
+            this.pbQuestionbank.Name = "pbQuestionbank";
+            this.pbQuestionbank.Size = new System.Drawing.Size(115, 115);
+            this.pbQuestionbank.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbQuestionbank.TabIndex = 14;
+            this.pbQuestionbank.TabStop = false;
             // 
             // pbQuestionReg
             // 
             this.pbQuestionReg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbQuestionReg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbQuestionReg.Image = global::irQm.Properties.Resources.addquestion;
             this.pbQuestionReg.Location = new System.Drawing.Point(312, 66);
             this.pbQuestionReg.Name = "pbQuestionReg";
@@ -245,6 +254,7 @@
             // pbNewLesson
             // 
             this.pbNewLesson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbNewLesson.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbNewLesson.Image = global::irQm.Properties.Resources.New_Lesson0;
             this.pbNewLesson.Location = new System.Drawing.Point(451, 66);
             this.pbNewLesson.Name = "pbNewLesson";
@@ -258,6 +268,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
@@ -266,27 +278,41 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblnewlesson);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pbSettings);
+            this.Controls.Add(this.pbBackup);
+            this.Controls.Add(this.pbScores);
+            this.Controls.Add(this.pbExamExams);
+            this.Controls.Add(this.pbExam);
+            this.Controls.Add(this.pbQuestionbank);
             this.Controls.Add(this.pbQuestionReg);
             this.Controls.Add(this.pbNewLesson);
-            this.Controls.Add(this.label4);
             this.Name = "FrmMain";
             this.Text = "FrmMain";
-            this.Load += new System.EventHandler(this.FrmMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.Controls.SetChildIndex(this.pbNewLesson, 0);
+            this.Controls.SetChildIndex(this.pbQuestionReg, 0);
+            this.Controls.SetChildIndex(this.pbQuestionbank, 0);
+            this.Controls.SetChildIndex(this.pbExam, 0);
+            this.Controls.SetChildIndex(this.pbExamExams, 0);
+            this.Controls.SetChildIndex(this.pbScores, 0);
+            this.Controls.SetChildIndex(this.pbBackup, 0);
+            this.Controls.SetChildIndex(this.pbSettings, 0);
+            this.Controls.SetChildIndex(this.lblnewlesson, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.label7, 0);
+            this.Controls.SetChildIndex(this.label8, 0);
+            this.Controls.SetChildIndex(this.label9, 0);
+            this.Controls.SetChildIndex(this.label10, 0);
+            this.Controls.SetChildIndex(this.label11, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.pbSettings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbScores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExamExams)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbExam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbQuestionbank)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQuestionReg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNewLesson)).EndInit();
-            this.Controls.SetChildIndex(label4, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,12 +323,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pbNewLesson;
         private System.Windows.Forms.PictureBox pbQuestionReg;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox pbQuestionbank;
+        private System.Windows.Forms.PictureBox pbExam;
+        private System.Windows.Forms.PictureBox pbExamExams;
+        private System.Windows.Forms.PictureBox pbScores;
+        private System.Windows.Forms.PictureBox pbBackup;
+        private System.Windows.Forms.PictureBox pbSettings;
         private System.Windows.Forms.Label lblnewlesson;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;

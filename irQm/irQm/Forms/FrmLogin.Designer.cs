@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.RegisterLink = new System.Windows.Forms.LinkLabel();
-            this.Picexit = new System.Windows.Forms.PictureBox();
             this.BtnEntire = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,7 +43,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtusername = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.Picexit)).BeginInit();
+            this.cbRemember = new System.Windows.Forms.CheckBox();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).BeginInit();
@@ -55,23 +55,13 @@
             // 
             this.RegisterLink.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RegisterLink.AutoSize = true;
-            this.RegisterLink.Location = new System.Drawing.Point(258, 324);
+            this.RegisterLink.Location = new System.Drawing.Point(262, 331);
             this.RegisterLink.Name = "RegisterLink";
             this.RegisterLink.Size = new System.Drawing.Size(39, 13);
-            this.RegisterLink.TabIndex = 15;
+            this.RegisterLink.TabIndex = 5;
             this.RegisterLink.TabStop = true;
             this.RegisterLink.Text = "ثبت نام";
             this.RegisterLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RegisterLink_LinkClicked);
-            // 
-            // Picexit
-            // 
-            this.Picexit.Image = global::irQm.Properties.Resources.exit;
-            this.Picexit.Location = new System.Drawing.Point(11, 5);
-            this.Picexit.Name = "Picexit";
-            this.Picexit.Size = new System.Drawing.Size(30, 30);
-            this.Picexit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Picexit.TabIndex = 12;
-            this.Picexit.TabStop = false;
             // 
             // BtnEntire
             // 
@@ -79,10 +69,10 @@
             this.BtnEntire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.BtnEntire.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.BtnEntire.ForeColor = System.Drawing.Color.White;
-            this.BtnEntire.Location = new System.Drawing.Point(239, 282);
+            this.BtnEntire.Location = new System.Drawing.Point(239, 286);
             this.BtnEntire.Name = "BtnEntire";
             this.BtnEntire.Size = new System.Drawing.Size(85, 39);
-            this.BtnEntire.TabIndex = 11;
+            this.BtnEntire.TabIndex = 4;
             this.BtnEntire.Text = "ورود";
             this.BtnEntire.UseVisualStyleBackColor = false;
             this.BtnEntire.Click += new System.EventHandler(this.Btnentire_Click);
@@ -215,7 +205,7 @@
             this.txtusername.MaxLength = 30;
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(194, 20);
-            this.txtusername.TabIndex = 9;
+            this.txtusername.TabIndex = 1;
             // 
             // txtpass
             // 
@@ -224,15 +214,39 @@
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(194, 20);
-            this.txtpass.TabIndex = 10;
+            this.txtpass.TabIndex = 2;
+            // 
+            // cbRemember
+            // 
+            this.cbRemember.AutoSize = true;
+            this.cbRemember.Location = new System.Drawing.Point(187, 259);
+            this.cbRemember.Name = "cbRemember";
+            this.cbRemember.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cbRemember.Size = new System.Drawing.Size(119, 17);
+            this.cbRemember.TabIndex = 3;
+            this.cbRemember.Text = "رمز را به خاطر بسپار";
+            this.cbRemember.UseVisualStyleBackColor = true;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackgroundImage = global::irQm.Properties.Resources.exit;
+            this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Location = new System.Drawing.Point(9, 5);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(35, 28);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.cbRemember);
             this.Controls.Add(this.RegisterLink);
-            this.Controls.Add(this.Picexit);
             this.Controls.Add(this.BtnEntire);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label4);
@@ -244,7 +258,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmLogin";
             this.Text = " ";
-            ((System.ComponentModel.ISupportInitialize)(this.Picexit)).EndInit();
+            this.Load += new System.EventHandler(this.FrmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).EndInit();
@@ -268,10 +282,11 @@
         private System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.Button BtnEntire;
-        private System.Windows.Forms.PictureBox Picexit;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.LinkLabel RegisterLink;
+        private System.Windows.Forms.CheckBox cbRemember;
+        private System.Windows.Forms.Button btnExit;
     }
 }
 

@@ -1,5 +1,6 @@
 ﻿
 
+using irQm.BaseCodes;
 using irQm.UserControls.Utilities;
 
 namespace irQm.Forms
@@ -47,7 +48,7 @@ namespace irQm.Forms
             this.btnRegister = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.rbFace = new System.Windows.Forms.RichTextBox();
+            this.rbFace = new CustomizedRichTextBox();
             this.ucMultiOption1 = new irQm.UCMultiOption();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -297,7 +298,7 @@ namespace irQm.Forms
         private System.Windows.Forms.Panel panel1;
         private UCMultiOption ucMultiOption1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.RichTextBox rbFace;
+        private CustomizedRichTextBox rbFace;
         internal System.Windows.Forms.Label label5;
         internal System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnNew;

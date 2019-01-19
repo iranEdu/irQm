@@ -42,12 +42,12 @@
             this.fLPanel2.Size = new System.Drawing.Size(478, 164);
             this.fLPanel2.TabIndex = 1;
             // 
-            // UCOptionListpuzzle
+            // UCPuzzlePairs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.fLPanel2);
-            this.Name = "UCOptionListpuzzle";
+            this.Name = "UCPuzzlePairs";
             this.Size = new System.Drawing.Size(487, 169);
             this.ResumeLayout(false);
 
