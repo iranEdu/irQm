@@ -172,56 +172,56 @@ namespace irQm.Forms
         }
         private void RegisterTrueOrFalse(irQmDbContext db)
         {
-            if (ucTrueFalseAnswer1.Options.Count(o => o.IsTrue) < 1)
-            {
-                lblMessage.Text = "گزینه یا گزینه های درست مشخص نشده است";
-                lblMessage.ForeColor = Color.Red;
+            //if (ucTrueFalseAnswer1.Options.Count(o => o.IsTrue) < 1)
+            //{
+            //    lblMessage.Text = "گزینه یا گزینه های درست مشخص نشده است";
+            //    lblMessage.ForeColor = Color.Red;
 
-                return;
-            }
+            //    return;
+            //}
 
-            var q = new MultiChoices();
-            q.Id = Guid.NewGuid().ToString();
-            q.Face = rbFace.Rtf;
+            //var q = new MultiChoices();
+            //q.Id = Guid.NewGuid().ToString();
+            //q.Face = rbFace.Rtf;
 
-            q.RegisterTime = DateTime.UtcNow;
-            var tagsInBox = tagsBox1.Tags;
-            var tags = db.Tags.Select(t => t.Value).ToArray();
-            foreach (var tg in tagsInBox.Where(t => !(tags.Contains(t))))
-            {
-                var tag = new Tag();
-                tag.Value = tg;
-                db.Tags.Add(tag);
+            //q.RegisterTime = DateTime.UtcNow;
+            //var tagsInBox = tagsBox1.Tags;
+            //var tags = db.Tags.Select(t => t.Value).ToArray();
+            //foreach (var tg in tagsInBox.Where(t => !(tags.Contains(t))))
+            //{
+            //    var tag = new Tag();
+            //    tag.Value = tg;
+            //    db.Tags.Add(tag);
 
-            }
-            foreach (var t in tagsBox1.Tags)
-            {
-                TagInQuestion<MultiChoices> tim = new TagInQuestion<MultiChoices>();
-                tim.QuestionId = q.Id;
-                tim.TagId = t;
-                db.TagInMultichoices.Add(tim);
-            }
-            var options = ucMultiOption1.Options;
+            //}
+            //foreach (var t in tagsBox1.Tags)
+            //{
+            //    TagInQuestion<MultiChoices> tim = new TagInQuestion<MultiChoices>();
+            //    tim.QuestionId = q.Id;
+            //    tim.TagId = t;
+            //    db.TagInMultichoices.Add(tim);
+            //}
+            //var options = ucMultiOption1.Options;
 
-            foreach (Option o in options)
-            {
-                o.MultiChoicesId = q.Id;
-                db.Option.Add(o);
-            }
-            q.LessonName = comboLesson.Text.Trim();
-            q.CreatorUserId = BaseCodes.Utilities.Globals.CurrentUser.UserId;
+            //foreach (Option o in options)
+            //{
+            //    o.MultiChoicesId = q.Id;
+            //    db.Option.Add(o);
+            //}
+            //q.LessonName = comboLesson.Text.Trim();
+            //q.CreatorUserId = BaseCodes.Utilities.Globals.CurrentUser.UserId;
 
-            db.MultiChoicesQuestions.Add(q);
+            //db.MultiChoicesQuestions.Add(q);
 
-            db.SaveChanges();
+            //db.SaveChanges();
 
 
-            var newOptions = new List<Option>();
-            for (var i = 0; i < ucMultiOption1.Options.Count; i++)
-            {
-                newOptions.Add(new Option());
-            }
-            ucMultiOption1.New(newOptions);
+            //var newOptions = new List<Option>();
+            //for (var i = 0; i < ucMultiOption1.Options.Count; i++)
+            //{
+            //    newOptions.Add(new Option());
+            //}
+            //ucMultiOption1.New(newOptions);
         }
         private void btnNew_Click(object sender, EventArgs e)
         {
