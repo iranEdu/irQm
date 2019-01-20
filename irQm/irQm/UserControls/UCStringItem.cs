@@ -44,7 +44,7 @@ namespace irQm.UserControls
 
         private void txtCheckList_TextChanged(object sender, EventArgs e)
         {
-            Item.Value =txtCheckList.Text;
+            Item.Value =richtextCheckList.Text;
         }
     }
 }
