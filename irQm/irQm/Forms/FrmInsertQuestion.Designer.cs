@@ -33,29 +33,29 @@ namespace irQm.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInsertQuestion));
-            irQm.BaseCodes.Puzzle puzzle2 = new irQm.BaseCodes.Puzzle();
+            irQm.BaseCodes.Puzzle puzzle1 = new irQm.BaseCodes.Puzzle();
             irQm.BaseCodes.Practical practical1 = new irQm.BaseCodes.Practical();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInsertQuestion));
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.comboLesson = new irQm.UserControls.Utilities.LessonsComboBox();
             this.comboQuestionType = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ucPuzzleAnswer1 = new irQm.UCPuzzleAnswer();
+            this.ucPracticalAnswer1 = new irQm.UCPracticalAnswer();
+            this.ucTrueFalseAnswer1 = new irQm.UCTrueFalseAnswer();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.ucShortAnswer1 = new irQm.UCShortAnswer();
             this.lblMessage = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tagsBox1 = new irQm.TagsBox();
-            this.btnNew = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnRegister = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.rbFace = new CustomizedRichTextBox();
+            this.rbFace = new irQm.BaseCodes.CustomizedRichTextBox();
             this.ucMultiOption1 = new irQm.UCMultiOption();
-            this.ucPuzzleAnswer1 = new irQm.UCPuzzleAnswer();
-            this.ucTrueFalseAnswer1 = new irQm.UCTrueFalseAnswer();
-            this.ucPracticalAnswer1 = new irQm.UCPracticalAnswer();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -128,6 +128,7 @@ namespace irQm.Forms
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.ucPuzzleAnswer1);
             this.panel1.Controls.Add(this.ucPracticalAnswer1);
             this.panel1.Controls.Add(this.ucTrueFalseAnswer1);
             this.panel1.Controls.Add(this.btnNew);
@@ -145,6 +146,81 @@ namespace irQm.Forms
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(564, 414);
             this.panel1.TabIndex = 111;
+            // 
+            // ucPuzzleAnswer1
+            // 
+            this.ucPuzzleAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucPuzzleAnswer1.Location = new System.Drawing.Point(20, 191);
+            this.ucPuzzleAnswer1.Name = "ucPuzzleAnswer1";
+            puzzle1.AnswerPairs = null;
+            puzzle1.CreatorUser = null;
+            puzzle1.CreatorUserId = null;
+            puzzle1.EditTime = new System.DateTime(((long)(0)));
+            puzzle1.ExtraAnswers = null;
+            puzzle1.Face = null;
+            puzzle1.GainedScore = 0F;
+            puzzle1.Id = null;
+            puzzle1.Image = null;
+            puzzle1.Lesson = null;
+            puzzle1.LessonName = null;
+            puzzle1.Pairs = null;
+            puzzle1.RegisterTime = new System.DateTime(((long)(0)));
+            puzzle1.Score = 0F;
+            puzzle1.Tags = null;
+            this.ucPuzzleAnswer1.Question = puzzle1;
+            this.ucPuzzleAnswer1.Size = new System.Drawing.Size(546, 173);
+            this.ucPuzzleAnswer1.TabIndex = 138;
+            this.ucPuzzleAnswer1.Visible = false;
+            // 
+            // ucPracticalAnswer1
+            // 
+            this.ucPracticalAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucPracticalAnswer1.Location = new System.Drawing.Point(26, 191);
+            this.ucPracticalAnswer1.Name = "ucPracticalAnswer1";
+           
+            this.ucPracticalAnswer1.Size = new System.Drawing.Size(538, 178);
+            this.ucPracticalAnswer1.TabIndex = 139;
+            this.ucPracticalAnswer1.Visible = false;
+            // 
+            // ucTrueFalseAnswer1
+            // 
+            this.ucTrueFalseAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucTrueFalseAnswer1.Location = new System.Drawing.Point(20, 193);
+            this.ucTrueFalseAnswer1.Name = "ucTrueFalseAnswer1";
+            this.ucTrueFalseAnswer1.Size = new System.Drawing.Size(533, 103);
+            this.ucTrueFalseAnswer1.TabIndex = 139;
+            this.ucTrueFalseAnswer1.Visible = false;
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.btnNew.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnNew.ForeColor = System.Drawing.Color.White;
+            this.btnNew.Location = new System.Drawing.Point(34, 372);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnNew.Size = new System.Drawing.Size(85, 39);
+            this.btnNew.TabIndex = 117;
+            this.btnNew.Text = "+ جدید";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.btnRegister.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
+            this.btnRegister.Location = new System.Drawing.Point(122, 372);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnRegister.Size = new System.Drawing.Size(85, 39);
+            this.btnRegister.TabIndex = 116;
+            this.btnRegister.Text = " ثبت";
+            this.btnRegister.UseVisualStyleBackColor = false;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // ucShortAnswer1
             // 
@@ -193,20 +269,6 @@ namespace irQm.Forms
             this.tagsBox1.Size = new System.Drawing.Size(369, 20);
             this.tagsBox1.TabIndex = 118;
             // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.btnNew.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnNew.ForeColor = System.Drawing.Color.White;
-            this.btnNew.Location = new System.Drawing.Point(34, 372);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnNew.Size = new System.Drawing.Size(85, 39);
-            this.btnNew.TabIndex = 117;
-            this.btnNew.Text = "+ جدید";
-            this.btnNew.UseVisualStyleBackColor = false;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
             // label7
             // 
             this.label7.AllowDrop = true;
@@ -221,20 +283,6 @@ namespace irQm.Forms
             this.label7.TabIndex = 114;
             this.label7.Text = "سوال:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnRegister
-            // 
-            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.btnRegister.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(122, 372);
-            this.btnRegister.Name = "btnRegister";
-            this.btnRegister.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.btnRegister.Size = new System.Drawing.Size(85, 39);
-            this.btnRegister.TabIndex = 116;
-            this.btnRegister.Text = " ثبت";
-            this.btnRegister.UseVisualStyleBackColor = false;
-            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // label5
             // 
@@ -283,73 +331,11 @@ namespace irQm.Forms
             this.ucMultiOption1.Size = new System.Drawing.Size(521, 198);
             this.ucMultiOption1.TabIndex = 0;
             // 
-            // ucPuzzleAnswer1
-            // 
-            this.ucPuzzleAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucPuzzleAnswer1.AutoScroll = true;
-            this.ucPuzzleAnswer1.Location = new System.Drawing.Point(32, 272);
-            this.ucPuzzleAnswer1.Name = "ucPuzzleAnswer1";
-            puzzle2.AnswerPairs = null;
-            puzzle2.CreatorUser = null;
-            puzzle2.CreatorUserId = null;
-            puzzle2.EditTime = new System.DateTime(((long)(0)));
-            puzzle2.ExtraAnswers = null;
-            puzzle2.Face = null;
-            puzzle2.GainedScore = 0F;
-            puzzle2.Id = null;
-            puzzle2.Image = null;
-            puzzle2.Lesson = null;
-            puzzle2.LessonName = null;
-            puzzle2.Pairs = null;
-            puzzle2.RegisterTime = new System.DateTime(((long)(0)));
-            puzzle2.Score = 0F;
-            puzzle2.Tags = null;
-            this.ucPuzzleAnswer1.Question = puzzle2;
-            this.ucPuzzleAnswer1.Size = new System.Drawing.Size(546, 170);
-            this.ucPuzzleAnswer1.TabIndex = 138;
-            this.ucPuzzleAnswer1.Visible = false;
-            // 
-            // ucTrueFalseAnswer1
-            // 
-            this.ucTrueFalseAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucTrueFalseAnswer1.Location = new System.Drawing.Point(20, 193);
-            this.ucTrueFalseAnswer1.Name = "ucTrueFalseAnswer1";
-            this.ucTrueFalseAnswer1.Size = new System.Drawing.Size(533, 103);
-            this.ucTrueFalseAnswer1.TabIndex = 139;
-            this.ucTrueFalseAnswer1.Visible = false;
-            // 
-            // ucPracticalAnswer1
-            // 
-            this.ucPracticalAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucPracticalAnswer1.Location = new System.Drawing.Point(26, 191);
-            this.ucPracticalAnswer1.Name = "ucPracticalAnswer1";
-            practical1.CheckList = null;
-            practical1.CreatorUser = null;
-            practical1.CreatorUserId = null;
-            practical1.EditTime = new System.DateTime(((long)(0)));
-            practical1.Face = null;
-            practical1.GainedScore = 0F;
-            practical1.Id = null;
-            practical1.Image = null;
-            practical1.Lesson = null;
-            practical1.LessonName = null;
-            practical1.RegisterTime = new System.DateTime(((long)(0)));
-            practical1.Score = 0F;
-            practical1.Tags = null;
-            this.ucPracticalAnswer1.Question = practical1;
-            this.ucPracticalAnswer1.Size = new System.Drawing.Size(538, 191);
-            this.ucPracticalAnswer1.TabIndex = 139;
-            this.ucPracticalAnswer1.Visible = false;
-            // 
             // FrmInsertQuestion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 504);
-            this.Controls.Add(this.ucPuzzleAnswer1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboQuestionType);
@@ -364,7 +350,6 @@ namespace irQm.Forms
             this.Controls.SetChildIndex(this.comboQuestionType, 0);
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.ucPuzzleAnswer1, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

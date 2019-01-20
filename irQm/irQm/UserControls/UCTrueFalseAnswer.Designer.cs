@@ -29,18 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.chbFalse = new System.Windows.Forms.RadioButton();
+            this.chbTrue = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.chbFalse);
+            this.panel1.Controls.Add(this.chbTrue);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(4, 3);
             this.panel1.Name = "panel1";
@@ -48,31 +49,30 @@
             this.panel1.Size = new System.Drawing.Size(522, 43);
             this.panel1.TabIndex = 116;
             // 
-            // radioButton2
+            // chbFalse
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radioButton2.Location = new System.Drawing.Point(334, 2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.radioButton2.Size = new System.Drawing.Size(53, 30);
-            this.radioButton2.TabIndex = 115;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "غلط";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.chbFalse.AutoSize = true;
+            this.chbFalse.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.chbFalse.Location = new System.Drawing.Point(334, 2);
+            this.chbFalse.Name = "chbFalse";
+            this.chbFalse.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chbFalse.Size = new System.Drawing.Size(53, 30);
+            this.chbFalse.TabIndex = 115;
+            this.chbFalse.TabStop = true;
+            this.chbFalse.Text = "غلط";
+            this.chbFalse.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // chbTrue
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.radioButton1.Location = new System.Drawing.Point(408, 2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.radioButton1.Size = new System.Drawing.Size(67, 30);
-            this.radioButton1.TabIndex = 114;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "صحیح";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.chbTrue.AutoSize = true;
+            this.chbTrue.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.chbTrue.Location = new System.Drawing.Point(408, 2);
+            this.chbTrue.Name = "chbTrue";
+            this.chbTrue.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.chbTrue.Size = new System.Drawing.Size(67, 30);
+            this.chbTrue.TabIndex = 114;
+            this.chbTrue.Text = "صحیح";
+            this.chbTrue.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -105,7 +105,7 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton chbFalse;
+        private System.Windows.Forms.RadioButton chbTrue;
     }
 }

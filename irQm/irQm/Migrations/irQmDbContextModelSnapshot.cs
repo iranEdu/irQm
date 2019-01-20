@@ -533,6 +533,7 @@ namespace irQm.Migrations
             modelBuilder.Entity("irQm.BaseCodes.TFOption", b =>
                 {
                     b.Property<string>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasMaxLength(50);
 
                     b.Property<bool>("Answered");
@@ -572,6 +573,9 @@ namespace irQm.Migrations
 
                     b.Property<float>("Score");
 
+                    b.Property<string>("TrueOptionId")
+                        .IsRequired();
+
                     b.HasKey("Id");
 
                     b.HasIndex("CreatorUserId");
@@ -579,6 +583,8 @@ namespace irQm.Migrations
                     b.HasIndex("FalseOptionId");
 
                     b.HasIndex("LessonName");
+
+                    b.HasIndex("TrueOptionId");
 
                     b.ToTable("TFQuestions");
                 });
@@ -876,14 +882,6 @@ namespace irQm.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("irQm.BaseCodes.TFOption", b =>
-                {
-                    b.HasOne("irQm.BaseCodes.TFQuestion")
-                        .WithOne("TrueOption")
-                        .HasForeignKey("irQm.BaseCodes.TFOption", "Id")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
             modelBuilder.Entity("irQm.BaseCodes.TFQuestion", b =>
                 {
                     b.HasOne("irQm.BaseCodes.User", "CreatorUser")
@@ -899,6 +897,11 @@ namespace irQm.Migrations
                     b.HasOne("irQm.BaseCodes.Lesson", "Lesson")
                         .WithMany("TFQuestions")
                         .HasForeignKey("LessonName")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("irQm.BaseCodes.TFOption", "TrueOption")
+                        .WithMany()
+                        .HasForeignKey("TrueOptionId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

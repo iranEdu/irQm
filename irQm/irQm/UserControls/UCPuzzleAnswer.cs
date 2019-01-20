@@ -22,7 +22,8 @@ namespace irQm
             options = ucOptionListpuzzle1.Options;
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+       
+        private void pbAdd_Click(object sender, EventArgs e)
         {
             ucOptionListpuzzle1.AddPair(new StringPair());
         }

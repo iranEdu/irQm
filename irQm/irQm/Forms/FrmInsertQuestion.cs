@@ -66,6 +66,7 @@ namespace irQm.Forms
                     ucPuzzleAnswer1.Visible = false;
                     ucPracticalAnswer1.Visible = false;
                     ucTrueFalseAnswer1.Visible = true;
+                    ucTrueFalseAnswer1.isTrue = true;
                     break;
 
 
@@ -74,7 +75,7 @@ namespace irQm.Forms
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            try
+            //try
             {
                 using (irQmDbContext db = new irQmDbContext())
                 {
@@ -99,7 +100,7 @@ namespace irQm.Forms
                         RegisterMutiChoices(db);
                             break;
                         case Globals.QuestionTypes.QType.trueOrFalse:
-
+                            RegisterTrueOrFalse(db);
                             break;
                     }
                 }
@@ -110,11 +111,11 @@ namespace irQm.Forms
                 tagsBox1.Text = "";
                
             }
-            catch
-            {
-                lblMessage.Text = "مشکلی در عملیات پیش آمده است";
-                lblMessage.ForeColor = Color.Red;
-            }
+            //catch(Exception x)
+            //{
+            //    lblMessage.Text = "مشکلی در عملیات پیش آمده است"+x.ToString();
+            //    lblMessage.ForeColor = Color.Red;
+            //}
         }
 
         private void RegisterMutiChoices(irQmDbContext db)
@@ -172,56 +173,55 @@ namespace irQm.Forms
         }
         private void RegisterTrueOrFalse(irQmDbContext db)
         {
-            //if (ucTrueFalseAnswer1.Options.Count(o => o.IsTrue) < 1)
-            //{
-            //    lblMessage.Text = "گزینه یا گزینه های درست مشخص نشده است";
-            //    lblMessage.ForeColor = Color.Red;
+            if (!ucTrueFalseAnswer1.isTrue && !ucTrueFalseAnswer1.isFalse) 
+            {
+                lblMessage.Text = "گزینه درست مشخص نشده است";
+                lblMessage.ForeColor = Color.Red;
 
-            //    return;
-            //}
+                return;
+            }
+            var q = new TFQuestion();
+            q.Id = Guid.NewGuid().ToString();
+            q.Face = rbFace.Rtf;
 
-            //var q = new MultiChoices();
-            //q.Id = Guid.NewGuid().ToString();
-            //q.Face = rbFace.Rtf;
+            q.RegisterTime = DateTime.UtcNow;
+            var tagsInBox = tagsBox1.Tags;
+            var tags = db.Tags.Select(t => t.Value).ToArray();
+            foreach (var tg in tagsInBox.Where(t => !(tags.Contains(t))))
+            {
+                var tag = new Tag();
+                tag.Value = tg;
+                db.Tags.Add(tag);
 
-            //q.RegisterTime = DateTime.UtcNow;
-            //var tagsInBox = tagsBox1.Tags;
-            //var tags = db.Tags.Select(t => t.Value).ToArray();
-            //foreach (var tg in tagsInBox.Where(t => !(tags.Contains(t))))
-            //{
-            //    var tag = new Tag();
-            //    tag.Value = tg;
-            //    db.Tags.Add(tag);
+            }
+            foreach (var t in tagsBox1.Tags)
+            {
+                TagInQuestion<TFQuestion> titf = new TagInQuestion<TFQuestion>();
+                titf.QuestionId = q.Id;
+                titf.TagId = t;
+                db.TagInTfQuestion.Add(titf);
+            }
+            var to= new TFOption();
+            
+            to.IsTrue = ucTrueFalseAnswer1.isTrue;
+            to.Id = Guid.NewGuid().ToString();
+            var fo = new TFOption();
+            fo.IsTrue = ucTrueFalseAnswer1.isFalse;
+            fo.Id = Guid.NewGuid().ToString();
+            q.TrueOption = to;
+            q.FalseOption = fo;
+            
+            q.LessonName = comboLesson.Text.Trim();
+            q.CreatorUserId = Globals.CurrentUser.UserId;
+           
+            db.TFQuestions.Add(q);
 
-            //}
-            //foreach (var t in tagsBox1.Tags)
-            //{
-            //    TagInQuestion<MultiChoices> tim = new TagInQuestion<MultiChoices>();
-            //    tim.QuestionId = q.Id;
-            //    tim.TagId = t;
-            //    db.TagInMultichoices.Add(tim);
-            //}
-            //var options = ucMultiOption1.Options;
-
-            //foreach (Option o in options)
-            //{
-            //    o.MultiChoicesId = q.Id;
-            //    db.Option.Add(o);
-            //}
-            //q.LessonName = comboLesson.Text.Trim();
-            //q.CreatorUserId = BaseCodes.Utilities.Globals.CurrentUser.UserId;
-
-            //db.MultiChoicesQuestions.Add(q);
-
-            //db.SaveChanges();
+            db.SaveChanges();
 
 
-            //var newOptions = new List<Option>();
-            //for (var i = 0; i < ucMultiOption1.Options.Count; i++)
-            //{
-            //    newOptions.Add(new Option());
-            //}
-            //ucMultiOption1.New(newOptions);
+           
+            ucTrueFalseAnswer1.New();
+            ucTrueFalseAnswer1.isTrue = true;
         }
         private void btnNew_Click(object sender, EventArgs e)
         {
