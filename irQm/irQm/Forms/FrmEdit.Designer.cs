@@ -1,4 +1,5 @@
-﻿namespace irQm.Forms
+﻿using irQm.UserControls.Utilities;
+namespace irQm.Forms
 {
     partial class FrmEdit
     {
@@ -28,7 +29,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.richTxtEdit = new System.Windows.Forms.RichTextBox();
+            // this.richTxtEdit = new System.Windows.Forms.RichTextBox();
+            this.richTxtEdit = new irQm.BaseCodes.CustomizedRichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblsuperscript = new System.Windows.Forms.Label();
             this.lblSubscript = new System.Windows.Forms.Label();
@@ -327,7 +329,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.RichTextBox richTxtEdit;
+        private irQm.BaseCodes.CustomizedRichTextBox richTxtEdit;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label LblalignR;
         private System.Windows.Forms.Label lblAlignL;

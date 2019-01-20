@@ -1,4 +1,5 @@
-﻿namespace irQm.UserControls
+﻿using irQm.BaseCodes;
+namespace irQm.UserControls
 {
     partial class UCOption
     {
@@ -28,7 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.rtbOption = new System.Windows.Forms.RichTextBox();
+            this.rtbOption = new CustomizedRichTextBox();
             this.lblNumber = new System.Windows.Forms.Label();
             this.pbRemove = new System.Windows.Forms.PictureBox();
             this.cbIsTrue = new System.Windows.Forms.CheckBox();
