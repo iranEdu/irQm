@@ -1,4 +1,5 @@
-﻿namespace irQm
+﻿using irQm.BaseCodes;
+namespace irQm
 {
     partial class UCLongAnswer
     {
@@ -31,7 +32,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.richtxtlonganswer = new System.Windows.Forms.RichTextBox();
+            this.richtxtlonganswer = new CustomizedRichTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.Btnentire = new System.Windows.Forms.Button();

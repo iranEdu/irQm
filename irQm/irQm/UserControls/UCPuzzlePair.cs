@@ -49,12 +49,12 @@ namespace irQm
 
         private void txtcolumn1_TextChanged(object sender, EventArgs e)
         {
-            Pair.Key= txtcolumn1.Text;
+            Pair.Key= richtextFirstpair.Text;
         }
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
-            Pair.Value = txtcolumn1.Text;
+            Pair.Value = richtextFirstpair.Text;
         }
     }
 }
