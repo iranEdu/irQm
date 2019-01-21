@@ -31,8 +31,8 @@ namespace irQm
         {
             this.pbRemove = new System.Windows.Forms.PictureBox();
             this.lblNumber = new System.Windows.Forms.Label();
-            this.richtextFirstpair = new CustomizedRichTextBox();
-            this.richTextSecondpair = new CustomizedRichTextBox();
+            this.textFirstpair = new System.Windows.Forms.TextBox();
+            this.TextSecondpair = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemove)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,49 +58,50 @@ namespace irQm
             this.lblNumber.TabIndex = 122;
             this.lblNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // richtextFirstpair
+            // textFirstpair
             // 
-            this.richtextFirstpair.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textFirstpair.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richtextFirstpair.Location = new System.Drawing.Point(216, 3);
-            this.richtextFirstpair.Name = "richtextFirstpair";
-            this.richtextFirstpair.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.richtextFirstpair.Size = new System.Drawing.Size(204, 20);
-            this.richtextFirstpair.TabIndex = 123;
-            this.richtextFirstpair.TextChanged += new System.EventHandler(this.txtcolumn1_TextChanged);
+            this.textFirstpair.Location = new System.Drawing.Point(216, 3);
+            this.textFirstpair.Name = "textFirstpair";
+            this.textFirstpair.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textFirstpair.Size = new System.Drawing.Size(204, 20);
+            this.textFirstpair.TabIndex = 123;
+            this.textFirstpair.Text = "";
+            this.textFirstpair.TextChanged += new System.EventHandler(this.txtcolumn1_TextChanged);
             // 
-            // richTextSecondpair
+            // TextSecondpair
             // 
-            this.richTextSecondpair.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.TextSecondpair.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextSecondpair.Location = new System.Drawing.Point(29, 3);
-            this.richTextSecondpair.Name = "richTextSecondpair";
-            this.richTextSecondpair.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.richTextSecondpair.Size = new System.Drawing.Size(181, 20);
-            this.richTextSecondpair.TabIndex = 124;
-            this.richTextSecondpair.Text = "";
-            this.richTextSecondpair.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
+            this.TextSecondpair.Location = new System.Drawing.Point(29, 3);
+            this.TextSecondpair.Name = "TextSecondpair";
+            this.TextSecondpair.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.TextSecondpair.Size = new System.Drawing.Size(181, 20);
+            this.TextSecondpair.TabIndex = 124;
+            this.TextSecondpair.Text = "";
+            this.TextSecondpair.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
             // UCPuzzleOption
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.richTextSecondpair);
-            this.Controls.Add(this.richtextFirstpair);
+            this.Controls.Add(this.TextSecondpair);
+            this.Controls.Add(this.textFirstpair);
             this.Controls.Add(this.lblNumber);
             this.Controls.Add(this.pbRemove);
             this.Name = "UCPuzzleOption";
             this.Size = new System.Drawing.Size(476, 30);
             ((System.ComponentModel.ISupportInitialize)(this.pbRemove)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
         private System.Windows.Forms.PictureBox pbRemove;
         private System.Windows.Forms.Label lblNumber;
-        private CustomizedRichTextBox richtextFirstpair;
-        private  CustomizedRichTextBox richTextSecondpair;
+        private System.Windows.Forms.TextBox textFirstpair;
+        private System.Windows.Forms.TextBox TextSecondpair;
     }
+        
 }

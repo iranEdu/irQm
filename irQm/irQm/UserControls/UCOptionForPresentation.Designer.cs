@@ -1,4 +1,4 @@
-﻿using irQm.UserControls.Utilities;
+﻿using irQm.BaseCodes;
 
 namespace irQm.UserControls
 {
@@ -32,7 +32,7 @@ namespace irQm.UserControls
         {
             this.cbIsTrue = new System.Windows.Forms.CheckBox();
             this.lblNumber = new System.Windows.Forms.Label();
-            this.FRtbFace = new FreeSizeRichTextBox();
+            this.FRtbFace = new CustomizedRichTextBox();
             this.SuspendLayout();
             // 
             // cbIsTrue
@@ -92,6 +92,6 @@ namespace irQm.UserControls
 
         private System.Windows.Forms.CheckBox cbIsTrue;
         private System.Windows.Forms.Label lblNumber;
-        private FreeSizeRichTextBox FRtbFace;
+        private  CustomizedRichTextBox FRtbFace;
     }
 }

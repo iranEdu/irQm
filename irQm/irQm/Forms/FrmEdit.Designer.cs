@@ -1,5 +1,4 @@
-﻿using irQm.UserControls.Utilities;
-namespace irQm.Forms
+﻿namespace irQm.Forms
 {
     partial class FrmEdit
     {
@@ -29,7 +28,6 @@ namespace irQm.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            // this.richTxtEdit = new System.Windows.Forms.RichTextBox();
             this.richTxtEdit = new irQm.BaseCodes.CustomizedRichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblsuperscript = new System.Windows.Forms.Label();
@@ -323,6 +321,14 @@ namespace irQm.Forms
             this.Name = "FrmEdit";
             this.Text = "FrmEdit";
             this.Load += new System.EventHandler(this.FrmEdit_Load);
+            this.Controls.SetChildIndex(this.richTxtEdit, 0);
+            this.Controls.SetChildIndex(this.panel2, 0);
+            this.Controls.SetChildIndex(this.label5, 0);
+            this.Controls.SetChildIndex(this.lblSave, 0);
+            this.Controls.SetChildIndex(this.lblUndo, 0);
+            this.Controls.SetChildIndex(this.lblRedo, 0);
+            this.Controls.SetChildIndex(this.richTxtPic, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 

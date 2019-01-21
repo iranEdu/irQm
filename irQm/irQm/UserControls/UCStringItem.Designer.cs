@@ -1,4 +1,5 @@
-﻿namespace irQm.UserControls
+﻿using irQm.BaseCodes;
+namespace irQm.UserControls
 {
     partial class UCStringItem
     {
@@ -28,20 +29,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtCheckList = new System.Windows.Forms.TextBox();
+            this.richtextCheckList = new CustomizedRichTextBox();
             this.pbRemove = new System.Windows.Forms.PictureBox();
             this.lblNumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemove)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtCheckList
+            // richtextCheckList
             // 
-            this.txtCheckList.Location = new System.Drawing.Point(36, 9);
-            this.txtCheckList.Name = "txtCheckList";
-            this.txtCheckList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtCheckList.Size = new System.Drawing.Size(315, 20);
-            this.txtCheckList.TabIndex = 0;
-            this.txtCheckList.TextChanged += new System.EventHandler(this.txtCheckList_TextChanged);
+            this.richtextCheckList.Location = new System.Drawing.Point(36, 9);
+            this.richtextCheckList.Name = "richtextCheckList";
+            this.richtextCheckList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.richtextCheckList.Size = new System.Drawing.Size(315, 20);
+            this.richtextCheckList.TabIndex = 0;
+            this.richtextCheckList.TextChanged += new System.EventHandler(this.txtCheckList_TextChanged);
             // 
             // pbRemove
             // 
@@ -64,14 +65,14 @@
             this.lblNumber.Text = " ";
             this.lblNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // UCPracticalItem
+            // UCStringItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblNumber);
             this.Controls.Add(this.pbRemove);
-            this.Controls.Add(this.txtCheckList);
-            this.Name = "UCPracticalItem";
+            this.Controls.Add(this.richtextCheckList);
+            this.Name = "UCStringItem";
             this.Size = new System.Drawing.Size(395, 37);
             ((System.ComponentModel.ISupportInitialize)(this.pbRemove)).EndInit();
             this.ResumeLayout(false);
@@ -81,7 +82,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtCheckList;
+        private  CustomizedRichTextBox richtextCheckList;
         private System.Windows.Forms.PictureBox pbRemove;
         private System.Windows.Forms.Label lblNumber;
     }

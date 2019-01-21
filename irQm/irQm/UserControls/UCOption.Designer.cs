@@ -121,7 +121,7 @@ namespace irQm.UserControls
         #endregion
 
         private System.Windows.Forms.PictureBox pbRemove;
-        private System.Windows.Forms.RichTextBox rtbOption;
+        private CustomizedRichTextBox rtbOption;
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.CheckBox cbIsTrue;
         private System.Windows.Forms.PictureBox pbEdit;
