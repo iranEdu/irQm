@@ -43,6 +43,7 @@
             this.label4.Size = new System.Drawing.Size(236, 23);
             this.label4.TabIndex = 50;
             this.label4.Text = "ورود  >  صفحه اصلی  >  بانک سوالات";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // FrmQuestionsBank
             // 
