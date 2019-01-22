@@ -29,20 +29,20 @@ namespace irQm.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.richtextCheckList = new CustomizedRichTextBox();
+            this.textCheckList = new System.Windows.Forms.TextBox();
             this.pbRemove = new System.Windows.Forms.PictureBox();
             this.lblNumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemove)).BeginInit();
             this.SuspendLayout();
             // 
-            // richtextCheckList
+            // textCheckList
             // 
-            this.richtextCheckList.Location = new System.Drawing.Point(36, 9);
-            this.richtextCheckList.Name = "richtextCheckList";
-            this.richtextCheckList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.richtextCheckList.Size = new System.Drawing.Size(315, 20);
-            this.richtextCheckList.TabIndex = 0;
-            this.richtextCheckList.TextChanged += new System.EventHandler(this.txtCheckList_TextChanged);
+            this.textCheckList.Location = new System.Drawing.Point(36, 9);
+            this.textCheckList.Name = "textCheckList";
+            this.textCheckList.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.textCheckList.Size = new System.Drawing.Size(315, 20);
+            this.textCheckList.TabIndex = 0;
+            this.textCheckList.TextChanged += new System.EventHandler(this.txtCheckList_TextChanged);
             // 
             // pbRemove
             // 
@@ -71,7 +71,7 @@ namespace irQm.UserControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lblNumber);
             this.Controls.Add(this.pbRemove);
-            this.Controls.Add(this.richtextCheckList);
+            this.Controls.Add(this.textCheckList);
             this.Name = "UCStringItem";
             this.Size = new System.Drawing.Size(395, 37);
             ((System.ComponentModel.ISupportInitialize)(this.pbRemove)).EndInit();
@@ -82,7 +82,7 @@ namespace irQm.UserControls
 
         #endregion
 
-        private  CustomizedRichTextBox richtextCheckList;
+        private  System.Windows.Forms.TextBox textCheckList;
         private System.Windows.Forms.PictureBox pbRemove;
         private System.Windows.Forms.Label lblNumber;
     }
