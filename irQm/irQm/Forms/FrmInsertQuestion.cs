@@ -38,6 +38,7 @@ namespace irQm.Forms
                     ucPuzzleAnswer1.Visible = false;
                     ucPracticalAnswer1.Visible = false;
                     ucTrueFalseAnswer1.Visible = false;
+                    ucLongAnswer1.Visible = false;
                     break;
                 case BaseCodes.Utilities.Globals.QuestionTypes.QType.shortAnswer:
                     ucShortAnswer1.Visible = true;
@@ -45,6 +46,8 @@ namespace irQm.Forms
                     ucPuzzleAnswer1.Visible = false;
                     ucPracticalAnswer1.Visible = false;
                     ucTrueFalseAnswer1.Visible = false;
+                    ucLongAnswer1.Visible = false;
+
                     break;
                 case BaseCodes.Utilities.Globals.QuestionTypes.QType.practical:
                     ucShortAnswer1.Visible = false;
@@ -52,6 +55,8 @@ namespace irQm.Forms
                     ucPuzzleAnswer1.Visible = false;
                     ucPracticalAnswer1.Visible = true;
                     ucTrueFalseAnswer1.Visible = false;
+                    ucLongAnswer1.Visible = false;
+
                     break;
                 case BaseCodes.Utilities.Globals.QuestionTypes.QType.puzzle:
                     ucShortAnswer1.Visible = false;
@@ -59,6 +64,8 @@ namespace irQm.Forms
                     ucPuzzleAnswer1.Visible = true;
                     ucPracticalAnswer1.Visible = false;
                     ucTrueFalseAnswer1.Visible = false;
+                    ucLongAnswer1.Visible = false;
+
                     break;
                 case BaseCodes.Utilities.Globals.QuestionTypes.QType.trueOrFalse:
                     ucShortAnswer1.Visible = false;
@@ -67,6 +74,18 @@ namespace irQm.Forms
                     ucPracticalAnswer1.Visible = false;
                     ucTrueFalseAnswer1.Visible = true;
                     ucTrueFalseAnswer1.isTrue = true;
+                    ucLongAnswer1.Visible = false;
+
+                    break;
+                case BaseCodes.Utilities.Globals.QuestionTypes.QType.longAnswer:
+                    ucShortAnswer1.Visible = false;
+                    ucMultiOption1.Visible = false;
+                    ucPuzzleAnswer1.Visible = false;
+                    ucPracticalAnswer1.Visible = false;
+                    ucTrueFalseAnswer1.Visible = false;
+                    ucTrueFalseAnswer1.isTrue = true;
+                    ucLongAnswer1.Visible = true;
+
                     break;
 
 
@@ -77,6 +96,7 @@ namespace irQm.Forms
         {
             //try
             {
+                bool success = false;
                 using (irQmDbContext db = new irQmDbContext())
                 {
                     if (comboLesson.SelectedIndex < 0)
@@ -97,19 +117,30 @@ namespace irQm.Forms
                     {
                         case Globals.QuestionTypes.QType.multiOption:
 
-                        RegisterMutiChoices(db);
+                            success= RegisterMutiChoices(db);
                             break;
                         case Globals.QuestionTypes.QType.trueOrFalse:
-                            RegisterTrueOrFalse(db);
+                            success= RegisterTrueOrFalse(db);
+                            break;
+                        case Globals.QuestionTypes.QType.longAnswer:
+                            success= RegisterLongAnswerQuestion(db);
+                            break;
+                        case Globals.QuestionTypes.QType.puzzle:
+                            success= RegisterPuzzleQuestion(db);
                             break;
                     }
                 }
-                lblMessage.Text = "پرسش ثبت شد";
-                lblMessage.ForeColor = Color.Green;
-                
-                rbFace.Rtf = "";
-                tagsBox1.Text = "";
-               
+
+
+                if (success)
+                {
+                    rbFace.Rtf = "";
+                    tagsBox1.Text = "";
+                    tagsBox1.UpdateTags();
+                    lblMessage.Text = "پرسش ثبت شد";
+                    lblMessage.ForeColor = Color.Green;
+                }
+
             }
             //catch(Exception x)
             //{
@@ -118,14 +149,105 @@ namespace irQm.Forms
             //}
         }
 
-        private void RegisterMutiChoices(irQmDbContext db)
+        private bool RegisterPuzzleQuestion(irQmDbContext db)
+        {
+            var pairs = ucPuzzleAnswer1.StringPairs;
+            if (pairs.Count==0)
+            {
+                lblMessage.Text = "جواب مشخص نشده است";
+                lblMessage.ForeColor = Color.Red;
+
+                return false;
+            }
+            var q = new Puzzle();
+            q.Id = Guid.NewGuid().ToString();
+            q.Face = rbFace.Rtf;
+
+            q.RegisterTime = DateTime.UtcNow;
+            var tagsInBox = tagsBox1.Tags;
+            var tags = db.Tags.Select(t => t.Value).ToArray();
+            foreach (var tg in tagsInBox.Where(t => !(tags.Contains(t))))
+            {
+                var tag = new Tag();
+                tag.Value = tg;
+                db.Tags.Add(tag);
+
+            }
+            foreach (var t in tagsBox1.Tags)
+            {
+                TagInQuestion<Puzzle> tagInQuestion = new TagInQuestion<Puzzle>();
+                tagInQuestion.QuestionId = q.Id;
+                tagInQuestion.TagId = t;
+                db.TagInPuzzle.Add(tagInQuestion);
+            }
+            q.Pairs = pairs;
+
+            q.LessonName = comboLesson.Text.Trim();
+            q.CreatorUserId = Globals.CurrentUser.UserId;
+
+            db.PuzzleQuestions.Add(q);
+
+            db.SaveChanges();
+            
+            ucPuzzleAnswer1.New();
+            return true;
+        }
+
+        private bool RegisterLongAnswerQuestion(irQmDbContext db)
+        {
+            if (string.IsNullOrEmpty(ucLongAnswer1.Answer))
+            {
+                lblMessage.Text = "جواب مشخص نشده است";
+                lblMessage.ForeColor = Color.Red;
+
+                return false;
+            }
+            var q = new LongAnswer ();
+            q.Id = Guid.NewGuid().ToString();
+            q.Face = rbFace.Rtf;
+
+            q.RegisterTime = DateTime.UtcNow;
+            var tagsInBox = tagsBox1.Tags;
+            var tags = db.Tags.Select(t => t.Value).ToArray();
+            foreach (var tg in tagsInBox.Where(t => !(tags.Contains(t))))
+            {
+                var tag = new Tag();
+                tag.Value = tg;
+                db.Tags.Add(tag);
+
+            }
+            foreach (var t in tagsBox1.Tags)
+            {
+                TagInQuestion<LongAnswer> tagInQuestion = new TagInQuestion<LongAnswer>();
+                tagInQuestion.QuestionId = q.Id;
+                tagInQuestion.TagId = t;
+                db.TagInLongAnswer.Add(tagInQuestion);
+            }
+            q.Answer = ucLongAnswer1.Answer;
+
+            q.LessonName = comboLesson.Text.Trim();
+            q.CreatorUserId = Globals.CurrentUser.UserId;
+
+            db.LongAnswerQuestions.Add(q);
+
+            db.SaveChanges();
+
+           
+            ucTrueFalseAnswer1.New();
+            ucTrueFalseAnswer1.isTrue = true;
+
+            return true;
+
+        }
+
+        private bool RegisterMutiChoices(irQmDbContext db)
         {
             if (ucMultiOption1.Options.Count(o => o.IsTrue) < 1)
             {
                 lblMessage.Text = "گزینه یا گزینه های درست مشخص نشده است";
                 lblMessage.ForeColor = Color.Red;
 
-                return;
+                return false;
             }
 
             var q = new MultiChoices();
@@ -163,22 +285,24 @@ namespace irQm.Forms
 
             db.SaveChanges();
 
-
+            
             var newOptions = new List<Option>();
             for (var i = 0; i < ucMultiOption1.Options.Count; i++)
             {
                 newOptions.Add(new Option());
             }
             ucMultiOption1.New(newOptions);
+            return true;
+
         }
-        private void RegisterTrueOrFalse(irQmDbContext db)
+        private bool RegisterTrueOrFalse(irQmDbContext db)
         {
             if (!ucTrueFalseAnswer1.isTrue && !ucTrueFalseAnswer1.isFalse) 
             {
                 lblMessage.Text = "گزینه درست مشخص نشده است";
                 lblMessage.ForeColor = Color.Red;
 
-                return;
+                return false;
             }
             var q = new TFQuestion();
             q.Id = Guid.NewGuid().ToString();
@@ -218,10 +342,11 @@ namespace irQm.Forms
 
             db.SaveChanges();
 
-
            
             ucTrueFalseAnswer1.New();
             ucTrueFalseAnswer1.isTrue = true;
+            return true;
+
         }
         private void btnNew_Click(object sender, EventArgs e)
         {

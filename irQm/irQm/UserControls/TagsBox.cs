@@ -18,7 +18,18 @@ namespace irQm
         }
         public string[] Tags { get { string[] tgs = this.Text.Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries).Distinct().ToArray(); for (int i = 0; i < tgs.Length; i++) tgs[i] = tgs[i].Trim(); return tgs; } }
         bool isInitialized;
-
+        public void UpdateTags()
+        {
+            tags.Clear();
+            using (irQmDbContext db = new irQmDbContext())
+            {
+                var t = db.Tags.ToArray();
+                foreach (var tag in t)
+                {
+                    tags.Add(tag.Value);
+                }
+            }
+        }
         protected override void OnGotFocus(EventArgs e)
         {
             if (!isInitialized)
@@ -45,7 +56,11 @@ namespace irQm
             }
             base.OnGotFocus(e);
         }
-
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            options.Width = this.Width;
+        }
         private void options_SelectedIndexChanged(object sender, EventArgs e)
         {
             options.Visible = false;

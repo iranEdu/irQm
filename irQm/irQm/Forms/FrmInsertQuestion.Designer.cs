@@ -33,8 +33,7 @@ namespace irQm.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            irQm.BaseCodes.Puzzle puzzle1 = new irQm.BaseCodes.Puzzle();
-            irQm.BaseCodes.Practical practical1 = new irQm.BaseCodes.Practical();
+            irQm.BaseCodes.Puzzle puzzle3 = new irQm.BaseCodes.Puzzle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInsertQuestion));
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@ namespace irQm.Forms
             this.comboLesson = new irQm.UserControls.Utilities.LessonsComboBox();
             this.comboQuestionType = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ucLongAnswer1 = new irQm.UCLongAnswer();
             this.ucPuzzleAnswer1 = new irQm.UCPuzzleAnswer();
             this.ucPracticalAnswer1 = new irQm.UCPracticalAnswer();
             this.ucTrueFalseAnswer1 = new irQm.UCTrueFalseAnswer();
@@ -128,6 +128,7 @@ namespace irQm.Forms
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.ucLongAnswer1);
             this.panel1.Controls.Add(this.ucPuzzleAnswer1);
             this.panel1.Controls.Add(this.ucPracticalAnswer1);
             this.panel1.Controls.Add(this.ucTrueFalseAnswer1);
@@ -147,28 +148,37 @@ namespace irQm.Forms
             this.panel1.Size = new System.Drawing.Size(564, 414);
             this.panel1.TabIndex = 111;
             // 
+            // ucLongAnswer1
+            // 
+            this.ucLongAnswer1.Answer = "";
+            this.ucLongAnswer1.Location = new System.Drawing.Point(20, 193);
+            this.ucLongAnswer1.Name = "ucLongAnswer1";
+            this.ucLongAnswer1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ucLongAnswer1.Size = new System.Drawing.Size(544, 143);
+            this.ucLongAnswer1.TabIndex = 140;
+            this.ucLongAnswer1.Visible = false;
+            // 
             // ucPuzzleAnswer1
             // 
             this.ucPuzzleAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ucPuzzleAnswer1.Location = new System.Drawing.Point(20, 191);
             this.ucPuzzleAnswer1.Name = "ucPuzzleAnswer1";
-            puzzle1.AnswerPairs = null;
-            puzzle1.CreatorUser = null;
-            puzzle1.CreatorUserId = null;
-            puzzle1.EditTime = new System.DateTime(((long)(0)));
-            puzzle1.ExtraAnswers = null;
-            puzzle1.Face = null;
-            puzzle1.GainedScore = 0F;
-            puzzle1.Id = null;
-            puzzle1.Image = null;
-            puzzle1.Lesson = null;
-            puzzle1.LessonName = null;
-            puzzle1.Pairs = null;
-            puzzle1.RegisterTime = new System.DateTime(((long)(0)));
-            puzzle1.Score = 0F;
-            puzzle1.Tags = null;
-            this.ucPuzzleAnswer1.Question = puzzle1;
+            puzzle3.AnswerPairs = null;
+            puzzle3.CreatorUser = null;
+            puzzle3.CreatorUserId = null;
+            puzzle3.EditTime = new System.DateTime(((long)(0)));
+            puzzle3.ExtraAnswers = null;
+            puzzle3.Face = null;
+            puzzle3.GainedScore = 0F;
+            puzzle3.Id = null;
+            puzzle3.Image = null;
+            puzzle3.Lesson = null;
+            puzzle3.LessonName = null;
+            puzzle3.Pairs = null;
+            puzzle3.RegisterTime = new System.DateTime(((long)(0)));
+            puzzle3.Score = 0F;
+            puzzle3.Tags = null;
             this.ucPuzzleAnswer1.Size = new System.Drawing.Size(546, 173);
             this.ucPuzzleAnswer1.TabIndex = 138;
             this.ucPuzzleAnswer1.Visible = false;
@@ -179,7 +189,6 @@ namespace irQm.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ucPracticalAnswer1.Location = new System.Drawing.Point(26, 191);
             this.ucPracticalAnswer1.Name = "ucPracticalAnswer1";
-           
             this.ucPracticalAnswer1.Size = new System.Drawing.Size(538, 178);
             this.ucPracticalAnswer1.TabIndex = 139;
             this.ucPracticalAnswer1.Visible = false;
@@ -188,6 +197,8 @@ namespace irQm.Forms
             // 
             this.ucTrueFalseAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucTrueFalseAnswer1.isFalse = false;
+            this.ucTrueFalseAnswer1.isTrue = false;
             this.ucTrueFalseAnswer1.Location = new System.Drawing.Point(20, 193);
             this.ucTrueFalseAnswer1.Name = "ucTrueFalseAnswer1";
             this.ucTrueFalseAnswer1.Size = new System.Drawing.Size(533, 103);
@@ -378,5 +389,6 @@ namespace irQm.Forms
         private UCTrueFalseAnswer ucTrueFalseAnswer1;
         private UCPuzzleAnswer ucPuzzleAnswer1;
         private UCPracticalAnswer ucPracticalAnswer1;
+        private UCLongAnswer ucLongAnswer1;
     }
 }

@@ -10,11 +10,11 @@ namespace irQm.BaseCodes
    public class StringPair
     {
       [MaxLength(50),Required]
-     public string Id { get; set; } 
+     public string Id { get; set; }
         [Required]
-      public  string Key { get; set; }
+        public string Key { get; set; } = "";
         [Required]
-        public string Value { get; set; }
+        public string Value { get; set; } = "";
         public byte Number { get; set; }
 
         

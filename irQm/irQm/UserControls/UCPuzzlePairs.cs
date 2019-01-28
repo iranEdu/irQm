@@ -13,21 +13,22 @@ namespace irQm.UserControls
 {
     public partial class UCPuzzlePairs : UserControl
     {
-        
-        public List<StringPair> Options { get; private set; }
-        
+        private List<StringPair> _options;
+
+        public List<StringPair> Options { get => _options; set  { _options = value;Make(); } }
+
 
         public UCPuzzlePairs(List<StringPair> options)
         {
             InitializeComponent();
             fLPanel2.WrapContents = false;
-            this.Options = options;
+            _options = options;
             Make();
         }
 
         public UCPuzzlePairs()
         {
-            this.Options = new List<StringPair>() {  new StringPair(), new StringPair(), new StringPair()};
+            _options = new List<StringPair>() { new StringPair(), new StringPair(), new StringPair() };
             InitializeComponent();
             fLPanel2.WrapContents = false;
             Make();
@@ -37,12 +38,12 @@ namespace irQm.UserControls
         {
             //fLPanel.Controls.Clear();
             byte i = 1;
-            foreach (StringPair o in Options)
+            foreach (StringPair o in _options)
             {
                 o.Number = i++;
 
                 var oc = new UCPuzzleOption(o);
-              //  oc.CheckedChanged += OptionItem_CheckedChanged;
+                //  oc.CheckedChanged += OptionItem_CheckedChanged;
                 oc.Width = fLPanel2.Width - 30;
                 //oc.Anchor = AnchorStyles.Right | AnchorStyles.Left;
 
@@ -56,19 +57,19 @@ namespace irQm.UserControls
         }
         private void PairRemoved(UCPuzzleOption ucpuzzleoption)
         {
-            Options.Remove(ucpuzzleoption.Pair);
+            _options.Remove(ucpuzzleoption.Pair);
             fLPanel2.Controls.Remove(ucpuzzleoption);
             RefreshNumbers();
         }
 
         public void AddPair(StringPair pair)
         {
-            pair.Number = Convert.ToByte(Options.Count + 1);
-            Options.Add(pair);
+            pair.Number = Convert.ToByte(_options.Count + 1);
+            _options.Add(pair);
             var oc = new UCPuzzleOption(pair);
             oc.Width = fLPanel2.Width - 30;
             oc.Anchor = AnchorStyles.Right | AnchorStyles.Left;
-           // oc.OptionRemoved += OptionRemoved;
+            // oc.OptionRemoved += OptionRemoved;
             fLPanel2.Controls.Add(oc);
         }
 
@@ -83,5 +84,6 @@ namespace irQm.UserControls
 
             }
         }
+       
     }
 }

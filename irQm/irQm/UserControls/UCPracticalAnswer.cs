@@ -13,7 +13,7 @@ namespace irQm
 {
     public partial class UCPracticalAnswer : UserControl
     {
-        
+       
         public  List<StringItem> CheckList { get; set; }
         public UCPracticalAnswer()
         {

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
+[Serializable]
   public  class StringItem
     {
         [MaxLength(50)]
