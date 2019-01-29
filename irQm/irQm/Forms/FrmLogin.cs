@@ -67,5 +67,34 @@ namespace irQm.Forms
         {
             txtusername.Select();
         }
+
+        private void txtusername_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13 && txtusername.Text != null)
+            {
+
+                this.SelectNextControl(this.ActiveControl, true, true, true, true);
+
+            }
+            else
+            {
+                MessageBox.Show("نام کاربری را وارد نمایید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            }
+
+        private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13 && txtpass.Text != null)
+            {
+                //SendKeys.Send("{TAB}");
+                this.SelectNextControl(this.ActiveControl, true, true, true, true);
+
+            }
+            else
+            {
+                MessageBox.Show("نام کاربری را وارد نمایید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

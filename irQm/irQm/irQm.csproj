@@ -259,6 +259,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\Utilities\DetectLangugeTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UserControls\Utilities\FreeSizeRichTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
