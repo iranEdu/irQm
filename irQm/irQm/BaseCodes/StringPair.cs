@@ -9,8 +9,16 @@ namespace irQm.BaseCodes
 {
    public class StringPair
     {
-      [MaxLength(50),Required]
-     public string Id { get; set; }
+        public StringPair()
+        {
+
+        }
+        public StringPair(byte number)
+        {
+            Number = number;
+        }
+        [MaxLength(50), Required]
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         [Required]
         public string Key { get; set; } = "";
         [Required]

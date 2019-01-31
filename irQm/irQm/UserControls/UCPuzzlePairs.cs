@@ -13,22 +13,26 @@ namespace irQm.UserControls
 {
     public partial class UCPuzzlePairs : UserControl
     {
-        private List<StringPair> _options;
+        private List<StringPair> _pairs;
 
-        public List<StringPair> Options { get => _options; set  { _options = value;Make(); } }
+        public List<StringPair> Pairs {
+            get { _pairs.ForEach(p => { p.Value?.Trim(); });
+                return _pairs; }
+            set  { _pairs = value;Make(); }
+        }
 
 
         public UCPuzzlePairs(List<StringPair> options)
         {
             InitializeComponent();
             fLPanel2.WrapContents = false;
-            _options = options;
+            _pairs = options;
             Make();
         }
 
         public UCPuzzlePairs()
         {
-            _options = new List<StringPair>() { new StringPair(), new StringPair(), new StringPair() };
+            _pairs = new List<StringPair>() { new StringPair(1), new StringPair(2), new StringPair(3) };
             InitializeComponent();
             fLPanel2.WrapContents = false;
             Make();
@@ -36,9 +40,9 @@ namespace irQm.UserControls
 
         private void Make()
         {
-            //fLPanel.Controls.Clear();
+            fLPanel2.Controls.Clear();
             byte i = 1;
-            foreach (StringPair o in _options)
+            foreach (StringPair o in _pairs)
             {
                 o.Number = i++;
 
@@ -57,15 +61,15 @@ namespace irQm.UserControls
         }
         private void PairRemoved(UCPuzzleOption ucpuzzleoption)
         {
-            _options.Remove(ucpuzzleoption.Pair);
+            _pairs.Remove(ucpuzzleoption.Pair);
             fLPanel2.Controls.Remove(ucpuzzleoption);
             RefreshNumbers();
         }
 
         public void AddPair(StringPair pair)
         {
-            pair.Number = Convert.ToByte(_options.Count + 1);
-            _options.Add(pair);
+            pair.Number = Convert.ToByte(_pairs.Count + 1);
+            _pairs.Add(pair);
             var oc = new UCPuzzleOption(pair);
             oc.Width = fLPanel2.Width - 30;
             oc.Anchor = AnchorStyles.Right | AnchorStyles.Left;

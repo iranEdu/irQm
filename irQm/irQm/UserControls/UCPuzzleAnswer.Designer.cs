@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCPuzzleAnswer));
             this.panel1 = new System.Windows.Forms.Panel();
             this.ucOptionListpuzzle1 = new irQm.UserControls.UCPuzzlePairs();
-            this.label4 = new System.Windows.Forms.Label();
             this.pbAdd = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -41,7 +41,6 @@
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.ucOptionListpuzzle1);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.pbAdd);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -60,21 +59,6 @@
             this.ucOptionListpuzzle1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.ucOptionListpuzzle1.Size = new System.Drawing.Size(443, 130);
             this.ucOptionListpuzzle1.TabIndex = 122;
-            // 
-            // label4
-            // 
-            this.label4.AllowDrop = true;
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
-            this.label4.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(93, 3);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(143, 35);
-            this.label4.TabIndex = 119;
-            this.label4.Text = "ستون دوم:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pbAdd
             // 
@@ -95,13 +79,14 @@
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(307, 3);
+            this.label1.Location = new System.Drawing.Point(355, 3);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(143, 35);
             this.label1.TabIndex = 111;
-            this.label1.Text = "ستون اول:";
+            this.label1.Text = "جفت گزینه‌های مرتبط:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // UCPuzzleAnswer
             // 
@@ -121,7 +106,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pbAdd;
         internal System.Windows.Forms.Label label1;
-        internal System.Windows.Forms.Label label4;
         private UserControls.UCPuzzlePairs ucOptionListpuzzle1;
     }
 }

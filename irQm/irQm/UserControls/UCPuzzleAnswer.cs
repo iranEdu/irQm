@@ -15,12 +15,12 @@ namespace irQm
     {
         private List<StringPair> _stringPairs;
 
-        public List<StringPair> StringPairs { get => _stringPairs.Where(p => !(string.IsNullOrEmpty(p.Key) && string.IsNullOrEmpty(p.Value))).ToList(); set => _stringPairs = value; }
+        public List<StringPair> StringPairs { get =>_stringPairs.Where(p => !string.IsNullOrWhiteSpace(p.Value) && !string.IsNullOrWhiteSpace(p.Key)).ToList(); set { _stringPairs = value; } }
 
         public UCPuzzleAnswer()
         {
             InitializeComponent();
-            StringPairs = ucOptionListpuzzle1.Options;
+            StringPairs = ucOptionListpuzzle1.Pairs;
 
         }
 
@@ -31,6 +31,7 @@ namespace irQm
         }
         public void New()
         {
+           
             List<StringPair> pairs = new List<StringPair>();
             for (byte i = 0; i < 3; i++)
             {
@@ -39,7 +40,12 @@ namespace irQm
 
                 pairs.Add(sp);
             }
-            ucOptionListpuzzle1.Options = pairs;
+            ucOptionListpuzzle1.Pairs = pairs;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

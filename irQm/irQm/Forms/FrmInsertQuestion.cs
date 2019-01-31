@@ -15,6 +15,7 @@ namespace irQm.Forms
 {
     public partial class FrmInsertQuestion : MasterForm
     {
+        Timer timer;
         
         public FrmInsertQuestion()
         {
@@ -24,10 +25,13 @@ namespace irQm.Forms
             comboQuestionType.ValueMember = "Value";
             comboQuestionType.SelectedIndexChanged += ComboQuestionType_SelectedIndexChanged;
             comboLesson.LoadItems();
-          
+            timer = new Timer();
+            timer.Interval = 4000;
+            timer.Tick += Timer_Tick;
 
         }
 
+        
         private void ComboQuestionType_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch(comboQuestionType.SelectedValue)
@@ -99,16 +103,23 @@ namespace irQm.Forms
                 bool success = false;
                 using (irQmDbContext db = new irQmDbContext())
                 {
+                    if (string.IsNullOrWhiteSpace(rbFace.Text))
+                    {
+                        lblMessage.Text = "صورت سوال خالی است";
+                        lblMessage.ForeColor = Color.Red;
+
+                        return;
+                    }
                     if (comboLesson.SelectedIndex < 0)
                     {
-                        if (string.IsNullOrEmpty(comboLesson.Text.Trim()))
+                        if (string.IsNullOrWhiteSpace(comboLesson.Text))
                         {
                             lblMessage.Text = "درس وارد نشده است";
                             lblMessage.ForeColor = Color.Red;
 
                             return;
                         }
-                        var l = new Lesson();
+                       var l = new Lesson();
                         l.LessonName = comboLesson.Text.Trim();
                         db.Lessons.Add(l);
                         comboLesson.Items.Add(l.LessonName);
@@ -117,7 +128,7 @@ namespace irQm.Forms
                     {
                         case Globals.QuestionTypes.QType.multiOption:
 
-                            success= RegisterMutiChoices(db);
+                            success= RegisterMultiChoices(db);
                             break;
                         case Globals.QuestionTypes.QType.trueOrFalse:
                             success= RegisterTrueOrFalse(db);
@@ -128,6 +139,12 @@ namespace irQm.Forms
                         case Globals.QuestionTypes.QType.puzzle:
                             success= RegisterPuzzleQuestion(db);
                             break;
+                        case Globals.QuestionTypes.QType.practical:
+                            success = RegisterPracticalQuestion(db);
+                            break;
+                        case Globals.QuestionTypes.QType.shortAnswer:
+                            success = RegisterShortAnswerQuestion(db);
+                            break;
                     }
                 }
 
@@ -137,6 +154,8 @@ namespace irQm.Forms
                     rbFace.Rtf = "";
                     tagsBox1.Text = "";
                     tagsBox1.UpdateTags();
+                   
+                    timer.Start();
                     lblMessage.Text = "پرسش ثبت شد";
                     lblMessage.ForeColor = Color.Green;
                 }
@@ -147,6 +166,101 @@ namespace irQm.Forms
             //    lblMessage.Text = "مشکلی در عملیات پیش آمده است"+x.ToString();
             //    lblMessage.ForeColor = Color.Red;
             //}
+        }
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            lblMessage.Text = "";
+            timer.Stop();
+        }
+
+        private bool RegisterShortAnswerQuestion(irQmDbContext db)
+        {
+            if (ucShortAnswer1.StringList.Count==0)
+            {
+                lblMessage.Text = "جواب مشخص نشده است";
+                lblMessage.ForeColor = Color.Red;
+
+                return false;
+            }
+            var q = new ShortAnswer();
+            q.Id = Guid.NewGuid().ToString();
+            q.Face = rbFace.Rtf;
+
+            q.RegisterTime = DateTime.UtcNow;
+            var tagsInBox = tagsBox1.Tags;
+            var tags = db.Tags.Select(t => t.Value).ToArray();
+            foreach (var tg in tagsInBox.Where(t => !(tags.Contains(t))))
+            {
+                var tag = new Tag();
+                tag.Value = tg;
+                db.Tags.Add(tag);
+
+            }
+            foreach (var t in tagsBox1.Tags)
+            {
+                TagInQuestion<ShortAnswer> tagInQuestion = new TagInQuestion<ShortAnswer>();
+                tagInQuestion.QuestionId = q.Id;
+                tagInQuestion.TagId = t;
+                db.TagInShortAnswer.Add(tagInQuestion);
+            }
+            q.Answer = ucShortAnswer1.StringList;
+
+            q.LessonName = comboLesson.Text.Trim();
+            q.CreatorUserId = Globals.CurrentUser.UserId;
+
+            db.ShortAnswerQustions.Add(q);
+
+            db.SaveChanges();
+
+
+            ucShortAnswer1.New(new List<StringItem> {new StringItem(1),new StringItem(2),new StringItem(3) });
+          
+
+            return true;
+        }
+
+        private bool RegisterPracticalQuestion(irQmDbContext db)
+        {
+            var list = ucPracticalAnswer1.CheckList;
+            if (list.Count == 0)
+            {
+                lblMessage.Text = "چک لیست خالی است";
+                lblMessage.ForeColor = Color.Red;
+
+                return false;
+            }
+            var q = new Practical();
+            q.Id = Guid.NewGuid().ToString();
+            q.Face = rbFace.Rtf;
+
+            q.RegisterTime = DateTime.UtcNow;
+            var tagsInBox = tagsBox1.Tags;
+            var tags = db.Tags.Select(t => t.Value).ToArray();
+            foreach (var tg in tagsInBox.Where(t => !(tags.Contains(t))))
+            {
+                var tag = new Tag();
+                tag.Value = tg;
+                db.Tags.Add(tag);
+
+            }
+            foreach (var t in tagsBox1.Tags)
+            {
+                TagInQuestion<Practical> tagInQuestion = new TagInQuestion<Practical>();
+                tagInQuestion.QuestionId = q.Id;
+                tagInQuestion.TagId = t;
+                db.TagInPractical.Add(tagInQuestion);
+            }
+            q.CheckList = list;
+
+            q.LessonName = comboLesson.Text.Trim();
+            q.CreatorUserId = Globals.CurrentUser.UserId;
+
+            db.PracticalQuestions.Add(q);
+
+            db.SaveChanges();
+
+            ucPracticalAnswer1.New(new List<StringItem>() { new StringItem(1),new StringItem(2),new StringItem(3) });
+            return true;
         }
 
         private bool RegisterPuzzleQuestion(irQmDbContext db)
@@ -233,14 +347,14 @@ namespace irQm.Forms
             db.SaveChanges();
 
            
-            ucTrueFalseAnswer1.New();
-            ucTrueFalseAnswer1.isTrue = true;
+            ucLongAnswer1.New();
+           
 
             return true;
 
         }
 
-        private bool RegisterMutiChoices(irQmDbContext db)
+        private bool RegisterMultiChoices(irQmDbContext db)
         {
             if (ucMultiOption1.Options.Count(o => o.IsTrue) < 1)
             {

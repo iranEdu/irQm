@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCShortAnswer));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ucPracticalItemList1 = new irQm.UserControls.UCStringItemList();
+            this.ucstringitemList1 = new irQm.UserControls.UCStringItemList();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +66,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.ucPracticalItemList1);
+            this.panel1.Controls.Add(this.ucstringitemList1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(5, 3);
@@ -74,12 +75,12 @@
             this.panel1.Size = new System.Drawing.Size(522, 167);
             this.panel1.TabIndex = 110;
             // 
-            // ucPracticalItemList1
+            // ucstringitemList1
             // 
-            this.ucPracticalItemList1.Location = new System.Drawing.Point(86, 38);
-            this.ucPracticalItemList1.Name = "ucPracticalItemList1";
-            this.ucPracticalItemList1.Size = new System.Drawing.Size(426, 124);
-            this.ucPracticalItemList1.TabIndex = 113;
+            this.ucstringitemList1.Location = new System.Drawing.Point(86, 38);
+            this.ucstringitemList1.Name = "ucstringitemList1";
+            this.ucstringitemList1.Size = new System.Drawing.Size(426, 124);
+            this.ucstringitemList1.TabIndex = 113;
             // 
             // UCShortAnswer
             // 
@@ -98,6 +99,6 @@
         internal System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
-        private UserControls.UCStringItemList ucPracticalItemList1;
+        private UserControls.UCStringItemList ucstringitemList1;
     }
 }

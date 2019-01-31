@@ -1,17 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace irQm.BaseCodes
 {
-[Serializable]
+    [Serializable]
   public  class StringItem
     {
+    
+        public StringItem(byte number)
+        {
+            Number = number;
+        }
+        public StringItem()
+        { }
         [MaxLength(50)]
-        public string Id { get; set; }
+        public string Id { get; set; } = Guid.NewGuid().ToString();
         [Required]
         public string Value { get; set; }
         public byte Number { get; set; }

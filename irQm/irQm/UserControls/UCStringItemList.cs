@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using irQm.BaseCodes;
 
@@ -9,20 +10,20 @@ namespace irQm.UserControls
     {
         private List<StringItem> _items;
 
-        public List<StringItem> Items { get => _items;
+        public List<StringItem> Items { get { _items.ForEach(i => { i.Value?.Trim();  });return _items.Where(i=>i!=null).ToList(); }
             set { _items = value; Make(); } }
 
-        public UCStringItemList(List<StringItem> options)
+        public UCStringItemList(List<StringItem> items)
         {
             InitializeComponent();
             fLPanel.WrapContents = false;
-            _items = options;
+            _items = items;
             Make();
         }
 
         public UCStringItemList()
         {
-            _items = new List<StringItem>() { new StringItem(), new StringItem(), new StringItem() };
+            _items = new List<StringItem>() { new StringItem(1), new StringItem(2), new StringItem(3) };
             InitializeComponent();
             fLPanel.WrapContents = false;
             Make();
