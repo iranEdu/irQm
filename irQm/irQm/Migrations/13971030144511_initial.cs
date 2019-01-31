@@ -31,6 +31,20 @@ namespace irQm.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "TFOption",
+                columns: table => new
+                {
+                    Id = table.Column<string>(maxLength: 50, nullable: false),
+                    IsTrue = table.Column<bool>(nullable: false),
+                    Answered = table.Column<bool>(nullable: false),
+                    number = table.Column<byte>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TFOption", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "User",
                 columns: table => new
                 {
@@ -225,6 +239,51 @@ namespace irQm.Migrations
                         column: x => x.LessonName,
                         principalTable: "Lessons",
                         principalColumn: "LessonName",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TFQuestions",
+                columns: table => new
+                {
+                    Id = table.Column<string>(maxLength: 50, nullable: false),
+                    Face = table.Column<string>(nullable: false),
+                    CreatorUserId = table.Column<string>(nullable: true),
+                    RegisterTime = table.Column<DateTime>(nullable: false),
+                    EditTime = table.Column<DateTime>(nullable: false),
+                    Score = table.Column<float>(nullable: false),
+                    GainedScore = table.Column<float>(nullable: false),
+                    TrueOptionId = table.Column<string>(nullable: false),
+                    FalseOptionId = table.Column<string>(nullable: false),
+                    LessonName = table.Column<string>(nullable: true),
+                    Image = table.Column<byte[]>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TFQuestions", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_TFQuestions_User_CreatorUserId",
+                        column: x => x.CreatorUserId,
+                        principalTable: "User",
+                        principalColumn: "UserId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_TFQuestions_TFOption_FalseOptionId",
+                        column: x => x.FalseOptionId,
+                        principalTable: "TFOption",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_TFQuestions_Lessons_LessonName",
+                        column: x => x.LessonName,
+                        principalTable: "Lessons",
+                        principalColumn: "LessonName",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_TFQuestions_TFOption_TrueOptionId",
+                        column: x => x.TrueOptionId,
+                        principalTable: "TFOption",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -568,59 +627,6 @@ namespace irQm.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TFQuestionInList",
-                columns: table => new
-                {
-                    Id = table.Column<string>(maxLength: 50, nullable: false),
-                    Row = table.Column<int>(nullable: false),
-                    QuestionId = table.Column<string>(nullable: false),
-                    ExamId = table.Column<string>(nullable: true),
-                    ExamUserId = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_TFQuestionInList", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_TFQuestionInList_Exams_ExamId_ExamUserId",
-                        columns: x => new { x.ExamId, x.ExamUserId },
-                        principalTable: "Exams",
-                        principalColumns: new[] { "Id", "UserId" },
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "TFQuestions",
-                columns: table => new
-                {
-                    Id = table.Column<string>(maxLength: 50, nullable: false),
-                    Face = table.Column<string>(nullable: false),
-                    CreatorUserId = table.Column<string>(nullable: true),
-                    RegisterTime = table.Column<DateTime>(nullable: false),
-                    EditTime = table.Column<DateTime>(nullable: false),
-                    Score = table.Column<float>(nullable: false),
-                    GainedScore = table.Column<float>(nullable: false),
-                    FalseOptionId = table.Column<string>(nullable: false),
-                    LessonName = table.Column<string>(nullable: true),
-                    Image = table.Column<byte[]>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_TFQuestions", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_TFQuestions_User_CreatorUserId",
-                        column: x => x.CreatorUserId,
-                        principalTable: "User",
-                        principalColumn: "UserId",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_TFQuestions_Lessons_LessonName",
-                        column: x => x.LessonName,
-                        principalTable: "Lessons",
-                        principalColumn: "LessonName",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "TagInTfQuestion",
                 columns: table => new
                 {
@@ -645,22 +651,29 @@ namespace irQm.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "TFOption",
+                name: "TFQuestionInList",
                 columns: table => new
                 {
                     Id = table.Column<string>(maxLength: 50, nullable: false),
-                    IsTrue = table.Column<bool>(nullable: false),
-                    Answered = table.Column<bool>(nullable: false),
-                    number = table.Column<byte>(nullable: false)
+                    Row = table.Column<int>(nullable: false),
+                    QuestionId = table.Column<string>(nullable: false),
+                    ExamId = table.Column<string>(nullable: true),
+                    ExamUserId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_TFOption", x => x.Id);
+                    table.PrimaryKey("PK_TFQuestionInList", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_TFOption_TFQuestions_Id",
-                        column: x => x.Id,
+                        name: "FK_TFQuestionInList_TFQuestions_QuestionId",
+                        column: x => x.QuestionId,
                         principalTable: "TFQuestions",
                         principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_TFQuestionInList_Exams_ExamId_ExamUserId",
+                        columns: x => new { x.ExamId, x.ExamUserId },
+                        principalTable: "Exams",
+                        principalColumns: new[] { "Id", "UserId" },
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -854,37 +867,14 @@ namespace irQm.Migrations
                 table: "TFQuestions",
                 column: "LessonName");
 
-            migrationBuilder.AddForeignKey(
-                name: "FK_TFQuestionInList_TFQuestions_QuestionId",
-                table: "TFQuestionInList",
-                column: "QuestionId",
-                principalTable: "TFQuestions",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
-
-            migrationBuilder.AddForeignKey(
-                name: "FK_TFQuestions_TFOption_FalseOptionId",
+            migrationBuilder.CreateIndex(
+                name: "IX_TFQuestions_TrueOptionId",
                 table: "TFQuestions",
-                column: "FalseOptionId",
-                principalTable: "TFOption",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Cascade);
+                column: "TrueOptionId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropForeignKey(
-                name: "FK_TFQuestions_User_CreatorUserId",
-                table: "TFQuestions");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_TFQuestions_Lessons_LessonName",
-                table: "TFQuestions");
-
-            migrationBuilder.DropForeignKey(
-                name: "FK_TFOption_TFQuestions_Id",
-                table: "TFOption");
-
             migrationBuilder.DropTable(
                 name: "LongAnswerQuestionInList");
 
@@ -949,19 +939,19 @@ namespace irQm.Migrations
                 name: "Tags");
 
             migrationBuilder.DropTable(
+                name: "TFQuestions");
+
+            migrationBuilder.DropTable(
                 name: "Exams");
 
             migrationBuilder.DropTable(
-                name: "User");
+                name: "TFOption");
 
             migrationBuilder.DropTable(
                 name: "Lessons");
 
             migrationBuilder.DropTable(
-                name: "TFQuestions");
-
-            migrationBuilder.DropTable(
-                name: "TFOption");
+                name: "User");
         }
     }
 }

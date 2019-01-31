@@ -13,21 +13,28 @@ namespace irQm
 {
     public partial class UCPracticalAnswer : UserControl
     {
-        public Practical Question { get; set; }
-        List<StringItem> options;
+        private List<StringItem> _checkList;
+
+        public List<StringItem> CheckList { get => _checkList.Where(i=>!string.IsNullOrWhiteSpace(i.Value)).ToList(); set => _checkList = value; }
         public UCPracticalAnswer()
         {
             InitializeComponent();
-            Question = new Practical();
-            options = ucPracticalItemList1.Items;
+
+            CheckList = ucPracticalItemList1.Items;
+        }
+
+        public void New(List<StringItem> checkList)
+        {
+            _checkList = checkList;
+            ucPracticalItemList1.Items = checkList;
         }
 
         private void pbAdd_Click(object sender, EventArgs e)
         {
             ucPracticalItemList1.AddOption(new BaseCodes.StringItem());
-          
+
         }
 
-        
+
     }
 }

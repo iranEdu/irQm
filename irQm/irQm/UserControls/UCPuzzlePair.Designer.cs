@@ -33,6 +33,7 @@ namespace irQm
             this.lblNumber = new System.Windows.Forms.Label();
             this.textFirstpair = new System.Windows.Forms.TextBox();
             this.TextSecondpair = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemove)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,8 +51,8 @@ namespace irQm
             // lblNumber
             // 
             this.lblNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNumber.BackColor = System.Drawing.SystemColors.Control;
-            this.lblNumber.Location = new System.Drawing.Point(426, 1);
+            this.lblNumber.BackColor = System.Drawing.Color.Transparent;
+            this.lblNumber.Location = new System.Drawing.Point(437, 1);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblNumber.Size = new System.Drawing.Size(33, 23);
@@ -60,32 +61,44 @@ namespace irQm
             // 
             // textFirstpair
             // 
-            this.textFirstpair.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.textFirstpair.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textFirstpair.Location = new System.Drawing.Point(216, 3);
+            this.textFirstpair.Location = new System.Drawing.Point(243, 3);
             this.textFirstpair.Name = "textFirstpair";
             this.textFirstpair.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textFirstpair.Size = new System.Drawing.Size(204, 20);
+            this.textFirstpair.Size = new System.Drawing.Size(185, 20);
             this.textFirstpair.TabIndex = 123;
-            this.textFirstpair.Text = "";
             this.textFirstpair.TextChanged += new System.EventHandler(this.txtcolumn1_TextChanged);
             // 
             // TextSecondpair
             // 
-            this.TextSecondpair.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.TextSecondpair.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TextSecondpair.Location = new System.Drawing.Point(29, 3);
             this.TextSecondpair.Name = "TextSecondpair";
             this.TextSecondpair.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.TextSecondpair.Size = new System.Drawing.Size(181, 20);
+            this.TextSecondpair.Size = new System.Drawing.Size(185, 20);
             this.TextSecondpair.TabIndex = 124;
-            this.TextSecondpair.Text = "";
             this.TextSecondpair.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(216, 7);
+            this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label1.Size = new System.Drawing.Size(25, 13);
+            this.label1.TabIndex = 125;
+            this.label1.Text = "<=>";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UCPuzzleOption
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.TextSecondpair);
             this.Controls.Add(this.textFirstpair);
             this.Controls.Add(this.lblNumber);
@@ -94,6 +107,7 @@ namespace irQm
             this.Size = new System.Drawing.Size(476, 30);
             ((System.ComponentModel.ISupportInitialize)(this.pbRemove)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -102,6 +116,7 @@ namespace irQm
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.TextBox textFirstpair;
         private System.Windows.Forms.TextBox TextSecondpair;
+        private System.Windows.Forms.Label label1;
     }
         
 }

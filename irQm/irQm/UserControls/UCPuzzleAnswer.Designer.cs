@@ -28,65 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCPuzzleAnswer));
             this.panel1 = new System.Windows.Forms.Panel();
             this.ucOptionListpuzzle1 = new irQm.UserControls.UCPuzzlePairs();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pbAdd = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.ucOptionListpuzzle1);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pbAdd);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(3, 1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panel1.Size = new System.Drawing.Size(522, 192);
+            this.panel1.Size = new System.Drawing.Size(529, 179);
             this.panel1.TabIndex = 119;
             // 
             // ucOptionListpuzzle1
             // 
-            this.ucOptionListpuzzle1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucOptionListpuzzle1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ucOptionListpuzzle1.AutoScroll = true;
-            this.ucOptionListpuzzle1.Location = new System.Drawing.Point(81, 41);
+            this.ucOptionListpuzzle1.Location = new System.Drawing.Point(50, 41);
             this.ucOptionListpuzzle1.Name = "ucOptionListpuzzle1";
             this.ucOptionListpuzzle1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.ucOptionListpuzzle1.Size = new System.Drawing.Size(444, 146);
+            this.ucOptionListpuzzle1.Size = new System.Drawing.Size(443, 130);
             this.ucOptionListpuzzle1.TabIndex = 122;
             // 
-            // label4
+            // pbAdd
             // 
-            this.label4.AllowDrop = true;
-            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.BackColor = System.Drawing.SystemColors.Control;
-            this.label4.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(127, 3);
-            this.label4.Name = "label4";
-            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label4.Size = new System.Drawing.Size(143, 35);
-            this.label4.TabIndex = 119;
-            this.label4.Text = "ستون دوم:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::irQm.Properties.Resources.addmark;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 146);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 113;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pbAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbAdd.Image = global::irQm.Properties.Resources.addmark;
+            this.pbAdd.Location = new System.Drawing.Point(3, 146);
+            this.pbAdd.Name = "pbAdd";
+            this.pbAdd.Size = new System.Drawing.Size(25, 25);
+            this.pbAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAdd.TabIndex = 113;
+            this.pbAdd.TabStop = false;
+            this.pbAdd.Click += new System.EventHandler(this.pbAdd_Click);
             // 
             // label1
             // 
@@ -95,13 +79,14 @@
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(334, 3);
+            this.label1.Location = new System.Drawing.Point(355, 3);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(143, 35);
             this.label1.TabIndex = 111;
-            this.label1.Text = "ستون اول:";
+            this.label1.Text = "جفت گزینه‌های مرتبط:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // UCPuzzleAnswer
             // 
@@ -109,9 +94,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Name = "UCPuzzleAnswer";
-            this.Size = new System.Drawing.Size(529, 201);
+            this.Size = new System.Drawing.Size(529, 179);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -119,9 +104,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pbAdd;
         internal System.Windows.Forms.Label label1;
-        internal System.Windows.Forms.Label label4;
         private UserControls.UCPuzzlePairs ucOptionListpuzzle1;
     }
 }

@@ -173,6 +173,11 @@
     <Compile Include="BaseCodes\LongAnswer.cs" />
     <Compile Include="BaseCodes\Puzzle.cs" />
     <Compile Include="BaseCodes\QuestionInList.cs" />
+    <Compile Include="Migrations\13971030144511_initial.cs" />
+    <Compile Include="Migrations\13971030144511_initial.designer.cs">
+      <DependentUpon>13971030144511_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\irQmDbContextModelSnapshot.cs" />
     <Compile Include="UserControls\Utilities\CustomizedRichTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -246,11 +251,6 @@
     <Compile Include="Forms\FrmEdit.Designer.cs">
       <DependentUpon>FrmEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\13971027084429_initial.cs" />
-    <Compile Include="Migrations\13971027084429_initial.designer.cs">
-      <DependentUpon>13971027084429_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\irQmDbContextModelSnapshot.cs" />
     <Compile Include="UserControls\UCQuestionForPresentation.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -13,18 +13,39 @@ namespace irQm
 {
     public partial class UCPuzzleAnswer : UserControl
     {
-        public Puzzle Question { get; set; }
-        List<StringPair> options;
+        private List<StringPair> _stringPairs;
+
+        public List<StringPair> StringPairs { get =>_stringPairs.Where(p => !string.IsNullOrWhiteSpace(p.Value) && !string.IsNullOrWhiteSpace(p.Key)).ToList(); set { _stringPairs = value; } }
+
         public UCPuzzleAnswer()
         {
             InitializeComponent();
-            Question = new Puzzle();
-            options = ucOptionListpuzzle1.Options;
+            StringPairs = ucOptionListpuzzle1.Pairs;
+
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+
+        private void pbAdd_Click(object sender, EventArgs e)
         {
             ucOptionListpuzzle1.AddPair(new StringPair());
+        }
+        public void New()
+        {
+           
+            List<StringPair> pairs = new List<StringPair>();
+            for (byte i = 0; i < 3; i++)
+            {
+                var sp = new StringPair();
+                sp.Id = Guid.NewGuid().ToString();
+
+                pairs.Add(sp);
+            }
+            ucOptionListpuzzle1.Pairs = pairs;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

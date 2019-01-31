@@ -12,9 +12,16 @@ namespace irQm
 {
     public partial class UCLongAnswer : UserControl
     {
+        public string Answer { get => txtFace.Text.Trim(); set { txtFace.Text = value.Trim(); } }
+
         public UCLongAnswer()
         {
             InitializeComponent();
+        }
+        public void New()
+        {
+            txtFace.Clear();
+            txtFace.ClearUndo();
         }
     }
 }
