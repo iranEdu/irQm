@@ -23,8 +23,13 @@ namespace irQm.Forms
 
       
 
-        private void Btnentire_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
+            if(string.IsNullOrWhiteSpace(txtusername.Text)||string.IsNullOrWhiteSpace(txtpass.Text))
+            {
+                MessageBox.Show("نام یا رمز عبور خالی است", "ورود نادرست", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             using (irQmDbContext db = new irQmDbContext())
             {
                 var user = db.User.FirstOrDefault(u => u.UserName == txtusername.Text.ToLower().Trim() && u.Password == txtpass.Text.GetHashCode().ToString());
@@ -41,6 +46,10 @@ namespace irQm.Forms
                     }
                     Settings.Default.Save();
                     this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("نام یا رمز عبور نادرست است", "ورود نادرست", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -73,14 +82,10 @@ namespace irQm.Forms
             if (e.KeyChar == 13 && txtusername.Text != null)
             {
 
-                this.SelectNextControl(this.ActiveControl, true, true, true, true);
+                this.btnLogin.PerformClick();
 
             }
-            else
-            {
-                MessageBox.Show("نام کاربری را وارد نمایید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-
+           
             }
 
         private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
@@ -88,13 +93,11 @@ namespace irQm.Forms
             if (e.KeyChar == 13 && txtpass.Text != null)
             {
                 //SendKeys.Send("{TAB}");
-                this.SelectNextControl(this.ActiveControl, true, true, true, true);
+                this.btnLogin.PerformClick();
+
 
             }
-            else
-            {
-                MessageBox.Show("نام کاربری را وارد نمایید", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+            
         }
     }
 }

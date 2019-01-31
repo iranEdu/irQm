@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.RegisterLink = new System.Windows.Forms.LinkLabel();
-            this.BtnEntire = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -63,19 +63,19 @@
             this.RegisterLink.Text = "ثبت نام";
             this.RegisterLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RegisterLink_LinkClicked);
             // 
-            // BtnEntire
+            // btnLogin
             // 
-            this.BtnEntire.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.BtnEntire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.BtnEntire.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.BtnEntire.ForeColor = System.Drawing.Color.White;
-            this.BtnEntire.Location = new System.Drawing.Point(239, 286);
-            this.BtnEntire.Name = "BtnEntire";
-            this.BtnEntire.Size = new System.Drawing.Size(85, 39);
-            this.BtnEntire.TabIndex = 4;
-            this.BtnEntire.Text = "ورود";
-            this.BtnEntire.UseVisualStyleBackColor = false;
-            this.BtnEntire.Click += new System.EventHandler(this.Btnentire_Click);
+            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.btnLogin.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(239, 286);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(85, 39);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "ورود";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // pictureBox2
             // 
@@ -249,7 +249,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.cbRemember);
             this.Controls.Add(this.RegisterLink);
-            this.Controls.Add(this.BtnEntire);
+            this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox1);
@@ -283,7 +283,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtusername;
         private System.Windows.Forms.TextBox txtpass;
-        private System.Windows.Forms.Button BtnEntire;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.LinkLabel RegisterLink;

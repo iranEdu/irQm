@@ -259,7 +259,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControls\Utilities\DetectLangugeTextbox.cs">
+    <Compile Include="UserControls\Utilities\AutoDirectionTextbox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserControls\Utilities\FreeSizeRichTextBox.cs">

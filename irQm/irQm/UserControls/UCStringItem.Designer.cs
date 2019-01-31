@@ -1,4 +1,6 @@
 ﻿using irQm.BaseCodes;
+using irQm.UserControls.Utilities;
+
 namespace irQm.UserControls
 {
     partial class UCStringItem
@@ -29,7 +31,7 @@ namespace irQm.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-            this.textCheckList = new System.Windows.Forms.TextBox();
+            this.textCheckList = new AutoDirectionTextbox();
             this.pbRemove = new System.Windows.Forms.PictureBox();
             this.lblNumber = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemove)).BeginInit();
@@ -82,7 +84,7 @@ namespace irQm.UserControls
 
         #endregion
 
-        private  System.Windows.Forms.TextBox textCheckList;
+        private AutoDirectionTextbox textCheckList;
         private System.Windows.Forms.PictureBox pbRemove;
         private System.Windows.Forms.Label lblNumber;
     }
