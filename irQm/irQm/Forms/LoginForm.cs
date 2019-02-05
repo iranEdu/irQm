@@ -7,9 +7,9 @@ using irQm.Properties;
 
 namespace irQm.Forms
 {
-    public partial class FrmLogin : ExtendedForm
+    public partial class LoginForm : ExtendedForm
     {
-        public FrmLogin()
+        public LoginForm()
         {
             InitializeComponent();
             if (Settings.Default.passRemember)
@@ -35,7 +35,7 @@ namespace irQm.Forms
                 var user = db.User.FirstOrDefault(u => u.UserName == txtusername.Text.ToLower().Trim() && u.Password == txtpass.Text.GetHashCode().ToString());
                 if (user!=null)
                 {
-                    FrmMain main = new FrmMain();
+                    MainForm main = new MainForm();
                     irQm.BaseCodes.Utilities.Globals.CurrentUser = user;
                     main.Show();
                     Settings.Default.passRemember = cbRemember.Checked ;
@@ -67,7 +67,7 @@ namespace irQm.Forms
 
         private void RegisterLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FrmUserRegister reg = new FrmUserRegister();
+            UserRegisterForm reg = new UserRegisterForm();
             reg.ShowDialog();
            
         }

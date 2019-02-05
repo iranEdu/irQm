@@ -1,6 +1,6 @@
 ﻿namespace irQm.Forms
 {
-    partial class FrmUserRegister
+    partial class UserRegisterForm
     {
         /// <summary>
         /// Required designer variable.
@@ -119,7 +119,7 @@
             this.txtusername.MaxLength = 30;
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(194, 20);
-            this.txtusername.TabIndex = 9;
+            this.txtusername.TabIndex = 1;
             // 
             // txtpass
             // 
@@ -128,7 +128,7 @@
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(194, 20);
-            this.txtpass.TabIndex = 10;
+            this.txtpass.TabIndex = 2;
             // 
             // BtnEntire
             // 
@@ -139,7 +139,7 @@
             this.BtnEntire.Location = new System.Drawing.Point(290, 309);
             this.BtnEntire.Name = "BtnEntire";
             this.BtnEntire.Size = new System.Drawing.Size(85, 39);
-            this.BtnEntire.TabIndex = 11;
+            this.BtnEntire.TabIndex = 7;
             this.BtnEntire.Text = "ثبت";
             this.BtnEntire.UseVisualStyleBackColor = false;
             this.BtnEntire.Click += new System.EventHandler(this.Btnentire_Click);
@@ -248,7 +248,7 @@
             this.txtName.MaxLength = 30;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(194, 20);
-            this.txtName.TabIndex = 20;
+            this.txtName.TabIndex = 3;
             // 
             // txtFamily
             // 
@@ -256,14 +256,14 @@
             this.txtFamily.MaxLength = 30;
             this.txtFamily.Name = "txtFamily";
             this.txtFamily.Size = new System.Drawing.Size(194, 20);
-            this.txtFamily.TabIndex = 22;
+            this.txtFamily.TabIndex = 4;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(243, 122);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(194, 20);
-            this.txtEmail.TabIndex = 21;
+            this.txtEmail.TabIndex = 5;
             // 
             // comboRole
             // 
@@ -274,7 +274,7 @@
             this.comboRole.Location = new System.Drawing.Point(243, 151);
             this.comboRole.Name = "comboRole";
             this.comboRole.Size = new System.Drawing.Size(194, 21);
-            this.comboRole.TabIndex = 23;
+            this.comboRole.TabIndex = 6;
             // 
             // Picexit
             // 
@@ -332,7 +332,7 @@
             this.lblResult.TabIndex = 15;
             this.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FrmUserRegister
+            // UserRegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -348,8 +348,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "FrmUserRegister";
+            this.Name = "UserRegisterForm";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.UserRegisterForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picexit)).EndInit();

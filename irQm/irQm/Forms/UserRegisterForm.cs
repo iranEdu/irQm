@@ -7,9 +7,9 @@ using System.Drawing;
 
 namespace irQm.Forms
 {
-    public partial class FrmUserRegister : ExtendedForm
+    public partial class UserRegisterForm : ExtendedForm
     {
-        public FrmUserRegister()
+        public UserRegisterForm()
         {
             InitializeComponent();
            
@@ -60,8 +60,13 @@ namespace irQm.Forms
 
         private void Picimg_Click(object sender, EventArgs e)
         {
-            FrmLogin login = new FrmLogin();
+            LoginForm login = new LoginForm();
             login.Show();
+        }
+
+        private void UserRegisterForm_Load(object sender, EventArgs e)
+        {
+            txtusername.Select();
         }
     }
 }

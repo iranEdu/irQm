@@ -1,6 +1,6 @@
 ﻿namespace irQm.Forms
 {
-    partial class Frmnewlesson
+    partial class NewLessonForm
     {
         /// <summary>
         /// Required designer variable.
@@ -177,7 +177,7 @@
             this.button1.Text = "+ جدید";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // Frmnewlesson
+            // NewLessonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -187,8 +187,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
-            this.Name = "Frmnewlesson";
-            this.Text = "Frmnewlesson";
+            this.Name = "NewLessonForm";
+            this.Text = "New Lesson";
             this.Controls.SetChildIndex(this.panel1, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.btnRegister, 0);

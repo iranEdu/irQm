@@ -173,6 +173,12 @@
     <Compile Include="BaseCodes\LongAnswer.cs" />
     <Compile Include="BaseCodes\Puzzle.cs" />
     <Compile Include="BaseCodes\QuestionInList.cs" />
+    <Compile Include="Forms\SelectChoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectChoiceForm.Designer.cs">
+      <DependentUpon>SelectChoiceForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\13971030144511_initial.cs" />
     <Compile Include="Migrations\13971030144511_initial.designer.cs">
       <DependentUpon>13971030144511_initial.cs</DependentUpon>
@@ -197,59 +203,59 @@
     <Compile Include="Forms\MasterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmUserRegister.cs">
+    <Compile Include="Forms\UserRegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmUserRegister.Designer.cs">
-      <DependentUpon>FrmUserRegister.cs</DependentUpon>
+    <Compile Include="Forms\UserRegisterForm.Designer.cs">
+      <DependentUpon>UserRegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmLogin.cs">
+    <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmLogin.Designer.cs">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmExam.cs">
+    <Compile Include="Forms\ExamForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmExam.Designer.cs">
-      <DependentUpon>FrmExam.cs</DependentUpon>
+    <Compile Include="Forms\ExamForm.Designer.cs">
+      <DependentUpon>ExamForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmMain.cs">
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frmnewlesson.cs">
+    <Compile Include="Forms\NewLessonForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Frmnewlesson.Designer.cs">
-      <DependentUpon>Frmnewlesson.cs</DependentUpon>
+    <Compile Include="Forms\NewLessonForm.Designer.cs">
+      <DependentUpon>NewLessonForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInsertQuestion.cs">
+    <Compile Include="Forms\InsertQuestionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInsertQuestion.Designer.cs">
-      <DependentUpon>FrmInsertQuestion.cs</DependentUpon>
+    <Compile Include="Forms\InsertQuestionForm.Designer.cs">
+      <DependentUpon>InsertQuestionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmExamResult.cs">
+    <Compile Include="Forms\ExamResultForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmExamResult.Designer.cs">
-      <DependentUpon>FrmExamResult.cs</DependentUpon>
+    <Compile Include="Forms\ExamResultForm.Designer.cs">
+      <DependentUpon>ExamResultForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmQuestionsBank.cs">
+    <Compile Include="Forms\QuestionBankForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmQuestionsBank.Designer.cs">
-      <DependentUpon>FrmQuestionsBank.cs</DependentUpon>
+    <Compile Include="Forms\QuestionBankForm.Designer.cs">
+      <DependentUpon>QuestionBankForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmEdit.cs">
+    <Compile Include="Forms\EditForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmEdit.Designer.cs">
-      <DependentUpon>FrmEdit.cs</DependentUpon>
+    <Compile Include="Forms\EditForm.Designer.cs">
+      <DependentUpon>EditForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCQuestionForPresentation.cs">
       <SubType>UserControl</SubType>
@@ -373,33 +379,36 @@
     <EmbeddedResource Include="Forms\ExtendedForm.resx">
       <DependentUpon>ExtendedForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmUserRegister.resx">
-      <DependentUpon>FrmUserRegister.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UserRegisterForm.resx">
+      <DependentUpon>UserRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmLogin.resx">
-      <DependentUpon>FrmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmEdit.resx">
-      <DependentUpon>FrmEdit.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\EditForm.resx">
+      <DependentUpon>EditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frmnewlesson.resx">
-      <DependentUpon>Frmnewlesson.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\NewLessonForm.resx">
+      <DependentUpon>NewLessonForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInsertQuestion.resx">
-      <DependentUpon>FrmInsertQuestion.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\InsertQuestionForm.resx">
+      <DependentUpon>InsertQuestionForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmExamResult.resx">
-      <DependentUpon>FrmExamResult.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ExamResultForm.resx">
+      <DependentUpon>ExamResultForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmQuestionsBank.resx">
-      <DependentUpon>FrmQuestionsBank.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\QuestionBankForm.resx">
+      <DependentUpon>QuestionBankForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MasterForm.resx">
       <DependentUpon>MasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectChoiceForm.resx">
+      <DependentUpon>SelectChoiceForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCQuestionForPresentation.resx">
       <DependentUpon>UCQuestionForPresentation.cs</DependentUpon>

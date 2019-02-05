@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace irQm.Forms
 {
-    public partial class FrmQuestionsBank : MasterForm
+    public partial class QuestionBankForm : MasterForm
     {
-        public FrmQuestionsBank()
+        public QuestionBankForm()
         {
             InitializeComponent();
         }

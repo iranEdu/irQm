@@ -5,9 +5,9 @@ using System.Windows.Forms;
 
 namespace irQm.Forms
 {
-    public partial class Frmnewlesson : MasterForm
+    public partial class NewLessonForm : MasterForm
     {
-        public Frmnewlesson()
+        public NewLessonForm()
         {
             InitializeComponent();
         }
@@ -47,5 +47,7 @@ namespace irQm.Forms
                 lblResult.ForeColor = Color.Red;
             }
         }
+
+        
     }
 }

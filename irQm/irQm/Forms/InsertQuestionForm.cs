@@ -13,11 +13,11 @@ using System.Windows.Forms;
 
 namespace irQm.Forms
 {
-    public partial class FrmInsertQuestion : MasterForm
+    public partial class InsertQuestionForm : MasterForm
     {
         Timer timer;
         
-        public FrmInsertQuestion()
+        public InsertQuestionForm()
         {
             InitializeComponent();
             comboQuestionType.DataSource = BaseCodes.Utilities.Globals.QuestionTypes.Names;

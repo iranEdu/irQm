@@ -5,7 +5,7 @@ using irQm.UserControls.Utilities;
 
 namespace irQm.Forms
 {
-    partial class FrmInsertQuestion
+    partial class InsertQuestionForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,7 @@ namespace irQm.Forms
         private void InitializeComponent()
         {
             irQm.BaseCodes.Puzzle puzzle3 = new irQm.BaseCodes.Puzzle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInsertQuestion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InsertQuestionForm));
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();

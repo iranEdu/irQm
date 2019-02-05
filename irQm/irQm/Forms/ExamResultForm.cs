@@ -1,8 +1,8 @@
 ﻿namespace irQm.Forms
 {
-    public partial class FrmExamResult : MasterForm
+    public partial class ExamResultForm : MasterForm
     {
-        public FrmExamResult()
+        public ExamResultForm()
         {
             InitializeComponent();
         }

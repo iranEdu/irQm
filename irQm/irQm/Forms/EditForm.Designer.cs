@@ -1,6 +1,6 @@
 ﻿namespace irQm.Forms
 {
-    partial class FrmEdit
+    partial class EditForm
     {
         /// <summary>
         /// Required designer variable.
@@ -305,7 +305,7 @@
             this.label4.TabIndex = 49;
             this.label4.Text = "ورود  >  صفحه اصلی  >  ثبت سوال  >  ویرایش";
             // 
-            // FrmEdit
+            // EditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -318,8 +318,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.richTxtEdit);
-            this.Name = "FrmEdit";
-            this.Text = "FrmEdit";
+            this.Name = "EditForm";
+            this.Text = "Edit";
             this.Load += new System.EventHandler(this.FrmEdit_Load);
             this.Controls.SetChildIndex(this.richTxtEdit, 0);
             this.Controls.SetChildIndex(this.panel2, 0);

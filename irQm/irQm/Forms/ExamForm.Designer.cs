@@ -1,6 +1,6 @@
 ﻿namespace irQm.Forms
 {
-    partial class FrmExam
+    partial class ExamForm
     {
         /// <summary>
         /// Required designer variable.

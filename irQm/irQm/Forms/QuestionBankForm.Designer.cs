@@ -1,6 +1,6 @@
 ﻿namespace irQm.Forms
 {
-    partial class FrmQuestionsBank
+    partial class QuestionBankForm
     {
         /// <summary>
         /// Required designer variable.
@@ -52,7 +52,7 @@
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.label4);
             this.Name = "FrmQuestionsBank";
-            this.Text = "FrmQuestionsBank";
+            this.Text = "Question Bank";
             this.Controls.SetChildIndex(this.label4, 0);
             this.ResumeLayout(false);
 

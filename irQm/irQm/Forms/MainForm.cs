@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace irQm.Forms
 {
-    public partial class FrmMain : MasterForm
+    public partial class MainForm : MasterForm
     {
-        public FrmMain()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -18,14 +18,14 @@ namespace irQm.Forms
 
         private void pbQuestionReg_Click(object sender, EventArgs e)
         {
-            FrmInsertQuestion insert = new FrmInsertQuestion();
+            InsertQuestionForm insert = new InsertQuestionForm();
             insert.Show();
             this.Close();
         }
 
         private void pbNewLesson_Click(object sender, EventArgs e)
         {
-            Frmnewlesson nlesson = new Frmnewlesson();
+            NewLessonForm nlesson = new NewLessonForm();
             nlesson.Show();
             this.Close();
         }
@@ -33,7 +33,7 @@ namespace irQm.Forms
 
         private void pbExam_Click(object sender, EventArgs e)
         {
-            Form fe = new FrmExam();
+            Form fe = new ExamForm();
             fe.Show();
             this.Close();
 
@@ -41,7 +41,7 @@ namespace irQm.Forms
 
         private void pbExams_Click(object sender, EventArgs e)
         {
-            Form fer = new FrmExamResult();
+            Form fer = new ExamResultForm();
             fer.Show();
             this.Close();
         }

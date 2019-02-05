@@ -288,9 +288,9 @@ namespace irQm.Forms
 
         private void lblMainPage_Click(object sender, EventArgs e)
         {
-            if (this is FrmMain)
+            if (this is MainForm)
                 return;
-            Form mf = new FrmMain();
+            Form mf = new MainForm();
 
             mf.Show();
             this.Close();
@@ -299,9 +299,9 @@ namespace irQm.Forms
 
         private void lblNewLesson_Click(object sender, EventArgs e)
         {
-            if (this is Frmnewlesson)
+            if (this is NewLessonForm)
                 return;
-            Form nl = new Frmnewlesson();
+            Form nl = new NewLessonForm();
             nl.Show();
             this.Close();
 
@@ -309,9 +309,9 @@ namespace irQm.Forms
 
         private void lblInsertQuestion_Click(object sender, EventArgs e)
         {
-            if (this is FrmInsertQuestion)
+            if (this is InsertQuestionForm)
                 return;
-            Form iq = new FrmInsertQuestion();
+            Form iq = new InsertQuestionForm();
             iq.Show();
             this.Close();
 
@@ -319,18 +319,18 @@ namespace irQm.Forms
 
         private void lblExam_Click(object sender, EventArgs e)
         {
-            if (this is FrmExam)
+            if (this is ExamForm)
                 return;
-            Form fe = new FrmExam();
+            Form fe = new ExamForm();
             fe.Show();
             this.Close();
         }
 
         private void lblExamResult_Click(object sender, EventArgs e)
         {
-            if (this is FrmExamResult)
+            if (this is ExamResultForm)
                 return;
-            Form fer = new FrmExamResult();
+            Form fer = new ExamResultForm();
             fer.Show();
             this.Close();
 

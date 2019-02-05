@@ -1,6 +1,6 @@
 ﻿namespace irQm.Forms
 {
-    partial class FrmMain
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -264,7 +264,7 @@
             this.pbNewLesson.TabStop = false;
             this.pbNewLesson.Click += new System.EventHandler(this.pbNewLesson_Click);
             // 
-            // FrmMain
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -286,8 +286,8 @@
             this.Controls.Add(this.pbQuestionbank);
             this.Controls.Add(this.pbQuestionReg);
             this.Controls.Add(this.pbNewLesson);
-            this.Name = "FrmMain";
-            this.Text = "FrmMain";
+            this.Name = "MainForm";
+            this.Text = "Main Page";
             this.Controls.SetChildIndex(this.pbNewLesson, 0);
             this.Controls.SetChildIndex(this.pbQuestionReg, 0);
             this.Controls.SetChildIndex(this.pbQuestionbank, 0);

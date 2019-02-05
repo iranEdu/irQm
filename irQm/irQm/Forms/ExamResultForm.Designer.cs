@@ -1,6 +1,6 @@
 ﻿namespace irQm.Forms
 {
-    partial class FrmExamResult
+    partial class ExamResultForm
     {
         /// <summary>
         /// Required designer variable.
@@ -306,16 +306,19 @@
             this.label10.Text = "مشاهده نتیجه آزمون";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // FrmExamResult
+            // ExamResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "FrmExamResult";
-            this.Text = "FrmExamResult";
+            this.Name = "ExamResultForm";
+            this.Text = "ExamResult";
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.Controls.SetChildIndex(this.panel2, 0);
+            this.Controls.SetChildIndex(this.label4, 0);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

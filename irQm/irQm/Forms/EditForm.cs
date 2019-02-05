@@ -11,9 +11,9 @@ using System.Drawing.Text;
 
 namespace irQm.Forms
 {
-    public partial class FrmEdit : MasterForm
+    public partial class EditForm : MasterForm
     {
-        public FrmEdit()
+        public EditForm()
         {
             InitializeComponent();
            
