@@ -173,6 +173,12 @@
     <Compile Include="BaseCodes\LongAnswer.cs" />
     <Compile Include="BaseCodes\Puzzle.cs" />
     <Compile Include="BaseCodes\QuestionInList.cs" />
+    <Compile Include="Forms\FrmItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmItems.Designer.cs">
+      <DependentUpon>FrmItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\13971115143340_initial.cs" />
     <Compile Include="Migrations\13971115143340_initial.designer.cs">
       <DependentUpon>13971115143340_initial.cs</DependentUpon>
@@ -407,6 +413,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MasterForm.resx">
       <DependentUpon>MasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmItems.resx">
+      <DependentUpon>FrmItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MultiOptionsForPresentation.resx">
       <DependentUpon>MultiOptionsForPresentation.cs</DependentUpon>
