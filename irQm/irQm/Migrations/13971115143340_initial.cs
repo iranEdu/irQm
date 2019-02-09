@@ -97,7 +97,8 @@ namespace irQm.Migrations
                     CreatorUserId = table.Column<string>(nullable: true),
                     Image = table.Column<byte[]>(nullable: true),
                     RegisterTime = table.Column<DateTime>(nullable: false),
-                    EditTime = table.Column<DateTime>(nullable: false)
+                    EditTime = table.Column<DateTime>(nullable: false),
+                    JustInList = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -129,7 +130,8 @@ namespace irQm.Migrations
                     CreatorUserId = table.Column<string>(nullable: true),
                     LessonName = table.Column<string>(nullable: false),
                     RegisterTime = table.Column<DateTime>(nullable: false),
-                    EditTime = table.Column<DateTime>(nullable: false)
+                    EditTime = table.Column<DateTime>(nullable: false),
+                    JustInList = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -160,7 +162,8 @@ namespace irQm.Migrations
                     RegisterTime = table.Column<DateTime>(nullable: false),
                     EditTime = table.Column<DateTime>(nullable: false),
                     LessonName = table.Column<string>(nullable: false),
-                    CreatorUserId = table.Column<string>(nullable: true)
+                    CreatorUserId = table.Column<string>(nullable: true),
+                    JustInList = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -191,6 +194,7 @@ namespace irQm.Migrations
                     EditTime = table.Column<DateTime>(nullable: false),
                     GainedScore = table.Column<float>(nullable: false),
                     CreatorUserId = table.Column<string>(nullable: true),
+                    JustInList = table.Column<bool>(nullable: false),
                     LessonName = table.Column<string>(nullable: false)
                 },
                 constraints: table =>
@@ -223,7 +227,8 @@ namespace irQm.Migrations
                     RegisterTime = table.Column<DateTime>(nullable: false),
                     EditTime = table.Column<DateTime>(nullable: false),
                     CreatorUserId = table.Column<string>(nullable: true),
-                    LessonName = table.Column<string>(nullable: false)
+                    LessonName = table.Column<string>(nullable: false),
+                    JustInList = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -256,7 +261,8 @@ namespace irQm.Migrations
                     TrueOptionId = table.Column<string>(nullable: false),
                     FalseOptionId = table.Column<string>(nullable: false),
                     LessonName = table.Column<string>(nullable: true),
-                    Image = table.Column<byte[]>(nullable: true)
+                    Image = table.Column<byte[]>(nullable: true),
+                    JustInList = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {

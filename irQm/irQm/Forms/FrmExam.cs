@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore;
 
 namespace irQm.Forms
 {
@@ -15,6 +16,12 @@ namespace irQm.Forms
         public FrmExam()
         {
             InitializeComponent();
+            using (var db = new irQm.BaseCodes.irQmDbContext())
+            {
+                ucQuestionForPresentation1.Question = db.MultiChoicesQuestions.Include(q=>q.Options).First();
+              
+
+            }
         }
     }
 }

@@ -8,49 +8,90 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using irQm.BaseCodes;
+using System.IO;
 
 namespace irQm
 {
     public partial class UCQuestionForPresentation : UserControl
     {
-       IQuestion Question;
-       
+        private IQuestion _question;
+
+        public IQuestion Question { get => _question; set { _question = value;InitializeAnswerZone(); } }
+
 
         public UCQuestionForPresentation(IQuestion question)
         {
             InitializeComponent();
-            Question = question;
-            frtbFace.Rtf = question.Face;
+            _question = question;
             InitializeAnswerZone();
         }
-       
+
         public UCQuestionForPresentation()
         {
             InitializeComponent();
-            Question = new MultiChoices();
-            
+            _question = new MultiChoices();
+
             InitializeAnswerZone();
         }
-        public override Color BackColor { get => base.BackColor; set { base.BackColor = value;
-                
+        public override Color BackColor
+        {
+            get => base.BackColor; set
+            {
+                base.BackColor = value;
+
             }
         }
 
         private void InitializeAnswerZone()
         {
-            UserControls.UCMultiOptionsForPresentation ucMultiOptionsForPresentation1;
-            
-            ucMultiOptionsForPresentation1 = new irQm.UserControls.UCMultiOptionsForPresentation((Question as MultiChoices).Options);
+            frtbFace.Rtf = _question.Face;
+            if (_question.Image != null)
+            {
+                using (var ms = new MemoryStream(_question.Image))
+                {
+                    var img = Image.FromStream(ms);
+                    var w = img.Width;
+                    var h = img.Height;
+                    pictureBox1.Height = (w / pictureBox1.Width) * h;
+                    pictureBox1.Image = img;
+                }
+            }
+           if (flowLayoutPanel1.Controls.Count==4)
+            {
+                flowLayoutPanel1.Controls.RemoveAt(3);
+            }
+            //flowLayoutPanel1.Controls.;
+            if (Question is MultiChoices)
+            {
+                UserControls.MultiOptionsForPresentation multiOptionsForPresentation1;
 
-            // 
-            // ucMultiOptionsForPresentation1
-            // 
-            ucMultiOptionsForPresentation1.Location = new Point(3, 77);
-            ucMultiOptionsForPresentation1.Size = new Size(489, 42);
-           ucMultiOptionsForPresentation1.TabIndex = 117;
+                multiOptionsForPresentation1 = new irQm.UserControls.MultiOptionsForPresentation((Question as MultiChoices).Options);
+                multiOptionsForPresentation1.Width = Width-10;
+                
+                // 
+                // ucMultiOptionsForPresentation1
+                // 
+             
 
-           flowLayoutPanel1.Controls.Add(ucMultiOptionsForPresentation1);
+                flowLayoutPanel1.Controls.Add(multiOptionsForPresentation1);
+            }
         }
 
-}
+        private void flowLayoutPanel1_SizeChanged(object sender, EventArgs e)
+        {
+           
+            foreach (Control c in flowLayoutPanel1.Controls)
+            {
+                c.Width = flowLayoutPanel1.Width-10;
+            }
+            if(pictureBox1.Image!=null)
+            {
+                var img = pictureBox1.Image;
+                var w = img.Width;
+                var h = img.Height;
+                pictureBox1.Height = (w / pictureBox1.Width) * h;
+            }
+
+        }
+    }
 }

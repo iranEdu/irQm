@@ -27,6 +27,8 @@ namespace irQm.BaseCodes
         public Lesson Lesson { get; set; }
         public DateTime RegisterTime { get; set; }
         public DateTime EditTime { get; set; }
+        public bool JustInList { get; set; }
+
         public void Mix() { }
 
         public void Evaluate()

@@ -32,6 +32,7 @@ namespace irQm.BaseCodes
         public Lesson Lesson { get; set; }
         public string LessonName { get; set; }
         public byte[] Image { get ; set; }
+        public bool JustInList { get; set; }
 
         public void Evaluate()
         {

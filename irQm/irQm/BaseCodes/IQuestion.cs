@@ -21,6 +21,8 @@ namespace irQm.BaseCodes
         
          User CreatorUser { get; set; }
         string CreatorUserId { get; set; }
+
+        bool JustInList { get; set; }
        
     }
 }

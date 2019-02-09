@@ -9,8 +9,7 @@ namespace irQm.UserControls.Utilities
             SetStyle(ControlStyles.SupportsTransparentBackColor |
                  ControlStyles.OptimizedDoubleBuffer |
                  ControlStyles.AllPaintingInWmPaint |
-                 ControlStyles.ResizeRedraw |
-                 ControlStyles.UserPaint, true);
+                 ControlStyles.ResizeRedraw , true);
             
         }
         protected override void OnContentsResized(ContentsResizedEventArgs e)

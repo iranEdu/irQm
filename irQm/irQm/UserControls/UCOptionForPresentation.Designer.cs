@@ -32,14 +32,13 @@ namespace irQm.UserControls
         {
             this.cbIsTrue = new System.Windows.Forms.CheckBox();
             this.lblNumber = new System.Windows.Forms.Label();
-            this.FRtbFace = new CustomizedRichTextBox();
+            this.FRtbFace = new irQm.BaseCodes.CustomizedRichTextBox();
             this.SuspendLayout();
             // 
             // cbIsTrue
             // 
-            this.cbIsTrue.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbIsTrue.AutoSize = true;
-            this.cbIsTrue.Location = new System.Drawing.Point(0, 3);
+            this.cbIsTrue.Location = new System.Drawing.Point(3, 5);
             this.cbIsTrue.Name = "cbIsTrue";
             this.cbIsTrue.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cbIsTrue.Size = new System.Drawing.Size(15, 14);
@@ -52,10 +51,10 @@ namespace irQm.UserControls
             this.lblNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNumber.BackColor = System.Drawing.Color.Transparent;
             this.lblNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblNumber.Location = new System.Drawing.Point(331, -5);
+            this.lblNumber.Location = new System.Drawing.Point(331, 3);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblNumber.Size = new System.Drawing.Size(36, 29);
+            this.lblNumber.Size = new System.Drawing.Size(27, 21);
             this.lblNumber.TabIndex = 123;
             this.lblNumber.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -68,8 +67,10 @@ namespace irQm.UserControls
             this.FRtbFace.Location = new System.Drawing.Point(21, 3);
             this.FRtbFace.Name = "FRtbFace";
             this.FRtbFace.ReadOnly = true;
+            this.FRtbFace.ShortcutsEnabled = false;
             this.FRtbFace.Size = new System.Drawing.Size(304, 18);
             this.FRtbFace.TabIndex = 125;
+            this.FRtbFace.TabStop = false;
             this.FRtbFace.Text = "";
             // 
             // UCOptionForPresentation

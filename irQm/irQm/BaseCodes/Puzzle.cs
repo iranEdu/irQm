@@ -29,6 +29,7 @@ namespace irQm.BaseCodes
 
         public User CreatorUser { get; set; }
         public string CreatorUserId { get; set; }
+        public bool JustInList { get; set; }
 
         public Lesson Lesson { get; set; }
         [Required]

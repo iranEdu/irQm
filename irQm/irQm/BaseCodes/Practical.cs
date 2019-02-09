@@ -26,5 +26,7 @@ namespace irQm.BaseCodes
         public string LessonName { get; set; }
         public User CreatorUser { get; set; }
         public string CreatorUserId { get; set; }
+        public bool JustInList { get; set; }
+
     }
 }

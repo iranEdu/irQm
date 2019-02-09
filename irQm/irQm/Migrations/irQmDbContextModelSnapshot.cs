@@ -71,6 +71,8 @@ namespace irQm.Migrations
 
                     b.Property<byte[]>("Image");
 
+                    b.Property<bool>("JustInList");
+
                     b.Property<string>("LessonName")
                         .IsRequired();
 
@@ -102,6 +104,8 @@ namespace irQm.Migrations
                     b.Property<float>("GainedScore");
 
                     b.Property<byte[]>("Image");
+
+                    b.Property<bool>("JustInList");
 
                     b.Property<string>("LessonName")
                         .IsRequired();
@@ -161,6 +165,8 @@ namespace irQm.Migrations
 
                     b.Property<byte[]>("Image");
 
+                    b.Property<bool>("JustInList");
+
                     b.Property<string>("LessonName")
                         .IsRequired();
 
@@ -192,6 +198,8 @@ namespace irQm.Migrations
                     b.Property<float>("GainedScore");
 
                     b.Property<byte[]>("Image");
+
+                    b.Property<bool>("JustInList");
 
                     b.Property<string>("LessonName")
                         .IsRequired();
@@ -368,6 +376,8 @@ namespace irQm.Migrations
                     b.Property<float>("GainedScore");
 
                     b.Property<byte[]>("Image");
+
+                    b.Property<bool>("JustInList");
 
                     b.Property<string>("LessonName")
                         .IsRequired();
@@ -566,6 +576,8 @@ namespace irQm.Migrations
                     b.Property<float>("GainedScore");
 
                     b.Property<byte[]>("Image");
+
+                    b.Property<bool>("JustInList");
 
                     b.Property<string>("LessonName");
 

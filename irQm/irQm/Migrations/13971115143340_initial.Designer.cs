@@ -9,7 +9,7 @@ using irQm.BaseCodes;
 namespace irQm.Migrations
 {
     [DbContext(typeof(irQmDbContext))]
-    [Migration("13971030144511_initial")]
+    [Migration("13971115143340_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -73,6 +73,8 @@ namespace irQm.Migrations
 
                     b.Property<byte[]>("Image");
 
+                    b.Property<bool>("JustInList");
+
                     b.Property<string>("LessonName")
                         .IsRequired();
 
@@ -104,6 +106,8 @@ namespace irQm.Migrations
                     b.Property<float>("GainedScore");
 
                     b.Property<byte[]>("Image");
+
+                    b.Property<bool>("JustInList");
 
                     b.Property<string>("LessonName")
                         .IsRequired();
@@ -163,6 +167,8 @@ namespace irQm.Migrations
 
                     b.Property<byte[]>("Image");
 
+                    b.Property<bool>("JustInList");
+
                     b.Property<string>("LessonName")
                         .IsRequired();
 
@@ -194,6 +200,8 @@ namespace irQm.Migrations
                     b.Property<float>("GainedScore");
 
                     b.Property<byte[]>("Image");
+
+                    b.Property<bool>("JustInList");
 
                     b.Property<string>("LessonName")
                         .IsRequired();
@@ -370,6 +378,8 @@ namespace irQm.Migrations
                     b.Property<float>("GainedScore");
 
                     b.Property<byte[]>("Image");
+
+                    b.Property<bool>("JustInList");
 
                     b.Property<string>("LessonName")
                         .IsRequired();
@@ -568,6 +578,8 @@ namespace irQm.Migrations
                     b.Property<float>("GainedScore");
 
                     b.Property<byte[]>("Image");
+
+                    b.Property<bool>("JustInList");
 
                     b.Property<string>("LessonName");
 

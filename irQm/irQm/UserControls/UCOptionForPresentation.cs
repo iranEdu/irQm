@@ -16,7 +16,7 @@ namespace irQm.UserControls
         public UCOptionForPresentation()
         {
             InitializeComponent();
-            FRtbFace.BackColor = Color.Transparent;
+         //   FRtbFace.BackColor = Color.Transparent;
         }
         Option option;
         public Option Option

@@ -173,11 +173,17 @@
     <Compile Include="BaseCodes\LongAnswer.cs" />
     <Compile Include="BaseCodes\Puzzle.cs" />
     <Compile Include="BaseCodes\QuestionInList.cs" />
-    <Compile Include="Migrations\13971030144511_initial.cs" />
-    <Compile Include="Migrations\13971030144511_initial.designer.cs">
-      <DependentUpon>13971030144511_initial.cs</DependentUpon>
+    <Compile Include="Migrations\13971115143340_initial.cs" />
+    <Compile Include="Migrations\13971115143340_initial.designer.cs">
+      <DependentUpon>13971115143340_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\irQmDbContextModelSnapshot.cs" />
+    <Compile Include="UserControls\MultiOptionsForPresentation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\MultiOptionsForPresentation.Designer.cs">
+      <DependentUpon>MultiOptionsForPresentation.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\Utilities\CustomizedRichTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -263,9 +269,6 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserControls\Utilities\FreeSizeRichTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="UserControls\MultiOptionsForPresentation.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UserControls\TagsBox.cs">
@@ -373,6 +376,10 @@
     <EmbeddedResource Include="Forms\ExtendedForm.resx">
       <DependentUpon>ExtendedForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmExam.resx">
+      <DependentUpon>FrmExam.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmUserRegister.resx">
       <DependentUpon>FrmUserRegister.cs</DependentUpon>
     </EmbeddedResource>
@@ -400,6 +407,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MasterForm.resx">
       <DependentUpon>MasterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\MultiOptionsForPresentation.resx">
+      <DependentUpon>MultiOptionsForPresentation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCQuestionForPresentation.resx">
       <DependentUpon>UCQuestionForPresentation.cs</DependentUpon>

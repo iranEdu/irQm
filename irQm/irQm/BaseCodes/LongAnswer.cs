@@ -27,5 +27,6 @@ namespace irQm.BaseCodes
         public byte[] Image { get ; set; }
         public DateTime RegisterTime { get; set; }
         public DateTime EditTime { get; set; }
+        public bool JustInList { get ; set; }
     }
 }

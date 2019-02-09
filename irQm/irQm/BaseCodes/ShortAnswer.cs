@@ -27,6 +27,7 @@ namespace irQm.BaseCodes
         public Lesson Lesson { get ; set ; }
         [Required]
         public string LessonName { get; set; }
+        public bool JustInList { get; set; }
 
         public void Evaluate()
         {
