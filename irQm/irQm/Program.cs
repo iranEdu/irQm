@@ -19,7 +19,7 @@ namespace irQm
             db.Database.EnsureCreated();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            FrmLogin login = new FrmLogin();
+            FrmEdit login = new FrmEdit();
             login.Show();
             Application.Run();
            

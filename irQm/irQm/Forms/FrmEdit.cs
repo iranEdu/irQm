@@ -132,13 +132,30 @@ namespace irQm.Forms
         private void lblPictures_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "Images |*.bmp;*.jpg;*.png;*.gif;*.ico";
+            openFileDialog1.Filter = "Images |*.bmp;*.jpg;*.png;*.gif;*.ico";
             openFileDialog1.Multiselect = false;
             openFileDialog1.FileName = "";
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
                 Image img = Image.FromFile(openFileDialog1.FileName);
-                Clipboard.SetImage(img);
+                int imgheight = img.Height;
+                int imgwidth = img.Width;
+
+
+                if (img.Width > 500)
+                {
+                    float percentwidth = (500*100 / imgwidth);
+                    float newheight = (imgheight * percentwidth)/100;
+                    int finalheight = (int)newheight;
+                    
+                    Image img1 = new Bitmap(img, new Size(500,finalheight));
+                    Clipboard.SetImage(img1);
+                }
+                else
+                {
+                    Clipboard.SetImage(img);
+                }
                 richTxtPic.Paste();
                 richTxtPic.Focus();
             }
@@ -146,6 +163,7 @@ namespace irQm.Forms
             {
                 richTxtPic.Focus();
             }
+
 
         }
 

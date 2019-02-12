@@ -58,9 +58,9 @@
             // 
             // richTxtEdit
             // 
-            this.richTxtEdit.Location = new System.Drawing.Point(12, 178);
+            this.richTxtEdit.Location = new System.Drawing.Point(12, 161);
             this.richTxtEdit.Name = "richTxtEdit";
-            this.richTxtEdit.Size = new System.Drawing.Size(379, 265);
+            this.richTxtEdit.Size = new System.Drawing.Size(570, 169);
             this.richTxtEdit.TabIndex = 51;
             this.richTxtEdit.Text = "";
             this.richTxtEdit.SelectionChanged += new System.EventHandler(this.richTxtEdit_SelectionChanged);
@@ -286,9 +286,9 @@
             // richTxtPic
             // 
             this.richTxtPic.BackColor = System.Drawing.SystemColors.Control;
-            this.richTxtPic.Location = new System.Drawing.Point(398, 177);
+            this.richTxtPic.Location = new System.Drawing.Point(12, 336);
             this.richTxtPic.Name = "richTxtPic";
-            this.richTxtPic.Size = new System.Drawing.Size(184, 265);
+            this.richTxtPic.Size = new System.Drawing.Size(570, 106);
             this.richTxtPic.TabIndex = 66;
             this.richTxtPic.Text = "";
             // 
@@ -309,7 +309,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 504);
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.richTxtPic);
             this.Controls.Add(this.lblRedo);
