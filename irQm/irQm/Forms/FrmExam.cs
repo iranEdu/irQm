@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Linq;
 using Microsoft.EntityFrameworkCore;
 
 namespace irQm.Forms
@@ -18,7 +10,7 @@ namespace irQm.Forms
             InitializeComponent();
             using (var db = new irQm.BaseCodes.irQmDbContext())
             {
-                ucQuestionForPresentation1.Question = db.MultiChoicesQuestions.Include(q=>q.Options).First();
+                ucQuestionForPresentation1.Initialize( db.LongAnswerQuestions.First(),true,true);
               
 
             }

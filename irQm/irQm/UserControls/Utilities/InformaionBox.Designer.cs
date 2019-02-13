@@ -1,6 +1,6 @@
 ﻿namespace irQm.UserControls.Utilities
 {
-    partial class InformaionBox1
+    partial class InformaionBox
     {
         /// <summary>
         /// Required designer variable.

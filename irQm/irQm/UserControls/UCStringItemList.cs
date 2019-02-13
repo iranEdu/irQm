@@ -10,7 +10,7 @@ namespace irQm.UserControls
     {
         private List<StringItem> _items;
 
-        public List<StringItem> Items { get { _items.ForEach(i => { i.Value?.Trim();  });return _items.Where(i=>i!=null).ToList(); }
+        public List<StringItem> Items { get { _items.ForEach(i => {i.Value= i.Value?.Trim();  });return _items; }
             set { _items = value; Make(); } }
 
         public UCStringItemList(List<StringItem> items)

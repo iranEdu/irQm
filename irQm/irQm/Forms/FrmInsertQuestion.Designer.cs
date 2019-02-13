@@ -33,7 +33,6 @@ namespace irQm.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            irQm.BaseCodes.Puzzle puzzle3 = new irQm.BaseCodes.Puzzle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInsertQuestion));
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -164,21 +163,6 @@ namespace irQm.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ucPuzzleAnswer1.Location = new System.Drawing.Point(20, 191);
             this.ucPuzzleAnswer1.Name = "ucPuzzleAnswer1";
-            puzzle3.AnswerPairs = null;
-            puzzle3.CreatorUser = null;
-            puzzle3.CreatorUserId = null;
-            puzzle3.EditTime = new System.DateTime(((long)(0)));
-            puzzle3.ExtraAnswers = null;
-            puzzle3.Face = null;
-            puzzle3.GainedScore = 0F;
-            puzzle3.Id = null;
-            puzzle3.Image = null;
-            puzzle3.Lesson = null;
-            puzzle3.LessonName = null;
-            puzzle3.Pairs = null;
-            puzzle3.RegisterTime = new System.DateTime(((long)(0)));
-            puzzle3.Score = 0F;
-            puzzle3.Tags = null;
             this.ucPuzzleAnswer1.Size = new System.Drawing.Size(546, 173);
             this.ucPuzzleAnswer1.TabIndex = 138;
             this.ucPuzzleAnswer1.Visible = false;
@@ -187,6 +171,7 @@ namespace irQm.Forms
             // 
             this.ucPracticalAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucPracticalAnswer1.CheckList = ((System.Collections.Generic.List<irQm.BaseCodes.StringItem>)(resources.GetObject("ucPracticalAnswer1.CheckList")));
             this.ucPracticalAnswer1.Location = new System.Drawing.Point(26, 191);
             this.ucPracticalAnswer1.Name = "ucPracticalAnswer1";
             this.ucPracticalAnswer1.Size = new System.Drawing.Size(538, 178);

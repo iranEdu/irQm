@@ -15,7 +15,8 @@ namespace irQm
     {
         private List<StringItem> _stringList;
 
-        public List<StringItem> StringList { get => _stringList.Where(i => !string.IsNullOrWhiteSpace(i.Value)).ToList(); set => _stringList = value; }
+        public List<StringItem> StringList { get => _stringList.Where(i => !string.IsNullOrWhiteSpace(i.Value)).ToList();
+            set => _stringList = value; }
         public UCShortAnswer()
         {
             InitializeComponent();

@@ -48,8 +48,8 @@ namespace irQm.UserControls
             
             _checked = cbIsTrue.Checked;
             Option.IsTrue = _checked;
-            if(_checked)
-                this.BackColor = System.Drawing.Color.FromArgb(255, 187, 236, 179);
+            if (_checked)
+                this.BackColor = BaseCodes.Utilities.Globals.Colors.TrueOption ;
             else
                 this.BackColor = System.Drawing.Color.FromArgb(0, 187, 236, 179);
 

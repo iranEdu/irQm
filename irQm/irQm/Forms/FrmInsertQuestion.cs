@@ -44,7 +44,7 @@ namespace irQm.Forms
                     ucTrueFalseAnswer1.Visible = false;
                     ucLongAnswer1.Visible = false;
                     break;
-                case BaseCodes.Utilities.Globals.QuestionTypes.QType.shortAnswer:
+                case Globals.QuestionTypes.QType.shortAnswer:
                     ucShortAnswer1.Visible = true;
                     ucMultiOption1.Visible = false;
                     ucPuzzleAnswer1.Visible = false;
@@ -62,7 +62,7 @@ namespace irQm.Forms
                     ucLongAnswer1.Visible = false;
 
                     break;
-                case BaseCodes.Utilities.Globals.QuestionTypes.QType.puzzle:
+                case Globals.QuestionTypes.QType.puzzle:
                     ucShortAnswer1.Visible = false;
                     ucMultiOption1.Visible = false;
                     ucPuzzleAnswer1.Visible = true;
@@ -71,7 +71,7 @@ namespace irQm.Forms
                     ucLongAnswer1.Visible = false;
 
                     break;
-                case BaseCodes.Utilities.Globals.QuestionTypes.QType.trueOrFalse:
+                case Globals.QuestionTypes.QType.trueOrFalse:
                     ucShortAnswer1.Visible = false;
                     ucMultiOption1.Visible = false;
                     ucPuzzleAnswer1.Visible = false;
@@ -81,7 +81,7 @@ namespace irQm.Forms
                     ucLongAnswer1.Visible = false;
 
                     break;
-                case BaseCodes.Utilities.Globals.QuestionTypes.QType.longAnswer:
+                case Globals.QuestionTypes.QType.longAnswer:
                     ucShortAnswer1.Visible = false;
                     ucMultiOption1.Visible = false;
                     ucPuzzleAnswer1.Visible = false;

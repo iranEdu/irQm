@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace irQm.UserControls.Utilities
 {
-    public partial class InformaionBox1 : Component
+    public partial class InformaionBox : Component
     {
         public int Width
         {
@@ -30,7 +30,7 @@ namespace irQm.UserControls.Utilities
 
             }
         }
-        public InformaionBox1(string[] information)
+        public InformaionBox(string[] information)
         {
             InitializeComponent();
             foreach(string s in information)
@@ -55,7 +55,7 @@ namespace irQm.UserControls.Utilities
             this.Dispose();
         }
 
-        public InformaionBox1(IContainer container)
+        public InformaionBox(IContainer container)
         {
             container.Add(this);
 

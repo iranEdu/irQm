@@ -1,4 +1,6 @@
-﻿namespace irQm.Forms
+﻿using irQm.UserControls.qPresentation;
+
+namespace irQm.Forms
 {
     partial class FrmExam
     {
@@ -28,8 +30,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            irQm.BaseCodes.MultiChoices multiChoices1 = new irQm.BaseCodes.MultiChoices();
-            this.ucQuestionForPresentation1 = new irQm.UCQuestionForPresentation();
+           
+            this.ucQuestionForPresentation1 = new UCQuestionForPresentation();
             this.SuspendLayout();
             // 
             // ucQuestionForPresentation1
@@ -42,22 +44,7 @@
             this.ucQuestionForPresentation1.BackColor = System.Drawing.Color.White;
             this.ucQuestionForPresentation1.Location = new System.Drawing.Point(12, 99);
             this.ucQuestionForPresentation1.Name = "ucQuestionForPresentation1";
-            multiChoices1.CreatorUser = null;
-            multiChoices1.CreatorUserId = null;
-            multiChoices1.EditTime = new System.DateTime(((long)(0)));
-            multiChoices1.Face = null;
-            multiChoices1.GainedScore = 0F;
-            multiChoices1.Id = null;
-            multiChoices1.Image = null;
-            multiChoices1.JustInList = false;
-            multiChoices1.Lesson = null;
-            multiChoices1.LessonName = null;
-            multiChoices1.MultiSelections = false;
-            multiChoices1.Options = null;
-            multiChoices1.RegisterTime = new System.DateTime(((long)(0)));
-            multiChoices1.Score = 0F;
-            multiChoices1.Tags = null;
-            this.ucQuestionForPresentation1.Question = multiChoices1;
+           
             this.ucQuestionForPresentation1.Size = new System.Drawing.Size(565, 303);
             this.ucQuestionForPresentation1.TabIndex = 138;
             // 

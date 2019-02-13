@@ -1,6 +1,6 @@
 ﻿using irQm.BaseCodes;
 
-namespace irQm.UserControls
+namespace irQm.UserControls.qPresentation
 {
     partial class UCOptionForPresentation
     {
@@ -32,6 +32,7 @@ namespace irQm.UserControls
         {
             this.cbIsTrue = new System.Windows.Forms.CheckBox();
             this.lblNumber = new System.Windows.Forms.Label();
+            this.rbIsTrue = new System.Windows.Forms.RadioButton();
             this.FRtbFace = new irQm.BaseCodes.CustomizedRichTextBox();
             this.SuspendLayout();
             // 
@@ -58,6 +59,16 @@ namespace irQm.UserControls
             this.lblNumber.TabIndex = 123;
             this.lblNumber.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // rbIsTrue
+            // 
+            this.rbIsTrue.AutoSize = true;
+            this.rbIsTrue.Location = new System.Drawing.Point(3, 5);
+            this.rbIsTrue.Name = "rbIsTrue";
+            this.rbIsTrue.Size = new System.Drawing.Size(14, 13);
+            this.rbIsTrue.TabIndex = 126;
+            this.rbIsTrue.UseVisualStyleBackColor = true;
+            this.rbIsTrue.CheckedChanged += new System.EventHandler(this.rbIsTrue_CheckedChanged);
+            // 
             // FRtbFace
             // 
             this.FRtbFace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -79,6 +90,8 @@ namespace irQm.UserControls
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Transparent;
+            this.CausesValidation = false;
+            this.Controls.Add(this.rbIsTrue);
             this.Controls.Add(this.FRtbFace);
             this.Controls.Add(this.cbIsTrue);
             this.Controls.Add(this.lblNumber);
@@ -94,5 +107,6 @@ namespace irQm.UserControls
         private System.Windows.Forms.CheckBox cbIsTrue;
         private System.Windows.Forms.Label lblNumber;
         private  CustomizedRichTextBox FRtbFace;
+        private System.Windows.Forms.RadioButton rbIsTrue;
     }
 }

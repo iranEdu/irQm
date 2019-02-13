@@ -1,4 +1,4 @@
-﻿namespace irQm
+﻿namespace irQm.UserControls.qPresentation
 {
     partial class UCQuestionForPresentation
     {
