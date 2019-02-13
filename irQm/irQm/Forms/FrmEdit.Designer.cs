@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.richTxtEdit = new irQm.BaseCodes.CustomizedRichTextBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.نسخهبرداریToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.انتقالToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.چسباندنPasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblsuperscript = new System.Windows.Forms.Label();
             this.lblSubscript = new System.Windows.Forms.Label();
@@ -51,21 +56,57 @@
             this.lblSave = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.richTxtPic = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.imagBox = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.contextMenuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imagBox)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // richTxtEdit
             // 
-            this.richTxtEdit.Location = new System.Drawing.Point(12, 161);
+            this.richTxtEdit.ContextMenuStrip = this.contextMenuStrip1;
+            this.richTxtEdit.Location = new System.Drawing.Point(7, 119);
             this.richTxtEdit.Name = "richTxtEdit";
-            this.richTxtEdit.Size = new System.Drawing.Size(570, 169);
+            this.richTxtEdit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.richTxtEdit.Size = new System.Drawing.Size(543, 169);
             this.richTxtEdit.TabIndex = 51;
             this.richTxtEdit.Text = "";
             this.richTxtEdit.SelectionChanged += new System.EventHandler(this.richTxtEdit_SelectionChanged);
             this.richTxtEdit.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             this.richTxtEdit.MouseUp += new System.Windows.Forms.MouseEventHandler(this.richTxtEdit_MouseUp);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.نسخهبرداریToolStripMenuItem,
+            this.انتقالToolStripMenuItem,
+            this.چسباندنPasteToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(174, 70);
+            // 
+            // نسخهبرداریToolStripMenuItem
+            // 
+            this.نسخهبرداریToolStripMenuItem.Name = "نسخهبرداریToolStripMenuItem";
+            this.نسخهبرداریToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.نسخهبرداریToolStripMenuItem.Text = "نسخه برداری (Copy)";
+            this.نسخهبرداریToolStripMenuItem.Click += new System.EventHandler(this.CopyAction);
+            // 
+            // انتقالToolStripMenuItem
+            // 
+            this.انتقالToolStripMenuItem.Name = "انتقالToolStripMenuItem";
+            this.انتقالToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.انتقالToolStripMenuItem.Text = "انتقال (Cut)";
+            this.انتقالToolStripMenuItem.Click += new System.EventHandler(this.CutAction);
+            // 
+            // چسباندنPasteToolStripMenuItem
+            // 
+            this.چسباندنPasteToolStripMenuItem.Name = "چسباندنPasteToolStripMenuItem";
+            this.چسباندنPasteToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.چسباندنPasteToolStripMenuItem.Text = "چسباندن (Paste)";
+            this.چسباندنPasteToolStripMenuItem.Click += new System.EventHandler(this.PasteAction);
             // 
             // panel2
             // 
@@ -85,9 +126,9 @@
             this.panel2.Controls.Add(this.lblJustify);
             this.panel2.Controls.Add(this.lblAlignL);
             this.panel2.Controls.Add(this.LblalignR);
-            this.panel2.Location = new System.Drawing.Point(12, 85);
+            this.panel2.Location = new System.Drawing.Point(9, 43);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(570, 70);
+            this.panel2.Size = new System.Drawing.Size(543, 70);
             this.panel2.TabIndex = 52;
             // 
             // lblsuperscript
@@ -158,6 +199,7 @@
             this.lblRightToLeft.Name = "lblRightToLeft";
             this.lblRightToLeft.Size = new System.Drawing.Size(26, 26);
             this.lblRightToLeft.TabIndex = 56;
+            this.lblRightToLeft.Click += new System.EventHandler(this.lblRightToLeft_Click);
             // 
             // lblLeftToRight
             // 
@@ -167,6 +209,7 @@
             this.lblLeftToRight.Name = "lblLeftToRight";
             this.lblLeftToRight.Size = new System.Drawing.Size(26, 26);
             this.lblLeftToRight.TabIndex = 55;
+            this.lblLeftToRight.Click += new System.EventHandler(this.lblLeftToRight_Click);
             // 
             // lblFontColor
             // 
@@ -233,7 +276,7 @@
             this.LblalignR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblalignR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.LblalignR.Image = global::irQm.Properties.Resources.align_right;
-            this.LblalignR.Location = new System.Drawing.Point(368, 7);
+            this.LblalignR.Location = new System.Drawing.Point(341, 7);
             this.LblalignR.Name = "LblalignR";
             this.LblalignR.Size = new System.Drawing.Size(26, 26);
             this.LblalignR.TabIndex = 0;
@@ -244,9 +287,9 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(12, 53);
+            this.label5.Location = new System.Drawing.Point(11, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(570, 30);
+            this.label5.Size = new System.Drawing.Size(543, 30);
             this.label5.TabIndex = 53;
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
@@ -254,7 +297,7 @@
             // 
             this.lblRedo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.lblRedo.Image = global::irQm.Properties.Resources.redo;
-            this.lblRedo.Location = new System.Drawing.Point(73, 55);
+            this.lblRedo.Location = new System.Drawing.Point(61, 13);
             this.lblRedo.Name = "lblRedo";
             this.lblRedo.Size = new System.Drawing.Size(26, 26);
             this.lblRedo.TabIndex = 65;
@@ -264,7 +307,7 @@
             // 
             this.lblUndo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.lblUndo.Image = global::irQm.Properties.Resources.undo;
-            this.lblUndo.Location = new System.Drawing.Point(45, 55);
+            this.lblUndo.Location = new System.Drawing.Point(33, 13);
             this.lblUndo.Name = "lblUndo";
             this.lblUndo.Size = new System.Drawing.Size(26, 26);
             this.lblUndo.TabIndex = 64;
@@ -274,7 +317,7 @@
             // 
             this.lblSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.lblSave.Image = global::irQm.Properties.Resources.save1;
-            this.lblSave.Location = new System.Drawing.Point(15, 55);
+            this.lblSave.Location = new System.Drawing.Point(3, 13);
             this.lblSave.Name = "lblSave";
             this.lblSave.Size = new System.Drawing.Size(26, 26);
             this.lblSave.TabIndex = 63;
@@ -282,15 +325,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // richTxtPic
-            // 
-            this.richTxtPic.BackColor = System.Drawing.SystemColors.Control;
-            this.richTxtPic.Location = new System.Drawing.Point(12, 336);
-            this.richTxtPic.Name = "richTxtPic";
-            this.richTxtPic.Size = new System.Drawing.Size(570, 106);
-            this.richTxtPic.TabIndex = 66;
-            this.richTxtPic.Text = "";
             // 
             // label4
             // 
@@ -305,31 +339,48 @@
             this.label4.TabIndex = 49;
             this.label4.Text = "ورود  >  صفحه اصلی  >  ثبت سوال  >  ویرایش";
             // 
+            // imagBox
+            // 
+            this.imagBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.imagBox.Location = new System.Drawing.Point(7, 294);
+            this.imagBox.Name = "imagBox";
+            this.imagBox.Size = new System.Drawing.Size(543, 50);
+            this.imagBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.imagBox.TabIndex = 139;
+            this.imagBox.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.imagBox);
+            this.panel1.Controls.Add(this.lblRedo);
+            this.panel1.Controls.Add(this.lblUndo);
+            this.panel1.Controls.Add(this.lblSave);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.richTxtEdit);
+            this.panel1.Location = new System.Drawing.Point(12, 42);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(577, 407);
+            this.panel1.TabIndex = 140;
+            // 
             // FrmEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.richTxtPic);
-            this.Controls.Add(this.lblRedo);
-            this.Controls.Add(this.lblUndo);
-            this.Controls.Add(this.lblSave);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.richTxtEdit);
             this.Name = "FrmEdit";
             this.Text = "FrmEdit";
             this.Load += new System.EventHandler(this.FrmEdit_Load);
-            this.Controls.SetChildIndex(this.richTxtEdit, 0);
-            this.Controls.SetChildIndex(this.panel2, 0);
-            this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.lblSave, 0);
-            this.Controls.SetChildIndex(this.lblUndo, 0);
-            this.Controls.SetChildIndex(this.lblRedo, 0);
-            this.Controls.SetChildIndex(this.richTxtPic, 0);
             this.Controls.SetChildIndex(this.label4, 0);
+            this.Controls.SetChildIndex(this.panel1, 0);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imagBox)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -358,7 +409,12 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label lblsuperscript;
-        private System.Windows.Forms.RichTextBox richTxtPic;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem نسخهبرداریToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem انتقالToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem چسباندنPasteToolStripMenuItem;
+        private System.Windows.Forms.PictureBox imagBox;
+        private System.Windows.Forms.Panel panel1;
     }
 }

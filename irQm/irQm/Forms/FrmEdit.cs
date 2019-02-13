@@ -16,7 +16,11 @@ namespace irQm.Forms
         public FrmEdit()
         {
             InitializeComponent();
-           
+            openFileDialog1.Filter = "Images |*.bmp;*.jpg;*.png;*.gif;*.ico";
+            openFileDialog1.Filter = "Images |*.bmp;*.jpg;*.png;*.gif;*.ico";
+            openFileDialog1.Multiselect = false;
+            openFileDialog1.FileName = "";
+
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -113,28 +117,12 @@ namespace irQm.Forms
 
         private void richTxtEdit_MouseUp(object sender, MouseEventArgs e)
         {
-            if (e.Button == System.Windows.Forms.MouseButtons.Right)
-            {   ContextMenu contextMenu = new System.Windows.Forms.ContextMenu();
-                MenuItem menuItem = new MenuItem("Cut");
-                menuItem.Click += new EventHandler(CutAction);
-                contextMenu.MenuItems.Add(menuItem);
-                menuItem = new MenuItem("Copy");
-                menuItem.Click += new EventHandler(CopyAction);
-                contextMenu.MenuItems.Add(menuItem);
-                menuItem = new MenuItem("Paste");
-                menuItem.Click += new EventHandler(PasteAction);
-                contextMenu.MenuItems.Add(menuItem);
-
-                richTxtEdit.ContextMenu = contextMenu;
-            }
+           
         }
 
         private void lblPictures_Click(object sender, EventArgs e)
         {
-            openFileDialog1.Filter = "Images |*.bmp;*.jpg;*.png;*.gif;*.ico";
-            openFileDialog1.Filter = "Images |*.bmp;*.jpg;*.png;*.gif;*.ico";
-            openFileDialog1.Multiselect = false;
-            openFileDialog1.FileName = "";
+            
             DialogResult result = openFileDialog1.ShowDialog();
             if (result == DialogResult.OK)
             {
@@ -145,24 +133,19 @@ namespace irQm.Forms
 
                 if (img.Width > 500)
                 {
-                    float percentwidth = (500*100 / imgwidth);
-                    float newheight = (imgheight * percentwidth)/100;
-                    int finalheight = (int)newheight;
                     
-                    Image img1 = new Bitmap(img, new Size(500,finalheight));
-                    Clipboard.SetImage(img1);
+                   
+                    int finalheight = (int)(500.0/imgwidth*imgheight);
+                    
+                     img = new Bitmap(img, new Size(500,finalheight));
+                    
                 }
-                else
-                {
-                    Clipboard.SetImage(img);
-                }
-                richTxtPic.Paste();
-                richTxtPic.Focus();
+                
+                
+                 imagBox.Image = img;
+                imagBox.Height = img.Height;
             }
-            else
-            {
-                richTxtPic.Focus();
-            }
+           
 
 
         }
@@ -233,6 +216,16 @@ namespace irQm.Forms
                 if (richTxtEdit.RedoActionName != "Delete")
                     richTxtEdit.Redo();
             }
+        }
+
+        private void lblRightToLeft_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLeftToRight_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
