@@ -30,27 +30,82 @@ namespace irQm.UserControls.Forms
        
 
         private void FrmBank_Load(object sender, EventArgs e)
-        { IQuestion[] questions;
+        { 
             using (var db = new irQmDbContext())
             {
-                questions = db.TFQuestions.ToArray();
-                questions.Union(db.MultiChoicesQuestions);
-                questions.Union(db.PuzzleQuestions);
+                var multi = db.MultiChoicesQuestions.ToArray();
+                int i = 1;
+                foreach (var q in multi.OrderBy(q => q.Face))
+                {
+                    var qitem = new UCQuestionListItem(q, "", i);
+                    qitem.Width = multiTabPage.Width - 50;
+                    qitem.RightToLeft = RightToLeft.Yes;
+                    qitem.Anchor = AnchorStyles.Right | AnchorStyles.Left;
+                    qitem.Resize += (s, ev) => { qitem.MaximumSize = new Size(Width - 50, 0); };
+                    flpMultiOptionsQuestions.Controls.Add(qitem);
+                    list.Add(qitem);
+                    i++;
+                }
+               
             }
-            int i = 1;
+            
 
-            foreach (var q in questions.OrderBy(q => q.Face))
+            
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (var db = new irQmDbContext())
             {
-                var qitem = new UCQuestionListItem(q, "سیی", i);
-                qitem.Width = flpQuestions.Width - 50;
-                qitem.RightToLeft = RightToLeft.Yes;
-                qitem.Anchor = AnchorStyles.Right | AnchorStyles.Left;
-                qitem.Resize += (s, ev) => { qitem.MaximumSize = new Size(Width - 50, 0); };
-                flpQuestions.Controls.Add(qitem);
-                list.Add(qitem);
-                i++;
-            }
+                IQuestion[] questions=null;
+                FlowLayoutPanel target = null;
+                switch (tabControl1.SelectedIndex)
+                {
+                    case 0:
+                        questions =  db.MultiChoicesQuestions.ToArray();
+                        target = flpMultiOptionsQuestions;
+                        break;
+                    case 1:
+                        questions = db.TFQuestions.ToArray();
+                        target = flpTFQuestions;
+                        break;
+                    case 2:
+                        questions = db.PuzzleQuestions.ToArray();
+                        target = flpPuzzleQuestions;
+                        break;
+                    case 3:
+                        questions = db.ShortAnswerQustions.ToArray();
+                        target = flpShortQuestions;
+                        break;
+                    case 4:
+                        questions = db.LongAnswerQuestions.ToArray();
+                        target = flpLongQuestions;
+                        break;
+                    case 5:
+                        questions = db.PracticalQuestions.ToArray();
+                        target = flpPracticalQuestions;
+                        break;
 
+                }
+
+               
+                int i = 1;
+                target.Controls.Clear();
+                foreach (var q in questions.OrderBy(q => q.Face))
+                {
+                    var qitem = new UCQuestionListItem(q, "", i);
+                    qitem.Width = multiTabPage.Width - 50;
+                    qitem.RightToLeft = RightToLeft.Yes;
+                    qitem.Anchor = AnchorStyles.Right | AnchorStyles.Left;
+                    qitem.Resize += (s, ev) => { qitem.MaximumSize = new Size(Width - 50, 0); };
+                    target.Controls.Add(qitem);
+                    list.Add(qitem);
+                    i++;
+                }
+
+            }
+            
         }
     }
 }

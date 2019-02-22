@@ -156,12 +156,12 @@ namespace irQm.UserControls.Forms
             this.lblMessage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMessage.BackColor = System.Drawing.Color.Transparent;
-            this.lblMessage.Location = new System.Drawing.Point(248, 384);
+            this.lblMessage.Location = new System.Drawing.Point(246, 424);
             this.lblMessage.Name = "lblMessage";
             this.lblMessage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblMessage.Size = new System.Drawing.Size(349, 25);
+            this.lblMessage.Size = new System.Drawing.Size(349, 37);
             this.lblMessage.TabIndex = 120;
-            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label6
             // 
@@ -314,14 +314,14 @@ namespace irQm.UserControls.Forms
             this.comboLesson.Size = new System.Drawing.Size(121, 21);
             this.comboLesson.TabIndex = 109;
             // 
-            // FrmInsertQuestion
+            // InsertQuestion
             // 
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboQuestionType);
             this.Controls.Add(this.comboLesson);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Name = "FrmInsertQuestion";
+            this.Name = "InsertQuestion";
             this.Size = new System.Drawing.Size(685, 507);
             this.Load += new System.EventHandler(this.FrmInsertQuestion_Load);
             this.panel1.ResumeLayout(false);
