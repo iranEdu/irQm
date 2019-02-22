@@ -15,6 +15,7 @@ namespace irQm
     {
         private List<StringItem> _stringList;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<StringItem> StringList { get => _stringList.Where(i => !string.IsNullOrWhiteSpace(i.Value)).ToList();
             set => _stringList = value; }
         public UCShortAnswer()

@@ -1,4 +1,4 @@
-﻿namespace irQm.UserControls
+﻿namespace irQm.UserControls.qPresentation
 {
     partial class UCQuestionListItem
     {
@@ -28,46 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.faceBox = new Utilities.FreeSizeRichTextBox();
+            this.lblSubtitle = new System.Windows.Forms.Label();
             this.lblNumber = new System.Windows.Forms.Label();
             this.cbSelect = new System.Windows.Forms.CheckBox();
             this.pbRemove = new System.Windows.Forms.PictureBox();
             this.pbInformation = new System.Windows.Forms.PictureBox();
-            this.lblSubtitle = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1.SuspendLayout();
+            this.faceBox = new irQm.UserControls.Utilities.FreeSizeRichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbRemove)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInformation)).BeginInit();
             this.SuspendLayout();
             // 
-            // flowLayoutPanel1
+            // lblSubtitle
             // 
-            this.flowLayoutPanel1.AutoSize = true;
-            this.flowLayoutPanel1.Controls.Add(this.faceBox);
-            this.flowLayoutPanel1.Controls.Add(this.lblSubtitle);
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 26);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(403, 53);
-            this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // faceBox
-            // 
-            this.faceBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.faceBox.BackColor = System.Drawing.Color.Transparent;
-            this.faceBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.faceBox.Location = new System.Drawing.Point(3, 3);
-            this.faceBox.Name = "faceBox";
-            this.faceBox.Size = new System.Drawing.Size(397, 22);
-            this.faceBox.TabIndex = 0;
-            this.faceBox.Text = "";
+            this.lblSubtitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSubtitle.AutoSize = true;
+            this.lblSubtitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblSubtitle.Location = new System.Drawing.Point(395, 20);
+            this.lblSubtitle.MinimumSize = new System.Drawing.Size(100, 0);
+            this.lblSubtitle.Name = "lblSubtitle";
+            this.lblSubtitle.Size = new System.Drawing.Size(100, 13);
+            this.lblSubtitle.TabIndex = 1;
+            this.lblSubtitle.Text = "label1";
             // 
             // lblNumber
             // 
+            this.lblNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNumber.AutoSize = true;
             this.lblNumber.BackColor = System.Drawing.Color.Transparent;
-            this.lblNumber.Location = new System.Drawing.Point(345, 3);
+            this.lblNumber.Location = new System.Drawing.Point(439, 3);
             this.lblNumber.Name = "lblNumber";
             this.lblNumber.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblNumber.Size = new System.Drawing.Size(35, 13);
@@ -76,12 +64,14 @@
             // 
             // cbSelect
             // 
+            this.cbSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbSelect.AutoSize = true;
-            this.cbSelect.Location = new System.Drawing.Point(386, 3);
+            this.cbSelect.Location = new System.Drawing.Point(480, 3);
             this.cbSelect.Name = "cbSelect";
             this.cbSelect.Size = new System.Drawing.Size(15, 14);
             this.cbSelect.TabIndex = 3;
             this.cbSelect.UseVisualStyleBackColor = true;
+            this.cbSelect.CheckedChanged += new System.EventHandler(this.cbSelect_CheckedChanged);
             // 
             // pbRemove
             // 
@@ -106,29 +96,33 @@
             this.pbInformation.TabIndex = 122;
             this.pbInformation.TabStop = false;
             // 
-            // lblSubtitle
+            // faceBox
             // 
-            this.lblSubtitle.AutoSize = true;
-            this.lblSubtitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblSubtitle.Location = new System.Drawing.Point(365, 28);
-            this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(35, 13);
-            this.lblSubtitle.TabIndex = 1;
-            this.lblSubtitle.Text = "label1";
+            this.faceBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.faceBox.BackColor = System.Drawing.Color.Transparent;
+            this.faceBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.faceBox.Location = new System.Drawing.Point(15, 47);
+            this.faceBox.Name = "faceBox";
+            this.faceBox.ReadOnly = true;
+            this.faceBox.Size = new System.Drawing.Size(470, 18);
+            this.faceBox.TabIndex = 0;
+            this.faceBox.Text = "";
             // 
             // UCQuestionListItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
+            this.Controls.Add(this.faceBox);
+            this.Controls.Add(this.lblSubtitle);
             this.Controls.Add(this.pbInformation);
             this.Controls.Add(this.pbRemove);
             this.Controls.Add(this.cbSelect);
             this.Controls.Add(this.lblNumber);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "UCQuestionListItem";
-            this.Size = new System.Drawing.Size(404, 79);
-            this.flowLayoutPanel1.ResumeLayout(false);
-            this.flowLayoutPanel1.PerformLayout();
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Size = new System.Drawing.Size(498, 68);
             ((System.ComponentModel.ISupportInitialize)(this.pbRemove)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbInformation)).EndInit();
             this.ResumeLayout(false);
@@ -137,8 +131,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private Utilities.FreeSizeRichTextBox faceBox;
         private System.Windows.Forms.Label lblNumber;
         private System.Windows.Forms.CheckBox cbSelect;

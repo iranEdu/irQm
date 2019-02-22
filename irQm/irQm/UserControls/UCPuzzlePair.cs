@@ -54,7 +54,7 @@ namespace irQm
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
-            Pair.Value = textFirstpair.Text;
+            Pair.Value = TextSecondpair.Text;
         }
     }
 }

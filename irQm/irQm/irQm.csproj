@@ -173,6 +173,12 @@
     <Compile Include="BaseCodes\LongAnswer.cs" />
     <Compile Include="BaseCodes\Puzzle.cs" />
     <Compile Include="BaseCodes\QuestionInList.cs" />
+    <Compile Include="UserControls\Forms\Bank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Forms\Bank.Designer.cs">
+      <DependentUpon>Bank.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\qPresentation\MultiOptionsForPresentation.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -190,6 +196,12 @@
     </Compile>
     <Compile Include="UserControls\qPresentation\PracticalForPresentation.Designer.cs">
       <DependentUpon>PracticalForPresentation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\qPresentation\PuzzleForPresentation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\qPresentation\PuzzleForPresentation.Designer.cs">
+      <DependentUpon>PuzzleForPresentation.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\qPresentation\ShortAnswerForPresentation.cs">
       <SubType>UserControl</SubType>
@@ -225,11 +237,11 @@
     <Compile Include="Forms\MasterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FrmUserRegister.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\Forms\UserRegister.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\FrmUserRegister.Designer.cs">
-      <DependentUpon>FrmUserRegister.cs</DependentUpon>
+    <Compile Include="UserControls\Forms\UserRegister.Designer.cs">
+      <DependentUpon>UserRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmLogin.cs">
       <SubType>Form</SubType>
@@ -237,11 +249,11 @@
     <Compile Include="Forms\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmExam.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\Forms\Exam.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\FrmExam.Designer.cs">
-      <DependentUpon>FrmExam.cs</DependentUpon>
+    <Compile Include="UserControls\Forms\Exam.Designer.cs">
+      <DependentUpon>Exam.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmMain.cs">
       <SubType>Form</SubType>
@@ -249,28 +261,28 @@
     <Compile Include="Forms\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Frmnewlesson.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\Forms\NewLesson.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Frmnewlesson.Designer.cs">
-      <DependentUpon>Frmnewlesson.cs</DependentUpon>
+    <Compile Include="UserControls\Forms\NewLesson.Designer.cs">
+      <DependentUpon>NewLesson.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmInsertQuestion.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\Forms\InsertQuestion.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\FrmInsertQuestion.Designer.cs">
-      <DependentUpon>FrmInsertQuestion.cs</DependentUpon>
+    <Compile Include="UserControls\Forms\InsertQuestion.Designer.cs">
+      <DependentUpon>InsertQuestion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmExamResult.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\Forms\Exams.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\FrmExamResult.Designer.cs">
-      <DependentUpon>FrmExamResult.cs</DependentUpon>
+    <Compile Include="UserControls\Forms\Exams.Designer.cs">
+      <DependentUpon>Exams.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FrmQuestionsBank.cs">
-      <SubType>Form</SubType>
+    <Compile Include="UserControls\Forms\FrmQuestionsBank.cs">
+      <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms\FrmQuestionsBank.Designer.cs">
+    <Compile Include="UserControls\Forms\FrmQuestionsBank.Designer.cs">
       <DependentUpon>FrmQuestionsBank.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmEdit.cs">
@@ -302,10 +314,10 @@
     <Compile Include="UserControls\qPresentation\UCOptionForPresentation.Designer.cs">
       <DependentUpon>UCOptionForPresentation.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UCQuestionListItem.cs">
+    <Compile Include="UserControls\qPresentation\UCQuestionListItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UCQuestionListItem.Designer.cs">
+    <Compile Include="UserControls\qPresentation\UCQuestionListItem.Designer.cs">
       <DependentUpon>UCQuestionListItem.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCStringItemList.cs">
@@ -392,12 +404,15 @@
     <EmbeddedResource Include="Forms\ExtendedForm.resx">
       <DependentUpon>ExtendedForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmExam.resx">
-      <DependentUpon>FrmExam.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\Forms\Bank.resx">
+      <DependentUpon>Bank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Forms\Exam.resx">
+      <DependentUpon>Exam.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmUserRegister.resx">
-      <DependentUpon>FrmUserRegister.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\Forms\UserRegister.resx">
+      <DependentUpon>UserRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -408,17 +423,17 @@
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Frmnewlesson.resx">
-      <DependentUpon>Frmnewlesson.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\Forms\NewLesson.resx">
+      <DependentUpon>NewLesson.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmInsertQuestion.resx">
-      <DependentUpon>FrmInsertQuestion.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\Forms\InsertQuestion.resx">
+      <DependentUpon>InsertQuestion.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmExamResult.resx">
-      <DependentUpon>FrmExamResult.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\Forms\Exams.resx">
+      <DependentUpon>Exams.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\FrmQuestionsBank.resx">
+    <EmbeddedResource Include="UserControls\Forms\FrmQuestionsBank.resx">
       <DependentUpon>FrmQuestionsBank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MasterForm.resx">
@@ -432,6 +447,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\qPresentation\PracticalForPresentation.resx">
       <DependentUpon>PracticalForPresentation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\qPresentation\PuzzleForPresentation.resx">
+      <DependentUpon>PuzzleForPresentation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\qPresentation\ShortAnswerForPresentation.resx">
       <DependentUpon>ShortAnswerForPresentation.cs</DependentUpon>
@@ -455,7 +473,7 @@
     <EmbeddedResource Include="UserControls\qPresentation\UCOptionForPresentation.resx">
       <DependentUpon>UCOptionForPresentation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UCQuestionListItem.resx">
+    <EmbeddedResource Include="UserControls\qPresentation\UCQuestionListItem.resx">
       <DependentUpon>UCQuestionListItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCStringItemList.resx">

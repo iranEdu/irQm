@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Net.Mail;
 using irQm.BaseCodes;
 using System.Linq;
 using System.Drawing;
+using irQm.Forms;
 
-namespace irQm.Forms
+namespace irQm.UserControls.Forms
 {
-    public partial class FrmUserRegister : ExtendedForm
+    public partial class UserRegister : UserControl
     {
-        public FrmUserRegister()
+        public UserRegister()
         {
             InitializeComponent();
            

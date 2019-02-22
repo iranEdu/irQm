@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using irQm.BaseCodes;
 using System.IO;
@@ -20,8 +14,7 @@ namespace irQm.UserControls.qPresentation
         public IQuestion Question { get => _question;}
 
         int flpHeight;
-        int tmp = 0;
-
+       
         public UCQuestionForPresentation()
         {
             InitializeComponent();
@@ -64,6 +57,24 @@ namespace irQm.UserControls.qPresentation
             _question = question;
             InitializeAnswerZone();
             LongAnswerForPresentation ans = new LongAnswerForPresentation(question, answerTime, showTrueOption);
+            ans.Width = this.Width - 10;
+            ans.Tag = "AnswerZone";
+            flowLayoutPanel1.Controls.Add(ans);
+        }
+        public void Initialize(Practical question, bool answerTime, bool showTrueOption)
+        {
+            _question = question;
+            InitializeAnswerZone();
+            PracticalForPresentation ans = new PracticalForPresentation(question.CheckList);
+            ans.Width = this.Width - 10;
+            ans.Tag = "AnswerZone";
+            flowLayoutPanel1.Controls.Add(ans);
+        }
+        public void Initialize(Puzzle question, bool answerTime, bool showTrueOption)
+        {
+            _question = question;
+            InitializeAnswerZone();
+            PuzzleForPresentation ans = new PuzzleForPresentation(question,answerTime,showTrueOption);
             ans.Width = this.Width - 10;
             ans.Tag = "AnswerZone";
             flowLayoutPanel1.Controls.Add(ans);

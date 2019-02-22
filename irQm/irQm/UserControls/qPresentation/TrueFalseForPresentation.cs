@@ -21,7 +21,10 @@ namespace irQm.UserControls.qPresentation
         {
             InitializeComponent();
             this.answerTime = answerTime;
-                this.showTrueOption = showTrueOption;
+            this.trueOption = trueOption;
+            this.falseOption = falseOption;
+
+            this.showTrueOption = showTrueOption;
             if (answerTime)
             {
                 chbTrue.Checked = trueOption.Answered;

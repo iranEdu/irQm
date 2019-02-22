@@ -1,4 +1,4 @@
-﻿namespace irQm.Forms
+﻿namespace irQm.UserControls.Forms
 {
     partial class FrmQuestionsBank
     {
@@ -47,9 +47,7 @@
             // 
             // FrmQuestionsBank
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+          
             this.Controls.Add(this.label4);
             this.Name = "FrmQuestionsBank";
             this.Text = "FrmQuestionsBank";

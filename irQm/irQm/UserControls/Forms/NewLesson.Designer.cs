@@ -1,6 +1,6 @@
-﻿namespace irQm.Forms
+﻿namespace irQm.UserControls.Forms
 {
-    partial class Frmnewlesson
+    partial class NewLesson
     {
         /// <summary>
         /// Required designer variable.
@@ -47,7 +47,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.label4.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(354, 3);
+            this.label4.Location = new System.Drawing.Point(891, 3);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(233, 23);
@@ -61,7 +61,7 @@
             this.label5.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.label5.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Location = new System.Drawing.Point(8, 0);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(522, 35);
@@ -80,10 +80,10 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(32, 89);
+            this.panel1.Location = new System.Drawing.Point(72, 31);
             this.panel1.Name = "panel1";
             this.panel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.panel1.Size = new System.Drawing.Size(522, 196);
+            this.panel1.Size = new System.Drawing.Size(530, 196);
             this.panel1.TabIndex = 74;
             // 
             // lblResult
@@ -93,14 +93,14 @@
             this.lblResult.ForeColor = System.Drawing.Color.Black;
             this.lblResult.Location = new System.Drawing.Point(0, 147);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(521, 23);
+            this.lblResult.Size = new System.Drawing.Size(529, 23);
             this.lblResult.TabIndex = 77;
             this.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtLessonname
             // 
             this.txtLessonname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLessonname.Location = new System.Drawing.Point(227, 42);
+            this.txtLessonname.Location = new System.Drawing.Point(235, 42);
             this.txtLessonname.MaxLength = 250;
             this.txtLessonname.Name = "txtLessonname";
             this.txtLessonname.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -110,7 +110,7 @@
             // txtDesc
             // 
             this.txtDesc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDesc.Location = new System.Drawing.Point(43, 69);
+            this.txtDesc.Location = new System.Drawing.Point(51, 69);
             this.txtDesc.MaxLength = 1000;
             this.txtDesc.Multiline = true;
             this.txtDesc.Name = "txtDesc";
@@ -125,7 +125,7 @@
             this.label7.BackColor = System.Drawing.SystemColors.Control;
             this.label7.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(421, 69);
+            this.label7.Location = new System.Drawing.Point(429, 69);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label7.Size = new System.Drawing.Size(67, 35);
@@ -140,7 +140,7 @@
             this.label6.BackColor = System.Drawing.SystemColors.Control;
             this.label6.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(421, 35);
+            this.label6.Location = new System.Drawing.Point(429, 35);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label6.Size = new System.Drawing.Size(67, 35);
@@ -154,7 +154,7 @@
             this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.btnRegister.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(123, 291);
+            this.btnRegister.Location = new System.Drawing.Point(346, 233);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnRegister.Size = new System.Drawing.Size(85, 39);
@@ -169,7 +169,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.button1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(33, 291);
+            this.button1.Location = new System.Drawing.Point(255, 233);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.button1.Size = new System.Drawing.Size(85, 39);
@@ -179,20 +179,13 @@
             // 
             // Frmnewlesson
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "Frmnewlesson";
-            this.Text = "Frmnewlesson";
-            this.Controls.SetChildIndex(this.panel1, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.btnRegister, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
+            this.Size = new System.Drawing.Size(687, 290);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

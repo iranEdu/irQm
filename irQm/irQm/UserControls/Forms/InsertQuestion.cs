@@ -1,23 +1,19 @@
 ﻿using irQm.BaseCodes;
 using irQm.BaseCodes.Utilities;
-using irQm.UserControls.Utilities;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace irQm.Forms
+namespace irQm.UserControls.Forms
 {
-    public partial class FrmInsertQuestion : MasterForm
+    public partial class InsertQuestion : UserControl
     {
         Timer timer;
         
-        public FrmInsertQuestion()
+        public InsertQuestion()
         {
             InitializeComponent();
             comboQuestionType.DataSource = BaseCodes.Utilities.Globals.QuestionTypes.Names;
@@ -465,6 +461,11 @@ namespace irQm.Forms
         private void btnNew_Click(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void FrmInsertQuestion_Load(object sender, EventArgs e)
+        {
 
         }
     }

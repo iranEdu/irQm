@@ -14,7 +14,7 @@ namespace irQm
     public partial class UCPracticalAnswer : UserControl
     {
         private List<StringItem> _checkList;
-
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public List<StringItem> CheckList { get => _checkList.Where(i=>!string.IsNullOrWhiteSpace(i.Value)).ToList(); set => _checkList = value; }
         public UCPracticalAnswer()
         {

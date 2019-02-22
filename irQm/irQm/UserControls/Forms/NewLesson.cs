@@ -3,11 +3,11 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace irQm.Forms
+namespace irQm.UserControls.Forms
 {
-    public partial class Frmnewlesson : MasterForm
+    public partial class NewLesson : UserControl
     {
-        public Frmnewlesson()
+        public NewLesson()
         {
             InitializeComponent();
         }

@@ -15,7 +15,8 @@ namespace irQm
     {
         private List<StringPair> _stringPairs;
 
-        public List<StringPair> StringPairs { get =>_stringPairs.Where(p => !string.IsNullOrWhiteSpace(p.Value) && !string.IsNullOrWhiteSpace(p.Key)).ToList(); set { _stringPairs = value; } }
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+        public List<StringPair> StringPairs { get =>_stringPairs.Where(p => !(string.IsNullOrWhiteSpace(p.Value) && string.IsNullOrWhiteSpace(p.Key))).ToList(); set { _stringPairs = value; } }
 
         public UCPuzzleAnswer()
         {
