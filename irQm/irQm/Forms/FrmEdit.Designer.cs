@@ -59,11 +59,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.imagBox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picdeletimg = new System.Windows.Forms.PictureBox();
             this.uCcheckbox1 = new irQm.UserControls.UCcheckbox();
             this.contextMenuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagBox)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picdeletimg)).BeginInit();
             this.SuspendLayout();
             // 
             // richTxtEdit
@@ -256,7 +258,7 @@
             // 
             this.lblJustify.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblJustify.Image = global::irQm.Properties.Resources.justify;
-            this.lblJustify.Location = new System.Drawing.Point(338, 8);
+            this.lblJustify.Location = new System.Drawing.Point(337, 8);
             this.lblJustify.Name = "lblJustify";
             this.lblJustify.Size = new System.Drawing.Size(26, 26);
             this.lblJustify.TabIndex = 2;
@@ -277,7 +279,7 @@
             this.LblalignR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblalignR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.LblalignR.Image = global::irQm.Properties.Resources.align_right;
-            this.LblalignR.Location = new System.Drawing.Point(341, 7);
+            this.LblalignR.Location = new System.Drawing.Point(364, 7);
             this.LblalignR.Name = "LblalignR";
             this.LblalignR.Size = new System.Drawing.Size(26, 26);
             this.LblalignR.TabIndex = 0;
@@ -349,11 +351,13 @@
             this.imagBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.imagBox.TabIndex = 139;
             this.imagBox.TabStop = false;
+            this.imagBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.imagBox_MouseDown);
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.picdeletimg);
             this.panel1.Controls.Add(this.uCcheckbox1);
             this.panel1.Controls.Add(this.imagBox);
             this.panel1.Controls.Add(this.lblRedo);
@@ -367,8 +371,21 @@
             this.panel1.Size = new System.Drawing.Size(577, 407);
             this.panel1.TabIndex = 140;
             // 
+            // picdeletimg
+            // 
+            this.picdeletimg.Image = global::irQm.Properties.Resources.close;
+            this.picdeletimg.Location = new System.Drawing.Point(525, 294);
+            this.picdeletimg.Name = "picdeletimg";
+            this.picdeletimg.Size = new System.Drawing.Size(25, 21);
+            this.picdeletimg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picdeletimg.TabIndex = 143;
+            this.picdeletimg.TabStop = false;
+            this.picdeletimg.Visible = false;
+            this.picdeletimg.Click += new System.EventHandler(this.picdeletimg_Click);
+            // 
             // uCcheckbox1
             // 
+            this.uCcheckbox1.check = false;
             this.uCcheckbox1.Location = new System.Drawing.Point(502, 349);
             this.uCcheckbox1.Name = "uCcheckbox1";
             this.uCcheckbox1.Size = new System.Drawing.Size(68, 49);
@@ -390,6 +407,7 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imagBox)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picdeletimg)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -426,5 +444,6 @@
         private System.Windows.Forms.PictureBox imagBox;
         private System.Windows.Forms.Panel panel1;
         private UserControls.UCcheckbox uCcheckbox1;
+        private System.Windows.Forms.PictureBox picdeletimg;
     }
 }

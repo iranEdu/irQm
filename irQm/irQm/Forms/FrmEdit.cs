@@ -144,7 +144,7 @@ namespace irQm.Forms
                  imagBox.Image = img;
                 imagBox.Height = img.Height;
             }
-           
+                      
 
 
         }
@@ -219,12 +219,28 @@ namespace irQm.Forms
 
         private void lblRightToLeft_Click(object sender, EventArgs e)
         {
-
+            richTxtEdit.RightToLeft = RightToLeft.Yes;
+            
         }
 
         private void lblLeftToRight_Click(object sender, EventArgs e)
         {
+            richTxtEdit.RightToLeft = RightToLeft.No;
+        }
 
+        private void imagBox_MouseDown(object sender, MouseEventArgs e)
+        {   
+            picdeletimg.Visible = true;
+          
+         
+            picdeletimg.Top =imagBox.Top;
+            picdeletimg.Left = imagBox.Width-picdeletimg.Width;
+        }
+
+        private void picdeletimg_Click(object sender, EventArgs e)
+        {
+            imagBox.Image = null;
+            picdeletimg.Visible = false;
         }
     }
 }
