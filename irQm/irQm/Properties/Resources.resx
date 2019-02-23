@@ -157,9 +157,6 @@
   <data name="subscript" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\subscript.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="right to left" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\right to left.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="align right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\align right.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -171,6 +168,9 @@
   </data>
   <data name="settingpic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settingpic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="baseline_more_black_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\baseline_more_black_18dp.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="italic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\italic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,6 +184,9 @@
   <data name="underline" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\underline.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="left to right" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\left to right.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="nwexam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nwexam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -193,17 +196,20 @@
   <data name="symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\symbol.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="right to left" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\right to left.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="questionsbank" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\questionsbank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="left to right" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\left to right.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bookpic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bookpic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="equation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\equation.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="check box" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="save" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,7 +238,7 @@
   <data name="removemark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\removemark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="baseline_more_black_18dp" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\baseline_more_black_18dp.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ceck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ceck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -17,7 +17,6 @@ namespace irQm.Forms
         {
             InitializeComponent();
             openFileDialog1.Filter = "Images |*.bmp;*.jpg;*.png;*.gif;*.ico";
-            openFileDialog1.Filter = "Images |*.bmp;*.jpg;*.png;*.gif;*.ico";
             openFileDialog1.Multiselect = false;
             openFileDialog1.FileName = "";
 

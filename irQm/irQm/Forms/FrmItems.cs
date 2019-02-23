@@ -26,7 +26,10 @@ namespace irQm.Forms
                 label1.Text = selection[i];
                 flowLayoutPanel1.Controls.Add(label1);
             }
+            
         }
+        
+
     }
 }
 

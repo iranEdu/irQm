@@ -42,15 +42,15 @@
             this.flowLayoutPanel1.TabIndex = 138;
             this.flowLayoutPanel1.WrapContents = false;
             // 
-            // SelectChoiceForm
+            // FrmItems
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(549, 341);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "SelectChoiceForm";
-            this.Text = "SelectChoiceForm";
+            this.Name = "FrmItems";
+            this.Text = "Select Items";
             this.ResumeLayout(false);
 
         }

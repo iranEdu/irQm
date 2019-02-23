@@ -59,6 +59,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.imagBox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.uCcheckbox1 = new irQm.UserControls.UCcheckbox();
             this.contextMenuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagBox)).BeginInit();
@@ -353,6 +354,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.uCcheckbox1);
             this.panel1.Controls.Add(this.imagBox);
             this.panel1.Controls.Add(this.lblRedo);
             this.panel1.Controls.Add(this.lblUndo);
@@ -364,6 +366,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(577, 407);
             this.panel1.TabIndex = 140;
+            // 
+            // uCcheckbox1
+            // 
+            this.uCcheckbox1.Location = new System.Drawing.Point(502, 349);
+            this.uCcheckbox1.Name = "uCcheckbox1";
+            this.uCcheckbox1.Size = new System.Drawing.Size(68, 49);
+            this.uCcheckbox1.TabIndex = 142;
             // 
             // FrmEdit
             // 
@@ -416,5 +425,6 @@
         private System.Windows.Forms.ToolStripMenuItem چسباندنPasteToolStripMenuItem;
         private System.Windows.Forms.PictureBox imagBox;
         private System.Windows.Forms.Panel panel1;
+        private UserControls.UCcheckbox uCcheckbox1;
     }
 }
