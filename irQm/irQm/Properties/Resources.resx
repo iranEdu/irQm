@@ -211,6 +211,9 @@
   <data name="ceck" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ceck.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="check box" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\check box.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -235,13 +238,16 @@
   <data name="superscript" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\superscript.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Ic_radio_button_off_48px.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ic_radio_button_off_48px.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="New Lesson0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\New Lesson0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="removemark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\removemark.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="green circle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\green circle.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

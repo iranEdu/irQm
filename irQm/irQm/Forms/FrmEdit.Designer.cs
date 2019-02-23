@@ -61,6 +61,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.picdeletimg = new System.Windows.Forms.PictureBox();
             this.uCcheckbox1 = new irQm.UserControls.UCcheckbox();
+            this.ucRadiobutton1 = new irQm.UserControls.UCRadiobutton();
             this.contextMenuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagBox)).BeginInit();
@@ -129,7 +130,7 @@
             this.panel2.Controls.Add(this.lblJustify);
             this.panel2.Controls.Add(this.lblAlignL);
             this.panel2.Controls.Add(this.LblalignR);
-            this.panel2.Location = new System.Drawing.Point(9, 43);
+            this.panel2.Location = new System.Drawing.Point(-33, 43);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(543, 70);
             this.panel2.TabIndex = 52;
@@ -345,7 +346,7 @@
             // imagBox
             // 
             this.imagBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imagBox.Location = new System.Drawing.Point(7, 294);
+            this.imagBox.Location = new System.Drawing.Point(-35, 294);
             this.imagBox.Name = "imagBox";
             this.imagBox.Size = new System.Drawing.Size(543, 50);
             this.imagBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -357,6 +358,7 @@
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.ucRadiobutton1);
             this.panel1.Controls.Add(this.picdeletimg);
             this.panel1.Controls.Add(this.uCcheckbox1);
             this.panel1.Controls.Add(this.imagBox);
@@ -390,6 +392,14 @@
             this.uCcheckbox1.Name = "uCcheckbox1";
             this.uCcheckbox1.Size = new System.Drawing.Size(68, 49);
             this.uCcheckbox1.TabIndex = 142;
+            // 
+            // ucRadiobutton1
+            // 
+            this.ucRadiobutton1.check = false;
+            this.ucRadiobutton1.Location = new System.Drawing.Point(437, 352);
+            this.ucRadiobutton1.Name = "ucRadiobutton1";
+            this.ucRadiobutton1.Size = new System.Drawing.Size(59, 46);
+            this.ucRadiobutton1.TabIndex = 144;
             // 
             // FrmEdit
             // 
@@ -445,5 +455,6 @@
         private System.Windows.Forms.Panel panel1;
         private UserControls.UCcheckbox uCcheckbox1;
         private System.Windows.Forms.PictureBox picdeletimg;
+        private UserControls.UCRadiobutton ucRadiobutton1;
     }
 }

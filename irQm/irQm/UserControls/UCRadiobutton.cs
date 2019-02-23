@@ -10,21 +10,18 @@ using System.Windows.Forms;
 
 namespace irQm.UserControls
 {
-    public partial class UCcheckbox : UserControl
+    public partial class UCRadiobutton : UserControl
     {
-       
-            public UCcheckbox()
+        public UCRadiobutton()
         {
             InitializeComponent();
-            AddCheckboxes();
-
+            AddRadioButton();
         }
         public bool check { get; set; }
-
-        private void AddCheckboxes()
-        { 
-             panel1.Controls.Add(pictureBox1);
-             panel1.Controls.Add(pictureBox2);
+        private void AddRadioButton()
+        {
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(pictureBox2);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -36,19 +33,16 @@ namespace irQm.UserControls
                 check = true;
 
             }
-            
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (pictureBox2.Visible==true)
+            if (pictureBox2.Visible == true)
             {
                 pictureBox2.Visible = false;
                 check = false;
             }
-
-            
-
         }
     }
+    
 }
