@@ -42,9 +42,15 @@
             this.practicalTabPage = new System.Windows.Forms.TabPage();
             this.flpPracticalQuestions = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.fdpTo = new FarsiLibrary.Win.Controls.FADatePicker();
+            this.fdpFrom = new FarsiLibrary.Win.Controls.FADatePicker();
+            this.lessonsComboBox1 = new irQm.UserControls.Utilities.LessonsComboBox();
             this.tagsBox1 = new irQm.TagsBox();
             this.txtSearchExpr = new irQm.UserControls.Utilities.AutoDirectionTextbox();
             this.tabControl1.SuspendLayout();
@@ -232,6 +238,12 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.fdpTo);
+            this.panel1.Controls.Add(this.fdpFrom);
+            this.panel1.Controls.Add(this.lessonsComboBox1);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.tagsBox1);
             this.panel1.Controls.Add(this.txtSearchExpr);
@@ -242,10 +254,54 @@
             this.panel1.Size = new System.Drawing.Size(552, 91);
             this.panel1.TabIndex = 1;
             // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(309, 36);
+            this.label5.Name = "label5";
+            this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label5.Size = new System.Drawing.Size(18, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "تا:";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(502, 36);
+            this.label4.Name = "label4";
+            this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "تاریخ از:";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(519, 64);
+            this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label3.Size = new System.Drawing.Size(29, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "درس:";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(295, 6);
+            this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "برچسب:";
+            // 
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSearch.Location = new System.Drawing.Point(76, 64);
+            this.btnSearch.Location = new System.Drawing.Point(67, 68);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 2;
@@ -264,21 +320,36 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "عبارت جستجو:";
             // 
-            // label2
+            // fdpTo
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(505, 32);
-            this.label2.Name = "label2";
-            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label2.Size = new System.Drawing.Size(43, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "برچسب:";
+            this.fdpTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.fdpTo.Location = new System.Drawing.Point(169, 29);
+            this.fdpTo.Name = "fdpTo";
+            this.fdpTo.Size = new System.Drawing.Size(120, 20);
+            this.fdpTo.TabIndex = 10;
+            // 
+            // fdpFrom
+            // 
+            this.fdpFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.fdpFrom.Location = new System.Drawing.Point(348, 29);
+            this.fdpFrom.Name = "fdpFrom";
+            this.fdpFrom.Size = new System.Drawing.Size(120, 20);
+            this.fdpFrom.TabIndex = 9;
+            // 
+            // lessonsComboBox1
+            // 
+            this.lessonsComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lessonsComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.lessonsComboBox1.FormattingEnabled = true;
+            this.lessonsComboBox1.Location = new System.Drawing.Point(347, 61);
+            this.lessonsComboBox1.Name = "lessonsComboBox1";
+            this.lessonsComboBox1.Size = new System.Drawing.Size(121, 21);
+            this.lessonsComboBox1.TabIndex = 7;
             // 
             // tagsBox1
             // 
             this.tagsBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tagsBox1.Location = new System.Drawing.Point(221, 29);
+            this.tagsBox1.Location = new System.Drawing.Point(42, 3);
             this.tagsBox1.Name = "tagsBox1";
             this.tagsBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tagsBox1.Size = new System.Drawing.Size(247, 20);
@@ -299,7 +370,6 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Bank";
             this.Size = new System.Drawing.Size(632, 482);
-            this.Load += new System.EventHandler(this.FrmBank_Load);
             this.tabControl1.ResumeLayout(false);
             this.multiTabPage.ResumeLayout(false);
             this.multiTabPage.PerformLayout();
@@ -340,5 +410,11 @@
         private System.Windows.Forms.Label label2;
         private TagsBox tagsBox1;
         private Utilities.AutoDirectionTextbox txtSearchExpr;
+        private Utilities.LessonsComboBox lessonsComboBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label5;
+        private FarsiLibrary.Win.Controls.FADatePicker fdpTo;
+        private FarsiLibrary.Win.Controls.FADatePicker fdpFrom;
     }
 }

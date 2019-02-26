@@ -689,7 +689,8 @@ namespace irQm.Forms
             var content = new Bank();
             content.Dock = DockStyle.Fill;
             MasterPanel.Controls.Add(content);
-            
+            content.search();
+
         }
 
         private void MasterForm_Load(object sender, EventArgs e)
