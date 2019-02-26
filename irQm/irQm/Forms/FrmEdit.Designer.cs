@@ -60,7 +60,7 @@
             this.imagBox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.picdeletimg = new System.Windows.Forms.PictureBox();
-            this.uCcheckbox1 = new irQm.UserControls.UCcheckbox();
+            this.uCcheckbox1 = new irQm.UserControls.UCCheckbox();
             this.ucRadiobutton1 = new irQm.UserControls.UCRadiobutton();
             this.contextMenuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -387,7 +387,7 @@
             // 
             // uCcheckbox1
             // 
-            this.uCcheckbox1.check = false;
+            this.uCcheckbox1.Checked = false;
             this.uCcheckbox1.Location = new System.Drawing.Point(502, 349);
             this.uCcheckbox1.Name = "uCcheckbox1";
             this.uCcheckbox1.Size = new System.Drawing.Size(68, 49);
@@ -453,7 +453,7 @@
         private System.Windows.Forms.ToolStripMenuItem چسباندنPasteToolStripMenuItem;
         private System.Windows.Forms.PictureBox imagBox;
         private System.Windows.Forms.Panel panel1;
-        private UserControls.UCcheckbox uCcheckbox1;
+        private UserControls.UCCheckbox uCcheckbox1;
         private System.Windows.Forms.PictureBox picdeletimg;
         private UserControls.UCRadiobutton ucRadiobutton1;
     }
