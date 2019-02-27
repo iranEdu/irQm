@@ -9,6 +9,7 @@ namespace irQm.UserControls.qPresentation
         public delegate void UCQuestionListItemEHndler(UCQuestionListItem item, IQuestion question);
         public event UCQuestionListItemEHndler Removed;
         public event UCQuestionListItemEHndler CheckedChange;
+        int _number;
         IQuestion Question;
         public bool Chacked
         {
@@ -54,10 +55,21 @@ namespace irQm.UserControls.qPresentation
                 cbSelect.Visible = value;
             }
         }
+
+        public int Number
+        {
+            get => _number;
+            set
+            {
+                _number = value;
+                lblNumber.Text = value.ToString();
+            }
+        }
         public UCQuestionListItem(IQuestion question, string subtitle, int number)
         {
 
             InitializeComponent();
+            _number = number;
             Question = question;
             lblSubtitle.Text = subtitle;
             lblNumber.Text = number.ToString();

@@ -29,5 +29,14 @@ namespace irQm.BaseCodes
         public DateTime RegisterTime { get; set; }
         public DateTime EditTime { get; set; }
         public bool JustInList { get ; set; }
+
+        public void DeleteFromDb()
+        {
+            using (var db = new irQmDbContext())
+            {
+                db.LongAnswerQuestions.Remove(this);
+                db.SaveChanges();
+            }
+        }
     }
 }

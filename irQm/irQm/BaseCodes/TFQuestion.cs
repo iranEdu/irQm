@@ -34,6 +34,16 @@ namespace irQm.BaseCodes
         public byte[] Image { get ; set; }
         public bool JustInList { get; set; }
 
+        public void DeleteFromDb()
+        {
+            using (var db = new irQmDbContext())
+            {
+                db.TFQuestions.Remove(this);
+                db.SaveChanges();
+            }
+
+        }
+
         public void Evaluate()
         {
             if ((TrueOption.IsTrue&&TrueOption.Answered) || (FalseOption.IsTrue&& FalseOption.Answered))

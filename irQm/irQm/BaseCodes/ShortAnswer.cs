@@ -29,6 +29,15 @@ namespace irQm.BaseCodes
         public string LessonName { get; set; }
         public bool JustInList { get; set; }
 
+        public void DeleteFromDb()
+        {
+            using (var db = new irQmDbContext())
+            {
+                db.ShortAnswerQustions.Remove(this);
+                db.SaveChanges();
+            }
+        }
+
         public void Evaluate()
         {
                                                                                   

@@ -28,5 +28,13 @@ namespace irQm.BaseCodes
         public string CreatorUserId { get; set; }
         public bool JustInList { get; set; }
 
+        public void DeleteFromDb()
+        {
+            using (var db = new irQmDbContext())
+            {
+                db.PracticalQuestions.Remove(this);
+                db.SaveChanges();
+            }
+        }
     }
 }

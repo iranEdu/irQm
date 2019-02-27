@@ -35,6 +35,15 @@ namespace irQm.BaseCodes
         [Required]
         public string LessonName { get; set; }
 
+        public void DeleteFromDb()
+        {
+            using (var db = new irQmDbContext())
+            {
+                db.PuzzleQuestions.Remove(this);
+                db.SaveChanges();
+            }
+        }
+
         public void Evaluate()
         {
             var count= AnswerPairs.Count(p=>Pairs.Contains(p));

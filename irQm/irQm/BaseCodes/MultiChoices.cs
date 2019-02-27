@@ -45,5 +45,14 @@ namespace irQm.BaseCodes
             }
 
         }
+
+        public void DeleteFromDb()
+        {
+            using (var db = new irQmDbContext())
+            {
+                db.MultiChoicesQuestions.Remove(this);
+                db.SaveChanges();
+            }
+        }
     }
 }

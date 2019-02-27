@@ -41,6 +41,9 @@
             this.flpLongQuestions = new System.Windows.Forms.FlowLayoutPanel();
             this.practicalTabPage = new System.Windows.Forms.TabPage();
             this.flpPracticalQuestions = new System.Windows.Forms.FlowLayoutPanel();
+            this.toolsTabControl = new System.Windows.Forms.TabControl();
+            this.searchTabPage = new System.Windows.Forms.TabPage();
+            this.OperationsTabPage = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,6 +51,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnMakeExam = new System.Windows.Forms.Button();
+            this.SelectedQuestionsTabPage = new System.Windows.Forms.TabPage();
+            this.flpSelectedQuestions = new System.Windows.Forms.FlowLayoutPanel();
             this.fdpTo = new FarsiLibrary.Win.Controls.FADatePicker();
             this.fdpFrom = new FarsiLibrary.Win.Controls.FADatePicker();
             this.lessonsComboBox1 = new irQm.UserControls.Utilities.LessonsComboBox();
@@ -60,7 +66,10 @@
             this.shortTabPage.SuspendLayout();
             this.longTabPage.SuspendLayout();
             this.practicalTabPage.SuspendLayout();
+            this.toolsTabControl.SuspendLayout();
+            this.searchTabPage.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.SelectedQuestionsTabPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -74,6 +83,7 @@
             this.tabControl1.Controls.Add(this.shortTabPage);
             this.tabControl1.Controls.Add(this.longTabPage);
             this.tabControl1.Controls.Add(this.practicalTabPage);
+            this.tabControl1.Controls.Add(this.SelectedQuestionsTabPage);
             this.tabControl1.Location = new System.Drawing.Point(0, 127);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -233,11 +243,45 @@
             this.flpPracticalQuestions.TabIndex = 145;
             this.flpPracticalQuestions.WrapContents = false;
             // 
+            // toolsTabControl
+            // 
+            this.toolsTabControl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.toolsTabControl.Controls.Add(this.searchTabPage);
+            this.toolsTabControl.Controls.Add(this.OperationsTabPage);
+            this.toolsTabControl.Location = new System.Drawing.Point(17, 3);
+            this.toolsTabControl.Name = "toolsTabControl";
+            this.toolsTabControl.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.toolsTabControl.RightToLeftLayout = true;
+            this.toolsTabControl.SelectedIndex = 0;
+            this.toolsTabControl.Size = new System.Drawing.Size(594, 109);
+            this.toolsTabControl.TabIndex = 2;
+            // 
+            // searchTabPage
+            // 
+            this.searchTabPage.Controls.Add(this.panel1);
+            this.searchTabPage.Location = new System.Drawing.Point(4, 22);
+            this.searchTabPage.Name = "searchTabPage";
+            this.searchTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.searchTabPage.Size = new System.Drawing.Size(586, 83);
+            this.searchTabPage.TabIndex = 0;
+            this.searchTabPage.Text = "جستجو";
+            this.searchTabPage.UseVisualStyleBackColor = true;
+            // 
+            // OperationsTabPage
+            // 
+            this.OperationsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.OperationsTabPage.Name = "OperationsTabPage";
+            this.OperationsTabPage.Padding = new System.Windows.Forms.Padding(3);
+            this.OperationsTabPage.Size = new System.Drawing.Size(586, 83);
+            this.OperationsTabPage.TabIndex = 1;
+            this.OperationsTabPage.Text = "عملیات";
+            this.OperationsTabPage.UseVisualStyleBackColor = true;
+            // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnMakeExam);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.fdpTo);
             this.panel1.Controls.Add(this.fdpFrom);
@@ -249,16 +293,17 @@
             this.panel1.Controls.Add(this.txtSearchExpr);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(41, 14);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(552, 91);
-            this.panel1.TabIndex = 1;
+            this.panel1.Size = new System.Drawing.Size(580, 77);
+            this.panel1.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(309, 36);
+            this.label5.Location = new System.Drawing.Point(337, 36);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label5.Size = new System.Drawing.Size(18, 13);
@@ -269,7 +314,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(502, 36);
+            this.label4.Location = new System.Drawing.Point(530, 36);
             this.label4.Name = "label4";
             this.label4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label4.Size = new System.Drawing.Size(46, 13);
@@ -280,7 +325,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(519, 64);
+            this.label3.Location = new System.Drawing.Point(547, 58);
             this.label3.Name = "label3";
             this.label3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label3.Size = new System.Drawing.Size(29, 13);
@@ -291,7 +336,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(295, 6);
+            this.label2.Location = new System.Drawing.Point(323, 6);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label2.Size = new System.Drawing.Size(43, 13);
@@ -301,29 +346,62 @@
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSearch.Location = new System.Drawing.Point(67, 68);
+            this.btnSearch.Location = new System.Drawing.Point(160, 53);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "جستجو";
             this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(474, 6);
+            this.label1.Location = new System.Drawing.Point(502, 6);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "عبارت جستجو:";
             // 
+            // btnMakeExam
+            // 
+            this.btnMakeExam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnMakeExam.Location = new System.Drawing.Point(3, 53);
+            this.btnMakeExam.Name = "btnMakeExam";
+            this.btnMakeExam.Size = new System.Drawing.Size(151, 23);
+            this.btnMakeExam.TabIndex = 12;
+            this.btnMakeExam.Text = "ایجاد آزمون از انتخاب شده‌ها";
+            this.btnMakeExam.UseVisualStyleBackColor = true;
+            // 
+            // SelectedQuestionsTabPage
+            // 
+            this.SelectedQuestionsTabPage.Controls.Add(this.flpSelectedQuestions);
+            this.SelectedQuestionsTabPage.Location = new System.Drawing.Point(4, 22);
+            this.SelectedQuestionsTabPage.Name = "SelectedQuestionsTabPage";
+            this.SelectedQuestionsTabPage.Size = new System.Drawing.Size(624, 329);
+            this.SelectedQuestionsTabPage.TabIndex = 6;
+            this.SelectedQuestionsTabPage.Text = "انتخاب شده‌ها";
+            this.SelectedQuestionsTabPage.UseVisualStyleBackColor = true;
+            // 
+            // flpSelectedQuestions
+            // 
+            this.flpSelectedQuestions.AutoScroll = true;
+            this.flpSelectedQuestions.AutoSize = true;
+            this.flpSelectedQuestions.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flpSelectedQuestions.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpSelectedQuestions.Location = new System.Drawing.Point(0, 0);
+            this.flpSelectedQuestions.Name = "flpSelectedQuestions";
+            this.flpSelectedQuestions.Padding = new System.Windows.Forms.Padding(5);
+            this.flpSelectedQuestions.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.flpSelectedQuestions.Size = new System.Drawing.Size(624, 329);
+            this.flpSelectedQuestions.TabIndex = 146;
+            this.flpSelectedQuestions.WrapContents = false;
+            // 
             // fdpTo
             // 
             this.fdpTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.fdpTo.Location = new System.Drawing.Point(169, 29);
+            this.fdpTo.Location = new System.Drawing.Point(197, 29);
             this.fdpTo.Name = "fdpTo";
             this.fdpTo.Size = new System.Drawing.Size(120, 20);
             this.fdpTo.TabIndex = 10;
@@ -331,7 +409,7 @@
             // fdpFrom
             // 
             this.fdpFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.fdpFrom.Location = new System.Drawing.Point(348, 29);
+            this.fdpFrom.Location = new System.Drawing.Point(376, 29);
             this.fdpFrom.Name = "fdpFrom";
             this.fdpFrom.Size = new System.Drawing.Size(120, 20);
             this.fdpFrom.TabIndex = 9;
@@ -341,7 +419,7 @@
             this.lessonsComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lessonsComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lessonsComboBox1.FormattingEnabled = true;
-            this.lessonsComboBox1.Location = new System.Drawing.Point(347, 61);
+            this.lessonsComboBox1.Location = new System.Drawing.Point(375, 55);
             this.lessonsComboBox1.Name = "lessonsComboBox1";
             this.lessonsComboBox1.Size = new System.Drawing.Size(121, 21);
             this.lessonsComboBox1.TabIndex = 7;
@@ -349,7 +427,7 @@
             // tagsBox1
             // 
             this.tagsBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.tagsBox1.Location = new System.Drawing.Point(42, 3);
+            this.tagsBox1.Location = new System.Drawing.Point(70, 3);
             this.tagsBox1.Name = "tagsBox1";
             this.tagsBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tagsBox1.Size = new System.Drawing.Size(247, 20);
@@ -358,7 +436,7 @@
             // txtSearchExpr
             // 
             this.txtSearchExpr.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSearchExpr.Location = new System.Drawing.Point(344, 3);
+            this.txtSearchExpr.Location = new System.Drawing.Point(372, 3);
             this.txtSearchExpr.Name = "txtSearchExpr";
             this.txtSearchExpr.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtSearchExpr.Size = new System.Drawing.Size(124, 20);
@@ -366,7 +444,7 @@
             // 
             // Bank
             // 
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.toolsTabControl);
             this.Controls.Add(this.tabControl1);
             this.Name = "Bank";
             this.Size = new System.Drawing.Size(632, 482);
@@ -383,8 +461,12 @@
             this.longTabPage.PerformLayout();
             this.practicalTabPage.ResumeLayout(false);
             this.practicalTabPage.PerformLayout();
+            this.toolsTabControl.ResumeLayout(false);
+            this.searchTabPage.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.SelectedQuestionsTabPage.ResumeLayout(false);
+            this.SelectedQuestionsTabPage.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -404,17 +486,23 @@
         private System.Windows.Forms.FlowLayoutPanel flpLongQuestions;
         private System.Windows.Forms.TabPage practicalTabPage;
         private System.Windows.Forms.FlowLayoutPanel flpPracticalQuestions;
+        private System.Windows.Forms.TabControl toolsTabControl;
+        private System.Windows.Forms.TabPage searchTabPage;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private TagsBox tagsBox1;
-        private Utilities.AutoDirectionTextbox txtSearchExpr;
-        private Utilities.LessonsComboBox lessonsComboBox1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private FarsiLibrary.Win.Controls.FADatePicker fdpTo;
         private FarsiLibrary.Win.Controls.FADatePicker fdpFrom;
+        private Utilities.LessonsComboBox lessonsComboBox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private TagsBox tagsBox1;
+        private Utilities.AutoDirectionTextbox txtSearchExpr;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage OperationsTabPage;
+        private System.Windows.Forms.TabPage SelectedQuestionsTabPage;
+        private System.Windows.Forms.Button btnMakeExam;
+        private System.Windows.Forms.FlowLayoutPanel flpSelectedQuestions;
     }
 }
