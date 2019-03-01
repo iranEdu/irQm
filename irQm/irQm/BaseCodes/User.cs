@@ -21,7 +21,7 @@ namespace irQm.BaseCodes
         public DateTime RegisterTime = DateTime.UtcNow;
         public Roles.RoleSNames Role { get; set; }
         public string Email { get; set; }
-
+        public static int randomnumer { get; set; }
         public ICollection< MultiChoices> MultiChoicesQuestions { get; set; }
         public ICollection<LongAnswer> LongAnswerQuestions { get; set; }
         public ICollection<ShortAnswer> ShortAnswerQuestions { get; set; }

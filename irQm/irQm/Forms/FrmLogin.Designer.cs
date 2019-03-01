@@ -31,11 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLogin));
             this.RegisterLink = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.Picbook = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -44,18 +41,22 @@
             this.txtusername = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
             this.cbRemember = new System.Windows.Forms.CheckBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.btnExit = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Picbook = new System.Windows.Forms.PictureBox();
+            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // RegisterLink
             // 
             this.RegisterLink.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.RegisterLink.AutoSize = true;
-            this.RegisterLink.Location = new System.Drawing.Point(262, 331);
+            this.RegisterLink.Location = new System.Drawing.Point(267, 368);
             this.RegisterLink.Name = "RegisterLink";
             this.RegisterLink.Size = new System.Drawing.Size(39, 13);
             this.RegisterLink.TabIndex = 5;
@@ -77,17 +78,6 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.Image = global::irQm.Properties.Resources.accountpic;
-            this.pictureBox2.Location = new System.Drawing.Point(230, 39);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(160, 122);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -100,17 +90,6 @@
             this.label4.TabIndex = 5;
             this.label4.Text = "ورود";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(203, -34);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(387, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -122,18 +101,6 @@
             this.label3.Size = new System.Drawing.Size(156, 33);
             this.label3.TabIndex = 3;
             this.label3.Text = "آزمون یار معلم";
-            // 
-            // Picbook
-            // 
-            this.Picbook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Picbook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.Picbook.Image = ((System.Drawing.Image)(resources.GetObject("Picbook.Image")));
-            this.Picbook.Location = new System.Drawing.Point(596, 5);
-            this.Picbook.Name = "Picbook";
-            this.Picbook.Size = new System.Drawing.Size(172, 69);
-            this.Picbook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.Picbook.TabIndex = 2;
-            this.Picbook.TabStop = false;
             // 
             // label2
             // 
@@ -229,6 +196,17 @@
             this.cbRemember.Text = "رمز را به خاطر بسپار";
             this.cbRemember.UseVisualStyleBackColor = true;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(234, 335);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(94, 13);
+            this.linkLabel1.TabIndex = 15;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "فراموشی رمز عبور";
+            // 
             // btnExit
             // 
             this.btnExit.BackgroundImage = global::irQm.Properties.Resources.exit;
@@ -241,11 +219,46 @@
             this.btnExit.TabIndex = 6;
             this.btnExit.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.pictureBox2.Image = global::irQm.Properties.Resources.accountpic;
+            this.pictureBox2.Location = new System.Drawing.Point(230, 39);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(160, 122);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(203, -34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(387, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Picbook
+            // 
+            this.Picbook.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Picbook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.Picbook.Image = ((System.Drawing.Image)(resources.GetObject("Picbook.Image")));
+            this.Picbook.Location = new System.Drawing.Point(596, 5);
+            this.Picbook.Name = "Picbook";
+            this.Picbook.Size = new System.Drawing.Size(172, 69);
+            this.Picbook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Picbook.TabIndex = 2;
+            this.Picbook.TabStop = false;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.cbRemember);
             this.Controls.Add(this.RegisterLink);
@@ -261,11 +274,11 @@
             this.Name = "FrmLogin";
             this.Text = " ";
             this.Load += new System.EventHandler(this.FrmLogin_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,6 +302,7 @@
         private System.Windows.Forms.LinkLabel RegisterLink;
         private System.Windows.Forms.CheckBox cbRemember;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
