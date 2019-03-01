@@ -449,7 +449,7 @@
       <DependentUpon>InformaionBox1.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Utilities\LessonsComboBox.cs">
-      <SubType>Component</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <EmbeddedResource Include="Forms\ExtendedForm.resx">
       <DependentUpon>ExtendedForm.cs</DependentUpon>

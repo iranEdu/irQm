@@ -395,7 +395,7 @@
             // 
             // ucRadiobutton1
             // 
-            this.ucRadiobutton1.check = false;
+           
             this.ucRadiobutton1.Location = new System.Drawing.Point(437, 352);
             this.ucRadiobutton1.Name = "ucRadiobutton1";
             this.ucRadiobutton1.Size = new System.Drawing.Size(59, 46);
