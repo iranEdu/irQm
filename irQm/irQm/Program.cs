@@ -19,7 +19,7 @@ namespace irQm
             db.Database.EnsureCreated();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            ResetPassForm login = new ResetPassForm();
+            FrmLogin login = new FrmLogin();
             login.Show();
             Application.Run();
            

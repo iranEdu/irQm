@@ -33,7 +33,6 @@ namespace irQm.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            irQm.BaseCodes.Puzzle puzzle3 = new irQm.BaseCodes.Puzzle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInsertQuestion));
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -106,11 +105,10 @@ namespace irQm.Forms
             // comboLesson
             // 
             this.comboLesson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboLesson.FormattingEnabled = true;
-            this.comboLesson.Location = new System.Drawing.Point(393, 47);
+            this.comboLesson.Location = new System.Drawing.Point(372, 47);
             this.comboLesson.Name = "comboLesson";
             this.comboLesson.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comboLesson.Size = new System.Drawing.Size(121, 21);
+            this.comboLesson.Size = new System.Drawing.Size(142, 28);
             this.comboLesson.TabIndex = 109;
             // 
             // comboQuestionType
@@ -164,21 +162,6 @@ namespace irQm.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ucPuzzleAnswer1.Location = new System.Drawing.Point(20, 191);
             this.ucPuzzleAnswer1.Name = "ucPuzzleAnswer1";
-            puzzle3.AnswerPairs = null;
-            puzzle3.CreatorUser = null;
-            puzzle3.CreatorUserId = null;
-            puzzle3.EditTime = new System.DateTime(((long)(0)));
-            puzzle3.ExtraAnswers = null;
-            puzzle3.Face = null;
-            puzzle3.GainedScore = 0F;
-            puzzle3.Id = null;
-            puzzle3.Image = null;
-            puzzle3.Lesson = null;
-            puzzle3.LessonName = null;
-            puzzle3.Pairs = null;
-            puzzle3.RegisterTime = new System.DateTime(((long)(0)));
-            puzzle3.Score = 0F;
-            puzzle3.Tags = null;
             this.ucPuzzleAnswer1.Size = new System.Drawing.Size(546, 173);
             this.ucPuzzleAnswer1.TabIndex = 138;
             this.ucPuzzleAnswer1.Visible = false;
@@ -187,6 +170,7 @@ namespace irQm.Forms
             // 
             this.ucPracticalAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucPracticalAnswer1.CheckList = ((System.Collections.Generic.List<irQm.BaseCodes.StringItem>)(resources.GetObject("ucPracticalAnswer1.CheckList")));
             this.ucPracticalAnswer1.Location = new System.Drawing.Point(26, 191);
             this.ucPracticalAnswer1.Name = "ucPracticalAnswer1";
             this.ucPracticalAnswer1.Size = new System.Drawing.Size(538, 178);
@@ -240,6 +224,7 @@ namespace irQm.Forms
             this.ucShortAnswer1.Location = new System.Drawing.Point(34, 191);
             this.ucShortAnswer1.Name = "ucShortAnswer1";
             this.ucShortAnswer1.Size = new System.Drawing.Size(530, 173);
+            this.ucShortAnswer1.StringList = ((System.Collections.Generic.List<irQm.BaseCodes.StringItem>)(resources.GetObject("ucShortAnswer1.StringList")));
             this.ucShortAnswer1.TabIndex = 121;
             this.ucShortAnswer1.Visible = false;
             // 

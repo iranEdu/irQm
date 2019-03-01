@@ -562,6 +562,9 @@
     <EmbeddedResource Include="UserControls\Utilities\InformaionBox1.resx">
       <DependentUpon>InformaionBox1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Utilities\LessonsComboBox.resx">
+      <DependentUpon>LessonsComboBox.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
