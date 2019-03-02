@@ -32,12 +32,12 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.txtemail = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.Btnsendmail = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.txtmailcode = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btncheckcode = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblsendmail = new System.Windows.Forms.Label();
@@ -111,19 +111,19 @@
             this.txtemail.Size = new System.Drawing.Size(194, 20);
             this.txtemail.TabIndex = 18;
             // 
-            // btnLogin
+            // Btnsendmail
             // 
-            this.btnLogin.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.btnLogin.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(43, 98);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(85, 32);
-            this.btnLogin.TabIndex = 142;
-            this.btnLogin.Text = "تایید";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.Btnsendmail.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Btnsendmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.Btnsendmail.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.Btnsendmail.ForeColor = System.Drawing.Color.White;
+            this.Btnsendmail.Location = new System.Drawing.Point(43, 96);
+            this.Btnsendmail.Name = "Btnsendmail";
+            this.Btnsendmail.Size = new System.Drawing.Size(85, 32);
+            this.Btnsendmail.TabIndex = 142;
+            this.Btnsendmail.Text = "تایید";
+            this.Btnsendmail.UseVisualStyleBackColor = false;
+            this.Btnsendmail.Click += new System.EventHandler(this.Btnsendmail_Click_1);
             // 
             // label7
             // 
@@ -149,14 +149,15 @@
             this.tableLayoutPanel2.Location = new System.Drawing.Point(134, 142);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.51515F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 48.48485F));
+            this.tableLayoutPanel2.RowCount = 2;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 74.19355F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.80645F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(412, 31);
             this.tableLayoutPanel2.TabIndex = 145;
+            this.tableLayoutPanel2.Visible = false;
             // 
             // label11
             // 
@@ -167,7 +168,7 @@
             this.label11.Location = new System.Drawing.Point(225, 0);
             this.label11.Name = "label11";
             this.label11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label11.Size = new System.Drawing.Size(184, 31);
+            this.label11.Size = new System.Drawing.Size(184, 23);
             this.label11.TabIndex = 21;
             this.label11.Text = "کد امنیتی ارسال شده به ایمیل:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -182,19 +183,19 @@
             this.txtmailcode.TabIndex = 20;
             this.txtmailcode.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // button1
+            // btncheckcode
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.button1.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(43, 142);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(85, 31);
-            this.button1.TabIndex = 147;
-            this.button1.Text = "ارسال";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btncheckcode.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btncheckcode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.btncheckcode.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btncheckcode.ForeColor = System.Drawing.Color.White;
+            this.btncheckcode.Location = new System.Drawing.Point(43, 142);
+            this.btncheckcode.Name = "btncheckcode";
+            this.btncheckcode.Size = new System.Drawing.Size(85, 31);
+            this.btncheckcode.TabIndex = 147;
+            this.btncheckcode.Text = "ارسال";
+            this.btncheckcode.UseVisualStyleBackColor = false;
+            this.btncheckcode.Visible = false;
             // 
             // label10
             // 
@@ -242,7 +243,6 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(420, 2);
             this.label13.TabIndex = 157;
-            this.label13.Visible = false;
             // 
             // label9
             // 
@@ -254,7 +254,6 @@
             this.label9.Size = new System.Drawing.Size(100, 26);
             this.label9.TabIndex = 156;
             this.label9.Text = "بازیابی رمز عبور";
-            this.label9.Visible = false;
             // 
             // btnsavepass
             // 
@@ -268,7 +267,6 @@
             this.btnsavepass.TabIndex = 155;
             this.btnsavepass.Text = "ذخیره";
             this.btnsavepass.UseVisualStyleBackColor = false;
-            this.btnsavepass.Visible = false;
             // 
             // tableconfirmpass
             // 
@@ -290,7 +288,6 @@
             this.tableconfirmpass.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
             this.tableconfirmpass.Size = new System.Drawing.Size(412, 33);
             this.tableconfirmpass.TabIndex = 154;
-            this.tableconfirmpass.Visible = false;
             // 
             // label8
             // 
@@ -334,7 +331,6 @@
             this.tableresetpass.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.tableresetpass.Size = new System.Drawing.Size(412, 30);
             this.tableresetpass.TabIndex = 153;
-            this.tableresetpass.Visible = false;
             // 
             // label6
             // 
@@ -367,20 +363,20 @@
             this.Controls.Add(this.lblsendmail);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btncheckcode);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.Btnsendmail);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label4);
             this.Name = "ResetPassForm";
             this.Text = "ResetPassForm";
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
-            this.Controls.SetChildIndex(this.btnLogin, 0);
+            this.Controls.SetChildIndex(this.Btnsendmail, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.tableLayoutPanel2, 0);
-            this.Controls.SetChildIndex(this.button1, 0);
+            this.Controls.SetChildIndex(this.btncheckcode, 0);
             this.Controls.SetChildIndex(this.label10, 0);
             this.Controls.SetChildIndex(this.label12, 0);
             this.Controls.SetChildIndex(this.lblsendmail, 0);
@@ -405,13 +401,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button Btnsendmail;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtmailcode;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btncheckcode;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblsendmail;

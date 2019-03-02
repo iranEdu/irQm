@@ -46,8 +46,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtusername = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
-            this.ucCheckbox1 = new irQm.UserControls.UCCheckbox();
-            this.ucRadiobutton1 = new irQm.UserControls.UCRadiobutton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).BeginInit();
@@ -64,6 +62,7 @@
             this.linkLabel1.TabIndex = 15;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "فراموشی رمز عبور";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // btnExit
             // 
@@ -255,29 +254,11 @@
             this.txtpass.TabIndex = 2;
             this.txtpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpass_KeyPress);
             // 
-            // ucCheckbox1
-            // 
-            this.ucCheckbox1.Checked = false;
-            this.ucCheckbox1.Location = new System.Drawing.Point(40, 102);
-            this.ucCheckbox1.Name = "ucCheckbox1";
-            this.ucCheckbox1.Size = new System.Drawing.Size(82, 36);
-            this.ucCheckbox1.TabIndex = 16;
-            // 
-            // ucRadiobutton1
-            // 
-            this.ucRadiobutton1.Checked = false;
-            this.ucRadiobutton1.Location = new System.Drawing.Point(12, 184);
-            this.ucRadiobutton1.Name = "ucRadiobutton1";
-            this.ucRadiobutton1.Size = new System.Drawing.Size(106, 50);
-            this.ucRadiobutton1.TabIndex = 17;
-            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.ucRadiobutton1);
-            this.Controls.Add(this.ucCheckbox1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.cbRemember);
@@ -323,8 +304,6 @@
         private System.Windows.Forms.CheckBox cbRemember;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private UserControls.UCCheckbox ucCheckbox1;
-        private UserControls.UCRadiobutton ucRadiobutton1;
     }
 }
 

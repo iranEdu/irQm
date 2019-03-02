@@ -99,5 +99,11 @@ namespace irQm.Forms
             }
             
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ResetPassForm rpform = new ResetPassForm();
+            rpform.Show();
+        }
     }
 }
