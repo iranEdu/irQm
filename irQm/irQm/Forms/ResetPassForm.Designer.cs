@@ -37,7 +37,6 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label11 = new System.Windows.Forms.Label();
             this.txtmailcode = new System.Windows.Forms.TextBox();
-            this.btncheckcode = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.lblsendmail = new System.Windows.Forms.Label();
@@ -47,10 +46,10 @@
             this.btnsavepass = new System.Windows.Forms.Button();
             this.tableconfirmpass = new System.Windows.Forms.TableLayoutPanel();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtconfirmpass = new System.Windows.Forms.TextBox();
             this.tableresetpass = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtnewpass = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panelresetpass.SuspendLayout();
@@ -183,20 +182,6 @@
             this.txtmailcode.TabIndex = 20;
             this.txtmailcode.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
-            // btncheckcode
-            // 
-            this.btncheckcode.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btncheckcode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.btncheckcode.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.btncheckcode.ForeColor = System.Drawing.Color.White;
-            this.btncheckcode.Location = new System.Drawing.Point(43, 142);
-            this.btncheckcode.Name = "btncheckcode";
-            this.btncheckcode.Size = new System.Drawing.Size(85, 31);
-            this.btncheckcode.TabIndex = 147;
-            this.btncheckcode.Text = "ارسال";
-            this.btncheckcode.UseVisualStyleBackColor = false;
-            this.btncheckcode.Visible = false;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -267,6 +252,7 @@
             this.btnsavepass.TabIndex = 155;
             this.btnsavepass.Text = "ذخیره";
             this.btnsavepass.UseVisualStyleBackColor = false;
+            this.btnsavepass.Click += new System.EventHandler(this.btnsavepass_Click);
             // 
             // tableconfirmpass
             // 
@@ -276,7 +262,7 @@
             this.tableconfirmpass.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 222F));
             this.tableconfirmpass.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableconfirmpass.Controls.Add(this.label8, 0, 0);
-            this.tableconfirmpass.Controls.Add(this.textBox2, 1, 0);
+            this.tableconfirmpass.Controls.Add(this.txtconfirmpass, 1, 0);
             this.tableconfirmpass.Location = new System.Drawing.Point(116, 90);
             this.tableconfirmpass.Name = "tableconfirmpass";
             this.tableconfirmpass.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -303,13 +289,13 @@
             this.label8.Text = "تکرار رمز عبور:";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox2
+            // txtconfirmpass
             // 
-            this.textBox2.Location = new System.Drawing.Point(25, 3);
-            this.textBox2.MaxLength = 30;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(194, 20);
-            this.textBox2.TabIndex = 20;
+            this.txtconfirmpass.Location = new System.Drawing.Point(25, 3);
+            this.txtconfirmpass.MaxLength = 30;
+            this.txtconfirmpass.Name = "txtconfirmpass";
+            this.txtconfirmpass.Size = new System.Drawing.Size(194, 20);
+            this.txtconfirmpass.TabIndex = 20;
             // 
             // tableresetpass
             // 
@@ -319,7 +305,7 @@
             this.tableresetpass.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 222F));
             this.tableresetpass.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableresetpass.Controls.Add(this.label6, 0, 0);
-            this.tableresetpass.Controls.Add(this.textBox1, 1, 0);
+            this.tableresetpass.Controls.Add(this.txtnewpass, 1, 0);
             this.tableresetpass.Location = new System.Drawing.Point(116, 47);
             this.tableresetpass.Name = "tableresetpass";
             this.tableresetpass.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -346,13 +332,13 @@
             this.label6.Text = "رمز عبور جدید:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // textBox1
+            // txtnewpass
             // 
-            this.textBox1.Location = new System.Drawing.Point(25, 3);
-            this.textBox1.MaxLength = 30;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(194, 20);
-            this.textBox1.TabIndex = 20;
+            this.txtnewpass.Location = new System.Drawing.Point(25, 3);
+            this.txtnewpass.MaxLength = 30;
+            this.txtnewpass.Name = "txtnewpass";
+            this.txtnewpass.Size = new System.Drawing.Size(194, 20);
+            this.txtnewpass.TabIndex = 20;
             // 
             // ResetPassForm
             // 
@@ -363,7 +349,6 @@
             this.Controls.Add(this.lblsendmail);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.btncheckcode);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Btnsendmail);
@@ -376,7 +361,6 @@
             this.Controls.SetChildIndex(this.Btnsendmail, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.tableLayoutPanel2, 0);
-            this.Controls.SetChildIndex(this.btncheckcode, 0);
             this.Controls.SetChildIndex(this.label10, 0);
             this.Controls.SetChildIndex(this.label12, 0);
             this.Controls.SetChildIndex(this.lblsendmail, 0);
@@ -407,7 +391,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtmailcode;
-        private System.Windows.Forms.Button btncheckcode;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lblsendmail;
@@ -417,9 +400,9 @@
         private System.Windows.Forms.Button btnsavepass;
         private System.Windows.Forms.TableLayoutPanel tableconfirmpass;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtconfirmpass;
         private System.Windows.Forms.TableLayoutPanel tableresetpass;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtnewpass;
     }
 }

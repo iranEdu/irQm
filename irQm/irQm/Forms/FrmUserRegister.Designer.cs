@@ -91,14 +91,15 @@
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.label4.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(538, 4);
+            this.label4.Location = new System.Drawing.Point(421, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 23);
+            this.label4.Size = new System.Drawing.Size(165, 23);
             this.label4.TabIndex = 5;
-            this.label4.Text = "ورود";
+            this.label4.Text = "ورود    >    ثبت کاربر";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label6
             // 
@@ -106,16 +107,16 @@
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label6.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(443, 29);
+            this.label6.Location = new System.Drawing.Point(341, 29);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label6.Size = new System.Drawing.Size(147, 27);
+            this.label6.Size = new System.Drawing.Size(117, 27);
             this.label6.TabIndex = 8;
             this.label6.Text = "رمز عبور:";
             // 
             // txtusername
             // 
-            this.txtusername.Location = new System.Drawing.Point(243, 3);
+            this.txtusername.Location = new System.Drawing.Point(141, 3);
             this.txtusername.MaxLength = 30;
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(194, 20);
@@ -123,7 +124,7 @@
             // 
             // txtpass
             // 
-            this.txtpass.Location = new System.Drawing.Point(243, 32);
+            this.txtpass.Location = new System.Drawing.Point(141, 32);
             this.txtpass.MaxLength = 30;
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
@@ -136,7 +137,7 @@
             this.BtnEntire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.BtnEntire.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.BtnEntire.ForeColor = System.Drawing.Color.White;
-            this.BtnEntire.Location = new System.Drawing.Point(290, 309);
+            this.BtnEntire.Location = new System.Drawing.Point(244, 328);
             this.BtnEntire.Name = "BtnEntire";
             this.BtnEntire.Size = new System.Drawing.Size(85, 39);
             this.BtnEntire.TabIndex = 11;
@@ -150,7 +151,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.77909F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 440F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 338F));
             this.tableLayoutPanel1.Controls.Add(this.label6, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label7, 0, 2);
@@ -163,7 +164,7 @@
             this.tableLayoutPanel1.Controls.Add(this.txtFamily, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.txtEmail, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.comboRole, 1, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(-3, 123);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(41, 142);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tableLayoutPanel1.RowCount = 6;
@@ -174,7 +175,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(593, 180);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(461, 180);
             this.tableLayoutPanel1.TabIndex = 14;
             // 
             // label5
@@ -183,10 +184,10 @@
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label5.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(443, 0);
+            this.label5.Location = new System.Drawing.Point(341, 0);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label5.Size = new System.Drawing.Size(147, 29);
+            this.label5.Size = new System.Drawing.Size(117, 29);
             this.label5.TabIndex = 15;
             this.label5.Text = "نام کاربری:";
             // 
@@ -196,10 +197,10 @@
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(443, 56);
+            this.label7.Location = new System.Drawing.Point(341, 56);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label7.Size = new System.Drawing.Size(147, 33);
+            this.label7.Size = new System.Drawing.Size(117, 33);
             this.label7.TabIndex = 16;
             this.label7.Text = "نام";
             // 
@@ -209,10 +210,10 @@
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label8.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(443, 89);
+            this.label8.Location = new System.Drawing.Point(341, 89);
             this.label8.Name = "label8";
             this.label8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label8.Size = new System.Drawing.Size(147, 30);
+            this.label8.Size = new System.Drawing.Size(117, 30);
             this.label8.TabIndex = 17;
             this.label8.Text = "نام خانوادگی";
             // 
@@ -222,10 +223,10 @@
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label9.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(443, 119);
+            this.label9.Location = new System.Drawing.Point(341, 119);
             this.label9.Name = "label9";
             this.label9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label9.Size = new System.Drawing.Size(147, 29);
+            this.label9.Size = new System.Drawing.Size(117, 29);
             this.label9.TabIndex = 18;
             this.label9.Text = "رایانامه (ایمیل)";
             // 
@@ -235,16 +236,16 @@
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(443, 148);
+            this.label10.Location = new System.Drawing.Point(341, 148);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label10.Size = new System.Drawing.Size(147, 32);
+            this.label10.Size = new System.Drawing.Size(117, 32);
             this.label10.TabIndex = 19;
             this.label10.Text = "نوع حساب";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(243, 59);
+            this.txtName.Location = new System.Drawing.Point(141, 59);
             this.txtName.MaxLength = 30;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(194, 20);
@@ -252,7 +253,7 @@
             // 
             // txtFamily
             // 
-            this.txtFamily.Location = new System.Drawing.Point(243, 92);
+            this.txtFamily.Location = new System.Drawing.Point(141, 92);
             this.txtFamily.MaxLength = 30;
             this.txtFamily.Name = "txtFamily";
             this.txtFamily.Size = new System.Drawing.Size(194, 20);
@@ -260,7 +261,7 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(243, 122);
+            this.txtEmail.Location = new System.Drawing.Point(141, 122);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(194, 20);
             this.txtEmail.TabIndex = 21;
@@ -271,7 +272,7 @@
             this.comboRole.Items.AddRange(new object[] {
             "مدیر",
             "محدود"});
-            this.comboRole.Location = new System.Drawing.Point(243, 151);
+            this.comboRole.Location = new System.Drawing.Point(141, 151);
             this.comboRole.Name = "comboRole";
             this.comboRole.Size = new System.Drawing.Size(194, 21);
             this.comboRole.TabIndex = 23;
@@ -291,7 +292,7 @@
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox2.Image = global::irQm.Properties.Resources.accountpic;
-            this.pictureBox2.Location = new System.Drawing.Point(266, 39);
+            this.pictureBox2.Location = new System.Drawing.Point(247, 54);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(82, 78);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

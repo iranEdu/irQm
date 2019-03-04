@@ -1,21 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using SendGrid;
 using System.Net;
-using System.Configuration;
-using System.Diagnostics;
 using System.Net.Mail;
-using System.Data.Sql;
-using System.Data.SqlClient;
-
-using System.Collections.Specialized;
+using irQm.BaseCodes;
+using System.Collections.Generic;
 
 
 namespace irQm.Forms
@@ -28,6 +18,8 @@ namespace irQm.Forms
            
         }
         public static int randomnumber;
+        public static string mail;
+
 
         private void SendWebMailMessage()
         {
@@ -43,7 +35,7 @@ namespace irQm.Forms
 
                 string subject = "بازیابی رمز عبور";
                 string body = "کد احراز هویت:" + randomcode;
-               
+                mail = txtemail.Text;
                 randomnumber = randomcode;
                 var smtp = new SmtpClient
                 {
@@ -109,6 +101,35 @@ namespace irQm.Forms
           
              SendWebMailMessage();
 
+        }
+
+        private void btncheckcode_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnsavepass_Click(object sender, EventArgs e)
+        {
+            if (txtnewpass.Text == txtconfirmpass.Text)
+            {
+                ChangePassword(mail, txtnewpass.Text);
+            }
+            else
+                MessageBox.Show(" رمز جدید با تکرار رمز مغابرت دارد ", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            
+            /*var user = new User { Email = mail, Password = txtnewpass.Text };
+            irQmDbContext db = new irQmDbContext();
+            db.User.Attach(user).Property(x => x.Password).IsModified = true;
+            db.SaveChanges();*/
+                                             
+            
+        }
+        public void ChangePassword(string email, string password)
+        {
+            irQmDbContext db = new irQmDbContext();
+            var user = db.User.FirstOrDefault(u => u.Email == mail);
+            user.Password = txtnewpass.Text;
+            db.SaveChanges();
         }
     }
 }

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Net.Mail;
 using irQm.BaseCodes;
 using System.Linq;
 using System.Drawing;
@@ -31,7 +30,7 @@ namespace irQm.Forms
             {
                 using (irQmDbContext db = new irQmDbContext())
                 {
-                    if (db.User.Any(u => u.UserName == user.UserName))
+                    if (db.User.Any(u => u.Email == ""))
                     {
                         lblResult.Text = "این نام کاربری قبلا ثبت شده است";
                         lblResult.ForeColor = Color.Red;

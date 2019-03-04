@@ -239,6 +239,12 @@
     <Compile Include="Forms\ResetPassForm.Designer.cs">
       <DependentUpon>ResetPassForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\UserEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserEditForm.Designer.cs">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\13971115143340_initial.cs" />
     <Compile Include="Migrations\13971115143340_initial.designer.cs">
       <DependentUpon>13971115143340_initial.cs</DependentUpon>
@@ -492,6 +498,9 @@
     <EmbeddedResource Include="Forms\ResetPassForm.resx">
       <DependentUpon>ResetPassForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserEditForm.resx">
+      <DependentUpon>UserEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MultiOptionsForPresentation.resx">
       <DependentUpon>MultiOptionsForPresentation.cs</DependentUpon>
     </EmbeddedResource>
@@ -720,6 +729,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\pass0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />
