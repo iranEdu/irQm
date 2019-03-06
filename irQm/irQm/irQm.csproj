@@ -194,6 +194,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseCodes\Backup.cs" />
     <Compile Include="BaseCodes\Configurations\UserConfiguration.cs" />
     <Compile Include="BaseCodes\Configurations\ExamConfiguration.cs" />
     <Compile Include="BaseCodes\Configurations\PracticalConfiguration.cs" />
@@ -227,6 +228,12 @@
     <Compile Include="BaseCodes\LongAnswer.cs" />
     <Compile Include="BaseCodes\Puzzle.cs" />
     <Compile Include="BaseCodes\QuestionInList.cs" />
+    <Compile Include="Forms\BackupAndRestoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BackupAndRestoreForm.Designer.cs">
+      <DependentUpon>BackupAndRestoreForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmItems.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -457,6 +464,9 @@
     <Compile Include="UserControls\Utilities\LessonsComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <EmbeddedResource Include="Forms\BackupAndRestoreForm.resx">
+      <DependentUpon>BackupAndRestoreForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExtendedForm.resx">
       <DependentUpon>ExtendedForm.cs</DependentUpon>
     </EmbeddedResource>

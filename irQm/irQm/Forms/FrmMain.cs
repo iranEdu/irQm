@@ -45,5 +45,17 @@ namespace irQm.Forms
             fer.Show();
             this.Close();
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            BackupAndRestoreForm brf = new BackupAndRestoreForm();
+            brf.Show();
+        }
+
+        private void pbBackup_Click(object sender, EventArgs e)
+        {
+            BackupAndRestoreForm brf = new BackupAndRestoreForm();
+            brf.Show();
+        }
     }
 }

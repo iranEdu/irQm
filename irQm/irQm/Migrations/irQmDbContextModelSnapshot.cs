@@ -916,6 +916,34 @@ namespace irQm.Migrations
                         .HasForeignKey("TrueOptionId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
+            modelBuilder.Entity("irQm.BaseCodes.Backup", b =>
+            {
+                b.Property<string>("BackupPath");
+
+                b.Property<DateTime>("BackupName");
+
+
+            });
+
+            modelBuilder.Entity("irQm.BaseCodes.Backup<irQm.BaseCodes.Backup>", b =>
+            {
+                b.Property<string>("BackupPath")
+                    .ValueGeneratedOnAdd()
+                    .HasMaxLength(50);
+                b.Property<string>("BackupName")
+                .IsRequired();
+                b.HasKey("BackupName");
+                b.HasIndex("QuestionId");
+                b.ToTable("Backup");
+            });
+
+            modelBuilder.Entity("irQm.BaseCodes.Backup", b =>
+            {
+                     b.HasOne("irQm.BaseCodes.Roles", "Role")
+                    .WithMany("Backup")
+                    .HasForeignKey("RoleSName")
+                    .OnDelete(DeleteBehavior.Cascade);
+            });
 #pragma warning restore 612, 618
         }
     }

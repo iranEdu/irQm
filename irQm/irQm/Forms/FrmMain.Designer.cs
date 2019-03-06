@@ -143,14 +143,14 @@
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label10.Location = new System.Drawing.Point(196, 370);
+            this.label10.Location = new System.Drawing.Point(174, 370);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label10.Size = new System.Drawing.Size(95, 26);
+            this.label10.Size = new System.Drawing.Size(110, 59);
             this.label10.TabIndex = 26;
-            this.label10.Text = "نسخه پشتیبان";
+            this.label10.Text = "پشتیبان گیری و بازیابی  اطلاعات";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -187,6 +187,7 @@
             this.pbBackup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbBackup.TabIndex = 18;
             this.pbBackup.TabStop = false;
+            this.pbBackup.Click += new System.EventHandler(this.pbBackup_Click);
             // 
             // pbScores
             // 
