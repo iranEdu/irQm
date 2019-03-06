@@ -79,6 +79,7 @@
             this.radioButtonrestore.TabStop = true;
             this.radioButtonrestore.Text = "بازیابی اطلاعات";
             this.radioButtonrestore.UseVisualStyleBackColor = true;
+            this.radioButtonrestore.CheckedChanged += new System.EventHandler(this.radioButtonrestore_CheckedChanged);
             // 
             // radiobuttonBackup
             // 
@@ -103,7 +104,8 @@
             this.gbbackup.Controls.Add(this.txtselectpath);
             this.gbbackup.Controls.Add(this.label5);
             this.gbbackup.Controls.Add(this.label4);
-            this.gbbackup.Font = new System.Drawing.Font("B Titr", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.gbbackup.Enabled = false;
+            this.gbbackup.Font = new System.Drawing.Font("B Titr", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.gbbackup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.gbbackup.Location = new System.Drawing.Point(25, 149);
             this.gbbackup.Name = "gbbackup";
@@ -115,7 +117,7 @@
             // 
             // btnstopbackup
             // 
-            this.btnstopbackup.Font = new System.Drawing.Font("B Titr", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnstopbackup.Font = new System.Drawing.Font("B Nazanin", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnstopbackup.ForeColor = System.Drawing.Color.Black;
             this.btnstopbackup.Location = new System.Drawing.Point(49, 105);
             this.btnstopbackup.Name = "btnstopbackup";
@@ -126,7 +128,7 @@
             // 
             // btnbackup
             // 
-            this.btnbackup.Font = new System.Drawing.Font("B Titr", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnbackup.Font = new System.Drawing.Font("B Nazanin", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnbackup.ForeColor = System.Drawing.Color.Black;
             this.btnbackup.Location = new System.Drawing.Point(154, 105);
             this.btnbackup.Name = "btnbackup";
@@ -194,6 +196,7 @@
             this.gbrestore.Controls.Add(this.btnchoosefile);
             this.gbrestore.Controls.Add(this.textBox4);
             this.gbrestore.Controls.Add(this.label7);
+            this.gbrestore.Enabled = false;
             this.gbrestore.Font = new System.Drawing.Font("B Titr", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.gbrestore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.gbrestore.Location = new System.Drawing.Point(25, 321);
@@ -206,7 +209,7 @@
             // 
             // btnrestore
             // 
-            this.btnrestore.Font = new System.Drawing.Font("B Titr", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.btnrestore.Font = new System.Drawing.Font("B Nazanin", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnrestore.ForeColor = System.Drawing.Color.Black;
             this.btnrestore.Location = new System.Drawing.Point(49, 79);
             this.btnrestore.Name = "btnrestore";

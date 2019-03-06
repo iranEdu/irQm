@@ -19,7 +19,12 @@ namespace irQm.Forms
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (radiobuttonBackup.Checked==true)
+            
+                gbbackup.Enabled = true;
+             
+            else
+                gbbackup.Enabled = false;
         }
 
         private void btnselectpath_Click(object sender, EventArgs e)
@@ -51,6 +56,16 @@ namespace irQm.Forms
 
             
             }
+        }
+
+        private void radioButtonrestore_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonrestore.Checked == true)
+
+                gbrestore.Enabled = true;
+
+            else
+                gbrestore.Enabled = false;
         }
     }
 }

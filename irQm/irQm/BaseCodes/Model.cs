@@ -23,7 +23,7 @@ namespace irQm.BaseCodes
         public DbSet<TagInQuestion<TFQuestion>> TagInTfQuestion { get; set; }
         public DbSet<Option> Option { get; set; }
         public DbSet<User> User { get; set; }
-        public DbSet<Backup> backup { get; set; }
+       // public DbSet<Backup> backup { get; set; }
         //public DbSet<TFOption> TFOption { get; set; }
 
 

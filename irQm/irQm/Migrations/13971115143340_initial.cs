@@ -683,22 +683,7 @@ namespace irQm.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-           /* migrationBuilder.CreateTable(
-                name: "Backup",
-                columns: table => new
-                {
-                    BackupPath = table.Column<string>(maxLength: 250, nullable: false),
-                    BackupName = table.Column<string>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Backup", x => x.BackupName);
-                    table.ForeignKey(name: "FK_Backup_Roles_RolesName",
-                        column: x => x.RoleSName,
-                        principalTable: "Roles",
-                        principalColumn: "RoleSName",
-                        onDelete: ReferentialAction.Cascade);
-                });   */
+         
 
             migrationBuilder.CreateIndex(
                 name: "IX_Exams_UserId",
