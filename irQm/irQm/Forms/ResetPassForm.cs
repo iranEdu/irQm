@@ -19,7 +19,7 @@ namespace irQm.Forms
         }
         public static int randomnumber;
         public static string mail;
-
+        private User user;
 
         private void SendWebMailMessage()
         {
@@ -27,15 +27,15 @@ namespace irQm.Forms
             try
             {
                                          
-                var fromAddress = new MailAddress("s.taghilonia@gmail.com", "From:");
-                var toAddress = new MailAddress(txtemail.Text, "To:");
-                const string fromPassword = "********";
+                var fromAddress = new MailAddress("porsan.app.ir@gmail.com", "پرسان");
+                var toAddress = new MailAddress(user.Email, user.Name+" "+user.Family);
+                const string fromPassword = "@)19irQmmvshk";
                 Random rnd = new Random();
                 int randomcode = rnd.Next(1000, 9999);
 
                 string subject = "بازیابی رمز عبور";
                 string body = "کد احراز هویت:" + randomcode;
-                mail = txtemail.Text;
+                mail = txtUsername.Text;
                 randomnumber = randomcode;
                 var smtp = new SmtpClient
                 {
@@ -47,15 +47,18 @@ namespace irQm.Forms
                     Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
 
                 };
-                using (var message = new MailMessage(fromAddress, toAddress)
+                smtp.SendCompleted += Smtp_SendCompleted;
+                var message = new MailMessage(fromAddress, toAddress)
                 {
                     Subject = subject,
                     Body = body
-                })
+                };
                 {
-                    smtp.Send(message);
+                    lblMessage.ForeColor = Color.LimeGreen;
+                    lblMessage.Text = "در حال انجام";
+                    smtp.SendAsync(message,"");
+
                     
-                    MessageBox.Show("کد احراز هویت به آدرس ایمیل ارسال شد ", "پیغام", MessageBoxButtons.OK);
                     
                     tableLayoutPanel2.Visible = true; 
                    
@@ -65,13 +68,30 @@ namespace irQm.Forms
             catch (Exception)
             {
                 
-                MessageBox.Show("اتصال به اینترنت و آدرس ایمیل وارد شده را بررسی نمایید. ","خطا", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                lblMessage.ForeColor = Color.Red;
+                lblMessage.Text = "اتصال به اینترنت را بررسی نمایید";
                 Btnsendmail.Visible = true;
             }
 
         }
 
-       
+        private void Smtp_SendCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
+        {
+           if(e.Error !=null)
+            {
+                lblMessage.ForeColor = Color.Red;
+                
+                lblMessage.Text = "خطایی پیش آمده است";
+            }
+           else if(!e.Cancelled)
+            {
+                lblMessage.ForeColor = Color.LimeGreen;
+
+                lblMessage.Text = "کد احراز هویت به آدرس ایمیل ارسال شد ";
+            }
+        }
+
         private void label9_Click(object sender, EventArgs e)
         {
 
@@ -89,7 +109,7 @@ namespace irQm.Forms
             if (txtmailcode.Text == Convert.ToString(randomnumber))
             {
                 panelresetpass.Visible = true;
-
+                lblMessage.Text = "";
 
             }
         }
@@ -98,8 +118,25 @@ namespace irQm.Forms
 
         private void Btnsendmail_Click_1(object sender, EventArgs e)
         {
-          
-             SendWebMailMessage();
+            using (irQmDbContext db = new irQmDbContext())
+            {
+                user = db.User.FirstOrDefault(u => u.UserName == txtUsername.Text.Trim());
+                if (user == null)
+                {
+                    lblMessage.ForeColor = Color.Red;
+                    lblMessage.Text = "این نام کاربری وجود ندارد";
+                   
+                    return;
+                }
+                if(string.IsNullOrWhiteSpace(user.Email))
+                {
+                    lblMessage.ForeColor = Color.Red;
+                    lblMessage.Text = "برای این نام کاربری هیچ ایمیلی وجود ندارد";
+                    
+                    return;
+                }
+            }
+                SendWebMailMessage();
 
         }
 
@@ -112,7 +149,7 @@ namespace irQm.Forms
         {
             if (txtnewpass.Text == txtconfirmpass.Text)
             {
-                ChangePassword(mail, txtnewpass.Text);
+                ChangePassword(txtnewpass.Text);
             }
             else
                 MessageBox.Show(" رمز جدید با تکرار رمز مغابرت دارد ", "خطا", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -124,12 +161,16 @@ namespace irQm.Forms
                                              
             
         }
-        public void ChangePassword(string email, string password)
+        private void ChangePassword(string password)
         {
-            irQmDbContext db = new irQmDbContext();
-            var user = db.User.FirstOrDefault(u => u.Email == mail);
-            user.Password = txtnewpass.Text;
-            db.SaveChanges();
+            using (irQmDbContext db = new irQmDbContext())
+            {
+                var usr = db.User.First(u=>u.UserId==user.UserId);
+                usr.Password = password.GetHashCode().ToString();
+                db.SaveChanges();
+            }
+            lblMessage.ForeColor = Color.LimeGreen;
+            lblMessage.Text = "عملیات تغییر رمز با موفقیت انجام شد";
         }
     }
 }
