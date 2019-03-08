@@ -54,5 +54,24 @@ namespace irQm.BaseCodes
                 db.SaveChanges();
             }
         }
+        public IQuestion Clone()
+        {
+            var q = new MultiChoices();
+            q.CreatorUser = CreatorUser;
+            q.CreatorUserId = CreatorUserId;
+            q.Face = Face;
+            q.Id = Guid.NewGuid().ToString();
+            q.Score = Score;
+            q.JustInList = JustInList;
+            q.Image = Image;
+            q.GainedScore = GainedScore;
+            q.RegisterTime = DateTime.UtcNow;
+            q.Tags = Tags;
+            q.Lesson = Lesson;
+            q.LessonName = LessonName;
+            q.Options = Options;
+            q.MultiSelections = MultiSelections;
+            return q;
+        }
     }
 }

@@ -55,13 +55,9 @@ namespace irQm.UserControls.Forms
 
         private void Picexit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Dispose();
         }
 
-        private void Picimg_Click(object sender, EventArgs e)
-        {
-            FrmLogin login = new FrmLogin();
-            login.Show();
-        }
+        
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using FarsiLibrary.Utils.Internals;
 
 namespace FarsiLibrary.Utils
@@ -233,6 +234,59 @@ namespace FarsiLibrary.Utils
         public static DateTime ToGregorianDateTime(PersianDate date)
         {
             return DateTime.Parse(ToGregorianDate(date), CultureHelper.NeutralCulture);
+        }
+        ///<summary>
+        ///</summary>
+        public static DateTime ToMiladi(PersianDate date)
+        {
+            
+            var jyear = date.Year;
+            var jmonth = date.Month;
+            var jday = date.Day;
+
+            //Continue
+            int i;
+
+            var totalDays = JalaliDays(jyear, jmonth, jday);
+            totalDays = totalDays + GYearOff;
+
+            var gyear = (int)(totalDays / (Solar - 0.25 / 33));
+            var Div4 = gyear / 4;
+            var Div100 = gyear / 100;
+            var Div400 = gyear / 400;
+            var gdays = totalDays - (365 * gyear) - (Div4 - Div100 + Div400);
+            gyear = gyear + 1;
+
+            if (gdays == 0)
+            {
+                gyear--;
+                gdays = GLeap(gyear) == 1 ? 366 : 365;
+            }
+            else
+            {
+                if (gdays == 366 && GLeap(gyear) != 1)
+                {
+                    gdays = 1;
+                    gyear++;
+                }
+            }
+
+            var leap = GLeap(gyear);
+            for (i = 0; i <= 12; i++)
+            {
+                if (gdays <= GDayTable[leap, i])
+                {
+                    break;
+                }
+
+                gdays = gdays - GDayTable[leap, i];
+            }
+
+            var iGMonth = i + 1;
+            var iGDay = gdays;
+
+
+            return new DateTime(gyear,iGMonth,iGDay,date.Hour,date.Minute,date.Second,new GregorianCalendar());
         }
 
         /// <summary>

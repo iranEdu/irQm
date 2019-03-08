@@ -22,6 +22,7 @@ namespace irQm.UserControls
             fLPanel.WrapContents = false;
 
             this.Options = options;
+           
             Make();
         }
         public void New(List<Option> options)
@@ -41,6 +42,7 @@ namespace irQm.UserControls
         {
             //fLPanel.Controls.Clear();
             byte i = 1;
+            
             foreach(Option o in Options)
             {
                 o.number = i++;
@@ -48,6 +50,8 @@ namespace irQm.UserControls
                 var oc = new UCOption(o);
                 oc.CheckedChanged += OptionItem_CheckedChanged;
                 oc.Width = fLPanel.Width - 30;
+                if (o.IsTrue)
+                    checkedItems++;
                 //oc.Anchor = AnchorStyles.Right | AnchorStyles.Left;
 
 

@@ -30,6 +30,26 @@ namespace irQm.BaseCodes
         public DateTime EditTime { get; set; }
         public bool JustInList { get ; set; }
 
+        public IQuestion Clone()
+        {
+            var q = new LongAnswer();
+            q.Answer = this.Answer;
+            q.CreatorUser = CreatorUser;
+            q.CreatorUserId = CreatorUserId;
+            q.Face = Face;
+            q.Id = Guid.NewGuid().ToString();
+            q.Score = Score;
+            q.UserAnswer = UserAnswer;
+            q.JustInList = JustInList;
+            q.Image = Image;
+            q.GainedScore = GainedScore;
+            q.RegisterTime = DateTime.UtcNow;
+            q.Tags = Tags;
+            q.Lesson = Lesson;
+            q.LessonName = LessonName;
+            return q;
+        }
+
         public void DeleteFromDb()
         {
             using (var db = new irQmDbContext())

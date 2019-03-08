@@ -27,6 +27,9 @@ namespace irQm.UserControls
             
             InitializeComponent();
             Number=option.number;
+            rtbOption.Rtf = option.Face;
+            cbIsTrue.Checked = option.IsTrue;
+            
         }
 
         private void Remove_Click(object sender, EventArgs e)

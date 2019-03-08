@@ -13,26 +13,32 @@ namespace irQm.UserControls.qPresentation
 {
     public partial class TrueFalseForPresentation : UserControl
     {
-        TFOption trueOption;
-        TFOption falseOption;
+        bool trueOption;
+        bool falseOption;
+        bool answeredTrueOption; bool answeredFalseOption;
         bool answerTime;
         bool showTrueOption;
-        public TrueFalseForPresentation(TFOption trueOption,TFOption falseOption,bool answerTime,bool showTrueOption)
+
+        public bool AnsweredFalseOption1 { get => AnsweredFalseOption2; set => AnsweredFalseOption2 = value; }
+        public bool AnsweredFalseOption2 { get => answeredFalseOption; set => answeredFalseOption = value; }
+
+        public TrueFalseForPresentation(bool trueOption,bool falseOption, bool answeredTrueOption, bool answeredFalseOption, bool answerTime,bool showTrueOption)
         {
             InitializeComponent();
             this.answerTime = answerTime;
             this.trueOption = trueOption;
             this.falseOption = falseOption;
-
+            this.AnsweredFalseOption1 = answeredFalseOption;
+            this.answeredTrueOption = answeredTrueOption;
             this.showTrueOption = showTrueOption;
             if (answerTime)
             {
-                chbTrue.Checked = trueOption.Answered;
-                chbFalse.Checked = falseOption.Answered;
+                chbTrue.Checked = answeredTrueOption;
+                chbFalse.Checked = answeredFalseOption;
                
                 if (showTrueOption)
                 {
-                    if (trueOption.IsTrue)
+                    if (trueOption)
                     {
                         chbTrue.BackColor = BaseCodes.Utilities.Globals.Colors.TrueOption;
                     }
@@ -51,8 +57,8 @@ namespace irQm.UserControls.qPresentation
             else
             {
 
-                chbTrue.Checked = trueOption.IsTrue;
-                chbFalse.Checked = falseOption.IsTrue;
+                chbTrue.Checked = trueOption;
+                chbFalse.Checked = falseOption;
                 AlphaPanel alphaPanel = new AlphaPanel();
                 alphaPanel.Dock = DockStyle.Fill;
                 this.Controls.Add(alphaPanel);
@@ -65,14 +71,14 @@ namespace irQm.UserControls.qPresentation
 
         private void chbTrue_CheckedChanged(object sender, EventArgs e)
         {
-            trueOption.Answered = chbTrue.Checked;
-            falseOption.Answered = chbFalse.Checked;
+            answeredTrueOption = chbTrue.Checked;
+           AnsweredFalseOption1 = chbFalse.Checked;
         }
 
         private void chbFalse_CheckedChanged(object sender, EventArgs e)
         {
-            trueOption.Answered = chbTrue.Checked;
-            falseOption.Answered = chbFalse.Checked;
+            answeredTrueOption = chbTrue.Checked;
+            AnsweredFalseOption1 = chbFalse.Checked;
         }
 
         private void btnClear_Click(object sender, EventArgs e)

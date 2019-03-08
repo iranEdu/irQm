@@ -16,7 +16,7 @@ namespace irQm.BaseCodes
         [Required]
         public float Score { get; set; }
         public float GainedScore { get; set ; }
-        public ICollection<StringItem> CheckList { get; set; }
+        public List<StringItem> CheckList { get; set; }
         public ICollection<TagInQuestion<Practical>> Tags { get; set; }
         public byte[] Image { get ; set; }
         public DateTime RegisterTime { get; set; }
@@ -35,6 +35,24 @@ namespace irQm.BaseCodes
                 db.PracticalQuestions.Remove(this);
                 db.SaveChanges();
             }
+        }
+        public IQuestion Clone()
+        {
+            var q = new Practical();
+            q.CreatorUser = CreatorUser;
+            q.CreatorUserId = CreatorUserId;
+            q.Face = Face;
+            q.Id = Guid.NewGuid().ToString();
+            q.Score = Score;
+            q.JustInList = JustInList;
+            q.Image = Image;
+            q.GainedScore = GainedScore;
+            q.RegisterTime = DateTime.UtcNow;
+            q.Tags = Tags;
+            q.Lesson = Lesson;
+            q.LessonName = LessonName;
+            q.CheckList = CheckList;
+            return q;
         }
     }
 }

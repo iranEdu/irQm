@@ -316,6 +316,7 @@
             this.Picexit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Picexit.TabIndex = 17;
             this.Picexit.TabStop = false;
+            this.Picexit.Click += new System.EventHandler(this.Picexit_Click);
             // 
             // BtnEntire
             // 
@@ -329,8 +330,9 @@
             this.BtnEntire.TabIndex = 16;
             this.BtnEntire.Text = "ثبت";
             this.BtnEntire.UseVisualStyleBackColor = false;
+            this.BtnEntire.Click += new System.EventHandler(this.Btnentire_Click);
             // 
-            // FrmUserRegister
+            // UserRegister
             // 
             this.Controls.Add(this.Picexit);
             this.Controls.Add(this.BtnEntire);
@@ -343,7 +345,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Name = "FrmUserRegister";
+            this.Name = "UserRegister";
             this.Size = new System.Drawing.Size(323, 245);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();

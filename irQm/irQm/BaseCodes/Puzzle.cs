@@ -24,7 +24,7 @@ namespace irQm.BaseCodes
         public float GainedScore { get ; set ; }
         public ICollection<TagInQuestion<Puzzle>> Tags { get; set; }
         public List<StringPair> Pairs { get; set; }
-        public List<StringItem> ExtraAnswers { get; set; }
+        //public List<StringItem> ExtraAnswers { get; set; }
         public List<StringPair> AnswerPairs { get; set; }
 
         public User CreatorUser { get; set; }
@@ -49,6 +49,26 @@ namespace irQm.BaseCodes
             var count= AnswerPairs.Count(p=>Pairs.Contains(p));
             GainedScore=Score/count;
             
+        }
+        public IQuestion Clone()
+        {
+            var q = new Puzzle();
+            q.CreatorUser = CreatorUser;
+            q.CreatorUserId = CreatorUserId;
+            q.Face = Face;
+            q.Id = Guid.NewGuid().ToString();
+            q.Score = Score;
+            q.JustInList = JustInList;
+            q.Image = Image;
+            q.GainedScore = GainedScore;
+            q.RegisterTime = DateTime.UtcNow;
+            q.Tags = Tags;
+            q.Lesson = Lesson;
+            q.LessonName = LessonName;
+            q.AnswerPairs = AnswerPairs;
+            q.Pairs = Pairs;
+          
+            return q;
         }
     }
 }

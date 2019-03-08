@@ -26,9 +26,13 @@ namespace irQm.BaseCodes
         public float GainedScore { get; set; }
         public ICollection<TagInQuestion<TFQuestion>> Tags { get; set; } 
         [Required]
-        public TFOption TrueOption { get; set; }
+        public bool TrueOption { get; set; }
         [Required]
-        public TFOption FalseOption { get; set; }
+        public bool FalseOption { get; set; }
+
+        public bool AnsweredTrueOption { get; set; }
+        public bool AnsweredFalseOption { get; set; }
+
         public Lesson Lesson { get; set; }
         public string LessonName { get; set; }
         public byte[] Image { get ; set; }
@@ -43,10 +47,29 @@ namespace irQm.BaseCodes
             }
 
         }
-
+        public IQuestion Clone()
+        {
+            var q = new TFQuestion();
+            q.CreatorUser = CreatorUser;
+            q.CreatorUserId = CreatorUserId;
+            q.Face = Face;
+            q.Id = Guid.NewGuid().ToString();
+            q.Score = Score;
+            q.JustInList = JustInList;
+            q.Image = Image;
+            q.GainedScore = GainedScore;
+            q.RegisterTime = DateTime.UtcNow;
+            q.Tags = Tags;
+            q.Lesson = Lesson;
+            q.LessonName = LessonName;
+            q.TrueOption = TrueOption;
+            q.FalseOption = FalseOption;
+           
+            return q;
+        }
         public void Evaluate()
         {
-            if ((TrueOption.IsTrue&&TrueOption.Answered) || (FalseOption.IsTrue&& FalseOption.Answered))
+            if ((TrueOption&&TrueOption) || (FalseOption&& FalseOption))
             {
                 GainedScore = Score;
             }

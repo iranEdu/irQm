@@ -32,7 +32,7 @@ namespace irQm.UserControls.qPresentation
                 var oc = new UCOptionForPresentation(o,justOneTrueOption,answerTime,showTrueOption);
                 oc.CheckedChanged += Oc_CheckedChanged; ;
                
-                oc.Width = Width - 20;
+                oc.Width = Width - 30;
                 flowLayoutPanel1.Controls.Add(oc);
 
             }
@@ -64,7 +64,7 @@ namespace irQm.UserControls.qPresentation
         {
             foreach (Control c in flowLayoutPanel1.Controls)
             {
-                c.Width = flowLayoutPanel1.Width;
+                c.Width = flowLayoutPanel1.Width-30;
             }
         }
     }

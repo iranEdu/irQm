@@ -26,7 +26,7 @@ namespace irQm.UserControls.qPresentation
             InitializeAnswerZone();
             MultiOptionsForPresentation ans = new MultiOptionsForPresentation(question.Options,!question.MultiSelections,answerTime,showTrueOption);
             ans.Tag = "AnswerZone";
-            ans.Width = Width - 10;
+            ans.Width = Width - 100;
             flowLayoutPanel1.Controls.Add(ans);
         }
 
@@ -35,8 +35,8 @@ namespace irQm.UserControls.qPresentation
         {
             _question = question;
             InitializeAnswerZone();
-            TrueFalseForPresentation ans = new TrueFalseForPresentation(question.TrueOption,question.FalseOption,answerTime,showTrueOption);
-            ans.Width = this.Width - 10;
+            TrueFalseForPresentation ans = new TrueFalseForPresentation(question.TrueOption,question.FalseOption,question.AnsweredTrueOption,question.AnsweredTrueOption,answerTime,showTrueOption);
+            ans.Width = this.Width - 100;
             ans.Tag = "AnswerZone";
 
             flowLayoutPanel1.Controls.Add(ans);
@@ -47,7 +47,7 @@ namespace irQm.UserControls.qPresentation
             _question = question;
             InitializeAnswerZone();
             ShortAnswerForPresentation ans = new ShortAnswerForPresentation(question, answerTime, showTrueOption);
-            ans.Width = this.Width-10;
+            ans.Width = this.Width-100;
             ans.Tag = "AnswerZone";
 
             flowLayoutPanel1.Controls.Add(ans);
@@ -57,7 +57,7 @@ namespace irQm.UserControls.qPresentation
             _question = question;
             InitializeAnswerZone();
             LongAnswerForPresentation ans = new LongAnswerForPresentation(question, answerTime, showTrueOption);
-            ans.Width = this.Width - 10;
+            ans.Width = this.Width - 100;
             ans.Tag = "AnswerZone";
             flowLayoutPanel1.Controls.Add(ans);
         }
@@ -66,7 +66,7 @@ namespace irQm.UserControls.qPresentation
             _question = question;
             InitializeAnswerZone();
             PracticalForPresentation ans = new PracticalForPresentation(question.CheckList);
-            ans.Width = this.Width - 10;
+            ans.Width = this.Width - 100;
             ans.Tag = "AnswerZone";
             flowLayoutPanel1.Controls.Add(ans);
         }
@@ -75,7 +75,7 @@ namespace irQm.UserControls.qPresentation
             _question = question;
             InitializeAnswerZone();
             PuzzleForPresentation ans = new PuzzleForPresentation(question,answerTime,showTrueOption);
-            ans.Width = this.Width - 10;
+            ans.Width = this.Width - 100;
             ans.Tag = "AnswerZone";
             flowLayoutPanel1.Controls.Add(ans);
         }

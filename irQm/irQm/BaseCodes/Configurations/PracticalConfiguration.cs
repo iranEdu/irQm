@@ -9,6 +9,7 @@ namespace irQm.BaseCodes.Configurations
         {
             builder.HasOne(q => q.Lesson).WithMany(l => l.Practicals).HasForeignKey(l => l.LessonName).OnDelete(DeleteBehavior.Cascade);
             builder.HasOne(q => q.CreatorUser).WithMany(u => u.PracticalQuestions).OnDelete(DeleteBehavior.Cascade).HasForeignKey(q => q.CreatorUserId);
+            builder.HasMany(q => q.CheckList).WithOne().OnDelete(DeleteBehavior.Cascade);
 
         }
     }

@@ -162,146 +162,146 @@
     <Compile Include="BaseCodes\Configurations\PuzzleQuestionInListConfiguration.cs" />
     <Compile Include="BaseCodes\Configurations\TFQuestionInListConfiguration.cs" />
     <Compile Include="BaseCodes\Exam.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Localization\ARLocalizer.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Localization\AssemblyNames.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Localization\BaseLocalizer.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Localization\ENLocalizer.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Localization\FALocalizeManager.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Localization\FALocalizer.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Localization\FormatterStringID.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Localization\StringID.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\CultureManager.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\DateTimeExtensions.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Exceptions\InvalidPersianDateException.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Exceptions\InvalidPersianDateFormatException.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\AbstractTimeUnit.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\BasicTimeFormat.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\Duration.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\ITimeFormat.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\ITimeUnit.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\PrettyTime.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\TimeUnits\Century.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\TimeUnits\Day.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\TimeUnits\Decade.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\TimeUnits\Hour.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\TimeUnits\JustNow.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\TimeUnits\Millennium.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\TimeUnits\Millisecond.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\TimeUnits\Minute.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\TimeUnits\Month.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\TimeUnits\Second.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\TimeUnits\Week.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Formatter\TimeUnits\Year.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Internals\CollectionHelper.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Internals\CultureHelper.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Internals\Guard.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Internals\ReflectionHelper.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Internals\ThemeWrapper.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\Internals\Utils.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\PersianCalendar.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\PersianCultureInfo.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\PersianDate.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\PersianDateConverter.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\PersianDateTimeFormatInfo.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\PersianMonthNames.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\PersianWeekDayNames.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\toEnglish.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\toFarsi.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Utils\ToWords.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\BaseClasses\BaseControl.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Localization\ARLocalizer.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Localization\AssemblyNames.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Localization\BaseLocalizer.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Localization\ENLocalizer.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Localization\FALocalizeManager.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Localization\FALocalizer.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Localization\FormatterStringID.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Localization\StringID.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\CultureManager.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\DateTimeExtensions.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Exceptions\InvalidPersianDateException.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Exceptions\InvalidPersianDateFormatException.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\AbstractTimeUnit.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\BasicTimeFormat.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\Duration.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\ITimeFormat.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\ITimeUnit.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\PrettyTime.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\TimeUnits\Century.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\TimeUnits\Day.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\TimeUnits\Decade.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\TimeUnits\Hour.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\TimeUnits\JustNow.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\TimeUnits\Millennium.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\TimeUnits\Millisecond.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\TimeUnits\Minute.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\TimeUnits\Month.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\TimeUnits\Second.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\TimeUnits\Week.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Formatter\TimeUnits\Year.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Internals\CollectionHelper.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Internals\CultureHelper.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Internals\Guard.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Internals\ReflectionHelper.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Internals\ThemeWrapper.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\Internals\Utils.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\PersianCalendar.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\PersianCultureInfo.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\PersianDate.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\PersianDateConverter.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\PersianDateTimeFormatInfo.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\PersianMonthNames.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\PersianWeekDayNames.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\toEnglish.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\toFarsi.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\ToWords.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\BaseClasses\BaseControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\BaseClasses\BaseDateControl.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\BaseClasses\BaseDateControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\BaseClasses\BaseStyledControl.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\BaseClasses\BaseStyledControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\BaseClasses\DateEditBase.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\BaseClasses\DateEditBase.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\BaseClasses\DateTimeCollection.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\BaseClasses\TextEditBase.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\BaseClasses\DateTimeCollection.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\BaseClasses\TextEditBase.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Controls\DataGridViewFADateTimePickerColumn.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Controls\FAContainerComboBox.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\DataGridViewFADateTimePickerColumn.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\FAContainerComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Controls\FADatePicker.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\FADatePicker.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Controls\FADatePickerStrip.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\FADatePickerStrip.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Controls\FADayView.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\FADayView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Controls\FAMonthView.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\FAMonthView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Controls\FAMonthViewContainer.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\FAMonthViewContainer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Controls\FAMonthViewStrip.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\FAMonthViewStrip.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Controls\FAMultiView.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\FAMultiView.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Controls\NamespaceDoc.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Delegates.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Design\About.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\NamespaceDoc.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Delegates.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Design\About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Design\AboutDialogEditor.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Design\DateTimeCollectionEditor.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Design\FABaseDesigner.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Design\FADatePickerDesigner.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Design\FADayViewDesigner.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Design\FAMonthViewDesigner.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Design\FAMultiViewDesigner.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Design\PersianDateTypeConverter.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Drawing\FAPainterBase.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Drawing\FAPainterFactory.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Drawing\FAPainterOffice2000.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Drawing\FAPainterOffice2003.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Drawing\FAPainterOffice2007.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Drawing\FAPainterWindowsXP.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Drawing\IFAPainter.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Drawing\Office2003Colors.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Drawing\Office2007Renderer.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Enums.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAMessageBoxEx\FAMessageBox.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAMessageBoxEx\FAMessageBoxButton.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAMessageBoxEx\FAMessageBoxForm.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Design\AboutDialogEditor.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Design\DateTimeCollectionEditor.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Design\FABaseDesigner.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Design\FADatePickerDesigner.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Design\FADayViewDesigner.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Design\FAMonthViewDesigner.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Design\FAMultiViewDesigner.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Design\PersianDateTypeConverter.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Drawing\FAPainterBase.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Drawing\FAPainterFactory.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Drawing\FAPainterOffice2000.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Drawing\FAPainterOffice2003.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Drawing\FAPainterOffice2007.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Drawing\FAPainterWindowsXP.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Drawing\IFAPainter.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Drawing\Office2003Colors.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Drawing\Office2007Renderer.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Enums.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAMessageBoxEx\FAMessageBox.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAMessageBoxEx\FAMessageBoxButton.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAMessageBoxEx\FAMessageBoxForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAMessageBoxEx\FAMessageBoxManager.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAMessageBoxEx\FAMessageBoxResult.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAPopup\FACustomTopForm.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAMessageBoxEx\FAMessageBoxManager.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAMessageBoxEx\FAMessageBoxResult.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAPopup\FACustomTopForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAPopup\FAHookPopup.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAPopup\FAShadow.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAPopup\FAHookPopup.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAPopup\FAShadow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAPopup\FAShadowManager.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAPopup\FATopFormBase.cs">
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAPopup\FAShadowManager.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAPopup\FATopFormBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAPopup\FAWinPopupController.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAPopup\HookInfo.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAPopup\HookManager.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAPopup\IHookController.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAPopup\IPopupServiceControl.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\FAThemeManager.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Helpers\ControlUtils.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Win32\Enums.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Win32\Gdi32.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Win32\Msgs.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Win32\Structs.cs" />
-    <Compile Include="BaseCodes\FarsiLibrary.Win\Win32\User32.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAPopup\FAWinPopupController.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAPopup\HookInfo.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAPopup\HookManager.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAPopup\IHookController.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAPopup\IPopupServiceControl.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAThemeManager.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Helpers\ControlUtils.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Win32\Enums.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Win32\Gdi32.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Win32\Msgs.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Win32\Structs.cs" />
+    <Compile Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Win32\User32.cs" />
     <Compile Include="BaseCodes\IEvaluable.cs" />
     <Compile Include="BaseCodes\IOption.cs" />
     <Compile Include="BaseCodes\IQuestion.cs" />
@@ -316,11 +316,28 @@
     <Compile Include="BaseCodes\QuestionInList.cs" />
     <Compile Include="BaseCodes\Utilities\PersianCulture.cs" />
     <Compile Include="BaseCodes\Utilities\PersianCultureHelper.cs" />
+    <Compile Include="Forms\FrmQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmQuestion.Designer.cs">
+      <DependentUpon>FrmQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\13971217111706_initial.cs" />
+    <Compile Include="Migrations\13971217111706_initial.designer.cs">
+      <DependentUpon>13971217111706_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\irQmDbContextModelSnapshot.cs" />
     <Compile Include="UserControls\Forms\Bank.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\Forms\Bank.Designer.cs">
       <DependentUpon>Bank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Forms\EditQuestion.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\Forms\EditQuestion.Designer.cs">
+      <DependentUpon>EditQuestion.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\qPresentation\MultiOptionsForPresentation.cs">
       <SubType>UserControl</SubType>
@@ -544,20 +561,27 @@
     <Compile Include="UserControls\Utilities\LessonsComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="BaseCodes\FarsiLibrary.Win\Design\About.resx">
+    <EmbeddedResource Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Design\About.resx">
       <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaseCodes\FarsiLibrary.Win\FAMessageBoxEx\FAMessageBoxForm.resx">
+    <EmbeddedResource Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FAMessageBoxEx\FAMessageBoxForm.resx">
       <DependentUpon>FAMessageBoxForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ExtendedForm.resx">
       <DependentUpon>ExtendedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmQuestion.resx">
+      <DependentUpon>FrmQuestion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Forms\Bank.resx">
       <DependentUpon>Bank.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Forms\Exam.resx">
       <DependentUpon>Exam.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Forms\EditQuestion.resx">
+      <DependentUpon>EditQuestion.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\Forms\UserRegister.resx">
@@ -664,9 +688,9 @@
     <EmbeddedResource Include="UserControls\Utilities\InformaionBox.resx">
       <DependentUpon>InformaionBox.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="BaseCodes\FarsiLibrary.Win\Diagrams\Controls.cd" />
-    <None Include="BaseCodes\FarsiLibrary.Win\Diagrams\Painters.cd" />
-    <None Include="BaseCodes\FarsiLibrary.Win\Diagrams\Popup.cd" />
+    <None Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Diagrams\Controls.cd" />
+    <None Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Diagrams\Painters.cd" />
+    <None Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Diagrams\Popup.cd" />
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -797,22 +821,21 @@
     <None Include="Resources\superscript.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Migrations\" />
     <Folder Include="Properties\DataSources\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\baseline_more_black_18dp.gif" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BaseCodes\FarsiLibrary.Localization\FarsiLibrary.Localization.csproj" />
-    <Content Include="BaseCodes\FarsiLibrary.Utils\FarsiLibrary.Utils.csproj" />
-    <Content Include="BaseCodes\FarsiLibrary.Win\Controls\DataGridViewFADateTimePickerEditor.bmp" />
-    <Content Include="BaseCodes\FarsiLibrary.Win\Controls\FADatePicker.bmp" />
-    <Content Include="BaseCodes\FarsiLibrary.Win\Controls\FADatePickerStrip.bmp" />
-    <Content Include="BaseCodes\FarsiLibrary.Win\Controls\FADayView.bmp" />
-    <Content Include="BaseCodes\FarsiLibrary.Win\Controls\FAMonthView.bmp" />
-    <Content Include="BaseCodes\FarsiLibrary.Win\Controls\FAMonthViewStrip.bmp" />
-    <Content Include="BaseCodes\FarsiLibrary.Win\FarsiLibrary.Win.csproj" />
+    <Content Include="BaseCodes\FarsiLibrary\FarsiLibrary.Localization\FarsiLibrary.Localization.csproj" />
+    <Content Include="BaseCodes\FarsiLibrary\FarsiLibrary.Utils\FarsiLibrary.Utils.csproj" />
+    <Content Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\DataGridViewFADateTimePickerEditor.bmp" />
+    <Content Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\FADatePicker.bmp" />
+    <Content Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\FADatePickerStrip.bmp" />
+    <Content Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\FADayView.bmp" />
+    <Content Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\FAMonthView.bmp" />
+    <Content Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\Controls\FAMonthViewStrip.bmp" />
+    <Content Include="BaseCodes\FarsiLibrary\FarsiLibrary.Win\FarsiLibrary.Win.csproj" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />

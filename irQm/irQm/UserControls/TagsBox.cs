@@ -16,7 +16,9 @@ namespace irQm
         {
             tags = new List<string>();
         }
-        public string[] Tags { get { string[] tgs = this.Text.Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries).Distinct().ToArray(); for (int i = 0; i < tgs.Length; i++) tgs[i] = tgs[i].Trim(); return tgs; } }
+        public string[] Tags { get { string[] tgs = this.Text.Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries).Distinct().ToArray(); for (int i = 0; i < tgs.Length; i++) tgs[i] = tgs[i].Trim(); return tgs; }
+            set { Text = string.Join("-", value); }
+        }
         bool isInitialized;
         public void UpdateTags()
         {

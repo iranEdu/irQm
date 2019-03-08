@@ -24,7 +24,13 @@ namespace irQm
             StringPairs = ucOptionListpuzzle1.Pairs;
 
         }
+        public UCPuzzleAnswer(List<StringPair> pairs)
+        {
+            InitializeComponent();
+            StringPairs = pairs;
+            
 
+        }
 
         private void pbAdd_Click(object sender, EventArgs e)
         {
@@ -43,7 +49,13 @@ namespace irQm
             }
             ucOptionListpuzzle1.Pairs = pairs;
         }
+        public void New(List<StringPair> pairs)
+        {
 
+
+            _stringPairs = pairs;
+            ucOptionListpuzzle1.Pairs = pairs;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 

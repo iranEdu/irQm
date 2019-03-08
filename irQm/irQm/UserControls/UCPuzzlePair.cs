@@ -34,6 +34,9 @@ namespace irQm
             this.Pair = pair;
             InitializeComponent();
             Number = pair.Number;
+            textFirstpair.Text = pair.Key;
+            TextSecondpair.Text = pair.Value;
+
         }
 
 

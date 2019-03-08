@@ -192,7 +192,7 @@ namespace irQm.UserControls.Forms
                 db.Tags.Add(tag);
 
             }
-            foreach (var t in tagsBox1.Tags)
+            foreach (var t in tagsInBox)
             {
                 TagInQuestion<ShortAnswer> tagInQuestion = new TagInQuestion<ShortAnswer>();
                 tagInQuestion.QuestionId = q.Id;
@@ -203,6 +203,7 @@ namespace irQm.UserControls.Forms
 
             q.LessonName = comboLesson.Text.Trim();
             q.CreatorUserId = Globals.CurrentUser.UserId;
+
 
             db.ShortAnswerQustions.Add(q);
 
@@ -239,7 +240,7 @@ namespace irQm.UserControls.Forms
                 db.Tags.Add(tag);
 
             }
-            foreach (var t in tagsBox1.Tags)
+            foreach (var t in tagsInBox)
             {
                 TagInQuestion<Practical> tagInQuestion = new TagInQuestion<Practical>();
                 tagInQuestion.QuestionId = q.Id;
@@ -283,7 +284,7 @@ namespace irQm.UserControls.Forms
                 db.Tags.Add(tag);
 
             }
-            foreach (var t in tagsBox1.Tags)
+            foreach (var t in tagsInBox)
             {
                 TagInQuestion<Puzzle> tagInQuestion = new TagInQuestion<Puzzle>();
                 tagInQuestion.QuestionId = q.Id;
@@ -326,7 +327,7 @@ namespace irQm.UserControls.Forms
                 db.Tags.Add(tag);
 
             }
-            foreach (var t in tagsBox1.Tags)
+            foreach (var t in tagsInBox)
             {
                 TagInQuestion<LongAnswer> tagInQuestion = new TagInQuestion<LongAnswer>();
                 tagInQuestion.QuestionId = q.Id;
@@ -374,7 +375,7 @@ namespace irQm.UserControls.Forms
                 db.Tags.Add(tag);
 
             }
-            foreach (var t in tagsBox1.Tags)
+            foreach (var t in tagsInBox)
             {
                 TagInQuestion<MultiChoices> tim = new TagInQuestion<MultiChoices>();
                 tim.QuestionId = q.Id;
@@ -390,7 +391,7 @@ namespace irQm.UserControls.Forms
             }
             q.LessonName = comboLesson.Text.Trim();
             q.CreatorUserId = BaseCodes.Utilities.Globals.CurrentUser.UserId;
-
+            q.MultiSelections = ucMultiOption1.MultiSelect;
             db.MultiChoicesQuestions.Add(q);
 
             db.SaveChanges();
@@ -401,7 +402,7 @@ namespace irQm.UserControls.Forms
             {
                 newOptions.Add(new Option());
             }
-            ucMultiOption1.New(newOptions);
+            ucMultiOption1.New(newOptions,ucMultiOption1.MultiSelect);
             return true;
 
         }
@@ -428,22 +429,22 @@ namespace irQm.UserControls.Forms
                 db.Tags.Add(tag);
 
             }
-            foreach (var t in tagsBox1.Tags)
+            foreach (var t in tagsInBox)
             {
                 TagInQuestion<TFQuestion> titf = new TagInQuestion<TFQuestion>();
                 titf.QuestionId = q.Id;
                 titf.TagId = t;
                 db.TagInTfQuestion.Add(titf);
             }
-            var to= new TFOption();
+            //var to= new TFOption();
             
-            to.IsTrue = ucTrueFalseAnswer1.isTrue;
-            to.Id = Guid.NewGuid().ToString();
-            var fo = new TFOption();
-            fo.IsTrue = ucTrueFalseAnswer1.isFalse;
-            fo.Id = Guid.NewGuid().ToString();
-            q.TrueOption = to;
-            q.FalseOption = fo;
+            //to.IsTrue = ucTrueFalseAnswer1.isTrue;
+            //to.Id = Guid.NewGuid().ToString();
+            //var fo = new TFOption();
+            //fo.IsTrue = ucTrueFalseAnswer1.isFalse;
+            //fo.Id = Guid.NewGuid().ToString();
+            q.TrueOption = ucTrueFalseAnswer1.isTrue;
+            q.FalseOption = ucTrueFalseAnswer1.isFalse;
             
             q.LessonName = comboLesson.Text.Trim();
             q.CreatorUserId = Globals.CurrentUser.UserId;

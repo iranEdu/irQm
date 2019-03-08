@@ -70,9 +70,9 @@ namespace irQm.Forms
         {
             var reg = new UserRegister();
             panel1.Controls.Add(reg);
-           
-            reg.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
-            reg.Width = panel1.Width;
+            reg.Dock = DockStyle.Fill;
+                //reg.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
+            //reg.Width = panel1.Width;
             reg.BringToFront();
            
         }

@@ -17,7 +17,11 @@ namespace irQm
        
        public List<Option> Options;
 
-
+        public bool MultiSelect
+        {
+            get { return ucOptionList1.MultiSelect; }
+            set { ucOptionList1.MultiSelect = value; }
+        }
         public UCMultiOption()
         {
             InitializeComponent();
@@ -42,10 +46,11 @@ namespace irQm
            
         }
 
-        public void New(List<Option> options)
+        public void New(List<Option> options,bool multi)
         {
             ucOptionList1.New(options);
             Options = options;
+            ucOptionList1.MultiSelect = multi;
         }
     }
 }

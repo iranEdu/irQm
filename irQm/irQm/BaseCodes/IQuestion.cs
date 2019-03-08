@@ -21,6 +21,7 @@ namespace irQm.BaseCodes
 
         bool JustInList { get; set; }
         void DeleteFromDb();
+        IQuestion Clone();
        
     }
 }

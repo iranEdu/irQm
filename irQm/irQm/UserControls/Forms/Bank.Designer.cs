@@ -352,6 +352,7 @@
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "جستجو";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // label1
             // 
@@ -386,6 +387,7 @@
             // 
             // flpSelectedQuestions
             // 
+            this.flpSelectedQuestions.AllowDrop = true;
             this.flpSelectedQuestions.AutoScroll = true;
             this.flpSelectedQuestions.AutoSize = true;
             this.flpSelectedQuestions.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -397,6 +399,9 @@
             this.flpSelectedQuestions.Size = new System.Drawing.Size(624, 329);
             this.flpSelectedQuestions.TabIndex = 146;
             this.flpSelectedQuestions.WrapContents = false;
+            this.flpSelectedQuestions.DragDrop += new System.Windows.Forms.DragEventHandler(this.flpSelectedQuestions_DragDrop);
+            this.flpSelectedQuestions.DragEnter += new System.Windows.Forms.DragEventHandler(this.flpSelectedQuestions_DragEnter);
+            this.flpSelectedQuestions.DragOver += new System.Windows.Forms.DragEventHandler(this.flpSelectedQuestions_DragOver);
             // 
             // fdpTo
             // 

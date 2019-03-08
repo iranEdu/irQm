@@ -1,6 +1,9 @@
-﻿using irQm.UserControls.Forms;
+﻿using FarsiLibrary.Utils;
+using irQm.UserControls.Forms;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Globalization;
 using System.Linq;
 
 using System.Text;
@@ -45,12 +48,20 @@ namespace irQm.Forms
         private PictureBox pbQuestionReg;
         private PictureBox pbNewLesson;
         private Label label1;
+  
 
         public MasterForm():base()
         {
             InitializeComponent();
-            Init();
+            //PersianDate persianDate = PersianDate.Now;
+            //FarsiLibrary.Localization.FALocalizeManager.Instance.CustomCulture = new CultureInfo("fa-IR");
+            //FarsiLibrary.Localization.FALocalizeManager.Instance.CustomLocalizer = new FarsiLibrary.Localization.FALocalizer();
+
+            //FarsiLibrary.Win.Controls.FADatePicker datePicker = new FarsiLibrary.Win.Controls.FADatePicker();
+            ////datePicker.Visible = false;
+            //Controls.Add(datePicker);
         }
+
         protected virtual void Init()
         {
 
