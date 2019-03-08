@@ -10,7 +10,7 @@ using System.Collections.Generic;
 
 namespace irQm.Forms
 {
-    public partial class ResetPassForm : MasterForm
+    public partial class ResetPassForm : Form
     {
         public ResetPassForm()
         {

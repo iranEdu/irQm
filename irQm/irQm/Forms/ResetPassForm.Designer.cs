@@ -40,7 +40,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panelresetpass = new System.Windows.Forms.Panel();
-            this.lblMessage = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.btnsavepass = new System.Windows.Forms.Button();
@@ -50,6 +49,7 @@
             this.tableresetpass = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.txtnewpass = new System.Windows.Forms.TextBox();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panelresetpass.SuspendLayout();
@@ -77,7 +77,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.label5, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtUsername, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(134, 99);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(171, 97);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tableLayoutPanel1.RowCount = 1;
@@ -116,7 +116,7 @@
             this.Btnsendmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.Btnsendmail.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Btnsendmail.ForeColor = System.Drawing.Color.White;
-            this.Btnsendmail.Location = new System.Drawing.Point(43, 96);
+            this.Btnsendmail.Location = new System.Drawing.Point(57, 100);
             this.Btnsendmail.Name = "Btnsendmail";
             this.Btnsendmail.Size = new System.Drawing.Size(85, 32);
             this.Btnsendmail.TabIndex = 142;
@@ -145,7 +145,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.label11, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.txtmailcode, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(134, 142);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(171, 145);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tableLayoutPanel2.RowCount = 2;
@@ -203,28 +203,16 @@
             // 
             // panelresetpass
             // 
-            this.panelresetpass.Controls.Add(this.lblMessage);
             this.panelresetpass.Controls.Add(this.label13);
             this.panelresetpass.Controls.Add(this.label9);
             this.panelresetpass.Controls.Add(this.btnsavepass);
             this.panelresetpass.Controls.Add(this.tableconfirmpass);
             this.panelresetpass.Controls.Add(this.tableresetpass);
-            this.panelresetpass.Location = new System.Drawing.Point(35, 48);
+            this.panelresetpass.Location = new System.Drawing.Point(41, 48);
             this.panelresetpass.Name = "panelresetpass";
             this.panelresetpass.Size = new System.Drawing.Size(540, 163);
             this.panelresetpass.TabIndex = 154;
             this.panelresetpass.Visible = false;
-            // 
-            // lblMessage
-            // 
-            this.lblMessage.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold);
-            this.lblMessage.ForeColor = System.Drawing.Color.LimeGreen;
-            this.lblMessage.Location = new System.Drawing.Point(-17, 128);
-            this.lblMessage.Name = "lblMessage";
-            this.lblMessage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblMessage.Size = new System.Drawing.Size(568, 23);
-            this.lblMessage.TabIndex = 155;
-            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label13
             // 
@@ -345,11 +333,23 @@
             this.txtnewpass.Size = new System.Drawing.Size(194, 20);
             this.txtnewpass.TabIndex = 20;
             // 
+            // lblMessage
+            // 
+            this.lblMessage.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold);
+            this.lblMessage.ForeColor = System.Drawing.Color.LimeGreen;
+            this.lblMessage.Location = new System.Drawing.Point(17, 214);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblMessage.Size = new System.Drawing.Size(568, 23);
+            this.lblMessage.TabIndex = 155;
+            this.lblMessage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ResetPassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 461);
+            this.ClientSize = new System.Drawing.Size(629, 310);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.panelresetpass);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label10);
@@ -358,16 +358,9 @@
             this.Controls.Add(this.Btnsendmail);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ResetPassForm";
             this.Text = "ResetPassForm";
-            this.Controls.SetChildIndex(this.label4, 0);
-            this.Controls.SetChildIndex(this.tableLayoutPanel1, 0);
-            this.Controls.SetChildIndex(this.Btnsendmail, 0);
-            this.Controls.SetChildIndex(this.label7, 0);
-            this.Controls.SetChildIndex(this.tableLayoutPanel2, 0);
-            this.Controls.SetChildIndex(this.label10, 0);
-            this.Controls.SetChildIndex(this.label12, 0);
-            this.Controls.SetChildIndex(this.panelresetpass, 0);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
