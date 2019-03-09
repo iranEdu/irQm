@@ -269,9 +269,6 @@
             // comboRole
             // 
             this.comboRole.FormattingEnabled = true;
-            this.comboRole.Items.AddRange(new object[] {
-            "مدیر",
-            "محدود"});
             this.comboRole.Location = new System.Drawing.Point(141, 151);
             this.comboRole.Name = "comboRole";
             this.comboRole.Size = new System.Drawing.Size(194, 21);

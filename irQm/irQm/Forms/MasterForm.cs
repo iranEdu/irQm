@@ -11,7 +11,7 @@ namespace irQm.Forms
     public class MasterForm:ExtendedForm
     {
         internal Label lblExit;
-        internal Label lblContactUs;
+        internal Label lblUserEdit;
         internal Label lblAboutSoftware;
         internal Label lblSetting;
         internal Label lblBackup;
@@ -35,7 +35,7 @@ namespace irQm.Forms
         private void InitializeComponent()
         {
             this.lblExit = new System.Windows.Forms.Label();
-            this.lblContactUs = new System.Windows.Forms.Label();
+            this.lblUserEdit = new System.Windows.Forms.Label();
             this.lblAboutSoftware = new System.Windows.Forms.Label();
             this.lblSetting = new System.Windows.Forms.Label();
             this.lblBackup = new System.Windows.Forms.Label();
@@ -68,20 +68,21 @@ namespace irQm.Forms
             this.lblExit.Text = "خروج";
             this.lblExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblContactUs
+            // lblUserEdit
             // 
-            this.lblContactUs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblContactUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
-            this.lblContactUs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblContactUs.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblContactUs.ForeColor = System.Drawing.Color.White;
-            this.lblContactUs.Location = new System.Drawing.Point(598, 391);
-            this.lblContactUs.Name = "lblContactUs";
-            this.lblContactUs.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblContactUs.Size = new System.Drawing.Size(189, 23);
-            this.lblContactUs.TabIndex = 135;
-            this.lblContactUs.Text = "تماس با ما";
-            this.lblContactUs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUserEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUserEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblUserEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblUserEdit.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblUserEdit.ForeColor = System.Drawing.Color.White;
+            this.lblUserEdit.Location = new System.Drawing.Point(598, 391);
+            this.lblUserEdit.Name = "lblUserEdit";
+            this.lblUserEdit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblUserEdit.Size = new System.Drawing.Size(189, 23);
+            this.lblUserEdit.TabIndex = 135;
+            this.lblUserEdit.Text = "وبرایش اطلاعات کاربری";
+            this.lblUserEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblUserEdit.Click += new System.EventHandler(this.lblUserEdit_Click);
             // 
             // lblAboutSoftware
             // 
@@ -265,7 +266,7 @@ namespace irQm.Forms
             // 
             this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.lblExit);
-            this.Controls.Add(this.lblContactUs);
+            this.Controls.Add(this.lblUserEdit);
             this.Controls.Add(this.lblAboutSoftware);
             this.Controls.Add(this.lblSetting);
             this.Controls.Add(this.lblBackup);
@@ -334,6 +335,15 @@ namespace irQm.Forms
             fer.Show();
             this.Close();
 
+        }
+
+        private void lblUserEdit_Click(object sender, EventArgs e)
+        {
+            if (this is UserEditForm)
+                return;
+            UserEditForm userEditForm = new UserEditForm();
+            userEditForm.Show();
+            this.Close();
         }
     }
 }

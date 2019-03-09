@@ -11,7 +11,9 @@ namespace irQm.Forms
         public FrmUserRegister()
         {
             InitializeComponent();
-           
+            comboRole.DataSource = Roles.Names;
+            comboRole.DisplayMember = "Name";
+            comboRole.ValueMember = "Value";
 
         }
 
