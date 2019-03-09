@@ -27,24 +27,7 @@ namespace irQm.Forms
             }
         }
 
-        private void BtnEntire_Click(object sender, EventArgs e)
-        {
-            
-
-
-        }
-
-        private void Picexit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void Picimg_Click(object sender, EventArgs e)
-        {
-            FrmLogin login = new FrmLogin();
-            login.Show();
-        }
-
+       
         private void btnSelectUser_Click(object sender, EventArgs e)
         { 
             List<string> users;
