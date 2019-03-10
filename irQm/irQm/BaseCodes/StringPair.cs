@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
-   public class StringPair
+    [Serializable]
+    public class StringPair
     {
         public StringPair()
         {

@@ -203,6 +203,7 @@
             // 
             // panelresetpass
             // 
+            this.panelresetpass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.panelresetpass.Controls.Add(this.label13);
             this.panelresetpass.Controls.Add(this.label9);
             this.panelresetpass.Controls.Add(this.btnsavepass);

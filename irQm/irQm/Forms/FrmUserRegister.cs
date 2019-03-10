@@ -26,13 +26,14 @@ namespace irQm.Forms
             user.UserName = txtusername.Text.ToLower().Trim();
             user.Password = txtpass.Text.GetHashCode().ToString();
             user.Name = txtName.Text.Trim();
+            user.Family = txtFamily.Text;
             user.Role = comboRole.SelectedItem.ToString()== "مدیر" ? Roles.RoleSNames.Admin: Roles.RoleSNames.limited;
             user.UserId = Guid.NewGuid().ToString()+user.UserName.ToString().Substring(5);
             try
             {
                 using (irQmDbContext db = new irQmDbContext())
                 {
-                    if (db.User.Any(u => u.Email == ""))
+                    if (db.User.Any(u => u.UserName == txtusername.Text))
                     {
                         lblResult.Text = "این نام کاربری قبلا ثبت شده است";
                         lblResult.ForeColor = Color.Red;
@@ -42,7 +43,7 @@ namespace irQm.Forms
                     db.SaveChanges();
                     lblResult.Text = "ثبت انجام شد";
                     lblResult.ForeColor = Color.Green;
-
+                    linklogin.Visible = true;
                 }
             }catch(Exception x)
             {
@@ -63,6 +64,18 @@ namespace irQm.Forms
         {
             FrmLogin login = new FrmLogin();
             login.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmLogin login = new FrmLogin();
+            login.Show();
+
+        }
+
+        private void FrmUserRegister_Load(object sender, EventArgs e)
+        {
+            txtusername.Select();
         }
     }
 }

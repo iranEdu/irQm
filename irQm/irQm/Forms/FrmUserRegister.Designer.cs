@@ -51,6 +51,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Picbook = new System.Windows.Forms.PictureBox();
             this.lblResult = new System.Windows.Forms.Label();
+            this.linklogin = new System.Windows.Forms.LinkLabel();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picexit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -120,7 +121,7 @@
             this.txtusername.MaxLength = 30;
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(194, 20);
-            this.txtusername.TabIndex = 9;
+            this.txtusername.TabIndex = 1;
             // 
             // txtpass
             // 
@@ -129,7 +130,7 @@
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(194, 20);
-            this.txtpass.TabIndex = 10;
+            this.txtpass.TabIndex = 2;
             // 
             // BtnEntire
             // 
@@ -137,10 +138,10 @@
             this.BtnEntire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.BtnEntire.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.BtnEntire.ForeColor = System.Drawing.Color.White;
-            this.BtnEntire.Location = new System.Drawing.Point(244, 328);
+            this.BtnEntire.Location = new System.Drawing.Point(232, 328);
             this.BtnEntire.Name = "BtnEntire";
             this.BtnEntire.Size = new System.Drawing.Size(85, 39);
-            this.BtnEntire.TabIndex = 11;
+            this.BtnEntire.TabIndex = 7;
             this.BtnEntire.Text = "ثبت";
             this.BtnEntire.UseVisualStyleBackColor = false;
             this.BtnEntire.Click += new System.EventHandler(this.Btnentire_Click);
@@ -249,7 +250,7 @@
             this.txtName.MaxLength = 30;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(194, 20);
-            this.txtName.TabIndex = 20;
+            this.txtName.TabIndex = 3;
             // 
             // txtFamily
             // 
@@ -257,14 +258,14 @@
             this.txtFamily.MaxLength = 30;
             this.txtFamily.Name = "txtFamily";
             this.txtFamily.Size = new System.Drawing.Size(194, 20);
-            this.txtFamily.TabIndex = 22;
+            this.txtFamily.TabIndex = 4;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(141, 122);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(194, 20);
-            this.txtEmail.TabIndex = 21;
+            this.txtEmail.TabIndex = 5;
             // 
             // comboRole
             // 
@@ -272,7 +273,7 @@
             this.comboRole.Location = new System.Drawing.Point(141, 151);
             this.comboRole.Name = "comboRole";
             this.comboRole.Size = new System.Drawing.Size(194, 21);
-            this.comboRole.TabIndex = 23;
+            this.comboRole.TabIndex = 6;
             // 
             // Picexit
             // 
@@ -323,18 +324,32 @@
             // 
             this.lblResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(307, 351);
+            this.lblResult.Location = new System.Drawing.Point(194, 370);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(0, 13);
+            this.lblResult.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblResult.Size = new System.Drawing.Size(165, 24);
             this.lblResult.TabIndex = 15;
             this.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // linklogin
+            // 
+            this.linklogin.AutoSize = true;
+            this.linklogin.Location = new System.Drawing.Point(260, 409);
+            this.linklogin.Name = "linklogin";
+            this.linklogin.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.linklogin.Size = new System.Drawing.Size(29, 13);
+            this.linklogin.TabIndex = 16;
+            this.linklogin.TabStop = true;
+            this.linklogin.Text = "ورود";
+            this.linklogin.Visible = false;
+            this.linklogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // FrmUserRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.linklogin);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.Picexit);
             this.Controls.Add(this.BtnEntire);
@@ -348,6 +363,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "FrmUserRegister";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.FrmUserRegister_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Picexit)).EndInit();
@@ -384,6 +400,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.ComboBox comboRole;
         private System.Windows.Forms.Label lblResult;
+        private System.Windows.Forms.LinkLabel linklogin;
     }
 }
 

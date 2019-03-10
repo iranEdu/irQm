@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
+    
     public class Puzzle : IQuestion,IEvaluable
     {
         [MaxLength(50)]

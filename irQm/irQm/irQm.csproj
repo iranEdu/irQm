@@ -269,6 +269,12 @@
     <Compile Include="UserControls\UCcheckbox.Designer.cs">
       <DependentUpon>UCcheckbox.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCPaging.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCPaging.Designer.cs">
+      <DependentUpon>UCPaging.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCRadiobutton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -517,6 +523,9 @@
     <EmbeddedResource Include="UserControls\UCcheckbox.resx">
       <DependentUpon>UCcheckbox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCPaging.resx">
+      <DependentUpon>UCPaging.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCQuestionForPresentation.resx">
       <DependentUpon>UCQuestionForPresentation.cs</DependentUpon>
     </EmbeddedResource>
@@ -742,6 +751,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nextpage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previouspage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets" Condition="Exists('..\packages\SQLitePCLRaw.lib.e_sqlite3.linux.1.1.11\build\net35\SQLitePCLRaw.lib.e_sqlite3.linux.targets')" />

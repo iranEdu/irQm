@@ -24,6 +24,8 @@ namespace irQm.Forms
         private PictureBox Picbook;
         private Label label2;
         private PictureBox pictureBox1;
+        internal Label lblnewuser;
+        internal Label lblchangpass;
         private Label label1;
 
         public MasterForm():base()
@@ -49,6 +51,8 @@ namespace irQm.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblnewuser = new System.Windows.Forms.Label();
+            this.lblchangpass = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -60,13 +64,14 @@ namespace irQm.Forms
             this.lblExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblExit.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblExit.ForeColor = System.Drawing.Color.White;
-            this.lblExit.Location = new System.Drawing.Point(594, 424);
+            this.lblExit.Location = new System.Drawing.Point(594, 433);
             this.lblExit.Name = "lblExit";
             this.lblExit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblExit.Size = new System.Drawing.Size(189, 23);
             this.lblExit.TabIndex = 136;
             this.lblExit.Text = "خروج";
             this.lblExit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             // 
             // lblUserEdit
             // 
@@ -75,7 +80,7 @@ namespace irQm.Forms
             this.lblUserEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblUserEdit.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblUserEdit.ForeColor = System.Drawing.Color.White;
-            this.lblUserEdit.Location = new System.Drawing.Point(598, 391);
+            this.lblUserEdit.Location = new System.Drawing.Point(594, 318);
             this.lblUserEdit.Name = "lblUserEdit";
             this.lblUserEdit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblUserEdit.Size = new System.Drawing.Size(189, 23);
@@ -91,7 +96,7 @@ namespace irQm.Forms
             this.lblAboutSoftware.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblAboutSoftware.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblAboutSoftware.ForeColor = System.Drawing.Color.White;
-            this.lblAboutSoftware.Location = new System.Drawing.Point(595, 356);
+            this.lblAboutSoftware.Location = new System.Drawing.Point(594, 403);
             this.lblAboutSoftware.Name = "lblAboutSoftware";
             this.lblAboutSoftware.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblAboutSoftware.Size = new System.Drawing.Size(189, 23);
@@ -106,7 +111,7 @@ namespace irQm.Forms
             this.lblSetting.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSetting.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblSetting.ForeColor = System.Drawing.Color.White;
-            this.lblSetting.Location = new System.Drawing.Point(595, 321);
+            this.lblSetting.Location = new System.Drawing.Point(593, 378);
             this.lblSetting.Name = "lblSetting";
             this.lblSetting.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblSetting.Size = new System.Drawing.Size(189, 23);
@@ -121,13 +126,14 @@ namespace irQm.Forms
             this.lblBackup.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblBackup.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblBackup.ForeColor = System.Drawing.Color.White;
-            this.lblBackup.Location = new System.Drawing.Point(595, 286);
+            this.lblBackup.Location = new System.Drawing.Point(594, 284);
             this.lblBackup.Name = "lblBackup";
             this.lblBackup.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblBackup.Size = new System.Drawing.Size(189, 23);
             this.lblBackup.TabIndex = 132;
             this.lblBackup.Text = "نسخه پشتیبان";
             this.lblBackup.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblBackup.Click += new System.EventHandler(this.lblBackup_Click);
             // 
             // lblExamResult
             // 
@@ -136,7 +142,7 @@ namespace irQm.Forms
             this.lblExamResult.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblExamResult.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblExamResult.ForeColor = System.Drawing.Color.White;
-            this.lblExamResult.Location = new System.Drawing.Point(595, 251);
+            this.lblExamResult.Location = new System.Drawing.Point(594, 254);
             this.lblExamResult.Name = "lblExamResult";
             this.lblExamResult.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblExamResult.Size = new System.Drawing.Size(189, 23);
@@ -152,7 +158,7 @@ namespace irQm.Forms
             this.lblExam.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblExam.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblExam.ForeColor = System.Drawing.Color.White;
-            this.lblExam.Location = new System.Drawing.Point(595, 216);
+            this.lblExam.Location = new System.Drawing.Point(594, 224);
             this.lblExam.Name = "lblExam";
             this.lblExam.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblExam.Size = new System.Drawing.Size(189, 23);
@@ -168,7 +174,7 @@ namespace irQm.Forms
             this.lblInsertQuestion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblInsertQuestion.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblInsertQuestion.ForeColor = System.Drawing.Color.White;
-            this.lblInsertQuestion.Location = new System.Drawing.Point(595, 181);
+            this.lblInsertQuestion.Location = new System.Drawing.Point(594, 194);
             this.lblInsertQuestion.Name = "lblInsertQuestion";
             this.lblInsertQuestion.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblInsertQuestion.Size = new System.Drawing.Size(189, 23);
@@ -184,7 +190,7 @@ namespace irQm.Forms
             this.lblNewLesson.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblNewLesson.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblNewLesson.ForeColor = System.Drawing.Color.White;
-            this.lblNewLesson.Location = new System.Drawing.Point(595, 146);
+            this.lblNewLesson.Location = new System.Drawing.Point(594, 164);
             this.lblNewLesson.Name = "lblNewLesson";
             this.lblNewLesson.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblNewLesson.Size = new System.Drawing.Size(189, 23);
@@ -200,7 +206,7 @@ namespace irQm.Forms
             this.lblMainPage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMainPage.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.lblMainPage.ForeColor = System.Drawing.Color.White;
-            this.lblMainPage.Location = new System.Drawing.Point(595, 111);
+            this.lblMainPage.Location = new System.Drawing.Point(594, 103);
             this.lblMainPage.Name = "lblMainPage";
             this.lblMainPage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblMainPage.Size = new System.Drawing.Size(189, 23);
@@ -235,7 +241,8 @@ namespace irQm.Forms
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.label2.Location = new System.Drawing.Point(593, 99);
             this.label2.Name = "label2";
@@ -262,9 +269,41 @@ namespace irQm.Forms
             this.pictureBox1.TabIndex = 137;
             this.pictureBox1.TabStop = false;
             // 
+            // lblnewuser
+            // 
+            this.lblnewuser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblnewuser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblnewuser.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblnewuser.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblnewuser.ForeColor = System.Drawing.Color.White;
+            this.lblnewuser.Location = new System.Drawing.Point(594, 134);
+            this.lblnewuser.Name = "lblnewuser";
+            this.lblnewuser.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblnewuser.Size = new System.Drawing.Size(189, 23);
+            this.lblnewuser.TabIndex = 138;
+            this.lblnewuser.Text = " کاربر جدید";
+            this.lblnewuser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblchangpass
+            // 
+            this.lblchangpass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblchangpass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.lblchangpass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblchangpass.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblchangpass.ForeColor = System.Drawing.Color.White;
+            this.lblchangpass.Location = new System.Drawing.Point(593, 349);
+            this.lblchangpass.Name = "lblchangpass";
+            this.lblchangpass.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblchangpass.Size = new System.Drawing.Size(189, 23);
+            this.lblchangpass.TabIndex = 139;
+            this.lblchangpass.Text = "تغییر کلمه عبور";
+            this.lblchangpass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MasterForm
             // 
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.lblchangpass);
+            this.Controls.Add(this.lblnewuser);
             this.Controls.Add(this.lblExit);
             this.Controls.Add(this.lblUserEdit);
             this.Controls.Add(this.lblAboutSoftware);
@@ -344,6 +383,17 @@ namespace irQm.Forms
             UserEditForm userEditForm = new UserEditForm();
             userEditForm.Show();
             this.Close();
+        }
+
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lblBackup_Click(object sender, EventArgs e)
+        {
+            BackupAndRestoreForm backup = new BackupAndRestoreForm();
+            backup.Show();
         }
     }
 }

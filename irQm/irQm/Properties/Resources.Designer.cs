@@ -343,6 +343,16 @@ namespace irQm.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nextpage {
+            get {
+                object obj = ResourceManager.GetObject("nextpage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nwexam {
             get {
                 object obj = ResourceManager.GetObject("nwexam", resourceCulture);
@@ -386,6 +396,16 @@ namespace irQm.Properties {
         internal static System.Drawing.Bitmap pictures {
             get {
                 object obj = ResourceManager.GetObject("pictures", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap previouspage {
+            get {
+                object obj = ResourceManager.GetObject("previouspage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

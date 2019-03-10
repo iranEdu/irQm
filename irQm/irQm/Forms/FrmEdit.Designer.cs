@@ -60,8 +60,7 @@
             this.imagBox = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.picdeletimg = new System.Windows.Forms.PictureBox();
-            this.uCcheckbox1 = new irQm.UserControls.UCCheckbox();
-            this.ucRadiobutton1 = new irQm.UserControls.UCRadiobutton();
+            this.label6 = new System.Windows.Forms.Label();
             this.contextMenuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagBox)).BeginInit();
@@ -71,6 +70,8 @@
             // 
             // richTxtEdit
             // 
+            this.richTxtEdit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.richTxtEdit.ContextMenuStrip = this.contextMenuStrip1;
             this.richTxtEdit.Location = new System.Drawing.Point(7, 119);
             this.richTxtEdit.Name = "richTxtEdit";
@@ -114,7 +115,8 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.lblsuperscript);
             this.panel2.Controls.Add(this.lblSubscript);
             this.panel2.Controls.Add(this.lblPaste);
@@ -130,7 +132,7 @@
             this.panel2.Controls.Add(this.lblJustify);
             this.panel2.Controls.Add(this.lblAlignL);
             this.panel2.Controls.Add(this.LblalignR);
-            this.panel2.Location = new System.Drawing.Point(-33, 43);
+            this.panel2.Location = new System.Drawing.Point(12, 42);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(543, 70);
             this.panel2.TabIndex = 52;
@@ -277,7 +279,6 @@
             // 
             // LblalignR
             // 
-            this.LblalignR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LblalignR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.LblalignR.Image = global::irQm.Properties.Resources.align_right;
             this.LblalignR.Location = new System.Drawing.Point(364, 7);
@@ -288,10 +289,12 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(11, 11);
+            this.label5.Location = new System.Drawing.Point(12, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(543, 30);
             this.label5.TabIndex = 53;
@@ -301,7 +304,7 @@
             // 
             this.lblRedo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.lblRedo.Image = global::irQm.Properties.Resources.redo;
-            this.lblRedo.Location = new System.Drawing.Point(61, 13);
+            this.lblRedo.Location = new System.Drawing.Point(62, 13);
             this.lblRedo.Name = "lblRedo";
             this.lblRedo.Size = new System.Drawing.Size(26, 26);
             this.lblRedo.TabIndex = 65;
@@ -311,7 +314,7 @@
             // 
             this.lblUndo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.lblUndo.Image = global::irQm.Properties.Resources.undo;
-            this.lblUndo.Location = new System.Drawing.Point(33, 13);
+            this.lblUndo.Location = new System.Drawing.Point(36, 13);
             this.lblUndo.Name = "lblUndo";
             this.lblUndo.Size = new System.Drawing.Size(26, 26);
             this.lblUndo.TabIndex = 64;
@@ -321,7 +324,7 @@
             // 
             this.lblSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.lblSave.Image = global::irQm.Properties.Resources.save1;
-            this.lblSave.Location = new System.Drawing.Point(3, 13);
+            this.lblSave.Location = new System.Drawing.Point(12, 13);
             this.lblSave.Name = "lblSave";
             this.lblSave.Size = new System.Drawing.Size(26, 26);
             this.lblSave.TabIndex = 63;
@@ -346,7 +349,7 @@
             // imagBox
             // 
             this.imagBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.imagBox.Location = new System.Drawing.Point(-35, 294);
+            this.imagBox.Location = new System.Drawing.Point(15, 321);
             this.imagBox.Name = "imagBox";
             this.imagBox.Size = new System.Drawing.Size(543, 50);
             this.imagBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -356,25 +359,34 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
-            this.panel1.Controls.Add(this.ucRadiobutton1);
             this.panel1.Controls.Add(this.picdeletimg);
-            this.panel1.Controls.Add(this.uCcheckbox1);
             this.panel1.Controls.Add(this.imagBox);
             this.panel1.Controls.Add(this.lblRedo);
             this.panel1.Controls.Add(this.lblUndo);
             this.panel1.Controls.Add(this.lblSave);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.richTxtEdit);
+            this.panel1.Controls.Add(this.label6);
             this.panel1.Location = new System.Drawing.Point(12, 42);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(577, 407);
             this.panel1.TabIndex = 140;
+            this.panel1.Controls.SetChildIndex(this.label6, 0);
+            this.panel1.Controls.SetChildIndex(this.richTxtEdit, 0);
+            this.panel1.Controls.SetChildIndex(this.panel2, 0);
+            this.panel1.Controls.SetChildIndex(this.lblSave, 0);
+            this.panel1.Controls.SetChildIndex(this.lblUndo, 0);
+            this.panel1.Controls.SetChildIndex(this.lblRedo, 0);
+            this.panel1.Controls.SetChildIndex(this.imagBox, 0);
+            this.panel1.Controls.SetChildIndex(this.picdeletimg, 0);
             // 
             // picdeletimg
             // 
+            this.picdeletimg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picdeletimg.Image = global::irQm.Properties.Resources.close;
             this.picdeletimg.Location = new System.Drawing.Point(525, 294);
             this.picdeletimg.Name = "picdeletimg";
@@ -385,21 +397,15 @@
             this.picdeletimg.Visible = false;
             this.picdeletimg.Click += new System.EventHandler(this.picdeletimg_Click);
             // 
-            // uCcheckbox1
+            // label6
             // 
-            this.uCcheckbox1.Checked = false;
-            this.uCcheckbox1.Location = new System.Drawing.Point(502, 349);
-            this.uCcheckbox1.Name = "uCcheckbox1";
-            this.uCcheckbox1.Size = new System.Drawing.Size(68, 49);
-            this.uCcheckbox1.TabIndex = 142;
-            // 
-            // ucRadiobutton1
-            // 
-           
-            this.ucRadiobutton1.Location = new System.Drawing.Point(437, 352);
-            this.ucRadiobutton1.Name = "ucRadiobutton1";
-            this.ucRadiobutton1.Size = new System.Drawing.Size(59, 46);
-            this.ucRadiobutton1.TabIndex = 144;
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
+            this.label6.Location = new System.Drawing.Point(12, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(543, 26);
+            this.label6.TabIndex = 144;
             // 
             // FrmEdit
             // 
@@ -453,8 +459,7 @@
         private System.Windows.Forms.ToolStripMenuItem چسباندنPasteToolStripMenuItem;
         private System.Windows.Forms.PictureBox imagBox;
         private System.Windows.Forms.Panel panel1;
-        private UserControls.UCCheckbox uCcheckbox1;
         private System.Windows.Forms.PictureBox picdeletimg;
-        private UserControls.UCRadiobutton ucRadiobutton1;
+        private System.Windows.Forms.Label label6;
     }
 }

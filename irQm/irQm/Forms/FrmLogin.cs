@@ -9,6 +9,8 @@ namespace irQm.Forms
 {
     public partial class FrmLogin : ExtendedForm
     {
+        public static string userrole;
+        public static string uname;
         public FrmLogin()
         {
             InitializeComponent();
@@ -35,6 +37,9 @@ namespace irQm.Forms
                 var user = db.User.FirstOrDefault(u => u.UserName == txtusername.Text.ToLower().Trim() && u.Password == txtpass.Text.GetHashCode().ToString());
                 if (user!=null)
                 {
+                    userrole = user.Role.ToString();
+                    uname = user.UserName;
+                    
                     FrmMain main = new FrmMain();
                     irQm.BaseCodes.Utilities.Globals.CurrentUser = user;
                     main.Show();

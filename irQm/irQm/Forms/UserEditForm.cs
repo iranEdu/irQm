@@ -30,7 +30,7 @@ namespace irQm.Forms
        
         private void btnSelectUser_Click(object sender, EventArgs e)
         { 
-            List<string> users;
+             List<string> users;
             using (irQmDbContext db = new irQmDbContext())
             {
                 users = db.User.Select(u=>u.UserName).ToList();
@@ -63,11 +63,38 @@ namespace irQm.Forms
                     user.Name = txtName.Text;
                     user.Family = txtFamily.Text;
                     user.Role = (Roles.RoleSNames)comboRole.SelectedValue;
+                    if (user.Role.ToString() == "limited")
+
+                        btnSelectUser.Visible = false;
+                    else
+                        btnSelectUser.Visible = true;
+
                     db.SaveChanges();
                     lblMessage.Text = "عملیات تغییر اطلاعات با موفقیت انجام شد";
                 }
             }
             catch { lblMessage.Text = "مشکلی در تغییر اطلاعات به وجود آمده است"; }
+        }
+
+        private void UserEditForm_Load(object sender, EventArgs e)
+        {
+            if (FrmLogin.userrole == "limited")
+            {
+                btnSelectUser.Visible = false;
+                using (irQmDbContext db = new irQmDbContext())
+                {
+                    var user = db.User.FirstOrDefault(u => u.UserName == FrmLogin.uname);
+                    if (db.User.Any(u => u.UserName == FrmLogin.uname))
+                        txtusername.Text = FrmLogin.uname;
+                    txtEmail.Text = user.Email;
+                    txtName.Text = user.Name;
+                    txtFamily.Text = user.Family;
+                    comboRole.SelectedValue = (Roles.RoleSNames)user.Role;
+                }
+            }
+            else
+                btnSelectUser.Visible = true;
+            
         }
     }
 }

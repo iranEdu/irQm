@@ -40,21 +40,25 @@ namespace irQm.Forms
             this.comboLesson = new irQm.UserControls.Utilities.LessonsComboBox();
             this.comboQuestionType = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ucLongAnswer2 = new irQm.UCLongAnswer();
+            this.ucTrueFalseAnswer1 = new irQm.UCTrueFalseAnswer();
+            this.ucShortAnswer1 = new irQm.UCShortAnswer();
+            this.ucPracticalAnswer1 = new irQm.UCPracticalAnswer();
+            this.ucMultiOption1 = new irQm.UCMultiOption();
             this.ucLongAnswer1 = new irQm.UCLongAnswer();
             this.ucPuzzleAnswer1 = new irQm.UCPuzzleAnswer();
-            this.ucPracticalAnswer1 = new irQm.UCPracticalAnswer();
-            this.ucTrueFalseAnswer1 = new irQm.UCTrueFalseAnswer();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.ucShortAnswer1 = new irQm.UCShortAnswer();
             this.lblMessage = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tagsBox1 = new irQm.TagsBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.rbFace = new irQm.BaseCodes.CustomizedRichTextBox();
-            this.ucMultiOption1 = new irQm.UCMultiOption();
+            this.label5 = new System.Windows.Forms.Label();
+            this.ucPuzzleAnswer2 = new irQm.UCPuzzleAnswer();
+            this.ucPuzzleAnswer3 = new irQm.UCPuzzleAnswer();
+            this.ucPuzzlePairs1 = new irQm.UserControls.UCPuzzlePairs();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -126,75 +130,89 @@ namespace irQm.Forms
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.ucLongAnswer2);
+            this.panel1.Controls.Add(this.ucTrueFalseAnswer1);
+            this.panel1.Controls.Add(this.ucShortAnswer1);
+            this.panel1.Controls.Add(this.ucPracticalAnswer1);
+            this.panel1.Controls.Add(this.ucMultiOption1);
             this.panel1.Controls.Add(this.ucLongAnswer1);
             this.panel1.Controls.Add(this.ucPuzzleAnswer1);
-            this.panel1.Controls.Add(this.ucPracticalAnswer1);
-            this.panel1.Controls.Add(this.ucTrueFalseAnswer1);
             this.panel1.Controls.Add(this.btnNew);
             this.panel1.Controls.Add(this.btnRegister);
-            this.panel1.Controls.Add(this.ucShortAnswer1);
             this.panel1.Controls.Add(this.lblMessage);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tagsBox1);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.rbFace);
-            this.panel1.Controls.Add(this.ucMultiOption1);
             this.panel1.Location = new System.Drawing.Point(12, 78);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(564, 414);
             this.panel1.TabIndex = 111;
             // 
+            // ucLongAnswer2
+            // 
+            this.ucLongAnswer2.Answer = "";
+            this.ucLongAnswer2.Location = new System.Drawing.Point(10, 179);
+            this.ucLongAnswer2.Name = "ucLongAnswer2";
+            this.ucLongAnswer2.Size = new System.Drawing.Size(545, 181);
+            this.ucLongAnswer2.TabIndex = 144;
+            // 
+            // ucTrueFalseAnswer1
+            // 
+            this.ucTrueFalseAnswer1.isFalse = false;
+            this.ucTrueFalseAnswer1.isTrue = false;
+            this.ucTrueFalseAnswer1.Location = new System.Drawing.Point(26, 195);
+            this.ucTrueFalseAnswer1.Name = "ucTrueFalseAnswer1";
+            this.ucTrueFalseAnswer1.Size = new System.Drawing.Size(531, 50);
+            this.ucTrueFalseAnswer1.TabIndex = 143;
+            // 
+            // ucShortAnswer1
+            // 
+            this.ucShortAnswer1.Location = new System.Drawing.Point(10, 175);
+            this.ucShortAnswer1.Name = "ucShortAnswer1";
+            this.ucShortAnswer1.Size = new System.Drawing.Size(530, 173);
+            this.ucShortAnswer1.TabIndex = 142;
+            // 
+            // ucPracticalAnswer1
+            // 
+            this.ucPracticalAnswer1.Location = new System.Drawing.Point(10, 179);
+            this.ucPracticalAnswer1.Name = "ucPracticalAnswer1";
+            this.ucPracticalAnswer1.Size = new System.Drawing.Size(543, 188);
+            this.ucPracticalAnswer1.TabIndex = 141;
+            // 
+            // ucMultiOption1
+            // 
+            this.ucMultiOption1.Location = new System.Drawing.Point(10, 179);
+            this.ucMultiOption1.Name = "ucMultiOption1";
+            this.ucMultiOption1.Size = new System.Drawing.Size(542, 199);
+            this.ucMultiOption1.TabIndex = 140;
+            // 
             // ucLongAnswer1
             // 
             this.ucLongAnswer1.Answer = "";
-            this.ucLongAnswer1.Location = new System.Drawing.Point(20, 193);
+            this.ucLongAnswer1.Location = new System.Drawing.Point(10, 179);
             this.ucLongAnswer1.Name = "ucLongAnswer1";
-            this.ucLongAnswer1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ucLongAnswer1.Size = new System.Drawing.Size(544, 143);
-            this.ucLongAnswer1.TabIndex = 140;
-            this.ucLongAnswer1.Visible = false;
+            this.ucLongAnswer1.Size = new System.Drawing.Size(542, 173);
+            this.ucLongAnswer1.TabIndex = 139;
             // 
             // ucPuzzleAnswer1
             // 
             this.ucPuzzleAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucPuzzleAnswer1.Location = new System.Drawing.Point(20, 191);
+            this.ucPuzzleAnswer1.Location = new System.Drawing.Point(10, 179);
             this.ucPuzzleAnswer1.Name = "ucPuzzleAnswer1";
             this.ucPuzzleAnswer1.Size = new System.Drawing.Size(546, 173);
+            this.ucPuzzleAnswer1.StringPairs = ((System.Collections.Generic.List<irQm.BaseCodes.StringPair>)(resources.GetObject("ucPuzzleAnswer1.StringPairs")));
             this.ucPuzzleAnswer1.TabIndex = 138;
             this.ucPuzzleAnswer1.Visible = false;
-            // 
-            // ucPracticalAnswer1
-            // 
-            this.ucPracticalAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucPracticalAnswer1.CheckList = ((System.Collections.Generic.List<irQm.BaseCodes.StringItem>)(resources.GetObject("ucPracticalAnswer1.CheckList")));
-            this.ucPracticalAnswer1.Location = new System.Drawing.Point(26, 191);
-            this.ucPracticalAnswer1.Name = "ucPracticalAnswer1";
-            this.ucPracticalAnswer1.Size = new System.Drawing.Size(538, 178);
-            this.ucPracticalAnswer1.TabIndex = 139;
-            this.ucPracticalAnswer1.Visible = false;
-            // 
-            // ucTrueFalseAnswer1
-            // 
-            this.ucTrueFalseAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucTrueFalseAnswer1.isFalse = false;
-            this.ucTrueFalseAnswer1.isTrue = false;
-            this.ucTrueFalseAnswer1.Location = new System.Drawing.Point(20, 193);
-            this.ucTrueFalseAnswer1.Name = "ucTrueFalseAnswer1";
-            this.ucTrueFalseAnswer1.Size = new System.Drawing.Size(533, 103);
-            this.ucTrueFalseAnswer1.TabIndex = 139;
-            this.ucTrueFalseAnswer1.Visible = false;
             // 
             // btnNew
             // 
             this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.btnNew.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnNew.ForeColor = System.Drawing.Color.White;
-            this.btnNew.Location = new System.Drawing.Point(34, 372);
+            this.btnNew.Location = new System.Drawing.Point(24, 371);
             this.btnNew.Name = "btnNew";
             this.btnNew.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnNew.Size = new System.Drawing.Size(85, 39);
@@ -208,7 +226,7 @@ namespace irQm.Forms
             this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.btnRegister.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.btnRegister.ForeColor = System.Drawing.Color.White;
-            this.btnRegister.Location = new System.Drawing.Point(122, 372);
+            this.btnRegister.Location = new System.Drawing.Point(115, 373);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnRegister.Size = new System.Drawing.Size(85, 39);
@@ -216,17 +234,6 @@ namespace irQm.Forms
             this.btnRegister.Text = " ثبت";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
-            // 
-            // ucShortAnswer1
-            // 
-            this.ucShortAnswer1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucShortAnswer1.Location = new System.Drawing.Point(34, 191);
-            this.ucShortAnswer1.Name = "ucShortAnswer1";
-            this.ucShortAnswer1.Size = new System.Drawing.Size(530, 173);
-            this.ucShortAnswer1.StringList = ((System.Collections.Generic.List<irQm.BaseCodes.StringItem>)(resources.GetObject("ucShortAnswer1.StringList")));
-            this.ucShortAnswer1.TabIndex = 121;
-            this.ucShortAnswer1.Visible = false;
             // 
             // lblMessage
             // 
@@ -247,7 +254,7 @@ namespace irQm.Forms
             this.label6.BackColor = System.Drawing.SystemColors.Control;
             this.label6.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(483, 165);
+            this.label6.Location = new System.Drawing.Point(483, 125);
             this.label6.Name = "label6";
             this.label6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label6.Size = new System.Drawing.Size(78, 25);
@@ -259,10 +266,10 @@ namespace irQm.Forms
             // 
             this.tagsBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tagsBox1.Location = new System.Drawing.Point(108, 165);
+            this.tagsBox1.Location = new System.Drawing.Point(7, 153);
             this.tagsBox1.Name = "tagsBox1";
             this.tagsBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tagsBox1.Size = new System.Drawing.Size(369, 20);
+            this.tagsBox1.Size = new System.Drawing.Size(545, 20);
             this.tagsBox1.TabIndex = 118;
             // 
             // label7
@@ -272,13 +279,34 @@ namespace irQm.Forms
             this.label7.BackColor = System.Drawing.SystemColors.Control;
             this.label7.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(515, 35);
+            this.label7.Location = new System.Drawing.Point(512, 0);
             this.label7.Name = "label7";
             this.label7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.label7.Size = new System.Drawing.Size(46, 25);
             this.label7.TabIndex = 114;
             this.label7.Text = "سوال:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(8, 125);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 112;
+            this.pictureBox2.TabStop = false;
+            // 
+            // rbFace
+            // 
+            this.rbFace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbFace.Location = new System.Drawing.Point(8, 30);
+            this.rbFace.Name = "rbFace";
+            this.rbFace.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rbFace.Size = new System.Drawing.Size(544, 90);
+            this.rbFace.TabIndex = 111;
+            this.rbFace.Text = "";
             // 
             // label5
             // 
@@ -296,36 +324,29 @@ namespace irQm.Forms
             this.label5.Text = "+ ثبت سوال چند گزینه‌ای";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox2
+            // ucPuzzleAnswer2
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(71, 77);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 112;
-            this.pictureBox2.TabStop = false;
+            this.ucPuzzleAnswer2.Location = new System.Drawing.Point(0, 0);
+            this.ucPuzzleAnswer2.Name = "ucPuzzleAnswer2";
+            this.ucPuzzleAnswer2.Size = new System.Drawing.Size(529, 179);
+            this.ucPuzzleAnswer2.StringPairs = ((System.Collections.Generic.List<irQm.BaseCodes.StringPair>)(resources.GetObject("ucPuzzleAnswer2.StringPairs")));
+            this.ucPuzzleAnswer2.TabIndex = 0;
             // 
-            // rbFace
+            // ucPuzzleAnswer3
             // 
-            this.rbFace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rbFace.Location = new System.Drawing.Point(108, 63);
-            this.rbFace.Name = "rbFace";
-            this.rbFace.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.rbFace.Size = new System.Drawing.Size(459, 96);
-            this.rbFace.TabIndex = 111;
-            this.rbFace.Text = "";
+            this.ucPuzzleAnswer3.Location = new System.Drawing.Point(0, 0);
+            this.ucPuzzleAnswer3.Name = "ucPuzzleAnswer3";
+            this.ucPuzzleAnswer3.Size = new System.Drawing.Size(529, 179);
+            this.ucPuzzleAnswer3.StringPairs = ((System.Collections.Generic.List<irQm.BaseCodes.StringPair>)(resources.GetObject("ucPuzzleAnswer3.StringPairs")));
+            this.ucPuzzleAnswer3.TabIndex = 0;
             // 
-            // ucMultiOption1
+            // ucPuzzlePairs1
             // 
-            this.ucMultiOption1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucMultiOption1.AutoScroll = true;
-            this.ucMultiOption1.Location = new System.Drawing.Point(40, 191);
-            this.ucMultiOption1.Name = "ucMultiOption1";
-            this.ucMultiOption1.Size = new System.Drawing.Size(521, 198);
-            this.ucMultiOption1.TabIndex = 0;
+            this.ucPuzzlePairs1.Location = new System.Drawing.Point(0, 0);
+            this.ucPuzzlePairs1.Name = "ucPuzzlePairs1";
+            this.ucPuzzlePairs1.Pairs = ((System.Collections.Generic.List<irQm.BaseCodes.StringPair>)(resources.GetObject("ucPuzzlePairs1.Pairs")));
+            this.ucPuzzlePairs1.Size = new System.Drawing.Size(487, 169);
+            this.ucPuzzlePairs1.TabIndex = 0;
             // 
             // FrmInsertQuestion
             // 
@@ -360,7 +381,6 @@ namespace irQm.Forms
         private LessonsComboBox comboLesson;
         private System.Windows.Forms.ComboBox comboQuestionType;
         private System.Windows.Forms.Panel panel1;
-        private UCMultiOption ucMultiOption1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private CustomizedRichTextBox rbFace;
         internal System.Windows.Forms.Label label5;
@@ -370,10 +390,15 @@ namespace irQm.Forms
         internal System.Windows.Forms.Label label6;
         private TagsBox tagsBox1;
         private System.Windows.Forms.Label lblMessage;
-        private UCShortAnswer ucShortAnswer1;
-        private UCTrueFalseAnswer ucTrueFalseAnswer1;
         private UCPuzzleAnswer ucPuzzleAnswer1;
+        private UCTrueFalseAnswer ucTrueFalseAnswer1;
+        private UCShortAnswer ucShortAnswer1;
         private UCPracticalAnswer ucPracticalAnswer1;
+        private UCMultiOption ucMultiOption1;
         private UCLongAnswer ucLongAnswer1;
+        private UCPuzzleAnswer ucPuzzleAnswer2;
+        private UCPuzzleAnswer ucPuzzleAnswer3;
+        private UserControls.UCPuzzlePairs ucPuzzlePairs1;
+        private UCLongAnswer ucLongAnswer2;
     }
 }

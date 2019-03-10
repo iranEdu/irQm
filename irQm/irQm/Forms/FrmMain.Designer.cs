@@ -289,6 +289,7 @@
             this.Controls.Add(this.pbNewLesson);
             this.Name = "FrmMain";
             this.Text = "FrmMain";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.Controls.SetChildIndex(this.pbNewLesson, 0);
             this.Controls.SetChildIndex(this.pbQuestionReg, 0);
             this.Controls.SetChildIndex(this.pbQuestionbank, 0);

@@ -55,6 +55,7 @@
             // 
             // gbchooseoperation
             // 
+            this.gbchooseoperation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gbchooseoperation.Controls.Add(this.radioButtonrestore);
             this.gbchooseoperation.Controls.Add(this.radiobuttonBackup);
             this.gbchooseoperation.Font = new System.Drawing.Font("B Titr", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -97,15 +98,14 @@
             // 
             // gbbackup
             // 
+            this.gbbackup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gbbackup.Controls.Add(this.btnstopbackup);
             this.gbbackup.Controls.Add(this.btnbackup);
             this.gbbackup.Controls.Add(this.btnselectpath);
             this.gbbackup.Controls.Add(this.txtbackupname);
             this.gbbackup.Controls.Add(this.txtselectpath);
-            this.gbbackup.Controls.Add(this.label5);
-            this.gbbackup.Controls.Add(this.label4);
             this.gbbackup.Enabled = false;
-            this.gbbackup.Font = new System.Drawing.Font("B Titr", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.gbbackup.Font = new System.Drawing.Font("B Titr", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.gbbackup.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.gbbackup.Location = new System.Drawing.Point(25, 149);
             this.gbbackup.Name = "gbbackup";
@@ -192,6 +192,7 @@
             // 
             // gbrestore
             // 
+            this.gbrestore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gbrestore.Controls.Add(this.btnrestore);
             this.gbrestore.Controls.Add(this.btnchoosefile);
             this.gbrestore.Controls.Add(this.textBox4);

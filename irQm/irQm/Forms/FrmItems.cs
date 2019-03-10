@@ -18,6 +18,7 @@ namespace irQm.Forms
         public List<string> SelectedList { get => _selectedList; }
         public bool Multiple { get => _multiple; set => _multiple = value; }
         short selectedIndex =-1;
+
         public FrmItems(List<string> selection,string[] selected)
 
         {

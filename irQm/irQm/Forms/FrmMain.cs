@@ -57,5 +57,10 @@ namespace irQm.Forms
             BackupAndRestoreForm brf = new BackupAndRestoreForm();
             brf.Show();
         }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
