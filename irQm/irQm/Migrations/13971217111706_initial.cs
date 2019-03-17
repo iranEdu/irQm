@@ -653,6 +653,8 @@ namespace irQm.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+         
+
             migrationBuilder.CreateIndex(
                 name: "IX_Exams_UserId",
                 table: "Exams",

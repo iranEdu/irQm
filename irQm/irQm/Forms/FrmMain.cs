@@ -47,13 +47,21 @@ namespace irQm.Forms
             this.Close();
         }
 
-        private void pbQuestionbank_Click(object sender, EventArgs e)
+        private void label10_Click(object sender, EventArgs e)
         {
-            this.Controls.Clear();
+            BackupAndRestoreForm brf = new BackupAndRestoreForm();
+            brf.Show();
+        }
 
-            var f = new Bank();
-            this.Controls.Add(f);
-           // this.Close();
+        private void pbBackup_Click(object sender, EventArgs e)
+        {
+            BackupAndRestoreForm brf = new BackupAndRestoreForm();
+            brf.Show();
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

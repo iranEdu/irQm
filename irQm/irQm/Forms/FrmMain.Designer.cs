@@ -239,14 +239,14 @@
             // label10
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label10.Location = new System.Drawing.Point(185, 358);
+            this.label10.Location = new System.Drawing.Point(174, 370);
             this.label10.Name = "label10";
             this.label10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.label10.Size = new System.Drawing.Size(95, 26);
-            this.label10.TabIndex = 168;
-            this.label10.Text = "نسخه پشتیبان";
+            this.label10.Size = new System.Drawing.Size(110, 59);
+            this.label10.TabIndex = 26;
+            this.label10.Text = "پشتیبان گیری و بازیابی  اطلاعات";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
             // 
@@ -259,6 +259,107 @@
             this.label11.Size = new System.Drawing.Size(61, 26);
             this.label11.TabIndex = 169;
             this.label11.Text = "تنظیمات";
+            // 
+            // pbSettings
+            // 
+            this.pbSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbSettings.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbSettings.Image = global::irQm.Properties.Resources.settingpic;
+            this.pbSettings.Location = new System.Drawing.Point(37, 252);
+            this.pbSettings.Name = "pbSettings";
+            this.pbSettings.Size = new System.Drawing.Size(115, 115);
+            this.pbSettings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSettings.TabIndex = 19;
+            this.pbSettings.TabStop = false;
+            // 
+            // pbBackup
+            // 
+            this.pbBackup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbBackup.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbBackup.Image = global::irQm.Properties.Resources.backup;
+            this.pbBackup.Location = new System.Drawing.Point(174, 252);
+            this.pbBackup.Name = "pbBackup";
+            this.pbBackup.Size = new System.Drawing.Size(115, 115);
+            this.pbBackup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBackup.TabIndex = 18;
+            this.pbBackup.TabStop = false;
+            this.pbBackup.Click += new System.EventHandler(this.pbBackup_Click);
+            // 
+            // pbScores
+            // 
+            this.pbScores.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbScores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbScores.Image = global::irQm.Properties.Resources.marklist;
+            this.pbScores.Location = new System.Drawing.Point(312, 252);
+            this.pbScores.Name = "pbScores";
+            this.pbScores.Size = new System.Drawing.Size(115, 115);
+            this.pbScores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbScores.TabIndex = 17;
+            this.pbScores.TabStop = false;
+            // 
+            // pbExamExams
+            // 
+            this.pbExamExams.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbExamExams.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbExamExams.Image = global::irQm.Properties.Resources.results;
+            this.pbExamExams.Location = new System.Drawing.Point(451, 252);
+            this.pbExamExams.Name = "pbExamExams";
+            this.pbExamExams.Size = new System.Drawing.Size(115, 115);
+            this.pbExamExams.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbExamExams.TabIndex = 16;
+            this.pbExamExams.TabStop = false;
+            this.pbExamExams.Click += new System.EventHandler(this.pbExams_Click);
+            // 
+            // pbExam
+            // 
+            this.pbExam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbExam.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbExam.Image = global::irQm.Properties.Resources.nwexam;
+            this.pbExam.Location = new System.Drawing.Point(37, 66);
+            this.pbExam.Name = "pbExam";
+            this.pbExam.Size = new System.Drawing.Size(115, 115);
+            this.pbExam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbExam.TabIndex = 15;
+            this.pbExam.TabStop = false;
+            this.pbExam.Click += new System.EventHandler(this.pbExam_Click);
+            // 
+            // pbQuestionbank
+            // 
+            this.pbQuestionbank.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbQuestionbank.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbQuestionbank.Image = global::irQm.Properties.Resources.questionsbank;
+            this.pbQuestionbank.Location = new System.Drawing.Point(174, 66);
+            this.pbQuestionbank.Name = "pbQuestionbank";
+            this.pbQuestionbank.Size = new System.Drawing.Size(115, 115);
+            this.pbQuestionbank.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbQuestionbank.TabIndex = 14;
+            this.pbQuestionbank.TabStop = false;
+            // 
+            // pbQuestionReg
+            // 
+            this.pbQuestionReg.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbQuestionReg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbQuestionReg.Image = global::irQm.Properties.Resources.addquestion;
+            this.pbQuestionReg.Location = new System.Drawing.Point(312, 66);
+            this.pbQuestionReg.Name = "pbQuestionReg";
+            this.pbQuestionReg.Size = new System.Drawing.Size(115, 115);
+            this.pbQuestionReg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbQuestionReg.TabIndex = 13;
+            this.pbQuestionReg.TabStop = false;
+            this.pbQuestionReg.Click += new System.EventHandler(this.pbQuestionReg_Click);
+            // 
+            // pbNewLesson
+            // 
+            this.pbNewLesson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbNewLesson.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbNewLesson.Image = global::irQm.Properties.Resources.New_Lesson0;
+            this.pbNewLesson.Location = new System.Drawing.Point(451, 66);
+            this.pbNewLesson.Name = "pbNewLesson";
+            this.pbNewLesson.Size = new System.Drawing.Size(115, 115);
+            this.pbNewLesson.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbNewLesson.TabIndex = 12;
+            this.pbNewLesson.TabStop = false;
+            this.pbNewLesson.Click += new System.EventHandler(this.pbNewLesson_Click);
             // 
             // FrmMain
             // 
@@ -284,7 +385,7 @@
             this.Controls.Add(this.label4);
             this.Name = "FrmMain";
             this.Text = "FrmMain";
-            this.Controls.SetChildIndex(this.label4, 0);
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.Controls.SetChildIndex(this.pbNewLesson, 0);
             this.Controls.SetChildIndex(this.pbQuestionReg, 0);
             this.Controls.SetChildIndex(this.pbQuestionbank, 0);

@@ -12,7 +12,9 @@ namespace irQm.UserControls.Forms
         public UserRegister()
         {
             InitializeComponent();
-           
+            comboRole.DataSource = Roles.Names;
+            comboRole.DisplayMember = "Name";
+            comboRole.ValueMember = "Value";
 
         }
 
@@ -25,13 +27,14 @@ namespace irQm.UserControls.Forms
             user.UserName = txtusername.Text.ToLower().Trim();
             user.Password = txtpass.Text.GetHashCode().ToString();
             user.Name = txtName.Text.Trim();
+            user.Family = txtFamily.Text;
             user.Role = comboRole.SelectedItem.ToString()== "مدیر" ? Roles.RoleSNames.Admin: Roles.RoleSNames.limited;
             user.UserId = Guid.NewGuid().ToString()+user.UserName.ToString().Substring(5);
             try
             {
                 using (irQmDbContext db = new irQmDbContext())
                 {
-                    if (db.User.Any(u => u.UserName == user.UserName))
+                    if (db.User.Any(u => u.UserName == txtusername.Text))
                     {
                         lblResult.Text = "این نام کاربری قبلا ثبت شده است";
                         lblResult.ForeColor = Color.Red;
@@ -41,7 +44,7 @@ namespace irQm.UserControls.Forms
                     db.SaveChanges();
                     lblResult.Text = "ثبت انجام شد";
                     lblResult.ForeColor = Color.Green;
-
+                    linklogin.Visible = true;
                 }
             }catch(Exception x)
             {

@@ -20,12 +20,12 @@ namespace irQm.BaseCodes
         public DateTime RegisterTime = DateTime.UtcNow;
         public Roles.RoleSNames Role { get; set; }
         public string Email { get; set; }
-
         public ICollection< MultiChoices> MultiChoicesQuestions { get; set; }
         public ICollection<LongAnswer> LongAnswerQuestions { get; set; }
         public ICollection<ShortAnswer> ShortAnswerQuestions { get; set; }
         public ICollection<Puzzle> PuzzleQuestions { get; set; }
         public ICollection<Practical> PracticalQuestions { get; set; }
         public ICollection<TFQuestion> TFQuestions { get; set; }
+                      
     }
 }
