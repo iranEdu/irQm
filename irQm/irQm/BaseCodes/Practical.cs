@@ -8,23 +8,29 @@ using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
+    [Serializable]
     public class Practical : IQuestion
     {
+        [NonSerialized]
+        private User _creatorUser;
+        [NonSerialized]
+        private Lesson _lesson;
+
         [MaxLength(50)]
         public string Id { get; set; }
         public string Face { get; set; }
         [Required]
         public float Score { get; set; }
-        public float GainedScore { get; set ; }
+        public float GainedScore { get; set; }
         public List<StringItem> CheckList { get; set; }
         public ICollection<TagInQuestion<Practical>> Tags { get; set; }
-        public byte[] Image { get ; set; }
+        public byte[] Image { get; set; }
         public DateTime RegisterTime { get; set; }
         public DateTime EditTime { get; set; }
-        public Lesson Lesson { get; set; }
+        public Lesson Lesson { get => _lesson; set => _lesson = value; }
         [Required]
         public string LessonName { get; set; }
-        public User CreatorUser { get; set; }
+        public User CreatorUser { get => _creatorUser; set => _creatorUser = value; }
         public string CreatorUserId { get; set; }
         public bool JustInList { get; set; }
 

@@ -596,6 +596,7 @@ namespace irQm.Forms
             this.Name = "MasterForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MasterForm_Load);
+            this.SizeChanged += new System.EventHandler(this.MasterForm_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.Picbook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.MasterPanel.ResumeLayout(false);
@@ -707,6 +708,11 @@ namespace irQm.Forms
         private void MasterForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void MasterForm_SizeChanged(object sender, EventArgs e)
+        {
+            MinimumSize = Size;
         }
     }
 }

@@ -8,14 +8,21 @@ using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
-   public class TFQuestion : IQuestion,IEvaluable
+    [Serializable]
+
+    public class TFQuestion : IQuestion, IEvaluable
     {
+        [NonSerialized]
+        private User _creatorUser;
+        [NonSerialized]
+        private Lesson _lesson;
+
         [MaxLength(50)]
         public string Id { get; set; }
-        [Required] 
-        public string Face { get ; set ; }
+        [Required]
+        public string Face { get; set; }
 
-        public User CreatorUser { get; set; }
+        public User CreatorUser { get => _creatorUser; set => _creatorUser = value; }
         public string CreatorUserId { get; set; }
 
 
@@ -24,7 +31,7 @@ namespace irQm.BaseCodes
 
         public float Score { get; set; }
         public float GainedScore { get; set; }
-        public ICollection<TagInQuestion<TFQuestion>> Tags { get; set; } 
+        public ICollection<TagInQuestion<TFQuestion>> Tags { get; set; }
         [Required]
         public bool TrueOption { get; set; }
         [Required]
@@ -33,9 +40,9 @@ namespace irQm.BaseCodes
         public bool AnsweredTrueOption { get; set; }
         public bool AnsweredFalseOption { get; set; }
 
-        public Lesson Lesson { get; set; }
+        public Lesson Lesson { get => _lesson; set => _lesson = value; }
         public string LessonName { get; set; }
-        public byte[] Image { get ; set; }
+        public byte[] Image { get; set; }
         public bool JustInList { get; set; }
 
         public void DeleteFromDb()
@@ -64,12 +71,12 @@ namespace irQm.BaseCodes
             q.LessonName = LessonName;
             q.TrueOption = TrueOption;
             q.FalseOption = FalseOption;
-           
+
             return q;
         }
         public void Evaluate()
         {
-            if ((TrueOption&&TrueOption) || (FalseOption&& FalseOption))
+            if ((TrueOption && TrueOption) || (FalseOption && FalseOption))
             {
                 GainedScore = Score;
             }

@@ -316,6 +316,12 @@
     <Compile Include="BaseCodes\QuestionInList.cs" />
     <Compile Include="BaseCodes\Utilities\PersianCulture.cs" />
     <Compile Include="BaseCodes\Utilities\PersianCultureHelper.cs" />
+    <Compile Include="Forms\FrmMakeExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmMakeExam.Designer.cs">
+      <DependentUpon>FrmMakeExam.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmQuestion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -374,6 +380,12 @@
     </Compile>
     <Compile Include="UserControls\qPresentation\TrueFalseForPresentation.Designer.cs">
       <DependentUpon>TrueFalseForPresentation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\qPresentation\UCExamQuestionListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\qPresentation\UCExamQuestionListItem.Designer.cs">
+      <DependentUpon>UCExamQuestionListItem.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\Utilities\AlphaPanel.cs">
       <SubType>Component</SubType>
@@ -570,6 +582,9 @@
     <EmbeddedResource Include="Forms\ExtendedForm.resx">
       <DependentUpon>ExtendedForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmMakeExam.resx">
+      <DependentUpon>FrmMakeExam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmQuestion.resx">
       <DependentUpon>FrmQuestion.cs</DependentUpon>
     </EmbeddedResource>
@@ -645,6 +660,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\qPresentation\UCOptionForPresentation.resx">
       <DependentUpon>UCOptionForPresentation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\qPresentation\UCExamQuestionListItem.resx">
+      <DependentUpon>UCExamQuestionListItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\qPresentation\UCQuestionListItem.resx">
       <DependentUpon>UCQuestionListItem.cs</DependentUpon>

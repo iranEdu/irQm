@@ -8,8 +8,15 @@ using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
-    public class Puzzle : IQuestion,IEvaluable
+    [Serializable]
+
+    public class Puzzle : IQuestion, IEvaluable
     {
+        [NonSerialized]
+        private User _creatorUser;
+        [NonSerialized]
+        private Lesson _lesson;
+
         [MaxLength(50)]
         public string Id { get; set; }
         public string Face { get; set; }
@@ -21,17 +28,18 @@ namespace irQm.BaseCodes
         public DateTime RegisterTime { get; set; }
         public DateTime EditTime { get; set; }
 
-        public float GainedScore { get ; set ; }
+        public float GainedScore { get; set; }
         public ICollection<TagInQuestion<Puzzle>> Tags { get; set; }
         public List<StringPair> Pairs { get; set; }
         //public List<StringItem> ExtraAnswers { get; set; }
         public List<StringPair> AnswerPairs { get; set; }
 
-        public User CreatorUser { get; set; }
+        public User CreatorUser { get => _creatorUser; set => _creatorUser = value; }
         public string CreatorUserId { get; set; }
         public bool JustInList { get; set; }
 
-        public Lesson Lesson { get; set; }
+
+        public Lesson Lesson { get => _lesson; set => _lesson = value; }
         [Required]
         public string LessonName { get; set; }
 
@@ -46,9 +54,9 @@ namespace irQm.BaseCodes
 
         public void Evaluate()
         {
-            var count= AnswerPairs.Count(p=>Pairs.Contains(p));
-            GainedScore=Score/count;
-            
+            var count = AnswerPairs.Count(p => Pairs.Contains(p));
+            GainedScore = Score / count;
+
         }
         public IQuestion Clone()
         {
@@ -67,7 +75,7 @@ namespace irQm.BaseCodes
             q.LessonName = LessonName;
             q.AnswerPairs = AnswerPairs;
             q.Pairs = Pairs;
-          
+
             return q;
         }
     }

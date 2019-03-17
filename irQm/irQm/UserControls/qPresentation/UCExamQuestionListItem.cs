@@ -6,17 +6,18 @@ using irQm.Forms;
 
 namespace irQm.UserControls.qPresentation
 {
-    public partial class UCQuestionListItem : UserControl
+    public partial class UCExamQuestionListItem : UserControl
     {
-        public delegate void UCQuestionListItemEHndler(UCQuestionListItem item, IQuestion question);
+        public delegate void UCQuestionListItemEHndler(UCExamQuestionListItem item, IQuestion question);
         public event UCQuestionListItemEHndler Removed;
         public event UCQuestionListItemEHndler CheckedChange;
         public event UCQuestionListItemEHndler QuestionEdited;
+        public event UCQuestionListItemEHndler MarkChanged;
 
         int _number;
         IQuestion Question;
   
-
+       
         public Color SubtitleColor
         {
             get { return lblSubtitle.BackColor; }
@@ -76,7 +77,7 @@ namespace irQm.UserControls.qPresentation
                 lblNumber.Text = value.ToString();
             }
         }
-        public UCQuestionListItem(IQuestion question, string subtitle, int number)
+        public UCExamQuestionListItem(IQuestion question, string subtitle, int number)
         {
 
             InitializeComponent();
@@ -100,7 +101,7 @@ namespace irQm.UserControls.qPresentation
             }
         }
 
-        public UCQuestionListItem()
+        public UCExamQuestionListItem()
         {
             InitializeComponent();
             SetStyle(ControlStyles.ResizeRedraw, true);
@@ -148,6 +149,21 @@ namespace irQm.UserControls.qPresentation
             frmQuestion.ShowDialog();
             if (frmQuestion.IsEdited)
                 QuestionEdited?.Invoke(this, Question);
+        }
+
+        private void markBox_TextChanged(object sender, EventArgs e)
+        {
+            float s = 0;
+            var txt = markBox.Text.Replace("_","").Replace(" ","");
+            float.TryParse(txt,out s);
+           Question.Score=s;
+            MarkChanged?.Invoke(this,Question);
+            if (s > 0)
+            {
+                markBox.BackColor = Color.White;
+            }
+            else
+                markBox.BackColor = Color.MistyRose;
         }
     }
 }

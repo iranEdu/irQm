@@ -22,6 +22,7 @@ namespace irQm.Forms
         {
             this.openInEditMode = openInEditMode;
             InitializeComponent();
+            this.ShowInTaskbar = false;
             question = q;
             if (!editable)
                 btnEdit.Visible = false;

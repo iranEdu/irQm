@@ -1,5 +1,6 @@
 ﻿using FarsiLibrary.Utils;
 using irQm.BaseCodes;
+using irQm.Forms;
 using irQm.UserControls.qPresentation;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -162,7 +163,7 @@ namespace irQm.UserControls.Forms
                     qitem.CheckedChange += Qitem_CheckedChange;
                     qitem.Name = q.Id;
                     if (selectedQuestions.Contains(q))
-                        qitem.Chacked = true;
+                        qitem.Checked = true;
                     target.Controls.Add(qitem);
                     qitem.QuestionEdited += Qitem_QuestionEdited;
                     list.Add(qitem);
@@ -185,7 +186,7 @@ namespace irQm.UserControls.Forms
                 
                 question.DeleteFromDb();
                 search();
-                if (item.Chacked)
+                if (item.Checked)
                 {
                     var controls = flpSelectedQuestions.Controls;
                     controls.Remove(controls.Find(question.Id, false)[0]);
@@ -198,7 +199,7 @@ namespace irQm.UserControls.Forms
 
         private void Qitem_CheckedChange(UCQuestionListItem item, IQuestion question)
         {
-            if (item.Chacked)
+            if (item.Checked)
             {
                 var q = question.Clone();
                 var qitem = new UCQuestionListItem(q, question.RegisterTime.ToLocalTime().ToPrettyTime(), flpSelectedQuestions.Controls.Count + 1);
@@ -208,7 +209,7 @@ namespace irQm.UserControls.Forms
                 qitem.Anchor = AnchorStyles.Right | AnchorStyles.Left;
                 qitem.Resize += (s, ev) => { qitem.MaximumSize = new Size(Width - 50, 0); };
                 qitem.Name = question.Id;
-                qitem.Chacked = true;
+                qitem.Checked = true;
                 qitem.CheckedChange += SelectedQitem_CheckedChange;
                 qitem.MouseDown += (s, ev) => { qitem.DoDragDrop(qitem,DragDropEffects.Move); };
                 qitem.QuestionEdited += Qitem_QuestionEdited;
@@ -236,7 +237,7 @@ namespace irQm.UserControls.Forms
 
         private void SelectedQitem_CheckedChange(UCQuestionListItem item, IQuestion question)
         {
-            if (item.Chacked)
+            if (item.Checked)
                 return;
             if (MessageBox.Show("آیا میخواهید این پرسش از فهرست انتخاب ‌‌شده‌ها حذف شود؟", "حذف از فهرست", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
@@ -251,7 +252,7 @@ namespace irQm.UserControls.Forms
                     if (f.Length > 0)
                     {
                         var c = ((UCQuestionListItem)f[0]);
-                        c.Chacked = false;
+                        c.Checked = false;
                         c.Tag=null;
                        
                     }
@@ -265,7 +266,7 @@ namespace irQm.UserControls.Forms
                     if (f.Length > 0)
                     {
                         var c = ((UCQuestionListItem)f[0]);
-                        c.Chacked = false;
+                        c.Checked = false;
                         c.Tag = null;
 
                     }
@@ -277,7 +278,7 @@ namespace irQm.UserControls.Forms
                     if (f.Length > 0)
                     {
                         var c = ((UCQuestionListItem)f[0]);
-                        c.Chacked = false;
+                        c.Checked = false;
                         c.Tag = null;
 
                     }
@@ -289,7 +290,7 @@ namespace irQm.UserControls.Forms
                     if (f.Length > 0)
                     {
                         var c = ((UCQuestionListItem)f[0]);
-                        c.Chacked = false;
+                        c.Checked = false;
                         c.Tag = null;
 
                     }
@@ -301,7 +302,7 @@ namespace irQm.UserControls.Forms
                     if (f.Length > 0)
                     {
                         var c = ((UCQuestionListItem)f[0]);
-                        c.Chacked = false;
+                        c.Checked = false;
                         c.Tag = null;
 
                     }
@@ -313,14 +314,14 @@ namespace irQm.UserControls.Forms
                     if (f.Length > 0)
                     {
                         var c = ((UCQuestionListItem)f[0]);
-                        c.Chacked = false;
+                        c.Checked = false;
                         c.Tag = null;
 
                     }
                 }
             }
             else
-                item.Chacked = true;
+                item.Checked = true;
         }
 
         bool richContains(string rich,string expr)
@@ -379,6 +380,17 @@ namespace irQm.UserControls.Forms
 
                 lastIndex = index;
             }
+        }
+
+        private void btnMakeExam_Click(object sender, EventArgs e)
+        {
+            if (selectedQuestions.Count > 0)
+            {
+                FrmMakeExam f = new FrmMakeExam(selectedQuestions);
+                f.ShowDialog();
+            }
+            else
+                MessageBox.Show("پرسشی انتخاب نشده است","توجه!",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
         }
     }
 }
