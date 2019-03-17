@@ -11,15 +11,7 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
-
+  
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -358,8 +350,6 @@
             // lessonsComboBox1
             // 
             this.lessonsComboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lessonsComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.lessonsComboBox1.FormattingEnabled = true;
             this.lessonsComboBox1.Location = new System.Drawing.Point(375, 55);
             this.lessonsComboBox1.Name = "lessonsComboBox1";
             this.lessonsComboBox1.Size = new System.Drawing.Size(121, 21);

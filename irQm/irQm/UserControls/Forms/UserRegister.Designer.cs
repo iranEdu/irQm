@@ -91,14 +91,15 @@
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(50)))));
             this.label4.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(711, 4);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 23);
+            this.label4.Size = new System.Drawing.Size(165, 23);
             this.label4.TabIndex = 5;
-            this.label4.Text = "ورود";
+            this.label4.Text = "ورود    >    ثبت کاربر";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label6
             // 
@@ -119,7 +120,7 @@
             this.txtusername.MaxLength = 30;
             this.txtusername.Name = "txtusername";
             this.txtusername.Size = new System.Drawing.Size(194, 20);
-            this.txtusername.TabIndex = 9;
+            this.txtusername.TabIndex = 1;
             // 
             // txtpass
             // 
@@ -128,7 +129,7 @@
             this.txtpass.Name = "txtpass";
             this.txtpass.PasswordChar = '*';
             this.txtpass.Size = new System.Drawing.Size(194, 20);
-            this.txtpass.TabIndex = 10;
+            this.txtpass.TabIndex = 2;
             // 
             // tableLayoutPanel1
             // 
@@ -233,7 +234,7 @@
             this.txtName.MaxLength = 30;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(194, 20);
-            this.txtName.TabIndex = 20;
+            this.txtName.TabIndex = 3;
             // 
             // txtFamily
             // 
@@ -241,14 +242,14 @@
             this.txtFamily.MaxLength = 30;
             this.txtFamily.Name = "txtFamily";
             this.txtFamily.Size = new System.Drawing.Size(194, 20);
-            this.txtFamily.TabIndex = 22;
+            this.txtFamily.TabIndex = 4;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(9, 104);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(194, 20);
-            this.txtEmail.TabIndex = 21;
+            this.txtEmail.TabIndex = 5;
             // 
             // comboRole
             // 
@@ -259,7 +260,7 @@
             this.comboRole.Location = new System.Drawing.Point(9, 128);
             this.comboRole.Name = "comboRole";
             this.comboRole.Size = new System.Drawing.Size(194, 21);
-            this.comboRole.TabIndex = 23;
+            this.comboRole.TabIndex = 6;
             // 
             // pictureBox2
             // 
@@ -299,10 +300,10 @@
             // 
             this.lblResult.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(307, 351);
+            this.lblResult.Location = new System.Drawing.Point(194, 370);
             this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(0, 13);
+            this.lblResult.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblResult.Size = new System.Drawing.Size(165, 24);
             this.lblResult.TabIndex = 15;
             this.lblResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

@@ -307,7 +307,6 @@ namespace irQm.UserControls.Forms
             // comboLesson
             // 
             this.comboLesson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboLesson.FormattingEnabled = true;
             this.comboLesson.Location = new System.Drawing.Point(407, 6);
             this.comboLesson.Name = "comboLesson";
             this.comboLesson.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

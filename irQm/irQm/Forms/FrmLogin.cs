@@ -10,6 +10,8 @@ namespace irQm.Forms
 {
     public partial class FrmLogin : ExtendedForm
     {
+        public static string userrole;
+        public static string uname;
         public FrmLogin()
         {
             InitializeComponent();
@@ -103,6 +105,12 @@ namespace irQm.Forms
 
             }
             
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ResetPassForm rpform = new ResetPassForm();
+            rpform.ShowDialog();
         }
     }
 }

@@ -882,6 +882,8 @@ namespace irQm.Migrations
                         .HasForeignKey("LessonName")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
+            
+           
 #pragma warning restore 612, 618
         }
     }

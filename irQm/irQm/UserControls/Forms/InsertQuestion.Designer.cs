@@ -43,7 +43,6 @@ namespace irQm.UserControls.Forms
             this.lblMessage = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ucMultiOption1 = new irQm.UCMultiOption();
             this.ucLongAnswer1 = new irQm.UCLongAnswer();
@@ -106,16 +105,12 @@ namespace irQm.UserControls.Forms
             this.panel1.Controls.Add(this.ucMultiOption1);
             this.panel1.Controls.Add(this.ucLongAnswer1);
             this.panel1.Controls.Add(this.ucPuzzleAnswer1);
-            this.panel1.Controls.Add(this.ucPracticalAnswer1);
-            this.panel1.Controls.Add(this.ucTrueFalseAnswer1);
             this.panel1.Controls.Add(this.btnNew);
             this.panel1.Controls.Add(this.btnRegister);
-            this.panel1.Controls.Add(this.ucShortAnswer1);
             this.panel1.Controls.Add(this.lblMessage);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.tagsBox1);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.rbFace);
             this.panel1.Location = new System.Drawing.Point(-1, 38);
@@ -193,6 +188,27 @@ namespace irQm.UserControls.Forms
             this.label7.Text = "سوال:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(8, 125);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 112;
+            this.pictureBox2.TabStop = false;
+            // 
+            // rbFace
+            // 
+            this.rbFace.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rbFace.Location = new System.Drawing.Point(8, 30);
+            this.rbFace.Name = "rbFace";
+            this.rbFace.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rbFace.Size = new System.Drawing.Size(544, 90);
+            this.rbFace.TabIndex = 111;
+            this.rbFace.Text = "";
+            // 
             // label5
             // 
             this.label5.AllowDrop = true;
@@ -209,7 +225,7 @@ namespace irQm.UserControls.Forms
             this.label5.Text = "+ ثبت سوال چند گزینه‌ای";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // pictureBox2
+            // ucPuzzleAnswer2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(113, 77);
@@ -307,7 +323,6 @@ namespace irQm.UserControls.Forms
             // comboLesson
             // 
             this.comboLesson.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboLesson.FormattingEnabled = true;
             this.comboLesson.Location = new System.Drawing.Point(407, 6);
             this.comboLesson.Name = "comboLesson";
             this.comboLesson.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -337,7 +352,6 @@ namespace irQm.UserControls.Forms
         private LessonsComboBox comboLesson;
         private System.Windows.Forms.ComboBox comboQuestionType;
         private System.Windows.Forms.Panel panel1;
-        private UCMultiOption ucMultiOption1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private CustomizedRichTextBox rbFace;
         internal System.Windows.Forms.Label label5;
@@ -347,10 +361,15 @@ namespace irQm.UserControls.Forms
         internal System.Windows.Forms.Label label6;
         private TagsBox tagsBox1;
         private System.Windows.Forms.Label lblMessage;
-        private UCShortAnswer ucShortAnswer1;
-        private UCTrueFalseAnswer ucTrueFalseAnswer1;
         private UCPuzzleAnswer ucPuzzleAnswer1;
+        private UCTrueFalseAnswer ucTrueFalseAnswer1;
+        private UCShortAnswer ucShortAnswer1;
         private UCPracticalAnswer ucPracticalAnswer1;
+        private UCMultiOption ucMultiOption1;
         private UCLongAnswer ucLongAnswer1;
+        private UCPuzzleAnswer ucPuzzleAnswer2;
+        private UCPuzzleAnswer ucPuzzleAnswer3;
+        private UserControls.UCPuzzlePairs ucPuzzlePairs1;
+        private UCLongAnswer ucLongAnswer2;
     }
 }

@@ -106,7 +106,7 @@ namespace irQm.UserControls.Forms
 
                         return;
                     }
-                    if (comboLesson.SelectedIndex < 0)
+                    if (comboLesson.IsNew())
                     {
                         if (string.IsNullOrWhiteSpace(comboLesson.Text))
                         {
@@ -118,7 +118,7 @@ namespace irQm.UserControls.Forms
                        var l = new Lesson();
                         l.LessonName = comboLesson.Text.Trim();
                         db.Lessons.Add(l);
-                        comboLesson.Items.Add(l.LessonName);
+                        comboLesson.LoadItems();
                     }
                     switch(comboQuestionType.SelectedValue)
                     {
