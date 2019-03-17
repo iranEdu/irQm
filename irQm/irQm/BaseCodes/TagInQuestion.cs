@@ -1,7 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace irQm.BaseCodes
 {
+    [Serializable]
+
     public class TagInQuestion<T> where T:IQuestion 
     {
        [Required]

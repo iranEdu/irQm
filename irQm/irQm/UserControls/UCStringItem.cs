@@ -31,6 +31,7 @@ namespace irQm.UserControls
             this.Item = item;
             InitializeComponent();
             Number = item.Number;
+            textCheckList.Text = item.Value;
         }
 
         private void pbRemove_Click(object sender, EventArgs e)

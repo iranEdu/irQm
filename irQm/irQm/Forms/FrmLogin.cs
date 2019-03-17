@@ -4,6 +4,7 @@ using System.Net.Mail;
 using System.Linq;
 using irQm.BaseCodes;
 using irQm.Properties;
+using irQm.UserControls.Forms;
 
 namespace irQm.Forms
 {
@@ -37,10 +38,7 @@ namespace irQm.Forms
                 var user = db.User.FirstOrDefault(u => u.UserName == txtusername.Text.ToLower().Trim() && u.Password == txtpass.Text.GetHashCode().ToString());
                 if (user!=null)
                 {
-                    userrole = user.Role.ToString();
-                    uname = user.UserName;
-                    
-                    FrmMain main = new FrmMain();
+                    MasterForm main = new MasterForm();
                     irQm.BaseCodes.Utilities.Globals.CurrentUser = user;
                     main.Show();
                     Settings.Default.passRemember = cbRemember.Checked ;
@@ -72,8 +70,12 @@ namespace irQm.Forms
 
         private void RegisterLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            FrmUserRegister reg = new FrmUserRegister();
-            reg.ShowDialog();
+            var reg = new UserRegister();
+            panel1.Controls.Add(reg);
+            reg.Dock = DockStyle.Fill;
+                //reg.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
+            //reg.Width = panel1.Width;
+            reg.BringToFront();
            
         }
 

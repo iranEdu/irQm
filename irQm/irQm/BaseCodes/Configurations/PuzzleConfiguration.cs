@@ -11,9 +11,9 @@ namespace irQm.BaseCodes.Configurations
             builder.HasMany(p => p.Pairs).WithOne().HasForeignKey("PuzzlePairs").OnDelete(DeleteBehavior.Cascade);
             builder.HasMany(p => p.AnswerPairs).WithOne().HasForeignKey("PuzzleAnswerPairs").OnDelete(DeleteBehavior.Cascade);
 
-            builder.HasMany(q => q.Pairs).WithOne().OnDelete(DeleteBehavior.Cascade);
-            builder.HasMany(q => q.AnswerPairs).WithOne().OnDelete(DeleteBehavior.Cascade);
-            builder.HasMany(q => q.ExtraAnswers).WithOne().OnDelete(DeleteBehavior.Cascade);
+            //builder.HasMany(q => q.Pairs).WithOne().OnDelete(DeleteBehavior.Cascade);
+            //builder.HasMany(q => q.AnswerPairs).WithOne().OnDelete(DeleteBehavior.Cascade);
+            //builder.HasMany(q => q.ExtraAnswers).WithOne().OnDelete(DeleteBehavior.Cascade);
 
             builder.HasOne(q => q.CreatorUser).WithMany(u => u.PuzzleQuestions).OnDelete(DeleteBehavior.Cascade).HasForeignKey(q => q.CreatorUserId);
 

@@ -8,14 +8,21 @@ using System.Threading.Tasks;
 
 namespace irQm.BaseCodes
 {
-   public class TFQuestion : IQuestion,IEvaluable
+    [Serializable]
+
+    public class TFQuestion : IQuestion, IEvaluable
     {
+        [NonSerialized]
+        private User _creatorUser;
+        [NonSerialized]
+        private Lesson _lesson;
+
         [MaxLength(50)]
         public string Id { get; set; }
-        [Required] 
-        public string Face { get ; set ; }
+        [Required]
+        public string Face { get; set; }
 
-        public User CreatorUser { get; set; }
+        public User CreatorUser { get => _creatorUser; set => _creatorUser = value; }
         public string CreatorUserId { get; set; }
 
 
@@ -24,19 +31,52 @@ namespace irQm.BaseCodes
 
         public float Score { get; set; }
         public float GainedScore { get; set; }
-        public ICollection<TagInQuestion<TFQuestion>> Tags { get; set; } 
+        public ICollection<TagInQuestion<TFQuestion>> Tags { get; set; }
         [Required]
-        public TFOption TrueOption { get; set; }
+        public bool TrueOption { get; set; }
         [Required]
-        public TFOption FalseOption { get; set; }
-        public Lesson Lesson { get; set; }
+        public bool FalseOption { get; set; }
+
+        public bool AnsweredTrueOption { get; set; }
+        public bool AnsweredFalseOption { get; set; }
+
+        public Lesson Lesson { get => _lesson; set => _lesson = value; }
         public string LessonName { get; set; }
-        public byte[] Image { get ; set; }
+        public byte[] Image { get; set; }
         public bool JustInList { get; set; }
 
+        public void DeleteFromDb()
+        {
+            using (var db = new irQmDbContext())
+            {
+                db.TFQuestions.Remove(this);
+                db.SaveChanges();
+            }
+
+        }
+        public IQuestion Clone()
+        {
+            var q = new TFQuestion();
+            q.CreatorUser = CreatorUser;
+            q.CreatorUserId = CreatorUserId;
+            q.Face = Face;
+            q.Id = Guid.NewGuid().ToString();
+            q.Score = Score;
+            q.JustInList = JustInList;
+            q.Image = Image;
+            q.GainedScore = GainedScore;
+            q.RegisterTime = DateTime.UtcNow;
+            q.Tags = Tags;
+            q.Lesson = Lesson;
+            q.LessonName = LessonName;
+            q.TrueOption = TrueOption;
+            q.FalseOption = FalseOption;
+
+            return q;
+        }
         public void Evaluate()
         {
-            if ((TrueOption.IsTrue&&TrueOption.Answered) || (FalseOption.IsTrue&& FalseOption.Answered))
+            if ((TrueOption && TrueOption) || (FalseOption && FalseOption))
             {
                 GainedScore = Score;
             }

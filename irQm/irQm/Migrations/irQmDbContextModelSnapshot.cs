@@ -80,6 +80,8 @@ namespace irQm.Migrations
 
                     b.Property<float>("Score");
 
+                    b.Property<string>("UserAnswer");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CreatorUserId");
@@ -407,8 +409,6 @@ namespace irQm.Migrations
 
                     b.Property<string>("PracticalId");
 
-                    b.Property<string>("PuzzleId");
-
                     b.Property<string>("ShortAnswerId");
 
                     b.Property<string>("Value")
@@ -417,8 +417,6 @@ namespace irQm.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("PracticalId");
-
-                    b.HasIndex("PuzzleId");
 
                     b.HasIndex("ShortAnswerId");
 
@@ -540,28 +538,15 @@ namespace irQm.Migrations
                     b.ToTable("TagInTfQuestion");
                 });
 
-            modelBuilder.Entity("irQm.BaseCodes.TFOption", b =>
-                {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(50);
-
-                    b.Property<bool>("Answered");
-
-                    b.Property<bool>("IsTrue");
-
-                    b.Property<byte>("number");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TFOption");
-                });
-
             modelBuilder.Entity("irQm.BaseCodes.TFQuestion", b =>
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd()
                         .HasMaxLength(50);
+
+                    b.Property<bool>("AnsweredFalseOption");
+
+                    b.Property<bool>("AnsweredTrueOption");
 
                     b.Property<string>("CreatorUserId");
 
@@ -570,8 +555,7 @@ namespace irQm.Migrations
                     b.Property<string>("Face")
                         .IsRequired();
 
-                    b.Property<string>("FalseOptionId")
-                        .IsRequired();
+                    b.Property<bool>("FalseOption");
 
                     b.Property<float>("GainedScore");
 
@@ -585,18 +569,13 @@ namespace irQm.Migrations
 
                     b.Property<float>("Score");
 
-                    b.Property<string>("TrueOptionId")
-                        .IsRequired();
+                    b.Property<bool>("TrueOption");
 
                     b.HasKey("Id");
 
                     b.HasIndex("CreatorUserId");
 
-                    b.HasIndex("FalseOptionId");
-
                     b.HasIndex("LessonName");
-
-                    b.HasIndex("TrueOptionId");
 
                     b.ToTable("TFQuestions");
                 });
@@ -791,16 +770,13 @@ namespace irQm.Migrations
                 {
                     b.HasOne("irQm.BaseCodes.Practical")
                         .WithMany("CheckList")
-                        .HasForeignKey("PracticalId");
-
-                    b.HasOne("irQm.BaseCodes.Puzzle")
-                        .WithMany("ExtraAnswers")
-                        .HasForeignKey("PuzzleId")
+                        .HasForeignKey("PracticalId")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("irQm.BaseCodes.ShortAnswer")
                         .WithMany("Answer")
-                        .HasForeignKey("ShortAnswerId");
+                        .HasForeignKey("ShortAnswerId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("irQm.BaseCodes.StringPair", b =>
@@ -901,19 +877,9 @@ namespace irQm.Migrations
                         .HasForeignKey("CreatorUserId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("irQm.BaseCodes.TFOption", "FalseOption")
-                        .WithMany()
-                        .HasForeignKey("FalseOptionId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
                     b.HasOne("irQm.BaseCodes.Lesson", "Lesson")
                         .WithMany("TFQuestions")
                         .HasForeignKey("LessonName")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("irQm.BaseCodes.TFOption", "TrueOption")
-                        .WithMany()
-                        .HasForeignKey("TrueOptionId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
             

@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ucOptionList1 = new irQm.UserControls.UCOptionList();
             this.pbAdd = new System.Windows.Forms.PictureBox();
             this.cbMulti = new System.Windows.Forms.CheckBox();
+            this.ucOptionList1 = new irQm.UserControls.UCOptionList();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdd)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.ucOptionList1);
@@ -49,20 +49,9 @@
             this.panel1.Size = new System.Drawing.Size(522, 163);
             this.panel1.TabIndex = 116;
             // 
-            // ucOptionList1
-            // 
-            this.ucOptionList1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucOptionList1.AutoScroll = true;
-            this.ucOptionList1.Location = new System.Drawing.Point(44, 2);
-            this.ucOptionList1.MultiSelect = false;
-            this.ucOptionList1.Name = "ucOptionList1";
-            this.ucOptionList1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ucOptionList1.Size = new System.Drawing.Size(477, 154);
-            this.ucOptionList1.TabIndex = 111;
-            // 
             // pbAdd
             // 
-            this.pbAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pbAdd.Image = global::irQm.Properties.Resources.addmark;
             this.pbAdd.Location = new System.Drawing.Point(13, 119);
             this.pbAdd.Name = "pbAdd";
@@ -74,7 +63,7 @@
             // 
             // cbMulti
             // 
-            this.cbMulti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbMulti.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.cbMulti.AutoSize = true;
             this.cbMulti.Checked = true;
             this.cbMulti.CheckState = System.Windows.Forms.CheckState.Checked;
@@ -87,6 +76,18 @@
             this.cbMulti.Text = "امکان انتخاب چند گزینه";
             this.cbMulti.UseVisualStyleBackColor = true;
             this.cbMulti.CheckedChanged += new System.EventHandler(this.cbMulti_CheckedChanged);
+            // 
+            // ucOptionList1
+            // 
+            this.ucOptionList1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucOptionList1.AutoScroll = true;
+            this.ucOptionList1.Location = new System.Drawing.Point(44, 2);
+            this.ucOptionList1.MultiSelect = false;
+            this.ucOptionList1.Name = "ucOptionList1";
+            this.ucOptionList1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.ucOptionList1.Size = new System.Drawing.Size(477, 154);
+            this.ucOptionList1.TabIndex = 111;
             // 
             // UCMultiOption
             // 

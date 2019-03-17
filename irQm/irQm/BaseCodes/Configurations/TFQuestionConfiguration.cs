@@ -11,6 +11,7 @@ namespace irQm.BaseCodes.Configurations
             builder.HasOne(q => q.Lesson).WithMany(l => l.TFQuestions).HasForeignKey(l=>l.LessonName).OnDelete(DeleteBehavior.Cascade);
             
             builder.HasOne(q => q.CreatorUser).WithMany(u => u.TFQuestions).OnDelete(DeleteBehavior.Cascade).HasForeignKey(q => q.CreatorUserId);
+            
         }
     }
 }

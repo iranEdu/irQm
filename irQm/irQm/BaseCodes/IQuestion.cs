@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Drawing;
 
 namespace irQm.BaseCodes
 {
@@ -23,6 +20,8 @@ namespace irQm.BaseCodes
         string CreatorUserId { get; set; }
 
         bool JustInList { get; set; }
+        void DeleteFromDb();
+        IQuestion Clone();
        
     }
 }

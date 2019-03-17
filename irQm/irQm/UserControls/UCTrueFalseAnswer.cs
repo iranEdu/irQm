@@ -13,10 +13,10 @@ namespace irQm
     public partial class UCTrueFalseAnswer : UserControl
     {
         public bool isTrue
-        { get => chbTrue.Checked; set { chbTrue.Checked = value; } }
+        { get => rbTrue.Checked; set { rbTrue.Checked = value; } }
 
         public bool isFalse
-        { get => chbFalse.Checked; set { chbFalse.Checked = value; } }
+        { get => rbFalse.Checked; set { rbFalse.Checked = value; } }
 
         public UCTrueFalseAnswer()
         {
@@ -24,9 +24,21 @@ namespace irQm
         }
         public void New()
         {
-            chbTrue.Checked = false;
-            chbFalse.Checked = false;
+            rbTrue.Checked = false;
+            rbFalse.Checked = false;
          
+        }
+        public void New(bool isTrue,bool isFalse)
+        {
+            rbTrue.Checked = isTrue;
+            rbFalse.Checked = isFalse;
+
+        }
+
+        private void rbTrue_CheckedChanged(object sender, EventArgs e)
+        {
+            System.Diagnostics.StackTrace t = new System.Diagnostics.StackTrace();
+            Console.WriteLine(t.ToString());
         }
     }
 }

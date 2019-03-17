@@ -15,6 +15,8 @@ namespace irQm.UserControls
     {
         private List<StringPair> _pairs;
 
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+
         public List<StringPair> Pairs {
             get { _pairs.ForEach(p => { p.Value?.Trim(); });
                 return _pairs; }

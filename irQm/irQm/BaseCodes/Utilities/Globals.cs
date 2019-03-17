@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,5 +32,9 @@ namespace irQm.BaseCodes.Utilities
         }
 
         public static User CurrentUser;
+        public class Colors
+        {
+            public static Color TrueOption = Color.FromArgb(255, 187, 236, 179);
+        }
     }
 }

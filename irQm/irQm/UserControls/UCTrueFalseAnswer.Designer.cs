@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.chbFalse = new System.Windows.Forms.RadioButton();
-            this.chbTrue = new System.Windows.Forms.RadioButton();
+            this.rbFalse = new System.Windows.Forms.RadioButton();
+            this.rbTrue = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -40,8 +40,8 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.chbFalse);
-            this.panel1.Controls.Add(this.chbTrue);
+            this.panel1.Controls.Add(this.rbFalse);
+            this.panel1.Controls.Add(this.rbTrue);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(4, 3);
             this.panel1.Name = "panel1";
@@ -49,30 +49,30 @@
             this.panel1.Size = new System.Drawing.Size(522, 43);
             this.panel1.TabIndex = 116;
             // 
-            // chbFalse
+            // rbFalse
             // 
-            this.chbFalse.AutoSize = true;
-            this.chbFalse.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.chbFalse.Location = new System.Drawing.Point(334, 2);
-            this.chbFalse.Name = "chbFalse";
-            this.chbFalse.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chbFalse.Size = new System.Drawing.Size(53, 30);
-            this.chbFalse.TabIndex = 115;
-            this.chbFalse.TabStop = true;
-            this.chbFalse.Text = "غلط";
-            this.chbFalse.UseVisualStyleBackColor = true;
+            this.rbFalse.AutoSize = true;
+            this.rbFalse.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.rbFalse.Location = new System.Drawing.Point(334, 2);
+            this.rbFalse.Name = "rbFalse";
+            this.rbFalse.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.rbFalse.Size = new System.Drawing.Size(53, 30);
+            this.rbFalse.TabIndex = 115;
+            this.rbFalse.Text = "غلط";
+            this.rbFalse.UseVisualStyleBackColor = true;
             // 
-            // chbTrue
+            // rbTrue
             // 
-            this.chbTrue.AutoSize = true;
-            this.chbTrue.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.chbTrue.Location = new System.Drawing.Point(408, 2);
-            this.chbTrue.Name = "chbTrue";
-            this.chbTrue.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.chbTrue.Size = new System.Drawing.Size(67, 30);
-            this.chbTrue.TabIndex = 114;
-            this.chbTrue.Text = "صحیح";
-            this.chbTrue.UseVisualStyleBackColor = true;
+            this.rbTrue.AutoSize = true;
+            this.rbTrue.Font = new System.Drawing.Font("B Nazanin", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.rbTrue.Location = new System.Drawing.Point(408, 2);
+            this.rbTrue.Name = "rbTrue";
+            this.rbTrue.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.rbTrue.Size = new System.Drawing.Size(67, 30);
+            this.rbTrue.TabIndex = 114;
+            this.rbTrue.Text = "صحیح";
+            this.rbTrue.UseVisualStyleBackColor = true;
+            this.rbTrue.CheckedChanged += new System.EventHandler(this.rbTrue_CheckedChanged);
             // 
             // label1
             // 
@@ -105,7 +105,7 @@
         #endregion
         private System.Windows.Forms.Panel panel1;
         internal System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton chbFalse;
-        private System.Windows.Forms.RadioButton chbTrue;
+        private System.Windows.Forms.RadioButton rbFalse;
+        private System.Windows.Forms.RadioButton rbTrue;
     }
 }

@@ -9,7 +9,7 @@ namespace irQm.BaseCodes.Configurations
         {
             builder.HasOne(q => q.Lesson).WithMany(l => l.ShortAnswers).HasForeignKey(l => l.LessonName).OnDelete(DeleteBehavior.Cascade);
             builder.HasOne(q => q.CreatorUser).WithMany(u => u.ShortAnswerQuestions).OnDelete(DeleteBehavior.Cascade).HasForeignKey(q => q.CreatorUserId);
-
+            builder.HasMany(q => q.Answer).WithOne().OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

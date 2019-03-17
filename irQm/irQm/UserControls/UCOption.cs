@@ -27,6 +27,9 @@ namespace irQm.UserControls
             
             InitializeComponent();
             Number=option.number;
+            rtbOption.Rtf = option.Face;
+            cbIsTrue.Checked = option.IsTrue;
+            
         }
 
         private void Remove_Click(object sender, EventArgs e)
@@ -48,8 +51,8 @@ namespace irQm.UserControls
             
             _checked = cbIsTrue.Checked;
             Option.IsTrue = _checked;
-            if(_checked)
-                this.BackColor = System.Drawing.Color.FromArgb(255, 187, 236, 179);
+            if (_checked)
+                this.BackColor = BaseCodes.Utilities.Globals.Colors.TrueOption ;
             else
                 this.BackColor = System.Drawing.Color.FromArgb(0, 187, 236, 179);
 

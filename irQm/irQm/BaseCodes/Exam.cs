@@ -6,20 +6,23 @@ using System.Linq;
 
 namespace irQm.BaseCodes
 {
+    [Serializable]
     public class Exam
     {
-        
+        [NonSerialized]
+        private User _user;
+
         public Exam()
         {
             RegisterTime = DateTime.UtcNow;
         }
 
-        public string ExamName { get ; set ; }
-        public bool Shuffle { get;  set; }
-       
-       // public List<QuestionInList<IQuestion>> Questions { get;private set; } = 
-        public ICollection<QuestionInList<TFQuestion>> TFQuestions { get;  set; } = new List<QuestionInList<TFQuestion>>();
-        public ICollection<QuestionInList<ShortAnswer>> ShortAnswerQuestions { get; set; }=new List<QuestionInList<ShortAnswer>>();
+        public string ExamName { get; set; }
+        public bool Shuffle { get; set; }
+
+        // public List<QuestionInList<IQuestion>> Questions { get;private set; } = 
+        public ICollection<QuestionInList<TFQuestion>> TFQuestions { get; set; } = new List<QuestionInList<TFQuestion>>();
+        public ICollection<QuestionInList<ShortAnswer>> ShortAnswerQuestions { get; set; } = new List<QuestionInList<ShortAnswer>>();
         public ICollection<QuestionInList<LongAnswer>> LongAnswerQuestions { get; set; } = new List<QuestionInList<LongAnswer>>();
         public ICollection<QuestionInList<Practical>> PracticalQuestions { get; set; } = new List<QuestionInList<Practical>>();
         public ICollection<QuestionInList<Puzzle>> PuzzleQuestions { get; set; } = new List<QuestionInList<Puzzle>>();
@@ -30,20 +33,20 @@ namespace irQm.BaseCodes
         [NotMapped]
         public bool Finished { get; private set; }
         [NotMapped]
-        public bool PasswordForExamTime { get; set; }
+        public string PasswordForExamTime { get; set; }
         [NotMapped]
-        public bool PasswordForEvaluationTime { get; set; }
+        public string PasswordForEvaluationTime { get; set; }
 
         [MaxLength(50)]
         public string Id { get; set; }
 
-        public User User { get; set; }
+        public User User { get => _user; set => _user = value; }
         public string UserId { get; set; }
 
         public DateTime RegisterTime { get; private set; }
-        
 
-        public DateTime StartTime { get; set; }
+
+        public DateTime? StartTime { get; set; }
         public TimeSpan Time { get; set; }
 
         [NotMapped]
@@ -58,7 +61,7 @@ namespace irQm.BaseCodes
                 list.AddRange(PracticalQuestions.ToList());
                 list.AddRange(PuzzleQuestions.ToList());
                 list.AddRange(MultiChoicesQuestions.ToList());
-                if(Shuffle)
+                if (Shuffle)
                 {
                     Random rnd = new Random();
                     list.ForEach(q => q.Row = rnd.Next(10 * list.Count()));
@@ -69,7 +72,7 @@ namespace irQm.BaseCodes
                 return list.OrderBy(q => q.Row).ToList();
             }
         }
-        
+
         [NotMapped]
         public float TotalMark
         {
@@ -78,7 +81,7 @@ namespace irQm.BaseCodes
                 return Questions.Sum(q => ((IQuestion)q).Score);
             }
         }
-        
+
         [NotMapped]
         public float Mark
         {
@@ -88,12 +91,12 @@ namespace irQm.BaseCodes
             }
         }
 
-        internal void AddQuestion(IQuestion q,int row)
+        internal void AddQuestion(IQuestion q, int row)
         {
-            var id =  Guid.NewGuid().ToString();
-           
-            
-            if(q is MultiChoices)
+            var id = Guid.NewGuid().ToString();
+
+
+            if (q is MultiChoices)
             {
                 var qil = new QuestionInList<MultiChoices>();
                 qil.Id = id;
@@ -103,7 +106,7 @@ namespace irQm.BaseCodes
 
                 MultiChoicesQuestions.Add(qil);
             }
-            else if(q is TFQuestion)
+            else if (q is TFQuestion)
             {
                 var qil = new QuestionInList<TFQuestion>();
                 qil.Id = id;
@@ -150,25 +153,25 @@ namespace irQm.BaseCodes
 
             }
         }
-        
-       
+
+
         public bool Start(Func<bool> startExamMethod)
         {
             var r = startExamMethod?.Invoke() ?? true;
-            if(r)
+            if (r)
             {
                 Started = true;
             }
             return r;
-             
+
         }
 
         public bool Finish(Func<bool> saveMethod)
         {
             Finished = true;
-          return  saveMethod?.Invoke()?? true;
+            return saveMethod?.Invoke() ?? true;
         }
 
-   
+
     }
 }

@@ -34,6 +34,9 @@ namespace irQm
             this.Pair = pair;
             InitializeComponent();
             Number = pair.Number;
+            textFirstpair.Text = pair.Key;
+            TextSecondpair.Text = pair.Value;
+
         }
 
 
@@ -54,7 +57,7 @@ namespace irQm
 
         private void richTextBox2_TextChanged(object sender, EventArgs e)
         {
-            Pair.Value = textFirstpair.Text;
+            Pair.Value = TextSecondpair.Text;
         }
     }
 }
