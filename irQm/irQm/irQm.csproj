@@ -393,7 +393,6 @@
     <Compile Include="Forms\UserEditForm.Designer.cs">
       <DependentUpon>UserEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\13971115143340_initial.cs" />
     <Compile Include="BaseCodes\Utilities\PersianCulture.cs" />
     <Compile Include="Forms\FrmMakeExam.cs">
       <SubType>Form</SubType>
@@ -412,7 +411,9 @@
       <DependentUpon>13971217111706_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\irQmDbContextModelSnapshot.cs" />
-    <Compile Include="UserControls\MultiOptionsForPresentation.cs" />
+    <Compile Include="UserControls\Forms\Bank.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="UserControls\Forms\Bank.Designer.cs">
       <DependentUpon>Bank.cs</DependentUpon>
     </Compile>
@@ -734,17 +735,11 @@
     <EmbeddedResource Include="Forms\UserEditForm.resx">
       <DependentUpon>UserEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\MultiOptionsForPresentation.resx">
-      <DependentUpon>MultiOptionsForPresentation.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCcheckbox.resx">
       <DependentUpon>UCcheckbox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCPaging.resx">
       <DependentUpon>UCPaging.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UCQuestionForPresentation.resx">
-      <DependentUpon>UCQuestionForPresentation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\qPresentation\MultiOptionsForPresentation.resx">
       <DependentUpon>MultiOptionsForPresentation.cs</DependentUpon>

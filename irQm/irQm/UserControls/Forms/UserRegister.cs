@@ -44,7 +44,7 @@ namespace irQm.UserControls.Forms
                     db.SaveChanges();
                     lblResult.Text = "ثبت انجام شد";
                     lblResult.ForeColor = Color.Green;
-                    linklogin.Visible = true;
+                    //linklogin.Visible = true;
                 }
             }catch(Exception x)
             {

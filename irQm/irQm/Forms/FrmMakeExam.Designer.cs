@@ -48,9 +48,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblTotalMark = new System.Windows.Forms.Label();
             this.createExamFile = new System.Windows.Forms.Button();
+            this.faDatePicker1 = new FarsiLibrary.Win.Controls.FADatePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.flpSelectedQuestions = new System.Windows.Forms.FlowLayoutPanel();
-            this.faDatePicker1 = new FarsiLibrary.Win.Controls.FADatePicker();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -253,6 +253,14 @@
             this.createExamFile.TabIndex = 12;
             this.createExamFile.Text = "ایجاد فایل آزمون";
             this.createExamFile.UseVisualStyleBackColor = true;
+            this.createExamFile.Click += new System.EventHandler(this.createExamFile_Click);
+            // 
+            // faDatePicker1
+            // 
+            this.faDatePicker1.Location = new System.Drawing.Point(7, 85);
+            this.faDatePicker1.Name = "faDatePicker1";
+            this.faDatePicker1.Size = new System.Drawing.Size(120, 20);
+            this.faDatePicker1.TabIndex = 23;
             // 
             // panel2
             // 
@@ -278,13 +286,6 @@
             this.flpSelectedQuestions.Size = new System.Drawing.Size(215, 261);
             this.flpSelectedQuestions.TabIndex = 148;
             this.flpSelectedQuestions.WrapContents = false;
-            // 
-            // faDatePicker1
-            // 
-            this.faDatePicker1.Location = new System.Drawing.Point(7, 85);
-            this.faDatePicker1.Name = "faDatePicker1";
-            this.faDatePicker1.Size = new System.Drawing.Size(120, 20);
-            this.faDatePicker1.TabIndex = 23;
             // 
             // FrmMakeExam
             // 
